@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Mail List" language="en" table="x_sohd3_dotmail_mail_list">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Mail List</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_mail_list</name>
+            <plural>Mail Lists</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-06 00:14:17</sys_created_on>
+            <sys_id>adfbb9691bf13410eef0cb72604bcbc7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Mail List</sys_name>
+            <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+            <sys_update_name>sys_documentation_x_sohd3_dotmail_mail_list__en</sys_update_name>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-06 00:14:17</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

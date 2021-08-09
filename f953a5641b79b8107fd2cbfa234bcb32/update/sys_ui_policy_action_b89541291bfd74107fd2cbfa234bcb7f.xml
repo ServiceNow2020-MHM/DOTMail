@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_action_requested</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-05 20:17:34</sys_created_on>
+        <sys_id>b89541291bfd74107fd2cbfa234bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_action_requested</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_policy_action_b89541291bfd74107fd2cbfa234bcb7f</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 20:17:34</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <ui_policy display_value="Action Requested">d4654de51bfd74107fd2cbfa234bcb17</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>

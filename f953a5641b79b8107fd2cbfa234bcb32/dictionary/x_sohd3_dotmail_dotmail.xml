@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="2" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" hint="Specify the action you are requesting from a list of choices.  The choices are dependent upon the request type selected." label="Action requested" max_length="40" name="u_action_requested" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Appropriate Action" sequence="0" value="appropriate action"/>
+                <element inactive_on_update="false" label="Appropriate Attention &amp; Action" sequence="0" value="appropriate attention &amp; action"/>
+                <element inactive_on_update="false" label="Arrange Meeting" sequence="1" value="arrange meeting"/>
+                <element inactive_on_update="false" label="Comment/Recommendation" sequence="2" value="comment/recommendation"/>
+                <element inactive_on_update="false" label="Direct Action/Reply" sequence="3" value="direct action/reply"/>
+                <element inactive_on_update="false" label="Direct Reply (cc/bc: Gov)" sequence="4" value="direct reply (cc/bc: gov)"/>
+                <element inactive_on_update="false" label="Direct Reply (cc: Gov)" sequence="5" value="direct reply (cc: gov)"/>
+                <element inactive_on_update="false" label="Direct Reply (bc: Gov)" sequence="6" value="direct reply (bc: gov)"/>
+                <element inactive_on_update="false" label="Signature Requested" sequence="7" value="signature requested"/>
+                <element inactive_on_update="false" label="Draft Reply" sequence="8" value="draft reply"/>
+                <element inactive_on_update="false" label="Final Reply for Gov Signature" sequence="9" value="final reply for gov signature"/>
+                <element inactive_on_update="false" label="Follow Up" sequence="10" value="follow up"/>
+                <element inactive_on_update="false" label="Information/FYI/File" sequence="11" value="information/fyi/file"/>
+                <element inactive_on_update="false" label="Interim Reply Done/Final Reply Needed" sequence="12" value="interim reply done/final reply needed"/>
+                <element inactive_on_update="false" label="Investigate &amp; Report Back" sequence="13" value="investigate &amp; report back"/>
+                <element inactive_on_update="false" label="Keep Enclosure(s)" sequence="14" value="keep enclosure(s)"/>
+                <element inactive_on_update="false" label="No Response Required" sequence="15" value="no response required"/>
+                <element inactive_on_update="false" label="Pending Gov's Signature" sequence="16" value="pending govs signature"/>
+                <element inactive_on_update="false" label="Phone Call" sequence="17" value="phone call"/>
+                <element inactive_on_update="false" label="Return" sequence="18" value="return"/>
+                <element inactive_on_update="false" label="Return Enclosure(s)" sequence="19" value="return enclosure(s)"/>
+                <element inactive_on_update="false" label="Review" sequence="20" value="review"/>
+                <element inactive_on_update="false" label="Review and Respond" sequence="21" value="review and respond"/>
+                <element inactive_on_update="false" label="Review and Respond (Resubmittal)" sequence="22" value="review and respond (resubmittal)"/>
+                <element inactive_on_update="false" label="See Me" sequence="23" value="see me"/>
+                <element inactive_on_update="false" label="Submit Copy of Response" sequence="24" value="submit copy of response"/>
+                <element inactive_on_update="false" label="Other" sequence="25" value="other"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" hint="The Division of the log's Author.  Auto-populated and is read only." label="Division" max_length="40" name="u_division" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Document(s) mailed date" max_length="40" name="u_documents_mailed_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" hint="Used for identification and reference to outgoing mail originating from an office." label="DOT letter number" max_length="40" name="u_dot_letter_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="From Company" max_length="40" name="u_from_company" type="string"/>
+        <element attributes="edge_encryption_enabled=true" hint="Identification and reference to mail from the Governor's Office.    " label="Governor referral number" max_length="40" name="u_gov_ref_number" type="string"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" hint="Who the correspondence is addressed to." label="Letter addressed to" max_length="1024" name="u_letter_addressed_to" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" hint="The date found on the correspondence." label="Letter date" max_length="40" name="u_letter_date" type="glide_date"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=false" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence originated from." label="Letter from" max_length="1024" name="u_letter_from" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:new GlideDateTime().getDisplayValue()" hint="The date the correspondence was loggeed.   Auto-populated and is read only." label="Log Date" mandatory="true" max_length="40" name="u_log_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" hint="The Office/Section of the log's Author.  Auto-populated and is read only." label="Office/Section" max_length="40" name="u_office_section" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+        <element attributes="edge_encryption_enabled=true" hint="Can contain any other identification of mail, i.e., Invoice number or purchase order number." label="Other letter number" max_length="40" name="u_other_letter_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" hint="User can copy and paste the URL of a related  DOTMail record." label="Related document link" max_length="1024" name="u_related_doclink" type="url"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="journal entry only" hint="Specify the type of mail request from a list of choices." label="Request type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Journal Entry Only" sequence="0" value="journal entry only"/>
+                <element inactive_on_update="false" label="No Response Required" sequence="1" value="no response required"/>
+                <element inactive_on_update="false" label="Response Requested - No Due Date" sequence="2" value="response requested - no due date"/>
+                <element inactive_on_update="false" label="Response Requested - With Due Date" sequence="3" value="response requested - with due date"/>
+                <element inactive_on_update="false" label="DIR Signature Request" sequence="4" value="dir_signature"/>
+                <element inactive_on_update="false" label="GOV Referral Request" sequence="5" value="gov referral request"/>
+                <element inactive_on_update="false" label="Letter Approval Request" sequence="6" value="letter approval request"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_14" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_16" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Division" max_length="40" name="u_string_4" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_when_needed" type="glide_date"/>
+    </element>
+</database>

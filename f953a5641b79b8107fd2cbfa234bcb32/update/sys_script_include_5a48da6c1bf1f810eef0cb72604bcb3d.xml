@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_sohd3_dotmail.MAILClientUtil</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Called by DOTMail Prefill User Info Client Script onload.</description>
+        <name>MAILClientUtil</name>
+        <script><![CDATA[var MAILClientUtil = Class.create();
+// Extend the global.AbstractAjaxProcessor class
+MAILClientUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    // Define the getUserInfo function.  
+    // Create a GlideRecord for the User table.
+    // Use the sysparm_user passed from the client side to retrieve a record user table.
+    // Return the division and department for the requested record
+    getUserInfo: function() {
+        var result = this.newitem("result");
+		var logged_user = gs.getUserID();
+		var grUser = new GlideRecord('sys_user');
+		grUser.addQuery('sys_id',logged_user);
+		grUser.query();
+        while(grUser.next())
+			{
+            result.setattribute("u_division", grUser.u_division);
+			result.setattribute("u_office_section", grUser.department);
+			}
+    },
+    type: 'MAILClientUtil'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-02 23:46:23</sys_created_on>
+        <sys_id>5a48da6c1bf1f810eef0cb72604bcb3d</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>MAILClientUtil</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_5a48da6c1bf1f810eef0cb72604bcb3d</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-04 19:11:05</sys_updated_on>
+    </sys_script_include>
+</record_update>
