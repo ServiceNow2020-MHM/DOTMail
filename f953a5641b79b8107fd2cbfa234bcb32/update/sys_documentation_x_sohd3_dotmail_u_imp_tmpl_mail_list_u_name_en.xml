@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="u_string_16" label="New String" language="en" table="x_sohd3_dotmail_dotmail">
+    <sys_documentation element="u_name" label="Name" language="en" table="x_sohd3_dotmail_u_imp_tmpl_mail_list">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>u_string_16</element>
+            <element>u_name</element>
             <help/>
             <hint/>
-            <label>New String</label>
+            <label>Name</label>
             <language>en</language>
-            <name>x_sohd3_dotmail_dotmail</name>
-            <plural>New Strings</plural>
+            <name>x_sohd3_dotmail_u_imp_tmpl_mail_list</name>
+            <plural>Names</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-02 22:15:37</sys_created_on>
-            <sys_id>4e040e2c1b71f810eef0cb72604bcb0e</sys_id>
+            <sys_created_on>2021-08-11 22:01:08</sys_created_on>
+            <sys_id>6507d8ab1bbdf8107fd2cbfa234bcb54</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>New String</sys_name>
+            <sys_name>Name</sys_name>
             <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
             <sys_policy/>
             <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-            <sys_update_name>sys_documentation_x_sohd3_dotmail_dotmail_u_string_16_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_sohd3_dotmail_u_imp_tmpl_mail_list_u_name_en</sys_update_name>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 22:15:37</sys_updated_on>
+            <sys_updated_on>2021-08-11 22:01:08</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

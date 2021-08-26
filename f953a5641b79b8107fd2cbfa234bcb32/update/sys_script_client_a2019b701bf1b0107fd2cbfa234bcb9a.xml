@@ -3,10 +3,9 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Use the GetUserDepartment Script Include to retrieve the logged in User 's Department from the sys_user database when the form loads.  &#13;
-NOTE:  this will be the default value when form is loaded only, user can update the value and may no longer be in sync with the logged in User.</description>
+        <description>Use the GetUserDepartment Script Include to retrieve the logged in User 's Department from the sys_user database when the form loads.  </description>
         <field>opened_by</field>
-        <global>false</global>
+        <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
         <name>Set User Department</name>
@@ -22,7 +21,8 @@ NOTE:  this will be the default value when form is loaded only, user can update 
         // Specify the getUserInfo method on Script Include
         getUserInfo.addParam('sysparm_name', 'getUserInfo');
         // Pass the record creator's name
-        getUserInfo.addParam('sysparm_user', g_user.getFullName());
+        //getUserInfo.addParam('sysparm_user', g_user.getFullName());
+		getUserInfo.addParam('sysparm_user', g_user.userID);
         //jslog("The currently logged in user is " + g_user.getFullName());
         //jslog("The currently logged in user info is " + g_user.getUserID());
         // Send the request to the server
@@ -45,7 +45,7 @@ NOTE:  this will be the default value when form is loaded only, user can update 
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a2019b701bf1b0107fd2cbfa234bcb9a</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Set User Department</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -53,7 +53,7 @@ NOTE:  this will be the default value when form is loaded only, user can update 
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_a2019b701bf1b0107fd2cbfa234bcb9a</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-05 18:51:14</sys_updated_on>
+        <sys_updated_on>2021-08-10 19:27:27</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

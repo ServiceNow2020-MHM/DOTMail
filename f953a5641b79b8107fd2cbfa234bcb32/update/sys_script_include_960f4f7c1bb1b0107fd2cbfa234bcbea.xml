@@ -25,13 +25,13 @@ GetUserDivision.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-08-03 22:24:50</sys_created_on>
         <sys_id>960f4f7c1bb1b0107fd2cbfa234bcbea</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>GetUserDivision</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_include_960f4f7c1bb1b0107fd2cbfa234bcbea</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-04 19:11:40</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:49:15</sys_updated_on>
     </sys_script_include>
 </record_update>

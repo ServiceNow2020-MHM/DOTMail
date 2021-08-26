@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_sohd3_dotmail_dotmail" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:53</sys_created_on>
+            <sys_id>891b41391b8eb010eef0cb72604bcb60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+            <sys_update_name>sys_choice_x_sohd3_dotmail_dotmail_state</sys_update_name>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:34:53</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Open</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>091b41391b8eb010eef0cb72604bcb67</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:35:58</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pending</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>701b41391b8eb010eef0cb72604bcb60</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:35:58</sys_updated_on>
+            <value>-5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Completed Request</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>051b41391b8eb010eef0cb72604bcb87</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:34:53</sys_updated_on>
+            <value>20</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11b41391b8eb010eef0cb72604bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:34:53</sys_updated_on>
+            <value>30</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Approved - Ready to Finalize</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>811b41391b8eb010eef0cb72604bcb95</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:34:53</sys_updated_on>
+            <value>50</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not Approved - Re-submit</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-08-19 01:34:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>411b41391b8eb010eef0cb72604bcb9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-08-19 01:34:53</sys_updated_on>
+            <value>55</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

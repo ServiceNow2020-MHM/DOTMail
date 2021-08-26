@@ -3,8 +3,7 @@
         <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Use the GetOriginatorCompany Script Include to retrieve the Originator's Company/Department from the database when the Originator (from) value changes.&#13;
-NOTE:  Only use if  Letter From is changed from List to Reference type field.</description>
+        <description>Use the GetOriginatorCompany Script Include to retrieve the Originator's Company/Department from the database when the Originator (from) value changes.</description>
         <field>u_letter_from</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
@@ -44,7 +43,7 @@ NOTE:  Only use if  Letter From is changed from List to Reference type field.</d
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b4d603791b35b0107fd2cbfa234bcbb9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Set Originator Company</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -52,7 +51,7 @@ NOTE:  Only use if  Letter From is changed from List to Reference type field.</d
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_b4d603791b35b0107fd2cbfa234bcbb9</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-07 00:47:44</sys_updated_on>
+        <sys_updated_on>2021-08-10 19:00:40</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

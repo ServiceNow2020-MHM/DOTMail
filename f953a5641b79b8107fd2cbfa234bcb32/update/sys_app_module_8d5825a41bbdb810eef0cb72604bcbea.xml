@@ -17,14 +17,14 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_sohd3_dotmail.dotmail_user</roles>
+        <roles>x_sohd3_dotmail.administrators,x_sohd3_dotmail.contributers</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-08-02 20:19:52</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8d5825a41bbdb810eef0cb72604bcbea</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>DOTMail - Create New Record</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_app_module_8d5825a41bbdb810eef0cb72604bcbea</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-06 00:44:38</sys_updated_on>
+        <sys_updated_on>2021-08-12 22:14:35</sys_updated_on>
         <timeline_page/>
         <title>DOTMail - Create New Record</title>
         <uncancelable>false</uncancelable>

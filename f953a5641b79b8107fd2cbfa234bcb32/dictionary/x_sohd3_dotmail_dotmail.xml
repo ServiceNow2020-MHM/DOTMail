@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="2" type="collection">
+    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="4" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" hint="Specify the action you are requesting from a list of choices.  The choices are dependent upon the request type selected." label="Action requested" max_length="40" name="u_action_requested" type="string">
             <choice>
                 <element inactive="true" inactive_on_update="true" label="Appropriate Action" sequence="0" value="appropriate action"/>
@@ -32,19 +32,20 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" hint="The Division of the log's Author.  Auto-populated and is read only." label="Division" max_length="40" name="u_division" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Document(s) mailed date" max_length="40" name="u_documents_mailed_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" hint="Date that the physical copies of the document(s) are routed." label="Document(s) mailed date" max_length="40" name="u_documents_mailed_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" hint="Used for identification and reference to outgoing mail originating from an office." label="DOT letter number" max_length="40" name="u_dot_letter_number" type="string"/>
+        <element attributes="encode_utf8=false" dynamic_creation="true" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence originated from." label="Letter originated from" max_length="32" name="u_from" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="From Company" max_length="40" name="u_from_company" type="string"/>
         <element attributes="edge_encryption_enabled=true" hint="Identification and reference to mail from the Governor's Office.    " label="Governor referral number" max_length="40" name="u_gov_ref_number" type="string"/>
-        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" hint="Who the correspondence is addressed to." label="Letter addressed to" max_length="1024" name="u_letter_addressed_to" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" hint="Who the correspondence is addressed to." label="Letter addressed to list" max_length="1024" name="u_letter_addressed_to" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
         <element attributes="edge_encryption_enabled=true" hint="The date found on the correspondence." label="Letter date" max_length="40" name="u_letter_date" type="glide_date"/>
-        <element attributes="no_sort=true,slushbucket_ref_no_expand=false" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence originated from." label="Letter from" max_length="1024" name="u_letter_from" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=false" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence originated from." label="Letter from list" max_length="1024" name="u_letter_from" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:new GlideDateTime().getDisplayValue()" hint="The date the correspondence was loggeed.   Auto-populated and is read only." label="Log Date" mandatory="true" max_length="40" name="u_log_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" hint="The Office/Section of the log's Author.  Auto-populated and is read only." label="Office/Section" max_length="40" name="u_office_section" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element attributes="edge_encryption_enabled=true" hint="Can contain any other identification of mail, i.e., Invoice number or purchase order number." label="Other letter number" max_length="40" name="u_other_letter_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" hint="User can copy and paste the URL of a related  DOTMail record." label="Related document link" max_length="1024" name="u_related_doclink" type="url"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="journal entry only" hint="Specify the type of mail request from a list of choices." label="Request type" max_length="40" name="u_request_type" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="journal entry only" hint="Specify the type of mail request from a list of choices.  Cannot be changed after the document has been saved." label="Request type" max_length="40" name="u_request_type" type="string">
             <choice>
                 <element inactive_on_update="false" label="Journal Entry Only" sequence="0" value="journal entry only"/>
                 <element inactive_on_update="false" label="No Response Required" sequence="1" value="no response required"/>
@@ -55,9 +56,8 @@
                 <element inactive_on_update="false" label="Letter Approval Request" sequence="6" value="letter approval request"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_14" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_16" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Division" max_length="40" name="u_string_4" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_when_needed" type="glide_date"/>
+        <element attributes="encode_utf8=false" dynamic_creation="true" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence was addressed to." label="Letter addressed to" max_length="32" name="u_to" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" hint="Default value is currently set to 10 business days from &quot;today&quot;.   Value can be changed." label="When needed" max_length="40" name="u_when_needed" type="glide_date"/>
     </element>
 </database>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>x_sohd3_dotmail_u_imp_tmpl_mail_list</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_sohd3_dotmail_x_sohd3_dotmail_u_imp_tmpl_mail_listx_sohd3_dotmail_u_imp_tmpl_m</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">5f3588a687032010fbe1b9d6cebb35ec</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-11 21:53:22</sys_created_on>
+        <sys_id>f154d4e31bbdf8107fd2cbfa234bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sohd3_dotmail_u_imp_tmpl_mail_list</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_db_object_f154d4e31bbdf8107fd2cbfa234bcb9a</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-11 21:53:22</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_sohd3_dotmail.x_sohd3_dotmail_u_imp_tmpl_mail_list_user" name="x_sohd3_dotmail.x_sohd3_dotmail_u_imp_tmpl_mail_list_user">eb3550af1b7df8107fd2cbfa234bcb08</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_db_object_f154d4e31bbdf8107fd2cbfa234bcb9a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access>public</access><actions_access>false</actions_access><alter_access>false</alter_access><caller_access/><client_scripts_access>false</client_scripts_access><configuration_access>false</configuration_access><create_access>false</create_access><create_access_controls>true</create_access_controls><delete_access>false</delete_access><extension_model/><is_extendable>false</is_extendable><label>x_sohd3_dotmail_u_imp_tmpl_mail_list</label><live_feed_enabled>false</live_feed_enabled><name>x_sohd3_dotmail_x_sohd3_dotmail_u_imp_tmpl_mail_listx_sohd3_dotmail_u_imp_tmpl_m</name><number_ref/><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class display_value="Import Set Row" name="sys_import_set_row">5f3588a687032010fbe1b9d6cebb35ec</super_class><sys_class_code/><sys_class_name>sys_db_object</sys_class_name><sys_class_path/><sys_created_by>moody_admin</sys_created_by><sys_created_on>2021-08-11 21:53:22</sys_created_on><sys_id>f154d4e31bbdf8107fd2cbfa234bcb9a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_sohd3_dotmail_u_imp_tmpl_mail_list</sys_name><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sys_db_object_f154d4e31bbdf8107fd2cbfa234bcb9a</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2021-08-11 21:53:22</sys_updated_on><update_access>false</update_access><user_role display_value="x_sohd3_dotmail.x_sohd3_dotmail_u_imp_tmpl_mail_list_user" name="x_sohd3_dotmail.x_sohd3_dotmail_u_imp_tmpl_mail_list_user">eb3550af1b7df8107fd2cbfa234bcb08</user_role><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+        <payload_hash>-250414925</payload_hash>
+        <record_name>x_sohd3_dotmail_u_imp_tmpl_mail_list</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-11 21:53:23</sys_created_on>
+        <sys_id>404554e71bbdf8107fd2cbfa234bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b3734a9680000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-11 21:53:23</sys_updated_on>
+        <type>Table</type>
+        <update_guid>884554e7cebdf810b95493ea7b63b7bb</update_guid>
+        <update_guid_history>884554e7cebdf810b95493ea7b63b7bb:-250414925</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-11 21:59:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>8732546e35794673b325af1bf98dcf91</sys_id>
+        <sys_metadata>f154d4e31bbdf8107fd2cbfa234bcb9a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sohd3_dotmail_u_imp_tmpl_mail_list</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_db_object_f154d4e31bbdf8107fd2cbfa234bcb9a</sys_update_name>
+        <sys_update_version display_value="sys_db_object_f154d4e31bbdf8107fd2cbfa234bcb9a">404554e71bbdf8107fd2cbfa234bcbbc</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-11 21:59:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

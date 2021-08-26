@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="u_imp_tmpl_mail_list" max_length="40" name="x_sohd3_dotmail_u_imp_tmpl_mail_list" sizeclass="0" type="collection">
+        <element label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element label="Company" max_length="100" name="u_company" type="string"/>
+        <element label="Name" max_length="100" name="u_name" type="string"/>
+        <element label="Title" max_length="100" name="u_title" type="string"/>
+    </element>
+</database>
