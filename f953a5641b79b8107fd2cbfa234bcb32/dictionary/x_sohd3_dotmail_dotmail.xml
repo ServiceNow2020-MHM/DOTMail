@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="4" type="collection">
+    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="0" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" hint="Specify the action you are requesting from a list of choices.  The choices are dependent upon the request type selected." label="Action requested" max_length="40" name="u_action_requested" type="string">
             <choice>
                 <element inactive="true" inactive_on_update="true" label="Appropriate Action" sequence="0" value="appropriate action"/>
@@ -58,6 +58,6 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="Division" max_length="40" name="u_string_4" type="string"/>
         <element attributes="encode_utf8=false" dynamic_creation="true" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence was addressed to." label="Letter addressed to" max_length="32" name="u_to" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" hint="Default value is currently set to 10 business days from &quot;today&quot;.   Value can be changed." label="When needed" max_length="40" name="u_when_needed" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" hint="Default value is based on the Request Type selected." label="When needed" max_length="40" name="u_when_needed" type="glide_date"/>
     </element>
 </database>

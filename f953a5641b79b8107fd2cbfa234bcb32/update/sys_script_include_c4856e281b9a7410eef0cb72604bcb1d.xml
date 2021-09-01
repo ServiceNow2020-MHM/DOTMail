@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_sohd3_dotmail.setDefault</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>setDefault</name>
+        <script><![CDATA[var setDefault = Class.create();
+
+setDefault.prototype = {
+    initialize: function() {},
+    getDefaultValue: function(current) {
+        if (current.u_request_type == 'journal entry only' || current.u_request_type == 'no response required' || current.u_request_type == 'response requested - no due date') {
+            //gs.info('DOTMail: When needed is not needed for: ' + current.u_request_type);
+            return '';
+        } else if (current.u_request_type == 'response requested - with due date' || current.u_request_type == 'dir_signature' || current.u_request_type == 'gov referral request' || current.u_request_type == 'letter approval request') {
+
+            var dueDays = 10;  // default to 10 days
+
+            if (current.u_request_type == 'response requested - with due date') {
+                dueDays = 1;
+            }
+            if (current.u_request_type == 'dir_signature') {
+                dueDays = 2;
+            }
+            if (current.u_request_type == 'gov referral request') {
+                dueDays = 3;
+            }
+            if (current.u_request_type == 'letter approval request') {
+                dueDays = 4;
+            }
+            gs.info('DOTMail: The number of days from today used for due date calculation is: ' + current.u_request_type + ' ' + dueDays);
+
+            var nowGdt = new GlideDateTime();
+            var myScheduleName = '8-5 weekdays';
+            var dueWorkingHours = 8;
+            var dueSeconds = dueDays * dueWorkingHours * 60 * 60;
+            var leadTime = new GlideDuration(dueSeconds * 1000);
+            var dueDateGdt;
+            var schedRec = new GlideRecord('cmn_schedule');
+
+            if (schedRec.get('name', myScheduleName)) {
+                var sched = new GlideSchedule(schedRec.sys_id);
+                dueDateGdt = sched.add(nowGdt, leadTime, '');
+            }
+            return dueDateGdt;
+        }
+    },
+    type: 'setDefault'
+	
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-27 21:26:13</sys_created_on>
+        <sys_id>c4856e281b9a7410eef0cb72604bcb1d</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>setDefault</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_c4856e281b9a7410eef0cb72604bcb1d</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 19:15:44</sys_updated_on>
+    </sys_script_include>
+</record_update>

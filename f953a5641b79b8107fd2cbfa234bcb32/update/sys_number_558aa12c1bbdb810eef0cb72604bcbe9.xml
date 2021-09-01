@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
     <sys_number action="INSERT_OR_UPDATE">
         <category display_value="" name="x_sohd3_dotmail_dotmail">x_sohd3_dotmail_dotmail</category>
-        <maximum_digits>8</maximum_digits>
+        <maximum_digits>7</maximum_digits>
         <number>0</number>
         <prefix>MAIL</prefix>
         <sys_class_name>sys_number</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-08-02 20:24:09</sys_created_on>
         <sys_id>558aa12c1bbdb810eef0cb72604bcbe9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>MAIL</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_number_558aa12c1bbdb810eef0cb72604bcbe9</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-02 20:34:03</sys_updated_on>
+        <sys_updated_on>2021-09-01 01:24:18</sys_updated_on>
     </sys_number>
 </record_update>
