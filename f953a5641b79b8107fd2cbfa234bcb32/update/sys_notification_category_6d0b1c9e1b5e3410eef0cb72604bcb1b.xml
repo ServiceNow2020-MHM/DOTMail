@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_category">
+    <sys_notification_category action="INSERT_OR_UPDATE">
+        <name>DOTMail</name>
+        <short_description/>
+        <sys_class_name>sys_notification_category</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-01 21:37:48</sys_created_on>
+        <sys_id>6d0b1c9e1b5e3410eef0cb72604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DOTMail</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_notification_category_6d0b1c9e1b5e3410eef0cb72604bcb1b</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 21:37:48</sys_updated_on>
+    </sys_notification_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=6d0b1c9e1b5e3410eef0cb72604bcb1b"/>
+</record_update>

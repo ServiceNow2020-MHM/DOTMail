@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_when_needed</field>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 21:20:55</sys_created_on>
+        <sys_id>72a021ee1b5230107fd2cbfa234bcb81</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>u_when_needed</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_policy_action_72a021ee1b5230107fd2cbfa234bcb81</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 21:25:26</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <ui_policy display_value="When Needed - Mandatory">d04021ae1b5230107fd2cbfa234bcb68</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_ui_policy_action_72a021ee1b5230107fd2cbfa234bcb81</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>u_when_needed</field><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2021-09-02 21:20:55</sys_created_on><sys_id>72a021ee1b5230107fd2cbfa234bcb81</sys_id><sys_mod_count>3</sys_mod_count><sys_name>u_when_needed</sys_name><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sys_ui_policy_action_72a021ee1b5230107fd2cbfa234bcb81</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2021-09-02 21:25:26</sys_updated_on><table>x_sohd3_dotmail_dotmail</table><ui_policy display_value="When Needed - Mandatory">d04021ae1b5230107fd2cbfa234bcb68</ui_policy><visible>ignore</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>693596141</payload_hash>
+        <record_name>u_when_needed</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 21:25:26</sys_created_on>
+        <sys_id>d9d1a5221b9230107fd2cbfa234bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba866fd180000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 21:25:26</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>d1d1a522f0923010bf16ad24307397c5</update_guid>
+        <update_guid_history>d1d1a522f0923010bf16ad24307397c5:693596141,7a4169ee965230101dd8c2b6d721ec75:-2030413272,0001a12261923010d0e8c7c468bf5269:-1793125805,43c069ae9a52301070d43f0366b67b44:1690479352</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 21:25:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>90c7e1fa0df04bd49750155249fc9790</sys_id>
+        <sys_metadata>72a021ee1b5230107fd2cbfa234bcb81</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_when_needed</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="">d04021ae1b5230107fd2cbfa234bcb68</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_72a021ee1b5230107fd2cbfa234bcb81</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_72a021ee1b5230107fd2cbfa234bcb81">d9d1a5221b9230107fd2cbfa234bcbc5</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 21:25:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

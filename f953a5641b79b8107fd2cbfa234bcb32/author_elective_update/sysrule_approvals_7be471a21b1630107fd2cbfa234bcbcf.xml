@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_approvals">
+    <sysrule_approvals action="DELETE">
+        <active>true</active>
+        <condition/>
+        <description/>
+        <group/>
+        <match_conditions>ALL</match_conditions>
+        <name>DOTMail Letter Approval = Requested</name>
+        <optional_group/>
+        <order>100</order>
+        <run_rule_before>true</run_rule_before>
+        <script/>
+        <set_state>requested</set_state>
+        <sys_class_name>sysrule_approvals</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 22:55:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7be471a21b1630107fd2cbfa234bcbcf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DOTMail Letter Approval = Requested</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sysrule_approvals_7be471a21b1630107fd2cbfa234bcbcf</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 22:56:17</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <user/>
+    </sysrule_approvals>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sysrule_approvals_7be471a21b1630107fd2cbfa234bcbcf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_approvals"><sysrule_approvals action="INSERT_OR_UPDATE"><active>true</active><condition/><description/><group/><match_conditions>ALL</match_conditions><name>DOTMail Letter Approval = Requested</name><optional_group/><order>100</order><run_rule_before>true</run_rule_before><script/><set_state>requested</set_state><sys_class_name>sysrule_approvals</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2021-09-02 22:55:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7be471a21b1630107fd2cbfa234bcbcf</sys_id><sys_mod_count>1</sys_mod_count><sys_name>DOTMail Letter Approval = Requested</sys_name><sys_overrides/><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sysrule_approvals_7be471a21b1630107fd2cbfa234bcbcf</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2021-09-02 22:56:17</sys_updated_on><table>x_sohd3_dotmail_dotmail</table><user/></sysrule_approvals></record_update>]]></payload>
+        <payload_hash>271378309</payload_hash>
+        <record_name>DOTMail Letter Approval = Requested</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 22:56:17</sys_created_on>
+        <sys_id>00a675261b1630107fd2cbfa234bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba8ba2a150000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 22:56:17</sys_updated_on>
+        <type>Approval Rules</type>
+        <update_guid>84a67526e9163010182ed9549ac95b99</update_guid>
+        <update_guid_history>84a67526e9163010182ed9549ac95b99:271378309,7d86b92671163010cfaca79f399dc0ad:-2032335905</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 23:04:17</sys_created_on>
+        <sys_db_object display_value="" name="sysrule_approvals">sysrule_approvals</sys_db_object>
+        <sys_id>135484972b544f85b3d5fed71d93cca9</sys_id>
+        <sys_metadata>7be471a21b1630107fd2cbfa234bcbcf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DOTMail Letter Approval = Requested</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sysrule_approvals_7be471a21b1630107fd2cbfa234bcbcf</sys_update_name>
+        <sys_update_version display_value="sysrule_approvals_7be471a21b1630107fd2cbfa234bcbcf">00a675261b1630107fd2cbfa234bcb9a</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 23:04:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="DOTMail" name="DOTMail">6d0b1c9e1b5e3410eef0cb72604bcb1b</category>
+        <collection>x_sohd3_dotmail_dotmail</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>triggered</generation_type>
+        <importance/>
+        <include_attachments>true</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 10pt; font-family: verdana, geneva;">As requested, a revised version of the new letter draft has been attached. &nbsp;Please review the attached revised letter and either accept or reject the draft. &nbsp;Please note that if there is a due date you are requested to complete this request on or before the due date.&nbsp;</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">To avoid reminder notices, please change the Approval field to "Approved" or "Rejected" after you have completed the assigned task.</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">This is the Task Information:</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Request type: ${u_request_type}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Action requested: ${u_action_requested}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;When needed: ${u_when_needed}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">Here is the Correspondence Information:</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;DOTMail number: ${number}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Letter date: ${u_letter_date}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Letter originated from: ${u_from.name}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Letter addressed to: ${u_to.name}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Letter Subject: ${short_description}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">Click here to view the DOTMail record: &nbsp;${URI_REF}</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">Or click on this link to view the DOTMail record in the portal:&nbsp;&nbsp;<a title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_only&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id}">Link</a></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">Thank You,</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">${opened_by.first_name}</span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Revised Letter Approval Request</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>assigned_to,group_list,additional_assignee_list</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>New Letter Approval Request (Revised):  ${u_action_requested} </subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-03 19:15:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d24d0afe1b5ab010eef0cb72604bcbf3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Revised Letter Approval Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sysevent_email_action_d24d0afe1b5ab010eef0cb72604bcbf3</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-03 21:09:11</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

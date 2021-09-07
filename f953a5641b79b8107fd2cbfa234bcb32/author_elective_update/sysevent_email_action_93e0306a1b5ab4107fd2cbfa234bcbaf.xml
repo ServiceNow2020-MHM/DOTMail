@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="DELETE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>false</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="DOTMail" name="DOTMail">6d0b1c9e1b5e3410eef0cb72604bcb1b</category>
+        <collection>x_sohd3_dotmail_dotmail</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>triggered</generation_type>
+        <importance/>
+        <include_attachments>true</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 10pt; font-family: verdana, geneva;">A new DOTMail record has been created and a task has been assigned to you.&nbsp; Please note that <span style="text-decoration: underline;"><strong>there is a&nbsp;due date</strong></span>, please complete this request on or before the due date.&nbsp; </span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">To avoid reminder notices, please change the State field to "<strong><span style="text-decoration: underline;">Completed Request</span></strong>" after you have completed the assigned task.</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">This is the Task Information:</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Request type: ${u_request_type}<br /></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Action requested: ${u_action_requested}<br /></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;When needed: ${u_when_needed}<br /><br /></span><span style="font-family: verdana, geneva; font-size: 10pt;">Here is the Correspondence Information:</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;DOTMail number: ${number}</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter date: ${u_letter_date}<br /></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter originated from: ${u_from.name}<br /></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter addressed to: ${u_to.name}<br /></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter Subject: ${short_description}</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Click here to view the DOTMail record:&nbsp; ${URI_REF}</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Or click here to view the DOTMail record in the portal:&nbsp; <a title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_only&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id }">Link</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Thank You,</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">${opened_by.first_name}</span></p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Response Requested - With Due Date</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>assigned_to,group_list,additional_assignee_list</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>New DOTMail Notification:  ${u_action_requested}  Due by: ${u_when_needed}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 17:51:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93e0306a1b5ab4107fd2cbfa234bcbaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Response Requested - With Due Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sysevent_email_action_93e0306a1b5ab4107fd2cbfa234bcbaf</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 18:54:43</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sysevent_email_action_93e0306a1b5ab4107fd2cbfa234bcbaf</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_email_action"&gt;&lt;sysevent_email_action action="INSERT_OR_UPDATE"&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;advanced_condition/&gt;&lt;affected_field_on_event/&gt;&lt;category display_value="DOTMail" name="DOTMail"&gt;6d0b1c9e1b5e3410eef0cb72604bcb1b&lt;/category&gt;&lt;collection&gt;x_sohd3_dotmail_dotmail&lt;/collection&gt;&lt;condition/&gt;&lt;content_type&gt;text/html&lt;/content_type&gt;&lt;default_interval/&gt;&lt;description/&gt;&lt;digest_from/&gt;&lt;digest_html/&gt;&lt;digest_reply_to/&gt;&lt;digest_separator_html&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/digest_separator_html&gt;&lt;digest_separator_text&gt;&lt;![CDATA[\n--------------------------------------------------------------------------------\n]]&gt;&lt;/digest_separator_text&gt;&lt;digest_subject/&gt;&lt;digest_template/&gt;&lt;digest_text/&gt;&lt;digestable&gt;false&lt;/digestable&gt;&lt;event_name&gt;activate.life.cycle.migration&lt;/event_name&gt;&lt;event_parm_1&gt;false&lt;/event_parm_1&gt;&lt;event_parm_2&gt;false&lt;/event_parm_2&gt;&lt;exclude_delegates&gt;false&lt;/exclude_delegates&gt;&lt;force_delivery&gt;false&lt;/force_delivery&gt;&lt;from/&gt;&lt;generation_type&gt;triggered&lt;/generation_type&gt;&lt;importance/&gt;&lt;include_attachments&gt;true&lt;/include_attachments&gt;&lt;item&gt;event.parm1&lt;/item&gt;&lt;item_table/&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;&lt;span style="font-size: 10pt; font-family: verdana, geneva;"&gt;A new DOTMail record has been created and a task has been assigned to you.&amp;nbsp; Please note that &lt;span style="text-decoration: underline;"&gt;&lt;strong&gt;there is a&amp;nbsp;due date&lt;/strong&gt;&lt;/span&gt;, please complete this request on or before the due date.&amp;nbsp; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: verdana, geneva;"&gt;To avoid reminder notices, please change the State field to "&lt;strong&gt;&lt;span style="text-decoration: underline;"&gt;Completed Request&lt;/span&gt;&lt;/strong&gt;" after you have completed the assigned task.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: verdana, geneva;"&gt;This is the Task Information:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: verdana, geneva;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Request type: ${u_request_type}&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: verdana, geneva;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Action requested: ${u_action_requested}&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: verdana, geneva;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;When needed: ${u_when_needed}&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Here is the Correspondence Information:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;DOTMail number: ${number}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Letter date: ${u_letter_date}&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Letter originated from: ${u_from.name}&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Letter addressed to: ${u_to.name}&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Letter Subject: ${short_description}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Click here to view the DOTMail record:&amp;nbsp; ${URI_REF}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Or click here to view the DOTMail record in the portal:&amp;nbsp; &lt;a title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_only&amp;amp;table=x_sohd3_dotmail_dotmail&amp;amp;sys_id=${sys_id }"&gt;Link&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Thank You,&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;${opened_by.first_name}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Response Requested - With Due Date&lt;/name&gt;&lt;omit_watermark&gt;false&lt;/omit_watermark&gt;&lt;order&gt;100&lt;/order&gt;&lt;push_message_only&gt;false&lt;/push_message_only&gt;&lt;recipient_fields&gt;assigned_to,group_list,additional_assignee_list&lt;/recipient_fields&gt;&lt;recipient_groups/&gt;&lt;recipient_users/&gt;&lt;reply_to/&gt;&lt;send_self&gt;true&lt;/send_self&gt;&lt;sms_alternate/&gt;&lt;style/&gt;&lt;subject&gt;New DOTMail Notification:  ${u_action_requested}  Due by: ${u_when_needed}&lt;/subject&gt;&lt;subscribable&gt;false&lt;/subscribable&gt;&lt;sys_class_name&gt;sysevent_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-02 17:51:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;93e0306a1b5ab4107fd2cbfa234bcbaf&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Response Requested - With Due Date&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_action_93e0306a1b5ab4107fd2cbfa234bcbaf&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-02 18:54:43&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;template display_value="Unsubscribe and Preferences"&gt;7ed0481f3b0b2200c869c2c703efc487&lt;/template&gt;&lt;type&gt;email&lt;/type&gt;&lt;weight&gt;0&lt;/weight&gt;&lt;/sysevent_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1064373046</payload_hash>
+        <record_name>Response Requested - With Due Date</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 18:54:43</sys_created_on>
+        <sys_id>f55ffce21bdab4107fd2cbfa234bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba7dd00ee0000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 18:54:43</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>fd5ffce239dab4102ec925a37ba4ab26</update_guid>
+        <update_guid_history>fd5ffce239dab4102ec925a37ba4ab26:1064373046,97e0306aa35ab4103fd19e19697d3fb0:1095255635</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 20:59:13</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_action">sysevent_email_action</sys_db_object>
+        <sys_id>7fce192de2cd4bf88a54ed3834591484</sys_id>
+        <sys_metadata>93e0306a1b5ab4107fd2cbfa234bcbaf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Response Requested - With Due Date</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sysevent_email_action_93e0306a1b5ab4107fd2cbfa234bcbaf</sys_update_name>
+        <sys_update_version display_value="sysevent_email_action_93e0306a1b5ab4107fd2cbfa234bcbaf">f55ffce21bdab4107fd2cbfa234bcb27</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 20:59:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

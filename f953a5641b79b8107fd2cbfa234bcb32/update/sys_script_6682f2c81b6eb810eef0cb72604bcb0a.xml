@@ -3,26 +3,24 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_sohd3_dotmail_dotmail</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_sohd3_dotmail_dotmail">u_request_type=journal entry only^state=1^sys_updated_on&gt;javascript:gs.endOfLastWeek()^EQ<item display_value="Journal Entry Only" endquery="false" field="u_request_type" goto="false" newquery="false" operator="=" or="false" value="journal entry only"/>
-            <item display_value="Open" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="1"/>
-            <item endquery="false" field="sys_updated_on" goto="false" newquery="false" operator="&gt;" or="false" value="javascript:gs.endOfLastWeek()"/>
+        <filter_condition table="x_sohd3_dotmail_dotmail">u_action_requested=review and respond (resubmittal)^EQ<item display_value="Review and Respond (Resubmittal)" endquery="false" field="u_action_requested" goto="false" newquery="false" operator="=" or="false" value="review and respond (resubmittal)"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Set State to Closed Complete</name>
+        <name>Set Flow Vars for Resubmittals</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -38,21 +36,21 @@
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-08-16 23:47:48</sys_created_on>
+        <sys_created_on>2021-09-07 19:12:21</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>69ae5ac51bc67010eef0cb72604bcbf6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Set State to Closed Complete</sys_name>
+        <sys_id>6682f2c81b6eb810eef0cb72604bcb0a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Set Flow Vars for Resubmittals</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_script_69ae5ac51bc67010eef0cb72604bcbf6</sys_update_name>
+        <sys_update_name>sys_script_6682f2c81b6eb810eef0cb72604bcb0a</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-02 21:12:21</sys_updated_on>
-        <template>state=30^EQ</template>
+        <sys_updated_on>2021-09-07 19:14:03</sys_updated_on>
+        <template>state=-5^approval=requested^EQ</template>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=69ae5ac51bc67010eef0cb72604bcbf6"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=6682f2c81b6eb810eef0cb72604bcb0a"/>
 </record_update>

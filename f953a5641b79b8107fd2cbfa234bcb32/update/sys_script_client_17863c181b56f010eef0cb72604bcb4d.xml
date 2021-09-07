@@ -12,8 +12,8 @@
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 
-    // Exit the script if the new value of the Request type is empty
-    if (newValue == '') {
+    // Exit the script if this is not a new record or a new value of the Request type is empty
+    if (!g_form.isNewRecord() || newValue === '') {
         return;
     }
 
@@ -38,7 +38,7 @@
     } else if (newValue == 'letter approval request') {
         defaultdueDays = 4;
     }
-
+    //alert(defaultdueDays);
     //jslog('When Needed Date calculation is needed for: ' + whatNeeded);
 
     // Call script include to calculate the When needed date
@@ -46,7 +46,7 @@
     ga.addParam('sysparm_name', 'calculateDate'); // Script Include Function Name
     ga.addParam('sysparm_wdays', defaultdueDays); // Send the parameter to the script include
     //jslog('Pass this parameter to script include: ' + defaultdueDays);
-	// Send the request to the server
+    // Send the request to the server
     ga.getXML(populateUserFields);
 }
 // When the response is back from the server
@@ -54,8 +54,8 @@ function populateUserFields(response) {
     // Extract the info from the response, clear any value from the field, 
     // set new value in the  field
     var answer = response.responseXML.documentElement.getAttribute("answer");
-    alert(answer);
-	
+    //alert(answer);
+
     g_form.clearValue('u_when_needed');
     g_form.setValue('u_when_needed', answer);
 
@@ -66,7 +66,7 @@ function populateUserFields(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>17863c181b56f010eef0cb72604bcb4d</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>97</sys_mod_count>
         <sys_name>Set When Needed Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -74,7 +74,7 @@ function populateUserFields(response) {
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_17863c181b56f010eef0cb72604bcb4d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 21:18:33</sys_updated_on>
+        <sys_updated_on>2021-09-02 19:22:02</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

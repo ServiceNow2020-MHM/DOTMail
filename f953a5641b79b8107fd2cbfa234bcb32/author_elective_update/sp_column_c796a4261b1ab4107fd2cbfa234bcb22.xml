@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">4f962ce21b1ab4107fd2cbfa234bcb04</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 17:06:41</sys_created_on>
+        <sys_id>c796a4261b1ab4107fd2cbfa234bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sp_column_c796a4261b1ab4107fd2cbfa234bcb22</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 17:06:41</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sp_column_c796a4261b1ab4107fd2cbfa234bcb22</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">4f962ce21b1ab4107fd2cbfa234bcb04</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2021-09-02 17:06:41</sys_created_on><sys_id>c796a4261b1ab4107fd2cbfa234bcb22</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sp_column_c796a4261b1ab4107fd2cbfa234bcb22</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2021-09-02 17:06:41</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-1651340328</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 17:06:41</sys_created_on>
+        <sys_id>8b96a4261b1ab4107fd2cbfa234bcb24</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba77a15730000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 17:06:41</sys_updated_on>
+        <type>Column</type>
+        <update_guid>c396a4267d1ab4107df631b50deca924</update_guid>
+        <update_guid_history>c396a4267d1ab4107df631b50deca924:-1651340328</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">2f69e82a1b1ab4107fd2cbfa234bcb97</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-02 17:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>26f9acb9ef12455e8747a091824680e4</sys_id>
+        <sys_metadata>c796a4261b1ab4107fd2cbfa234bcb22</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sp_column_c796a4261b1ab4107fd2cbfa234bcb22</sys_update_name>
+        <sys_update_version display_value="sp_column_c796a4261b1ab4107fd2cbfa234bcb22">8b96a4261b1ab4107fd2cbfa234bcb24</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 17:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
