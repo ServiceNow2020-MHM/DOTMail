@@ -35,22 +35,24 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p><span style="font-size: 10pt; font-family: verdana, geneva;">A DOTMail record has been created and a draft of a new letter has been attached.&nbsp; Please review the attached letter and either accept or reject the draft.&nbsp; Please note that <span style="text-decoration: underline;"><strong>if</strong> <strong>there is a due date</strong></span> you are requested to complete this request on or before the due date.&nbsp; </span></p>
-<p><span style="font-size: 10pt; font-family: verdana, geneva;">To avoid reminder notices, please change the Approval field to "<span style="text-decoration: underline;"><strong>Approved</strong></span>" or "<strong><span style="text-decoration: underline;">Rejected</span></strong>" after you have completed the assigned task.</span></p>
-<p><span style="font-size: 10pt; font-family: verdana, geneva;">This is the Task Information:</span></p>
-<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Request type: ${u_request_type}<br /></span></p>
-<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;Action requested: ${u_action_requested}<br /></span></p>
-<p><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp;When needed: ${u_when_needed}<br /><br /></span><span style="font-family: verdana, geneva; font-size: 10pt;">Here is the Correspondence Information:</span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;DOTMail number: ${number}</span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter date: ${u_letter_date}<br /></span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter originated from: ${u_from.name}<br /></span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter addressed to: ${u_to.name}<br /></span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp; &nbsp; &nbsp; &nbsp;Letter Subject: ${short_description}</span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">Click here to view the DOTMail record:&nbsp; ${URI_REF}</span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">Or click on this link to view the DOTMail record in the portal:&nbsp; <a title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_only&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id}">Link</a></span></p>
+        <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;"><img style="align: baseline;" src="DOTMail%20Banner.jpgx" width="1280" height="182" align="baseline" /></span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">A DOTMail record has been created and a draft of a new letter has been attached.&nbsp; Please review the attached letter and either accept or reject the draft.&nbsp; Please note that <span style="text-decoration: underline;"><strong>if</strong> <strong>there is a due date</strong></span> you are requested to complete this request on or before the due date.&nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">To avoid reminder notices, please change the Approval field to "<span style="text-decoration: underline;"><strong>Approved</strong></span>" or "<strong><span style="text-decoration: underline;">Rejected</span></strong>" after you have completed the assigned task.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></p>
+<p><span style="text-decoration: underline; font-family: arial, helvetica, sans-serif;"><span style="font-size: 12pt; color: #333333; text-decoration: underline;">This is the Task Information:</span></span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Request type:</strong> ${u_request_type}<br /></span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Action requested</strong>: ${u_action_requested}<br /></span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Due On:</strong> <span style="color: #ff0000;"><strong>${u_when_needed}</strong></span><br /><br /><span style="text-decoration: underline;">Here is the Correspondence Information:</span></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>DOTMail number: </strong><span style="color: #000000;">${number}</span></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Letter date:</strong> ${u_letter_date}<br /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">&nbsp; &nbsp; &nbsp; <strong>&nbsp;Letter originated from:</strong> ${u_from.name}<br /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Letter addressed to:</strong> ${u_to.name}<br /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Letter Subject:</strong> ${short_description}</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">Click here to view the DOTMail record:&nbsp; <span style="color: #3366ff;"><strong>${URI_REF}</strong></span></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">Or click on this link to view the DOTMail record in the portal:&nbsp; <span style="color: #3366ff;"><strong><a style="color: #3366ff;" title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_only&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id}">Link</a></strong></span></span></p>
 <p>&nbsp;</p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">Thank You,</span></p>
-<p><span style="font-family: verdana, geneva; font-size: 10pt;">${opened_by.first_name}</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">Thank You,</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #333333;">${opened_by.first_name}</span></p>
 <p>&nbsp;</p>]]></message_html>
         <message_list/>
         <message_text/>
@@ -73,7 +75,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>11fb6da21bd230107fd2cbfa234bcba4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Letter Approval Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -81,7 +83,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_11fb6da21bd230107fd2cbfa234bcba4</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 19:06:23</sys_updated_on>
+        <sys_updated_on>2021-09-09 22:47:07</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

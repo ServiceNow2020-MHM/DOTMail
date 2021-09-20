@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Sets a default date in the When Needed field based on the Request Type selected.</description>
+        <description/>
         <field>u_request_type</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Set When Needed Date</name>
+        <name>Set When Needed Date based on Request Ty</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-
-    // Exit the script if this is not a new record or a new value of the Request type is empty
-    if (!g_form.isNewRecord() || newValue === '') {
+    if (isLoading || newValue === '') {
         return;
     }
 
@@ -27,39 +25,38 @@
     }
 
     // Call script include to calculate the When needed date
-    var ga = new GlideAjax('x_sohd3_dotmail.setDefault'); // Instantiate the Script Include
+    var ga = new GlideAjax('x_sohd3_dotmail.setDefaultDate'); // Instantiate the Script Include
     ga.addParam('sysparm_name', 'getDefaultValue'); // Script Include Function Name
     ga.addParam('sysparm_u_request_type', newValue); // Script Include Function Name
     //ga.addParam('sysparm_wdays', defaultdueDays); // Send the parameter to the script include
     // Send the request to the server
     ga.getXML(populateUserFields);
-    }
-    // When the response is back from the server
-    function populateUserFields(response) {
-        // Extract the info from the response, clear any value from the field, 
-        // set new value in the  field
-        var answer = response.responseXML.documentElement.getAttribute("answer");
-        alert(answer);
-        //alert(answer);
+}
+// When the response is back from the server
+function populateUserFields(response) {
+    // Extract the info from the response, clear any value from the field, 
+    // set new value in the  field
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+    //alert(answer);
 
-        g_form.clearValue('u_when_needed');
-        g_form.setValue('u_when_needed', answer);
- }]]></script>
+    g_form.clearValue('u_when_needed');
+    g_form.setValue('u_when_needed', answer);
+}]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
-        <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-08-26 19:02:32</sys_created_on>
+        <sys_created_by>karim_admin</sys_created_by>
+        <sys_created_on>2021-09-16 02:06:18</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>17863c181b56f010eef0cb72604bcb4d</sys_id>
-        <sys_mod_count>107</sys_mod_count>
-        <sys_name>Set When Needed Date</sys_name>
+        <sys_id>269e953e1b263050eef0cb72604bcbbd</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Set When Needed Date based on Request Ty</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_script_client_17863c181b56f010eef0cb72604bcb4d</sys_update_name>
+        <sys_update_name>sys_script_client_269e953e1b263050eef0cb72604bcbbd</sys_update_name>
         <sys_updated_by>karim_admin</sys_updated_by>
-        <sys_updated_on>2021-09-16 02:15:59</sys_updated_on>
+        <sys_updated_on>2021-09-16 02:34:17</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -3,38 +3,41 @@
         <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Prevent user from changing the Request Type after the Mail Document has been created.</description>
-        <field>u_request_type</field>
+        <description>Change the value of  State to Pending and Approval to Requested.</description>
+        <field>u_action_requested</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
-        <messages>Cannot change the Request Type after the Mail Document has been created.  You must create a new Mail Document with a new Request Type.</messages>
-        <name>Make Read Only On Change</name>
+        <messages/>
+        <name>Set Flow Vars for Resubmittals</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-	// identifies whether the change occurs as part of a form load or not.
-    if (isLoading || newValue === '') {
-        return;
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+	// 
+    if (g_form.getValue('u_action_requested') == 'review and respond (resubmittal)') {
+      //Set the result field on the form.     
+        g_form.setValue('state', -5);
+		g_form.setValue('approval', 'requested');
     }
-    // Check if its not a new record, basically you are checking if you already saved it
-    if (!g_form.isNewRecord()) {
-        g_form.setReadonly('u_request_type', true);
-    }
+   
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-08-16 21:47:14</sys_created_on>
+        <sys_created_on>2021-09-08 18:08:49</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>99a1c68d1bc27010eef0cb72604bcb1c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Make Read Only On Change</sys_name>
+        <sys_id>c93c2f941b6e70107fd2cbfa234bcb88</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Set Flow Vars for Resubmittals</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c</sys_update_name>
+        <sys_update_name>sys_script_client_c93c2f941b6e70107fd2cbfa234bcb88</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-08 19:33:18</sys_updated_on>
+        <sys_updated_on>2021-09-16 20:41:10</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
