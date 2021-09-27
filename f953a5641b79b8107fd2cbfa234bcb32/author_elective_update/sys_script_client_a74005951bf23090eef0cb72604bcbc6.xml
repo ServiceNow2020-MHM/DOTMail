@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_action_requested</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Hide  Action  and Routing Section</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    //Type appropriate comment here, and begin script below
+
+    var actionRequested = g_form.getValue('u_action_requested');
+    if (actionRequested == 'journal entry only') {
+        g_form.setSectionDisplay('Action_and_Routing_Information', false);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-23 18:26:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a74005951bf23090eef0cb72604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hide  Action  and Routing Section</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_a74005951bf23090eef0cb72604bcbc6</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-23 18:26:03</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_client_a74005951bf23090eef0cb72604bcbc6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_action_requested&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Hide  Action  and Routing Section&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    //Type appropriate comment here, and begin script below
+
+    var actionRequested = g_form.getValue('u_action_requested');
+    if (actionRequested == 'journal entry only') {
+        g_form.setSectionDisplay('Action_and_Routing_Information', false);
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-23 18:26:03&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a74005951bf23090eef0cb72604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Hide  Action  and Routing Section&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_a74005951bf23090eef0cb72604bcbc6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-23 18:26:03&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1821220854</payload_hash>
+        <record_name>Hide  Action  and Routing Section</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-23 18:26:03</sys_created_on>
+        <sys_id>922281991bf23090eef0cb72604bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c13e84dd10000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-23 18:26:03</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>da228199b4f2309044fcf10bad6537ac</update_guid>
+        <update_guid_history>da228199b4f2309044fcf10bad6537ac:1821220854</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-23 18:27:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0d94b7b9df8b489083cf8cbc0e854524</sys_id>
+        <sys_metadata>a74005951bf23090eef0cb72604bcbc6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hide  Action  and Routing Section</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_client_a74005951bf23090eef0cb72604bcbc6</sys_update_name>
+        <sys_update_version display_value="sys_script_client_a74005951bf23090eef0cb72604bcbc6">922281991bf23090eef0cb72604bcbad</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-23 18:27:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

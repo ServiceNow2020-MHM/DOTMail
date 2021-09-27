@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_sohd3_dotmail.setDefault</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Called by Sent When Needed Date Client Script to calculate a due date based on the number of days defined for each Request Type defined on the Client Script.  Needed to place this code on Server Side because GlideDateTime() is a Server Side class.</description>
+        <name>setDefault</name>
+        <script><![CDATA[var setDefault = Class.create();
+setDefault.prototype = {
+    initialize: function() {},
+
+    getDefaultValue: function() {
+
+        var u_request_type = this.getParameter('sysparm_u_request_type');
+
+        return 'u_request_type';
+
+
+        //         if (u_request_type == 'journal entry only' || u_request_type == 'no response required' || u_request_type == 'response requested - no due date') {
+        //             return '';
+        //         } else if (u_request_type == 'response requested' || u_request_type == 'dir_signature' || u_request_type == 'gov referral request' || u_request_type == 'letter approval request') {
+        //             var dueDays = 10;
+        //             if (u_request_type == 'response requested') {
+        //                 dueDays = 3;
+        //             }
+        //             if (u_request_type == 'dir_signature') {
+        //                 dueDays = 5;
+        //             }
+        //             if (u_request_type == 'gov referral request') {
+        //                 dueDays = 10;
+        //             }
+        //             if (u_request_type == 'letter approval request') {
+        //                 dueDays = 15;
+        //             }
+        //             var nowGdt = new GlideDateTime();
+        //             var myScheduleName = '8-5 weekdays';
+
+        //             var dueWorkingHours = 8;
+        //             var dueSeconds = dueDays * dueWorkingHours * 60 * 60;
+        //             var leadTime = new GlideDuration(dueSeconds * 1000);
+        //             var dueDateGdt;
+        //             var schedRec = new GlideRecord('cmn_schedule');
+        //             if (schedRec.get('name', myScheduleName)) {
+        //                 var sched = new GlideSchedule(schedRec.sys_id);
+        //                 dueDateGdt = sched.add(nowGdt, leadTime, '');
+        //             }
+
+        //             var date = dueDateGdt.getDate();
+        //             date = date.toString().split('-');
+        //             var year = date[0];
+        //             var month = date[1];
+        //             var day = date[2];
+        //             var fDate = month + '-' + day + '-' + year;
+
+        //             return fDate;
+        //         }
+
+    },
+
+    type: 'setDefault'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-26 23:18:07</sys_created_on>
+        <sys_id>2d15f9141b1ef010eef0cb72604bcbf0</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>setDefault</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_2d15f9141b1ef010eef0cb72604bcbf0</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 21:52:27</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_include_2d15f9141b1ef010eef0cb72604bcbf0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_sohd3_dotmail.setDefault&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Called by Sent When Needed Date Client Script to calculate a due date based on the number of days defined for each Request Type defined on the Client Script.  Needed to place this code on Server Side because GlideDateTime() is a Server Side class.&lt;/description&gt;&lt;name&gt;setDefault&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var setDefault = Class.create();
+setDefault.prototype = {
+    initialize: function() {},
+
+    getDefaultValue: function() {
+
+        var u_request_type = this.getParameter('sysparm_u_request_type');
+
+        return 'u_request_type';
+
+
+        //         if (u_request_type == 'journal entry only' || u_request_type == 'no response required' || u_request_type == 'response requested - no due date') {
+        //             return '';
+        //         } else if (u_request_type == 'response requested' || u_request_type == 'dir_signature' || u_request_type == 'gov referral request' || u_request_type == 'letter approval request') {
+        //             var dueDays = 10;
+        //             if (u_request_type == 'response requested') {
+        //                 dueDays = 3;
+        //             }
+        //             if (u_request_type == 'dir_signature') {
+        //                 dueDays = 5;
+        //             }
+        //             if (u_request_type == 'gov referral request') {
+        //                 dueDays = 10;
+        //             }
+        //             if (u_request_type == 'letter approval request') {
+        //                 dueDays = 15;
+        //             }
+        //             var nowGdt = new GlideDateTime();
+        //             var myScheduleName = '8-5 weekdays';
+
+        //             var dueWorkingHours = 8;
+        //             var dueSeconds = dueDays * dueWorkingHours * 60 * 60;
+        //             var leadTime = new GlideDuration(dueSeconds * 1000);
+        //             var dueDateGdt;
+        //             var schedRec = new GlideRecord('cmn_schedule');
+        //             if (schedRec.get('name', myScheduleName)) {
+        //                 var sched = new GlideSchedule(schedRec.sys_id);
+        //                 dueDateGdt = sched.add(nowGdt, leadTime, '');
+        //             }
+
+        //             var date = dueDateGdt.getDate();
+        //             date = date.toString().split('-');
+        //             var year = date[0];
+        //             var month = date[1];
+        //             var day = date[2];
+        //             var fDate = month + '-' + day + '-' + year;
+
+        //             return fDate;
+        //         }
+
+    },
+
+    type: 'setDefault'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-26 23:18:07&lt;/sys_created_on&gt;&lt;sys_id&gt;2d15f9141b1ef010eef0cb72604bcbf0&lt;/sys_id&gt;&lt;sys_mod_count&gt;45&lt;/sys_mod_count&gt;&lt;sys_name&gt;setDefault&lt;/sys_name&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_2d15f9141b1ef010eef0cb72604bcbf0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-16 21:52:27&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1706035470</payload_hash>
+        <record_name>setDefault</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-16 21:52:28</sys_created_on>
+        <sys_id>2d4e21471ba2b050eef0cb72604bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bf098c1cd0000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 21:52:28</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>614e2147c2a2b0504a0a236f7ab3c6d3</update_guid>
+        <update_guid_history>614e2147c2a2b0504a0a236f7ab3c6d3:-1706035470,6ebf59beea26305091f20601abf87424:-384850977,fc8d5dfaa126305071fed535dbe0a300:1827757095,8bec19ba6c2630501d0cd200eb2598a6:1360987100,7d832db432623410e4e1befbacb3360d:-905787794,5f61657416623410f5af05e6b749ac86:-2121212948,1a274fb51a16b0100d8d57fa14451ab7:-344946080,56854775dd16b010d902a687eba2be6a:48294740,291583358e16b010843ad7173c42f724:-414540652,bb53877dd9d2b010760fdbbf3ebfb6b9:131129837,859dbeb53fd2b0108853f72d56ab5aa2:-812643211,7a7bbef12dd2b010af284eb4bce99236:1691948211,740b72f148d2b010822c897d82682fab:-409321965,4ad6b6795392b010d1f62c0c0b67cd6a:479184787,de843639e892b010a6b3badcf086ccea:-26291860,93e0f6b15a92b010f6922b162c79c6dd:870069324,39562e712552b0101321661482e889d6:-1236056558,7a1c3665299e30103334cad055ec3fdf:487486621,503b3ee1af9e3010a63b3b8d668ee203:1186572362,18653e69525e30100eadf89fe62407c2:-864931974,a6237ea5c85e30104d3e3706198dfc91:1438203482,a771f2e1405e3010cb5eea9cfffe2b85:-647689795,8848e6a9c0da30108f321509773e0bdf:2049159156,ad38aee9aeda3010bb3957006ce4d9c3:1639356116,bb97266955da301043923ada47487b7e:-796540796,0857aee9edda30109ffb73c680413789:1902000484,c771ee6192da30108310a4cdcaeb117d:-549694269,b88869e92f16301018cb93217fef35d5:-1683287600,3428a569541630107ce49a626ac51df4:-549694269,235baaa054da7410b3f361cec4108697:-1683287600,fe625ee4b21a741093a7319127179d53:-549694269,c2711e60131a741019250fc7cc138a13:1164836547,aaeb8eacffd6741054df282852bda901:575572949,2feacea88cd674103bd26243665e0b18:-1325358153,54a9c2e8d4d67410443328a519099199:-1693849622,b459ce2826d67410a2aa6a3894a756b9:531040604,b14af5a0f296741093f5a85071c85548:1428928758,9a84b968af56741020121a6af58f661f:2129193767,74c612507e1234106215f9b881ba71e7:1420339390,fdb41a5ca4def0103af24351e8a31c19:1846353105,2ee39ed8c6def010404dd25df8ed4a8e:1922329440,a9205e546edef010b594db46bf908d82:1846353105,f5cf0294addef0101930cdc8b7fa1a57:906593393,028f795c7b5ef010d97f2bbe02052170:1793596549,454df1981d5ef01006f26356adbaa150:436355276,33783d90735ef0102c4a6652b8b4a824:359988080</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-24 00:35:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0357df24a1ea42fc808c6c1baa70f464</sys_id>
+        <sys_metadata>2d15f9141b1ef010eef0cb72604bcbf0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>setDefault</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_include_2d15f9141b1ef010eef0cb72604bcbf0</sys_update_name>
+        <sys_update_version display_value="sys_script_include_2d15f9141b1ef010eef0cb72604bcbf0">2d4e21471ba2b050eef0cb72604bcbd3</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-24 00:35:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

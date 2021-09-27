@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Change the value of  State to Pending and Approval to Requested.</description>
+        <field>u_action_requested</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set Flow Vars for Resubmittals</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+	// 
+    if (g_form.getValue('u_action_requested') == 'review and respond (resubmittal)') {
+      //Set the result field on the form.     
+        g_form.setValue('state', -5);
+		g_form.setValue('approval', 'requested');
+    }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-08 18:08:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c93c2f941b6e70107fd2cbfa234bcb88</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Set Flow Vars for Resubmittals</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_c93c2f941b6e70107fd2cbfa234bcb88</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 20:41:10</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_client_c93c2f941b6e70107fd2cbfa234bcb88</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Change the value of  State to Pending and Approval to Requested.&lt;/description&gt;&lt;field&gt;u_action_requested&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Set Flow Vars for Resubmittals&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+	// 
+    if (g_form.getValue('u_action_requested') == 'review and respond (resubmittal)') {
+      //Set the result field on the form.     
+        g_form.setValue('state', -5);
+		g_form.setValue('approval', 'requested');
+    }
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-08 18:08:49&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c93c2f941b6e70107fd2cbfa234bcb88&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Set Flow Vars for Resubmittals&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_c93c2f941b6e70107fd2cbfa234bcb88&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-16 20:41:10&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1068106073</payload_hash>
+        <record_name>Set Flow Vars for Resubmittals</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-16 20:41:10</sys_created_on>
+        <sys_id>55fdd5431b22b050eef0cb72604bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bf0577dd20000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 20:41:10</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>d9fdd5436122b050d0c211c516edca56</update_guid>
+        <update_guid_history>d9fdd5436122b050d0c211c516edca56:-1068106073,60af423450a634109442d64ebea5f30a:158919572,8590adb0a06234101ce5ec4d901da2a2:-1068106073,6940f4748f2ef0105b1987ce6713b76d:158919572,c26c4468ab22b01096fa6dd2c448d694:-1068106073,87307fd89f6e70107361cd3b5bb7cb0f:1440146142,0eef2b5ca06e7010ccd90890a54d56a8:920490193,1c3fe71c7b6e7010aee2eac57c5a6783:-498949760,6b0f2bd8136e7010fefd2b49096bbed4:-490346048,66bee3d81d6e7010776a56f1c91f58d2:876611364,fb5e2398e16e701007ffed664bf02fe8:-437318045</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-23 17:52:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>129ac5ce296e4812b22a454f129dede9</sys_id>
+        <sys_metadata>c93c2f941b6e70107fd2cbfa234bcb88</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Flow Vars for Resubmittals</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_client_c93c2f941b6e70107fd2cbfa234bcb88</sys_update_name>
+        <sys_update_version display_value="sys_script_client_c93c2f941b6e70107fd2cbfa234bcb88">55fdd5431b22b050eef0cb72604bcb57</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-23 17:52:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
