@@ -11,7 +11,7 @@
         <copied_from_name/>
         <description>Send Cancelled Notification when State changed to "Cancelled"</description>
         <internal_name>dotmail_cancelled_state</internal_name>
-        <label_cache>[{"name":"b896b444-5b6a-4c45-bc9d-197cf3123900.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b896b444-5b6a-4c45-bc9d-197cf3123900.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d94c1225-df85-4f1a-a61f-9264934122f4.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d94c1225-df85-4f1a-a61f-9264934122f4.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current","label":"Trigger➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{}},{"name":"Updated_1.current","label":"Trigger➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{}},{"name":"Updated_1.current.state","label":"Trigger➛DOTMail Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"state"}]</label_cache>
+        <label_cache>[{"name":"93693f0f-86a3-423e-9abf-7a18af1774a7.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"93693f0f-86a3-423e-9abf-7a18af1774a7.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"93693f0f-86a3-423e-9abf-7a18af1774a7.table_name","label":"3➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"93693f0f-86a3-423e-9abf-7a18af1774a7.record","label":"3➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.state","label":"Trigger➛DOTMail Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"state"},{"name":"Updated_1.current","label":"Trigger➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current","label":"Trigger➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{}},{"name":"d94c1225-df85-4f1a-a61f-9264934122f4.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d94c1225-df85-4f1a-a61f-9264934122f4.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b896b444-5b6a-4c45-bc9d-197cf3123900.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b896b444-5b6a-4c45-bc9d-197cf3123900.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <name>DOTMail Cancelled State</name>
@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f41114c51bf2bc50eef0cb72604bcbb1</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>DOTMail Cancelled State</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_hub_flow_f41114c51bf2bc50eef0cb72604bcbb1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-23 20:45:24</sys_updated_on>
+        <sys_updated_on>2021-09-30 00:22:26</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=f41114c51bf2bc50eef0cb72604bcbb1"/>
@@ -53,10 +53,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-22 22:33:54</sys_created_on>
         <sys_id>cb417c051bf6bc50eef0cb72604bcbb6</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-23 20:45:24</sys_updated_on>
+        <sys_updated_on>2021-09-30 00:22:25</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -99,10 +99,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-22 22:33:54</sys_created_on>
         <sys_id>cb417c051bf6bc50eef0cb72604bcbb8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-22 22:41:10</sys_updated_on>
-        <value>stateVALCHANGES</value>
+        <sys_updated_on>2021-09-29 20:35:54</sys_updated_on>
+        <value>stateCHANGESTO10</value>
         <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=cb417c051bf6bc50eef0cb72604bcbb6"/>
@@ -123,7 +123,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD2302e5912ff63090198b8174990026cf,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDc14dc91fc7f634104dc9cbf6ffc795af,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -181,14 +181,14 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-22 20:18:57</sys_created_on>
         <sys_id>5e6214491bf2bc50eef0cb72604bcb30</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-23 20:45:24</sys_updated_on>
+        <sys_updated_on>2021-09-30 00:22:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -378,10 +378,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-22 22:42:26</sys_created_on>
         <sys_id>444378091bf6bc50eef0cb72604bcb92</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-23 20:45:24</sys_updated_on>
+        <sys_updated_on>2021-09-30 00:22:26</sys_updated_on>
         <ui_id>b896b444-5b6a-4c45-bc9d-197cf3123900</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=444378091bf6bc50eef0cb72604bcb92"/>
@@ -473,10 +473,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-22 22:41:10</sys_created_on>
         <sys_id>edf230091bf6bc50eef0cb72604bcb83</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-23 20:45:24</sys_updated_on>
+        <sys_updated_on>2021-09-30 00:22:26</sys_updated_on>
         <ui_id>1065b97e-a704-4167-8003-29575383ee56</ui_id>
         <workflow_inputs/>
         <workflow_reference/>

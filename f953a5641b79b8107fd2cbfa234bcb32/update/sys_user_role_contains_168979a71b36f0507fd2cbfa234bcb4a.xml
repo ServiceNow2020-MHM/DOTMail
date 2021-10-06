@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</contains>
+        <role display_value="x_sohd3_dotmail.administrators" name="x_sohd3_dotmail.administrators">7c6511f31bfd70107fd2cbfa234bcbea</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-09-30 22:14:19</sys_created_on>
+        <sys_id>168979a71b36f0507fd2cbfa234bcb4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>itil.x_sohd3_dotmail.administrators</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_user_role_contains_168979a71b36f0507fd2cbfa234bcb4a</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-09-30 22:14:19</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
