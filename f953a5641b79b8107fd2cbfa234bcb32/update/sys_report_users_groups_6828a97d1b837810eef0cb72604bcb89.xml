@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="DOTMail State Report">e028a97d1b837810eef0cb72604bcb89</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-07 20:44:37</sys_created_on>
+        <sys_id>6828a97d1b837810eef0cb72604bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e028a97d1b837810eef0cb72604bcb89</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_report_users_groups_6828a97d1b837810eef0cb72604bcb89</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-07 20:44:37</sys_updated_on>
+        <user_id display_value="Moody Matsunaga (Admin)">bf1cec2e1bd5f010426d0e10604bcb6d</user_id>
+    </sys_report_users_groups>
+</record_update>
