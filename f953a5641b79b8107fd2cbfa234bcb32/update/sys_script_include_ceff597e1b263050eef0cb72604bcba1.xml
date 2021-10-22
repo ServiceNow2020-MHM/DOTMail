@@ -5,7 +5,7 @@
         <api_name>x_sohd3_dotmail.setDefaultDate</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
-        <description/>
+        <description>This script calculates the When Needed date based on the number of calendar days.</description>
         <name>setDefaultDate</name>
         <script><![CDATA[var setDefaultDate = Class.create();
 setDefaultDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
@@ -32,16 +32,13 @@ setDefaultDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             }
 
             var gdt = new GlideDateTime();
-
-            var ed = new GlideDateTime(gdt);
-            ed.addDaysLocalTime(dueDays);
-
-
+            gdt.addDaysLocalTime(dueDays);
+            var gd = new GlideDate();
+            gd.setValue(gdt.getLocalDate());
 
 
 
             //             var myScheduleName = '8-5 weekdays';
-
             //             var dueWorkingHours = 8;
             //             var dueSeconds = dueDays * dueWorkingHours * 60 * 60;
             //             var leadTime = new GlideDuration(dueSeconds * 1000);
@@ -52,12 +49,12 @@ setDefaultDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             //                 dueDateGdt = sched.add(nowGdt, leadTime, '');
             //             }
             //var date = new GlideDate(dueDateGdt.getDate());
-            var date = new GlideDate(ed);
+            //       var date = new GlideDate(ed);
 
-        //    var date2 = date.getByFormat('MM/dd/YYYY');
+            //    var date2 = date.getByFormat('MM/dd/YYYY');
 
-            return date;
-
+            //return gd.getByFormat("MM/dd/yyyy");
+			return gd.getDisplayValue();
         }
     },
     type: 'setDefaultDate'
@@ -66,13 +63,13 @@ setDefaultDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>karim_admin</sys_created_by>
         <sys_created_on>2021-09-16 02:11:58</sys_created_on>
         <sys_id>ceff597e1b263050eef0cb72604bcba1</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>setDefaultDate</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_include_ceff597e1b263050eef0cb72604bcba1</sys_update_name>
-        <sys_updated_by>karim_admin</sys_updated_by>
-        <sys_updated_on>2021-10-07 04:07:06</sys_updated_on>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-14 17:26:16</sys_updated_on>
     </sys_script_include>
 </record_update>

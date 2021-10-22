@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Print Route Form</name>
+        <onclick/>
+        <order>300</order>
+        <script><![CDATA[var pdf = new global.GeneralPdfUtils();
+// Script Include GeneralPdfUtils() comes with the PDF Generator Plugin
+
+// Sys ID of the attachment PDF template
+var attachmentSysId = 'd7352b501b1738507fd2cbfa234bcb01';
+alert(attachmentSysID);
+
+// set variables with current form values
+var v_log_date = current.u_log_date.toString() || "";
+var v_log_number = current.number.toString() || "";
+var v_when_needed = current.u_when_needed.toString() || "";
+var v_subject = current.short_description.toString() || "";
+var v_route_to = current.assigned_to.toString() || "";
+var v_action_requested = current.u_action_requested.toString() || "";
+
+// set PDF variables with the variable values created above
+var jsonObject = {
+    "f_log_date": v_log_date,
+    "f_log_number": v_log_number,
+	"f_when_needed": v_when_needed,
+	"f_subject": v_subject,
+	"f_route_to": v_route_to,
+	"f_action_requested": v_action_requested,
+};
+
+var jsonString = JSON.stringify(jsonObject);
+var destinationTableName = 'x_sohd3_dotmail_dotmail';
+var destinationTableSysId = current.sys_id;
+
+var pdfName = current.number + '.pdf';
+
+pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
+action.setRedirectURL(current);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-15 23:42:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e13d53101bd338507fd2cbfa234bcbae</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Print Route Form</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_action_e13d53101bd338507fd2cbfa234bcbae</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-16 01:38:00</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_ui_action_e13d53101bd338507fd2cbfa234bcbae</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Print Route Form&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;300&lt;/order&gt;&lt;script&gt;&lt;![CDATA[var pdf = new global.GeneralPdfUtils();
+// Script Include GeneralPdfUtils() comes with the PDF Generator Plugin
+
+// Sys ID of the attachment PDF template
+var attachmentSysId = 'd7352b501b1738507fd2cbfa234bcb01';
+alert(attachmentSysID);
+
+// set variables with current form values
+var v_log_date = current.u_log_date.toString() || "";
+var v_log_number = current.number.toString() || "";
+var v_when_needed = current.u_when_needed.toString() || "";
+var v_subject = current.short_description.toString() || "";
+var v_route_to = current.assigned_to.toString() || "";
+var v_action_requested = current.u_action_requested.toString() || "";
+
+// set PDF variables with the variable values created above
+var jsonObject = {
+    "f_log_date": v_log_date,
+    "f_log_number": v_log_number,
+	"f_when_needed": v_when_needed,
+	"f_subject": v_subject,
+	"f_route_to": v_route_to,
+	"f_action_requested": v_action_requested,
+};
+
+var jsonString = JSON.stringify(jsonObject);
+var destinationTableName = 'x_sohd3_dotmail_dotmail';
+var destinationTableSysId = current.sys_id;
+
+var pdfName = current.number + '.pdf';
+
+pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
+action.setRedirectURL(current);]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-15 23:42:47&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e13d53101bd338507fd2cbfa234bcbae&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;Print Route Form&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_e13d53101bd338507fd2cbfa234bcbae&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-16 01:38:00&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-751445966</payload_hash>
+        <record_name>Print Route Form</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-16 01:38:00</sys_created_on>
+        <sys_id>5c08bb9c1b5738507fd2cbfa234bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c86bfab080000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-16 01:38:00</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>5408bb9c8a573850f881759d1f974376</update_guid>
+        <update_guid_history>5408bb9c8a573850f881759d1f974376:-751445966,c0d7fb9ce95738502ae621c2a865e713:-1422188129,8af5bb985b573850628e6dfdaa9fd881:-151250010,36a5fb181e573850b604acb1aca96748:698261669,d084375870573850d02f4339966f1cf6:-525300882,56437f9468573850ede43cc357e7373d:-451118660,58b27f549457385002db4fcda093b6dc:-998982189,ce427f5407573850b7e5f150e880a805:1691556012,6b817b14e2573850f094503dca9b7aed:282942942,4dbfefdc0b1738502a5979c12b6b7ce2:416380445,8afeefdc9c1738508ca814ed195abd5a:2829083,8cad6798dd173850ebd4c837ea26993d:-663549246,907d2f9caf173850221a70a23261b40c:666496298,3c0ce398bf173850fcc4c5cb8f0173c9:1612070841,87866b1409173850c1b88daf28ea6983:1545369793,24ad1b907ed3385024a6553e4fc9807f:1882255873</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-18 23:12:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>0f9afccbff1f447b83524f5c501603f9</sys_id>
+        <sys_metadata>e13d53101bd338507fd2cbfa234bcbae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Print Route Form</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_ui_action_e13d53101bd338507fd2cbfa234bcbae</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_e13d53101bd338507fd2cbfa234bcbae">5c08bb9c1b5738507fd2cbfa234bcb76</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-18 23:12:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

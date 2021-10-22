@@ -45,16 +45,30 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>3</position>
             <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-10-21 17:15:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b36e389e1b57b410eef0cb72604bcb29</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_sohd3_dotmail_dotmail" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">b185bdec1bfdb810eef0cb72604bcb87</sys_ui_form>
+            <sys_ui_section caption="Route Slip Information" display_value="Route Slip Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">bf6ef49e1b57b410eef0cb72604bcba6</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-10-21 17:15:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>moody_admin</sys_created_by>
             <sys_created_on>2021-08-02 21:12:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>b185bdec1bfdb810eef0cb72604bcbab</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_sohd3_dotmail_dotmail" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">b185bdec1bfdb810eef0cb72604bcb87</sys_ui_form>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-09-30 01:13:56</sys_updated_on>
+            <sys_updated_on>2021-10-21 17:15:05</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_sohd3_dotmail_dotmail</name>

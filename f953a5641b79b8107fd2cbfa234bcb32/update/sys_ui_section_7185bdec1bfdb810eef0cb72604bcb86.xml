@@ -4,13 +4,13 @@
             <element>sys_created_on</element>
             <position>0</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-05 22:58:33</sys_created_on>
-            <sys_id>14aa296d1b713410eef0cb72604bcb0b</sys_id>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>79d04f581b1338507fd2cbfa234bcbe6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:33</sys_updated_on>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,69 +18,83 @@
             <element>sys_updated_on</element>
             <position>1</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-05 22:58:33</sys_created_on>
-            <sys_id>94aa296d1b713410eef0cb72604bcb0b</sys_id>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>35d04f581b1338507fd2cbfa234bcbe7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:33</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>2</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-05 22:58:33</sys_created_on>
-            <sys_id>18aa296d1b713410eef0cb72604bcb0b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:33</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>sys_created_by</element>
-            <position>3</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-05 22:58:33</sys_created_on>
-            <sys_id>98aa296d1b713410eef0cb72604bcb0b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:33</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>sys_updated_by</element>
-            <position>4</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-05 22:58:33</sys_created_on>
-            <sys_id>1caa296d1b713410eef0cb72604bcb0b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:33</sys_updated_on>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
-            <position>5</position>
+            <position>2</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-08-05 22:58:33</sys_created_on>
-            <sys_id>9caa296d1b713410eef0cb72604bcb0b</sys_id>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>b9d04f581b1338507fd2cbfa234bcbe7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:33</sys_updated_on>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>31d04f581b1338507fd2cbfa234bcbe8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_by</element>
+            <position>4</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>b5d04f581b1338507fd2cbfa234bcbe8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_updated_by</element>
+            <position>5</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>3dd04f581b1338507fd2cbfa234bcbe8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_string_1</element>
+            <position>6</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2021-10-15 21:36:59</sys_created_on>
+            <sys_id>b1d04f581b1338507fd2cbfa234bcbe9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2021-10-15 21:36:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

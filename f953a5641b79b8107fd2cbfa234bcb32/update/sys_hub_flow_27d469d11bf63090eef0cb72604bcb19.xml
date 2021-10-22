@@ -11,7 +11,7 @@
         <copied_from_name/>
         <description/>
         <internal_name>dotmail_reminders</internal_name>
-        <label_cache>[{"name":"87161bc3-7049-4d07-ad1b-ca2c63215352.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"87161bc3-7049-4d07-ad1b-ca2c63215352.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Daily_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.u_when_needed","label":"2➛DOTMail Record➛When needed","reference":"","reference_display":"When needed","type":"glide_date","base_type":"glide_date","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"u_when_needed"},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item","label":"2➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.Records","label":"1➛DOTMail Records","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.Table","label":"1➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.opened_at","label":"2➛DOTMail Record➛Routed on","reference":"","reference_display":"Routed on","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"opened_at"}]</label_cache>
+        <label_cache>[{"name":"87161bc3-7049-4d07-ad1b-ca2c63215352.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"87161bc3-7049-4d07-ad1b-ca2c63215352.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Daily_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.u_when_needed","label":"2➛DOTMail Record➛When needed","reference":"","reference_display":"When needed","type":"glide_date","base_type":"glide_date","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"u_when_needed"},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item","label":"2➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.Records","label":"1➛DOTMail Records","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.Table","label":"1➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f63d0062-1293-4ccc-a56e-279ec16fb832.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.opened_at","label":"2➛DOTMail Record➛Routed on","reference":"","reference_display":"Routed on","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"opened_at"},{"name":"2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.u_when_needed2","label":"2➛DOTMail Record➛When needed (u_when_needed2)","reference":"","reference_display":"When needed (u_when_needed2)","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"u_when_needed2"}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <name>DOTMail Past Due Date</name>
@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>27d469d11bf63090eef0cb72604bcb19</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>DOTMail Past Due Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -38,14 +38,14 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_hub_flow_27d469d11bf63090eef0cb72604bcb19</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 00:35:53</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=27d469d11bf63090eef0cb72604bcb19"/>
     <sys_variable_value action="delete_multiple" query="document_key=27d469d11bf63090eef0cb72604bcb19"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=27d469d11bf63090eef0cb72604bcb19^sys_idNOT IN5bd50f2a1bb63010eef0cb72604bcb1c"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
-        <comment/>
+        <comment>NOTE:  THIS SCRIPT WILL NOT WORK AS IS.  DUE DATE IN WRONG FORMAT</comment>
         <display_text/>
         <flow display_value="DOTMail Past Due Date">27d469d11bf63090eef0cb72604bcb19</flow>
         <name>Daily</name>
@@ -53,10 +53,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-28 01:13:52</sys_created_on>
         <sys_id>5bd50f2a1bb63010eef0cb72604bcb1c</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 00:35:52</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -104,10 +104,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-28 01:13:53</sys_created_on>
         <sys_id>2fd50f2a1bb63010eef0cb72604bcb24</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 00:35:52</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <ui_id>f63d0062-1293-4ccc-a56e-279ec16fb832</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2fd50f2a1bb63010eef0cb72604bcb24"/>
@@ -155,10 +155,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-28 01:25:32</sys_created_on>
         <sys_id>8688cf2e1bb63010eef0cb72604bcb5f</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 00:35:53</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <ui_id>87161bc3-7049-4d07-ad1b-ca2c63215352</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8688cf2e1bb63010eef0cb72604bcb5f"/>
@@ -250,10 +250,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-28 01:25:32</sys_created_on>
         <sys_id>0288cf2e1bb63010eef0cb72604bcb53</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 00:35:53</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <ui_id>2fcc7c87-4da0-43ce-b333-efaeebcdaf56</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -274,7 +274,7 @@
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">c288cf2e1bb63010eef0cb72604bcb57</block>
-        <comment/>
+        <comment>NOTE:  When Needed is in mm/dd/yyyy format and will not work here.  I used Routed on just to show that compared to trigger date that it can work.</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
@@ -294,10 +294,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-28 01:25:32</sys_created_on>
         <sys_id>8a88cf2e1bb63010eef0cb72604bcb57</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 00:35:53</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <ui_id>27ed0163-211a-4682-8ba1-8b1929e9b8c4</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -324,11 +324,11 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-28 01:25:32</sys_created_on>
         <sys_id>ce88cf2e1bb63010eef0cb72604bcb5a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 20:12:20</sys_updated_on>
+        <sys_updated_on>2021-10-14 18:01:30</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{Daily_1.run_start_time}}&gt;{{2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.opened_at}}</value>
+        <value>{{Daily_1.run_start_time}}&gt;{{2fcc7c87-4da0-43ce-b333-efaeebcdaf56.item.u_when_needed2}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>condition_name</field>

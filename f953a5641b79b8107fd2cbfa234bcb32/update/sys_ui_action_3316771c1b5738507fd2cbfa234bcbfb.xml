@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Print Route Slip</name>
+        <onclick/>
+        <order>300</order>
+        <script><![CDATA[var pdf = new global.GeneralPdfUtils();
+// Script Include GeneralPdfUtils() comes with the PDF Generator Plugin
+
+// Sys ID of the attachment PDF template
+var attachmentSysId = "3dbaa69e1b13f410eef0cb72604bcb7b";
+
+// set autofill variables with current form values
+var v_log_date = current.u_log_date.getDisplayValue() || "";
+var v_log_number = current.number.getDisplayValue() || "";
+var v_when_needed = current.u_when_needed.getDisplayValue() || "";
+var v_subject = current.short_description.getDisplayValue() || "";
+var v_route_to = current.assigned_to.getDisplayValue() || "";
+var v_action_requested = current.u_action_requested.getDisplayValue() || "";
+// set user entered variables with current form values
+var v_order_1 = current.u_order_1.getDisplayValue() || "";
+var v_order_2 = current.u_order_2.getDisplayValue() || "";
+var v_order_3 = current.u_order_3.getDisplayValue() || "";
+var v_order_4 = current.u_order_4.getDisplayValue() || "";
+var v_order_5 = current.u_order_5.getDisplayValue() || "";
+var v_order_6 = current.u_order_6.getDisplayValue() || "";
+var v_order_7 = current.u_order_7.getDisplayValue() || "";
+var v_order_8 = current.u_order_8.getDisplayValue() || "";
+var v_order_9 = current.u_order_9.getDisplayValue() || "";
+var v_order_10 = current.u_order_10.getDisplayValue() || "";
+var v_order_11 = current.u_order_11.getDisplayValue() || "";
+var v_order_12 = current.u_order_12.getDisplayValue() || "";
+var v_order_13 = current.u_order_13.getDisplayValue() || "";
+var v_order_14 = current.u_order_14.getDisplayValue() || "";
+var v_order_15 = current.u_order_15.getDisplayValue() || "";
+var v_order_16 = current.u_order_16.getDisplayValue() || "";
+var v_order_17 = current.u_order_17.getDisplayValue() || "";
+var v_order_18 = current.u_order_18.getDisplayValue() || "";
+var v_order_19 = current.u_order_19.getDisplayValue() || "";
+var v_order_20 = current.u_order_20.getDisplayValue() || "";
+var v_order_21 = current.u_order_21.getDisplayValue() || "";
+var v_order_22 = current.u_order_22.getDisplayValue() || "";
+var v_order_23 = current.u_order_23.getDisplayValue() || "";
+var v_order_24 = current.u_order_24.getDisplayValue() || "";
+var v_order_25 = current.u_order_25.getDisplayValue() || "";
+var v_order_26 = current.u_order_26.getDisplayValue() || "";
+var v_order_27 = current.u_order_27.getDisplayValue() || "";
+var v_other_1 = current.u_other_route_1.getDisplayValue() || "";
+var v_other_2 = current.u_other_route_2.getDisplayValue() || "";
+var v_other_3 = current.u_other_route_3.getDisplayValue() || "";
+var v_other_action = current.u_action_1.getDisplayValue() || "";
+var v_phone_number = current.u_phone_number.getDisplayValue() || "";
+var v_comments = current.u_route_slip_comments.getDisplayValue() || "";
+// Set user entered checkbox values with current form values
+var str50 = current.u_checkbox_50.getDisplayValue() || "";
+var v_checkbox_50 = str50.replace('true', 'Yes');
+
+var str51 = current.u_checkbox_51.getDisplayValue() || "";
+var v_checkbox_51 = str51.replace('true', 'Yes');
+
+var str52 = current.u_checkbox_52.getDisplayValue() || "";
+var v_checkbox_52 = str52.replace('true', 'Yes');
+
+var str53 = current.u_checkbox_53.getDisplayValue() || "";
+var v_checkbox_53 = str53.replace('true', 'Yes');
+
+var str54 = current.u_checkbox_54.getDisplayValue() || "";
+var v_checkbox_54 = str54.replace('true', 'Yes');
+
+var str55 = current.u_checkbox_55.getDisplayValue() || "";
+var v_checkbox_55 = str55.replace('true', 'Yes');
+
+var str56 = current.u_checkbox_56.getDisplayValue() || "";
+var v_checkbox_56 = str56.replace('true', 'Yes');
+
+var str57 = current.u_checkbox_57.getDisplayValue() || "";
+var v_checkbox_57 = str57.replace('true', 'Yes');
+
+var str58 = current.u_checkbox_58.getDisplayValue() || "";
+var v_checkbox_58 = str58.replace('true', 'Yes');
+
+var str59 = current.u_checkbox_59.getDisplayValue() || "";
+var v_checkbox_59 = str59.replace('true', 'Yes');
+
+var str60 = current.u_checkbox_60.getDisplayValue() || "";
+var v_checkbox_60 = str60.replace('true', 'Yes');
+
+var str61 = current.u_checkbox_61.getDisplayValue() || "";
+var v_checkbox_61 = str61.replace('true', 'Yes');
+
+var str62 = current.u_checkbox_62.getDisplayValue() || "";
+var v_checkbox_62 = str62.replace('true', 'Yes');
+
+var str63 = current.u_checkbox_63.getDisplayValue() || "";
+var v_checkbox_63 = str63.replace('true', 'Yes');
+
+var str64 = current.u_checkbox_64.getDisplayValue() || "";
+var v_checkbox_64 = str64.replace('true', 'Yes');
+
+var str65 = current.u_checkbox_65.getDisplayValue() || "";
+var v_checkbox_65 = str65.replace('true', 'Yes');
+
+var str66 = current.u_checkbox_66.getDisplayValue() || "";
+var v_checkbox_66 = str66.replace('true', 'Yes');
+
+// set PDF variables with the variable values created above
+var jsonObject = {
+    "f_log_date": v_log_date,
+    "f_log_number": v_log_number,
+    "f_when_needed": v_when_needed,
+    "f_subject": v_subject,
+    "f_route_to": v_route_to,
+    "f_action_requested": v_action_requested,
+    "Order": v_order_1,
+    "Order 2": v_order_2,
+    "Order 3": v_order_3,
+    "Order 4": v_order_4,
+    "Order 5": v_order_5,
+    "Order 6": v_order_6,
+    "Order 7": v_order_7,
+    "Order 8": v_order_8,
+    "Order 9": v_order_9,
+    "Order 10": v_order_10,
+    "Order 11": v_order_11,
+    "Order 12": v_order_12,
+    "Order 13": v_order_13,
+    "Order 14": v_order_14,
+    "Order 15": v_order_15,
+    "Order 16": v_order_16,
+    "Order 17": v_order_17,
+    "Order 18": v_order_18,
+    "Order 19": v_order_19,
+    "Order 20": v_order_20,
+    "Order 21": v_order_21,
+    "Order 22": v_order_22,
+    "Order 23": v_order_23,
+    "Order 24": v_order_24,
+    "Order 25": v_order_25,
+    "Order 26": v_order_26,
+    "Order 27": v_order_27,
+    "Blank Route 1": v_other_1,
+    "Blank Route 2": v_other_2,
+    "Blank Route 3": v_other_3,
+    "Check Box 50": v_checkbox_50,
+    "Check Box 51": v_checkbox_51,
+    "Check Box 52": v_checkbox_52,
+    "Check Box 53": v_checkbox_53,
+    "Check Box 54": v_checkbox_54,
+    "Check Box 55": v_checkbox_55,
+    "Check Box 56": v_checkbox_56,
+    "Check Box 57": v_checkbox_57,
+    "Check Box 58": v_checkbox_58,
+    "Check Box 59": v_checkbox_59,
+    "Check Box 60": v_checkbox_60,
+    "Check Box 61": v_checkbox_61,
+    "Check Box 62": v_checkbox_62,
+    "Check Box 63": v_checkbox_63,
+    "Check Box 64": v_checkbox_64,
+    "Check Box 65": v_checkbox_65,
+    "Check Box 66": v_checkbox_66,
+    "Phone Number": v_phone_number,
+    "Comments": v_comments,
+    "Blank Action 1": v_other_action,
+};
+
+var jsonString = JSON.stringify(jsonObject);
+var destinationTableName = "x_sohd3_dotmail_dotmail";
+var destinationTableSysId = current.sys_id; // sys_id of current record
+
+var pdfName = "Route Slip " + current.number + ".pdf";
+
+pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
+action.setRedirectURL(current);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-16 01:29:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3316771c1b5738507fd2cbfa234bcbfb</sys_id>
+        <sys_mod_count>99</sys_mod_count>
+        <sys_name>Print Route Slip</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-22 01:10:39</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
