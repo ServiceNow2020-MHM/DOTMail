@@ -2,26 +2,26 @@
     <sys_user_role action="INSERT_OR_UPDATE">
         <assignable_by/>
         <can_delegate>true</can_delegate>
-        <description>Role needed for users who can only read DOTMail records.</description>
+        <description/>
         <elevated_privilege>false</elevated_privilege>
         <encryption_context/>
         <grantable>true</grantable>
         <includes_roles/>
-        <name>x_sohd3_dotmail.readers</name>
+        <name>x_sohd3_dotmail.DIR Editors</name>
         <requires_subscription>-1</requires_subscription>
         <scoped_admin>false</scoped_admin>
-        <suffix>readers</suffix>
+        <suffix>DIR Editors</suffix>
         <sys_class_name>sys_user_role</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-08-12 21:10:05</sys_created_on>
-        <sys_id>b6a451f31bfd70107fd2cbfa234bcbae</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>x_sohd3_dotmail.readers</sys_name>
+        <sys_created_on>2021-10-29 20:24:20</sys_created_on>
+        <sys_id>2b66be701b273c10747921f2b24bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_sohd3_dotmail.DIR Editors</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_user_role_b6a451f31bfd70107fd2cbfa234bcbae</sys_update_name>
+        <sys_update_name>sys_user_role_2b66be701b273c10747921f2b24bcbb5</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-29 17:21:12</sys_updated_on>
+        <sys_updated_on>2021-10-29 20:24:20</sys_updated_on>
     </sys_user_role>
 </record_update>

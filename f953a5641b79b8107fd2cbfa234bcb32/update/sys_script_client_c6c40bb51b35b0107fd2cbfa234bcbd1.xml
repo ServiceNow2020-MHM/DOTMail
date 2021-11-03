@@ -3,7 +3,7 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Make fields read-only on load.  Hide the Journal Section for New Records.</description>
+        <description>Make fields read-only on load.  Hide the Journal Section for New Records.  Show Route Slip Section only for assigned roles.</description>
         <field>u_action_requested</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
@@ -11,6 +11,16 @@
         <name>Set Form Properties On Load</name>
         <order/>
         <script><![CDATA[function onLoad() {
+
+	// Tried the following code but department field returns UID not the display value; possibly because its a
+	// field from the User table to the Department table. The Division field works fine.
+	//var userRefID = g_form.getReference('opened_by', callback);
+	//
+    //function callback(userRefID) {
+    //    g_form.setValue('u_division', userRefID.u_division);
+    //    g_form.setValue('u_office_section', userRefID.department);
+	// }
+
     //Type appropriate comment here, and begin script below
     g_form.setReadonly('number', true);
     g_form.setReadonly('u_log_date', true);
@@ -23,7 +33,7 @@
         g_form.setSectionDisplay('journal_information', false);
     }
 
-	// Display the Route Slip Information Section only for certain roles
+    // Display the Route Slip Information Section only for certain roles
     if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('admin')) {
         g_form.setSectionDisplay('route_slipinformation', true);
     } else {
@@ -38,7 +48,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -46,7 +56,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-26 23:02:23</sys_updated_on>
+        <sys_updated_on>2021-10-27 19:05:50</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

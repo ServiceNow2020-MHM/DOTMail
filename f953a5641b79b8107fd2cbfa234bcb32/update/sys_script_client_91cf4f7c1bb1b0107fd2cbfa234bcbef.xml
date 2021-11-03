@@ -47,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>91cf4f7c1bb1b0107fd2cbfa234bcbef</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Set User Division</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -55,7 +55,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_91cf4f7c1bb1b0107fd2cbfa234bcbef</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 22:47:24</sys_updated_on>
+        <sys_updated_on>2021-10-27 19:01:16</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
