@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <application display_value="DOTMail">7ed5a9641bbdb810eef0cb72604bcb27</application>
         <assessment/>
         <device_type/>
@@ -24,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dba342291b353410eef0cb72604bcb15</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Mail List - Create New Record</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_app_module_dba342291b353410eef0cb72604bcb15</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-06 18:46:19</sys_updated_on>
+        <sys_updated_on>2021-11-05 01:13:29</sys_updated_on>
         <timeline_page/>
         <title>Mail List - Create New Record</title>
         <uncancelable>false</uncancelable>

@@ -16,31 +16,47 @@
     }
 
     var whatneeded = g_form.getValue('u_action_requested');
+    var whatstate = g_form.getValue('state');
 
-    // Clear all of the choices from the Action Requested field choice list
+    // Clear all of the choices from the Action Requested and State field choice lists
     g_form.clearOptions('u_action_requested');
+    g_form.clearOptions('state');
 
     if (newValue == 'journal entry only') {
         // g_form.addOption('u_action_requested', 'none', 'None');
-		g_form.addOption('u_action_requested', 'no response required', 'No Response Required');
+
+        // set option to No Response Required so that there is a value in this column in the list view
+        g_form.addOption('u_action_requested', 'no response required', 'No Response Required');
+
+        // show only Open State since their is no action necessary, flow will change to Closed Complete after one year
+        //g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '1', 'Open');
+        //g_form.addOption('state', '3', 'Closed Complete');
+        //g_form.addOption('state', '10', 'Cancelled');
+        //g_form.addOption('state', '20', 'Completed Request');
     }
-    // If the value of the Request type field is a DIR signature request, 
-    // add choices and other to the Action requested field choice list
-	if (newValue == 'dir_signature') {
+
+    // Set choices to display in Action requested and State field choice lists depending on the Request Type
+
+    if (newValue == 'dir_signature') {
         g_form.addOption('u_action_requested', 'signature requested', 'Signature Requested');
         //g_form.addOption('u_action_requested', 'other', 'Other');
+
+        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '1', 'Open');
+        g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '10', 'Cancelled');
+        g_form.addOption('state', '20', 'Completed Request');
     }
-	
-    // If the value of the Request type field is a GOV Referral Request, 
-    // add choices and other to the Action requested field choice list
-	if (newValue == 'gov referral request') {
+
+    if (newValue == 'gov referral request') {
         g_form.addOption('u_action_requested', 'appropriate attention & action', 'Appropriate Attention & Action');
         g_form.addOption('u_action_requested', 'comment/recommendation', 'Comment/Recommendation');
         g_form.addOption('u_action_requested', 'signature requested', 'Signature Requested');
         g_form.addOption('u_action_requested', 'direct reply (cc/bc: gov)', 'Direct Reply (cc/bc: Gov)');
         g_form.addOption('u_action_requested', 'direct reply (cc: gov)', 'Direct Reply (cc: Gov)');
         g_form.addOption('u_action_requested', 'direct reply (bc: gov)', 'Direct Reply (bc: Gov)');
-		g_form.addOption('u_action_requested', 'final reply for gov signature', 'Final Reply for Gov Signature');
+        g_form.addOption('u_action_requested', 'final reply for gov signature', 'Final Reply for Gov Signature');
         g_form.addOption('u_action_requested', 'follow up', 'Follow Up');
         g_form.addOption('u_action_requested', 'information/fyi/file', 'Information/FYI/File');
         g_form.addOption('u_action_requested', 'interim reply done/final reply', 'Interim Reply Done/Final Reply');
@@ -49,10 +65,14 @@
         g_form.addOption('u_action_requested', 'submit copy of response', 'Submit Copy of Response');
         g_form.addOption('u_action_requested', 'return enclosure(s)', 'Return Enclosure(s)');
         g_form.addOption('u_action_requested', 'other', 'Other');
-	}
-	
-    // If the value of the Request type field is No Response Required, 
-    // add choices and other to the Action requested field choice list
+
+        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '1', 'Open');
+        g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '10', 'Cancelled');
+        g_form.addOption('state', '20', 'Completed Request');
+    }
+
     if (newValue == 'no response required') {
         g_form.addOption('u_action_requested', 'no response required', 'No Response Required');
         g_form.addOption('u_action_requested', 'information/fyi/file', 'Information/FYI/File');
@@ -61,10 +81,15 @@
         g_form.addOption('u_action_requested', 'review', 'Review');
         g_form.addOption('u_action_requested', 'return enclosure(s)', 'Return Enclosure(s)');
         g_form.addOption('u_action_requested', 'other', 'Other');
+
+        // show only Open State since their is no action necessary, flow will change to Closed Complete after one year
+        //g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '1', 'Open');
+        //g_form.addOption('state', '3', 'Closed Complete');
+        //g_form.addOption('state', '10', 'Cancelled');
+        //g_form.addOption('state', '20', 'Completed Request');
     }
-	
-    // If the value of the Request type field is Response Requested - No Due Date, 
-    // add choices and other to the Action requested field choice list
+
     if (newValue == 'response requested - no due date') {
         g_form.addOption('u_action_requested', 'appropriate attention & action', 'Appropriate Attention & Action');
         g_form.addOption('u_action_requested', 'arrange meeting', 'Arrange Meeting');
@@ -78,10 +103,14 @@
         g_form.addOption('u_action_requested', 'see me', 'See Me');
         g_form.addOption('u_action_requested', 'submit copy of response', 'Submit Copy of Response');
         g_form.addOption('u_action_requested', 'other', 'Other');
+
+        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '1', 'Open');
+        g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '10', 'Cancelled');
+        g_form.addOption('state', '20', 'Completed Request');
     }
-	
-    // If the value of the Request type field is Response Requested - With Due Date, 
-    // add choices and other to the Action requested field choice list
+
     if (newValue == 'response requested - with due date') {
         g_form.addOption('u_action_requested', 'appropriate attention & action', 'Appropriate Attention & Action');
         g_form.addOption('u_action_requested', 'appropriate attention & action', 'Appropriate Attention & Action');
@@ -96,21 +125,31 @@
         g_form.addOption('u_action_requested', 'see me', 'See Me');
         g_form.addOption('u_action_requested', 'submit copy of response', 'Submit Copy of Response');
         g_form.addOption('u_action_requested', 'other', 'Other');
+
+        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '1', 'Open');
+        g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '10', 'Cancelled');
+        g_form.addOption('state', '20', 'Completed Request');
     }
 
-    // If the value of the Request type field is Letter Approval Request, 
-    // add choices and other to the Action requested field choice list
     if (newValue == 'letter approval request') {
         g_form.addOption('u_action_requested', 'review and respond', 'Review and Respond');
         g_form.addOption('u_action_requested', 'review and respond (resubmittal)', 'Review and Respond (Resubmittal)');
         g_form.addOption('u_action_requested', 'other', 'Other');
+
+        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '50', 'Approved - Ready to Finalize');
+        g_form.addOption('state', '55', 'Not Approved - Re-submit');
     }
 
     // If the form is loading and it is not a new record, set the Action requested value to the
     // value from the record before it was loaded
     if (isLoading && !g_form.isNewRecord()) {
         g_form.setValue('u_action_requested', whatneeded);
+        g_form.setValue('state', whatstate);
     }
+    //    alert(whatstate);
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -118,7 +157,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a396f4d11bb534107fd2cbfa234bcb6d</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Define Request Type Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -126,7 +165,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_a396f4d11bb534107fd2cbfa234bcb6d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-07 23:56:31</sys_updated_on>
+        <sys_updated_on>2021-11-05 00:51:47</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

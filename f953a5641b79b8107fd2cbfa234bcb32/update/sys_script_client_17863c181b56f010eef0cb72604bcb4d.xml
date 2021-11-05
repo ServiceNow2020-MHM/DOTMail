@@ -3,12 +3,13 @@
         <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Sets a default date in the When Needed field based on the Request Type selected.</description>
+        <description>Sets a default date in the When Needed field based on the Request Type selected.&#13;
+NOTE:  SCRIPT INCLUDE IS BROKEN (BY CONTRACTOR)</description>
         <field>u_request_type</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Set When Needed Date</name>
+        <name>Set When Needed Date in Business Days</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 
@@ -51,15 +52,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>17863c181b56f010eef0cb72604bcb4d</sys_id>
-        <sys_mod_count>110</sys_mod_count>
-        <sys_name>Set When Needed Date</sys_name>
+        <sys_mod_count>111</sys_mod_count>
+        <sys_name>Set When Needed Date in Business Days</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_17863c181b56f010eef0cb72604bcb4d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-28 19:02:46</sys_updated_on>
+        <sys_updated_on>2021-11-04 18:08:45</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

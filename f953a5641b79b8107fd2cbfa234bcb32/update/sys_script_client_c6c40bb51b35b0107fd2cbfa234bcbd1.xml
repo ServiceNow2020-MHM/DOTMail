@@ -12,16 +12,16 @@
         <order/>
         <script><![CDATA[function onLoad() {
 
-	// Tried the following code but department field returns UID not the display value; possibly because its a
-	// field from the User table to the Department table. The Division field works fine.
-	//var userRefID = g_form.getReference('opened_by', callback);
-	//
+    // Tried the following code but department field returns UID not the display value; possibly because its a
+    // field from the User table to the Department table. The Division field works fine.
+    //var userRefID = g_form.getReference('opened_by', callback);
+    //
     //function callback(userRefID) {
     //    g_form.setValue('u_division', userRefID.u_division);
     //    g_form.setValue('u_office_section', userRefID.department);
-	// }
+    // }
 
-    //Type appropriate comment here, and begin script below
+    //Set the following fields
     g_form.setReadonly('number', true);
     g_form.setReadonly('u_log_date', true);
     g_form.setReadonly('active', true);
@@ -30,17 +30,20 @@
 
     // Hide the Journal Information for new documents
     if (g_form.isNewRecord()) {
+        g_form.setSectionDisplay('activity', false);
         g_form.setSectionDisplay('journal_information', false);
-    }
+        g_form.setSectionDisplay('route_slipsetup', false);
+    } else
 
-    // Display the Route Slip Information Section only for certain roles
-    if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('admin')) {
-        g_form.setSectionDisplay('route_slipinformation', true);
-    } else {
-        g_form.setSectionDisplay('route_slipinformation', false);
-    }
+        // Display the Route Slip Setup Section only for certain roles
+        if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Administrators') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Editors')) {
+            g_form.setSectionDisplay('route_slipsetup', true);
+        } else {
+            g_form.setSectionDisplay('route_slipsetup', false);
+        }
 
-    //alert(g_form.getSectionNames());
+    //     alert(g_form.getSectionNames());
+
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -48,7 +51,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -56,7 +59,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-27 19:05:50</sys_updated_on>
+        <sys_updated_on>2021-11-04 22:13:02</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

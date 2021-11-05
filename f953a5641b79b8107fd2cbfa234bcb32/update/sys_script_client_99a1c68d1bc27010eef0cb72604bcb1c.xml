@@ -3,23 +3,35 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Reset When needed to blank if state is changed to 'Cancelled'.&#13;
-NOTE:  CANNOT CLEAR THE WHEN NEEDED VALUE BECAUSE IT IS A REQUIRED FIELD FOR MANY REQUEST TYPES.</description>
+        <description>Reset task assignment related fields to default values if state is changed to 'Cancelled'.</description>
         <field>state</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Clear When Needed When Cancelled</name>
+        <name>Reset Task Fields When Cancelled</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     // identifies whether the change occurs as part of a form load or not.
     if (isLoading || newValue === '') {
         return;
     }
-    // Clear the When needed date if the State is 'Cancelled'
-	//
+	
+	// Clear the task assignment fields when the State is 'Cancelled'.  Need to reset request type and action requested to
+	// default values before clearing values for the when needed date and opened_at fields because they are mandatory for
+	// assignment related request types
+	
+	var resetRequestType = 'no response required';
+	var resetActionRequested = 'no response required';
 	if (newValue == '10') {
+		g_form.setValue('u_request_type', resetRequestType);
+		g_form.setValue('u_action_requested', resetActionRequested);						
 		g_form.clearValue('u_when_needed');
+		g_form.clearValue('assigned_to');
+		g_form.clearValue('group_list');
+		g_form.clearValue('additional_assignee_list');
+		g_form.clearValue('opened_at');
+		
+		g_form.setMandatory('opened_at', false); //opened_at field becomes non-mandatory
     }
 
 }]]></script>
@@ -29,15 +41,15 @@ NOTE:  CANNOT CLEAR THE WHEN NEEDED VALUE BECAUSE IT IS A REQUIRED FIELD FOR MAN
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>99a1c68d1bc27010eef0cb72604bcb1c</sys_id>
-        <sys_mod_count>20</sys_mod_count>
-        <sys_name>Clear When Needed When Cancelled</sys_name>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Reset Task Fields When Cancelled</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 21:33:38</sys_updated_on>
+        <sys_updated_on>2021-11-04 23:44:38</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
