@@ -38,12 +38,24 @@
 
     // Set choices to display in Action requested and State field choice lists depending on the Request Type
 
+    if (newValue == 'dir review') {
+        g_form.addOption('u_action_requested', 'appropriate attention & action', 'Appropriate Attention & Action');
+        g_form.addOption('u_action_requested', 'comment/recommendation', 'Comment/Recommendation');
+        g_form.addOption('u_action_requested', 'other', 'Other');
+
+        g_form.addOption('state', '-5', 'Pending');
+        //g_form.addOption('state', '1', 'Open');
+        g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '10', 'Cancelled');
+        g_form.addOption('state', '20', 'Completed Request');
+    }
+
     if (newValue == 'dir_signature') {
         g_form.addOption('u_action_requested', 'signature requested', 'Signature Requested');
         //g_form.addOption('u_action_requested', 'other', 'Other');
 
         g_form.addOption('state', '-5', 'Pending');
-        g_form.addOption('state', '1', 'Open');
+        //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
@@ -67,7 +79,7 @@
         g_form.addOption('u_action_requested', 'other', 'Other');
 
         g_form.addOption('state', '-5', 'Pending');
-        g_form.addOption('state', '1', 'Open');
+        //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
@@ -105,7 +117,7 @@
         g_form.addOption('u_action_requested', 'other', 'Other');
 
         g_form.addOption('state', '-5', 'Pending');
-        g_form.addOption('state', '1', 'Open');
+        //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
@@ -127,7 +139,7 @@
         g_form.addOption('u_action_requested', 'other', 'Other');
 
         g_form.addOption('state', '-5', 'Pending');
-        g_form.addOption('state', '1', 'Open');
+        //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
@@ -157,7 +169,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a396f4d11bb534107fd2cbfa234bcb6d</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>Define Request Type Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -165,7 +177,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_a396f4d11bb534107fd2cbfa234bcb6d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-05 00:51:47</sys_updated_on>
+        <sys_updated_on>2021-11-10 21:05:02</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

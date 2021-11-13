@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="23" type="collection">
+    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="24" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Other Action Request" max_length="30" name="u_action_1" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" hint="Specify the action you are requesting from a list of choices.  The choices are dependent upon the request type selected." label="Action requested" max_length="40" name="u_action_requested" type="string">
             <choice>
@@ -103,9 +103,10 @@
                 <element inactive_on_update="false" label="No Response Required" sequence="1" value="no response required"/>
                 <element inactive_on_update="false" label="Response Requested - No Due Date" sequence="2" value="response requested - no due date"/>
                 <element inactive_on_update="false" label="Response Requested - With Due Date" sequence="3" value="response requested - with due date"/>
-                <element inactive_on_update="false" label="DIR Signature Request" sequence="4" value="dir_signature"/>
-                <element inactive_on_update="false" label="GOV Referral Request" sequence="5" value="gov referral request"/>
-                <element inactive_on_update="false" label="Letter Approval Request" sequence="6" value="letter approval request"/>
+                <element inactive_on_update="false" label="DIR Review Request" sequence="4" value="dir review"/>
+                <element inactive_on_update="false" label="DIR Signature Request" sequence="5" value="dir_signature"/>
+                <element inactive_on_update="false" label="GOV Referral Request" sequence="6" value="gov referral request"/>
+                <element inactive_on_update="false" label="Letter Approval Request" sequence="7" value="letter approval request"/>
             </choice>
         </element>
         <element label="DIR" max_length="40" name="u_route_1" type="integer"/>

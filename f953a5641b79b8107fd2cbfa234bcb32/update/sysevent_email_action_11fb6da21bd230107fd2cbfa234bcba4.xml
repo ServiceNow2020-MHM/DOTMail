@@ -37,7 +37,7 @@
         <message/>
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;"><img style="align: baseline;" src="DOTMail%20Banner.jpgx" width="1280" height="182" align="baseline" /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">A DOTMail record has been created and a draft of a new letter has been attached.&nbsp; Please review the attached letter and either accept or reject the draft.&nbsp; Please note that <span style="text-decoration: underline;"><strong>if</strong> <strong>there is a due date</strong></span> you are requested to complete this request on or before the due date.&nbsp; </span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">To avoid reminder notices, please change the Approval field to "<span style="text-decoration: underline;"><strong>Approved</strong></span>" or "<strong><span style="text-decoration: underline;">Rejected</span></strong>" after you have completed the assigned task.</span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">To avoid reminder notices, please click on the "<span style="text-decoration: underline;"><strong>Approved Button</strong></span>" or "<strong><span style="text-decoration: underline;">Rejected Button</span></strong>" after you have completed the assigned task.</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></p>
 <p><span style="text-decoration: underline; font-family: arial, helvetica, sans-serif;"><span style="font-size: 12pt; color: #333333; text-decoration: underline;">This is the Task Information:</span></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #333333;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Request type:</strong> ${u_request_type}<br /></span></p>
@@ -75,7 +75,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>11fb6da21bd230107fd2cbfa234bcba4</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Letter Approval Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -83,7 +83,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_11fb6da21bd230107fd2cbfa234bcba4</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-09 22:47:07</sys_updated_on>
+        <sys_updated_on>2021-11-12 18:06:07</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

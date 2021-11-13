@@ -24,9 +24,21 @@
     //Set the following fields
     g_form.setReadonly('number', true);
     g_form.setReadonly('u_log_date', true);
-    g_form.setReadonly('active', true);
+    //g_form.setReadonly('active', true);
     g_form.setReadonly('u_division', true);
     g_form.setReadonly('u_office_section', true);
+
+
+    // Set to read only if not admin
+    if (g_user.hasRoleExactly('admin')) {
+        g_form.setReadonly('state', false);
+        g_form.setReadonly('approval', false);
+		g_form.setReadonly('active', false);
+    } else {
+        g_form.setReadonly('state', true);
+        g_form.setReadonly('approval', true);
+		g_form.setReadonly('active', true);
+    }
 
     // Hide the Journal Information for new documents
     if (g_form.isNewRecord()) {
@@ -36,7 +48,7 @@
     } else
 
         // Display the Route Slip Setup Section only for certain roles
-        if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Administrators') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Editors')) {
+        if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Administrators') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Editors') || g_user.hasRoleExactly('admin')) {
             g_form.setSectionDisplay('route_slipsetup', true);
         } else {
             g_form.setSectionDisplay('route_slipsetup', false);
@@ -51,7 +63,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>70</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -59,7 +71,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 22:13:02</sys_updated_on>
+        <sys_updated_on>2021-11-13 00:23:12</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
