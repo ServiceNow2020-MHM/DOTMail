@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
-        <action_insert>false</action_insert>
-        <action_update>false</action_update>
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="DOTMail" name="DOTMail">6d0b1c9e1b5e3410eef0cb72604bcb1b</category>
         <collection>x_sohd3_dotmail_dotmail</collection>
-        <condition/>
+        <condition table="x_sohd3_dotmail_dotmail">u_request_type=gov referral request^active=true^EQ<item display_value="GOV Referral Request" endquery="false" field="u_request_type" goto="false" newquery="false" operator="=" or="false" value="gov referral request"/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
         <content_type>text/html</content_type>
         <default_interval/>
         <description/>
@@ -38,7 +41,7 @@
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img style="align: baseline;" title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">A new DOTMail record has been created and a <strong>Governor Referral</strong> related action request is assigned to you.&nbsp; Please note that <span style="text-decoration: underline;"><strong>if</strong> <strong>there is a due date</strong></span> you are requested to complete the action requested on or before the due date.&nbsp; </span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">To avoid reminder notices, please click on the "<strong><span style="text-decoration: underline;">Completed Request Button</span></strong>" after you have completed the action requested.</span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span> </span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is the Task Information:</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; <strong>Request type:</strong> ${u_request_type}<br /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; <strong>Action requested:</strong> ${u_action_requested}<br /></span></p>
@@ -75,7 +78,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>571725aa1b9230107fd2cbfa234bcb36</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Governor Referral Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -83,7 +86,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_571725aa1b9230107fd2cbfa234bcb36</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-10 22:18:48</sys_updated_on>
+        <sys_updated_on>2021-11-16 19:14:00</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
