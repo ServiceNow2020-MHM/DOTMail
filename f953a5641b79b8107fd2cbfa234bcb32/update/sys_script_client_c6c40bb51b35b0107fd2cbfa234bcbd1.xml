@@ -36,16 +36,16 @@
     //changeButtonColor('reject_action', '#CC0000');
     //changeButtonColor('reject_action', 'red', 'white');	
 
-	// The opened_by field only stores the database ID and cannot getValue from client script.  Will have to
-	// getDisplayValue using script include to get the displayed name.  The getDisplayBox works in ITIL but not
-	// in portal.
-	//     var openedBy = g_form.getDisplayBox('opened_by').value;
-	//     var currentUser = g_user.fullName;
-	//     if (currentUser == openedBy) {
-	//         g_form.setReadOnly('u_request_type', false);
-	//     } else {
-	//         g_form.setReadOnly('u_request_type', true);
-	//     }
+    // The opened_by field only stores the database ID and cannot getValue from client script.  Will have to
+    // getDisplayValue using script include to get the displayed name.  The getDisplayBox works in ITIL but not
+    // in portal.
+    //     var openedBy = g_form.getDisplayBox('opened_by').value;
+    //     var currentUser = g_user.fullName;
+    //     if (currentUser == openedBy) {
+    //         g_form.setReadOnly('u_request_type', false);
+    //     } else {
+    //         g_form.setReadOnly('u_request_type', true);
+    //     }
 
     // Set to read only if not admin
     if (g_user.hasRoleExactly('admin')) {
@@ -63,21 +63,25 @@
         g_form.setSectionDisplay('activity', false);
         g_form.setSectionDisplay('journal_information', false);
         g_form.setSectionDisplay('route_slipsetup', false);
-    } else
+        //alert("in new record logic");
+    } else {
+        //alert("in existing record logic");
         // Display the Route Slip Setup Section only for certain roles and request types
         var request = g_form.getValue('u_request_type');
-    if (request != 'letter approval request' && request != 'dir review') {
-        // Display only for DIR related roles and not for letter approvals and dir reviews
-        if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Administrators') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Editors') || g_user.hasRoleExactly('admin')) {
-            g_form.setSectionDisplay('route_slipsetup', true);
+        if (request != 'letter approval request' && request != 'dir review' && request != 'journal entry only') {
+            // Display only for DIR related roles and not for letter approvals and dir reviews
+            if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Administrators') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Editors') || g_user.hasRoleExactly('admin')) {
+                g_form.setSectionDisplay('route_slipsetup', true);
+                //alert("in existing record logic - checking roles true");
+            } else {
+                g_form.setSectionDisplay('route_slipsetup', false);
+                //alert("in existing record logic - checking roles false");
+            }
         } else {
             g_form.setSectionDisplay('route_slipsetup', false);
         }
-    } else {
-        g_form.setSectionDisplay('route_slipsetup', false);
+        // alert(g_form.getSectionNames());
     }
-    //     alert(g_form.getSectionNames());
-
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -85,7 +89,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>112</sys_mod_count>
+        <sys_mod_count>120</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -93,7 +97,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-18 00:49:20</sys_updated_on>
+        <sys_updated_on>2021-11-19 00:47:14</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

@@ -5,34 +5,34 @@
         <api_name>x_sohd3_dotmail.GetOpenedBy</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
-        <description/>
+        <description>Called from Set Request Type Read Only Client Script.</description>
         <name>GetOpenedBy</name>
-        <script><![CDATA[
-var GetOpenedBy = Class.create();
+        <script><![CDATA[var GetOpenedBy = Class.create();
 // Extend the global.AbstractAjaxProcessor class
-GetOpenedBy.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
-    // Define the getUserInfo function.  
+GetOpenedBy.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    // Define the GetOpenedBy function.  
     // Create a GlideRecord for the User table.
     // Use the sysparm_user passed from the client side to retrieve a record user table.
-    // Return the division for the requested record
+    // 
     getUserInfo: function() {
         var grUser = new GlideRecord('sys_user');
         grUser.get(this.getParameter('sysparm_user'));
-        return grUser.fullname;
+        return grUser.name;
     },
+
     type: 'GetOpenedBy'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-11-18 00:53:36</sys_created_on>
         <sys_id>5b79e1031bbf305042d8c848624bcbdb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>GetOpenedBy</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_include_5b79e1031bbf305042d8c848624bcbdb</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-18 00:53:36</sys_updated_on>
+        <sys_updated_on>2021-11-18 22:12:32</sys_updated_on>
     </sys_script_include>
 </record_update>
