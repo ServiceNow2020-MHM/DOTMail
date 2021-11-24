@@ -21,12 +21,27 @@
     //    g_form.setValue('u_office_section', userRefID.department);
     // }
 
-    //Set the following fields
+    //Set the following fields to Read Only
     g_form.setReadonly('number', true);
     g_form.setReadonly('u_log_date', true);
-    //g_form.setReadonly('active', true);
     g_form.setReadonly('u_division', true);
     g_form.setReadonly('u_office_section', true);
+	
+    // Set to read only if not admin
+    if (g_user.hasRoleExactly('admin')) {
+        g_form.setReadonly('state', false);
+        g_form.setReadonly('approval', false);
+        g_form.setReadonly('active', false);
+    } else {
+        g_form.setReadonly('state', true);
+        g_form.setReadonly('approval', true);
+        g_form.setReadonly('active', true);
+    }
+	
+	//Set the following fields to Mandatory
+	g_form.setMandatory('u_letter_date', true);
+	g_form.setMandatory('u_from', true);	
+	g_form.setMandatory('u_to', true);
 
     //Change the color of the 'Approve' button to green  --> Doesn't work
     //changeButtonColor('approve_action', '#00CC00');
@@ -46,17 +61,6 @@
     //     } else {
     //         g_form.setReadOnly('u_request_type', true);
     //     }
-
-    // Set to read only if not admin
-    if (g_user.hasRoleExactly('admin')) {
-        g_form.setReadonly('state', false);
-        g_form.setReadonly('approval', false);
-        g_form.setReadonly('active', false);
-    } else {
-        g_form.setReadonly('state', true);
-        g_form.setReadonly('approval', true);
-        g_form.setReadonly('active', true);
-    }
 
     // Hide the Journal Information for new documents
     if (g_form.isNewRecord()) {
@@ -89,7 +93,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>120</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -97,7 +101,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-19 00:47:14</sys_updated_on>
+        <sys_updated_on>2021-11-19 01:23:03</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

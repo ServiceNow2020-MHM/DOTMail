@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="30" type="collection">
+    <element attributes="email_client=true" audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="31" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Requester name" max_length="40" name="requestor_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Other Action Request" max_length="30" name="u_action_1" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" hint="Specify the action you are requesting from a list of choices.  The choices are dependent upon the request type selected." label="Action requested" max_length="40" name="u_action_requested" type="string">
