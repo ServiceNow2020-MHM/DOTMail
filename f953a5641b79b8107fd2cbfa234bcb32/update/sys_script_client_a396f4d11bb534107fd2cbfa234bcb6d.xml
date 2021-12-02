@@ -3,7 +3,7 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Only display Action requested choices that match the Request type value.</description>
+        <description>Only display Action requested choices and State Display Values for each Request type value.</description>
         <field>u_request_type</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
@@ -28,12 +28,13 @@
         // set option to No Response Required so that there is a value in this column in the list view
         g_form.addOption('u_action_requested', 'no response required', 'No Response Required');
 
-        // show only Open State since their is no action necessary, flow will change to Closed Complete after one year
+        // need to show only Open, Completed Request and Completed Request State for workflow process
         //g_form.addOption('state', '-5', 'Pending');
         g_form.addOption('state', '1', 'Open');
-        //g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '3', 'Closed Complete');
         //g_form.addOption('state', '10', 'Cancelled');
         //g_form.addOption('state', '20', 'Completed Request');
+        //g_form.addOption('state', '30', 'Reopened');
     }
 
     // Set choices to display in Action requested and State field choice lists depending on the Request Type
@@ -48,6 +49,7 @@
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
+        g_form.addOption('state', '30', 'Reopened');
     }
 
     if (newValue == 'dir_signature') {
@@ -59,6 +61,7 @@
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
+        g_form.addOption('state', '30', 'Reopened');
     }
 
     if (newValue == 'gov referral request') {
@@ -83,6 +86,7 @@
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
+        g_form.addOption('state', '30', 'Reopened');
     }
 
     if (newValue == 'no response required') {
@@ -94,12 +98,13 @@
         g_form.addOption('u_action_requested', 'return enclosure(s)', 'Return Enclosure(s)');
         g_form.addOption('u_action_requested', 'other', 'Other');
 
-        // show only Open State since their is no action necessary, flow will change to Closed Complete after one year
+        // need to show only Open, Completed Request and Completed Request State for workflow process
         //g_form.addOption('state', '-5', 'Pending');
         g_form.addOption('state', '1', 'Open');
-        //g_form.addOption('state', '3', 'Closed Complete');
+        g_form.addOption('state', '3', 'Closed Complete');
         //g_form.addOption('state', '10', 'Cancelled');
         //g_form.addOption('state', '20', 'Completed Request');
+        //g_form.addOption('state', '30', 'Reopened');
     }
 
     if (newValue == 'response requested - no due date') {
@@ -121,6 +126,7 @@
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
+        g_form.addOption('state', '30', 'Reopened');
     }
 
     if (newValue == 'response requested - with due date') {
@@ -143,6 +149,7 @@
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
         g_form.addOption('state', '20', 'Completed Request');
+        g_form.addOption('state', '30', 'Reopened');
     }
 
     if (newValue == 'letter approval request') {
@@ -169,7 +176,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a396f4d11bb534107fd2cbfa234bcb6d</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>Define Request Type Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -177,7 +184,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_a396f4d11bb534107fd2cbfa234bcb6d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-10 21:05:02</sys_updated_on>
+        <sys_updated_on>2021-12-01 21:35:33</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

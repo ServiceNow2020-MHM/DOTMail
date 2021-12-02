@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="email_client=true" audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="31" type="collection">
+    <element attributes="email_client=true" audit="true" extends="task" label="DOTMail" max_length="40" name="x_sohd3_dotmail_dotmail" sizeclass="37" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Requester name" max_length="40" name="requestor_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Other Action Request" max_length="30" name="u_action_1" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" hint="Specify the action you are requesting from a list of choices.  The choices are dependent upon the request type selected." label="Action requested" max_length="40" name="u_action_requested" type="string">
@@ -64,6 +64,7 @@
         <element attributes="no_sort=true,slushbucket_ref_no_expand=false" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence originated from." label="Letter from list" max_length="1024" name="u_letter_from" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="glide_list"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:new GlideDateTime().getDisplayValue()" hint="The date the correspondence was loggeed.   Auto-populated and is read only." label="Log Date" mandatory="true" max_length="40" name="u_log_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" hint="The Office/Section of the log's Author.  Auto-populated and is read only." label="Office/Section" max_length="40" name="u_office_section" type="string"/>
+        <element attributes="encode_utf8=false" label="Opened by" max_length="32" name="u_opened_by" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="DIR" max_length="2" name="u_order_1" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="ENV" max_length="2" name="u_order_10" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="RTS" max_length="2" name="u_order_11" type="string"/>

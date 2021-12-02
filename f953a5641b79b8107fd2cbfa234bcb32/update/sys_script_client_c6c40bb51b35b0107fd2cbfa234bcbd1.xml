@@ -20,7 +20,11 @@
     //    g_form.setValue('u_division', userRefID.u_division);
     //    g_form.setValue('u_office_section', userRefID.department);
     // }
-
+    //
+    if (g_form.isNewRecord()) {
+        var fullName = g_user.getFullName();
+        g_form.setValue('u_opened_by', fullName);
+    }
     //Set the following fields to Read Only
     g_form.setReadonly('number', true);
     g_form.setReadonly('u_log_date', true);
@@ -94,7 +98,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>126</sys_mod_count>
+        <sys_mod_count>128</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -102,7 +106,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-24 23:44:58</sys_updated_on>
+        <sys_updated_on>2021-12-02 00:57:40</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

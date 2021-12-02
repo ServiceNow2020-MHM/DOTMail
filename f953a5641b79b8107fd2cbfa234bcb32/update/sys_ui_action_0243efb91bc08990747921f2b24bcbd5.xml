@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>reject_action</action_name>
+        <action_name>reopen_action</action_name>
         <active>true</active>
         <client>false</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments>Show Reject Button only for Letter Approval Requests and not already Approved or Rejected.  Also, show only for the assigned to person and admins.</comments>
-        <condition>(current.u_request_type == 'letter approval request'   &amp;&amp; current.state != '50'  &amp;&amp; current.state != '55') &amp;&amp; (current.assigned_to == gs.getUserID() || (gs.hasRole('admin') ))</condition>
+        <comments>Show button if the State is a Completed Request,  not archived, and logged-in user is in DOTMail Administrators role.  NOTE:  Journal Entry Only, No Response Required, and Signature Approval Requests do not have a Completed Request State.</comments>
+        <condition>current.state == '20'  &amp;&amp; current.active == true &amp;&amp;  gs.hasRole('admin, x_sohd3_dotmail.administrators')</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
-        <form_style>destructive</form_style>
+        <form_style/>
         <hint/>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
@@ -26,31 +26,32 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Reject</name>
+        <name>Reopen</name>
         <onclick/>
-        <order>330</order>
-        <script><![CDATA[    current.approval = 'rejected';
-    current.state = '55'; // Not Approved - Re-submit
-    current.update();]]></script>
+        <order>360</order>
+        <script><![CDATA[current.state = '30';  
+action.setRedirectURL(current);   // use this to update and stay
+current.update();
+]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-11-12 17:32:52</sys_created_on>
+        <sys_created_on>2021-11-26 23:00:42</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>2215da191bbff810747921f2b24bcb47</sys_id>
-        <sys_mod_count>20</sys_mod_count>
-        <sys_name>Reject</sys_name>
+        <sys_id>0243efb91bc08990747921f2b24bcbd5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Reopen</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_ui_action_2215da191bbff810747921f2b24bcb47</sys_update_name>
+        <sys_update_name>sys_ui_action_0243efb91bc08990747921f2b24bcbd5</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 22:59:53</sys_updated_on>
+        <sys_updated_on>2021-12-01 21:34:04</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
