@@ -7,9 +7,8 @@
         <affected_field_on_event/>
         <category display_value="DOTMail" name="DOTMail">6d0b1c9e1b5e3410eef0cb72604bcb1b</category>
         <collection>x_sohd3_dotmail_dotmail</collection>
-        <condition table="x_sohd3_dotmail_dotmail">state=20^u_request_type!=journal entry only^u_request_type!=no response required^EQ<item display_value="Completed Request" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="20"/>
-            <item display_value="Journal Entry Only" endquery="false" field="u_request_type" goto="false" newquery="false" operator="!=" or="false" value="journal entry only"/>
-            <item display_value="No Response Required" endquery="false" field="u_request_type" goto="false" newquery="false" operator="!=" or="false" value="no response required"/>
+        <condition table="x_sohd3_dotmail_dotmail">stateCHANGESTO20^active=true^EQ<item display_value="Completed Request" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="20"/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -41,7 +40,7 @@
         <message/>
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Dear ${opened_by.first_name},</span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This notification is sent to you to inform you that the DOTMail action request that was assigned to me/us has been completed.&nbsp; &nbsp;&nbsp;</span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This notification is to inform you that the DOTMail action request that was assigned to me/us has been completed.&nbsp; &nbsp;&nbsp;</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Feel free to contact me/us if you have any questions or concerns.</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Thank You,<br /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${assigned_to}<br /></span></p>
@@ -82,7 +81,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e450a15d1bcc4590747921f2b24bcb6c</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Request Completed</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -90,7 +89,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_e450a15d1bcc4590747921f2b24bcb6c</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-01 20:16:48</sys_updated_on>
+        <sys_updated_on>2021-12-02 21:42:22</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

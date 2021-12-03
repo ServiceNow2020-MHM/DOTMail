@@ -11,7 +11,7 @@
         <copied_from_name>DOTMail Archive Journal &amp; No Res</copied_from_name>
         <description>Change Active to False after being Open for a year.</description>
         <internal_name>dotmail_archive_response_type_requests</internal_name>
-        <label_cache>[{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.table_name","label":"3➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.record","label":"3➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"08ed5182-68ca-4eb9-8bd3-b454110d40df.item","label":"2➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.Table","label":"1➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.Records","label":"1➛DOTMail Records","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.record","label":"4➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.table_name","label":"4➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.record","label":"4➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.table_name","label":"4➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <label_cache>[{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.table_name","label":"4➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"159ddbf0-5183-4c95-9a3b-19a199dfe35b.record","label":"4➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.table_name","label":"4➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bd68d801-aa81-43a6-b59e-5bd1ef75bd4e.record","label":"4➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.Records","label":"1➛DOTMail Records","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.Table","label":"1➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9de766f2-7613-49e0-9eae-3aabd7dd4225.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"08ed5182-68ca-4eb9-8bd3-b454110d40df.item","label":"2➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.record","label":"3➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.table_name","label":"3➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b73c49b9-44ba-4952-99a7-12b943cd64ac.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <name>DOTMail Archive Response Type Requests</name>
@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>43c22a551bbe3090eef0cb72604bcb28</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>DOTMail Archive Response Type Requests</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_hub_flow_43c22a551bbe3090eef0cb72604bcb28</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-12 22:52:16</sys_updated_on>
+        <sys_updated_on>2021-12-02 20:10:19</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=43c22a551bbe3090eef0cb72604bcb28"/>
@@ -53,10 +53,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-24 01:28:16</sys_created_on>
         <sys_id>cfc22a551bbe3090eef0cb72604bcb45</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-12 22:52:16</sys_updated_on>
+        <sys_updated_on>2021-12-02 20:10:18</sys_updated_on>
         <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -94,7 +94,7 @@
         <action_inputs/>
         <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
         <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
-        <comment>Look for all response type records with State=Completed Request and Updated is more than 1 year ago</comment>
+        <comment>Look for all response type records with State=Completed Request or Cancelled and Updated is more than 1 year ago</comment>
         <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="DOTMail Archive Response Type Requests">43c22a551bbe3090eef0cb72604bcb28</flow>
@@ -104,10 +104,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-24 01:28:16</sys_created_on>
         <sys_id>47c22a551bbe3090eef0cb72604bcb3b</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-12 22:52:16</sys_updated_on>
+        <sys_updated_on>2021-12-02 20:10:19</sys_updated_on>
         <ui_id>9de766f2-7613-49e0-9eae-3aabd7dd4225</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=47c22a551bbe3090eef0cb72604bcb3b"/>
@@ -133,10 +133,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-24 01:28:16</sys_created_on>
         <sys_id>8fc22a551bbe3090eef0cb72604bcb3d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-12 22:52:16</sys_updated_on>
-        <value>u_request_type=response requested - no due date^ORu_request_type=response requested - with due date^ORu_request_type=dir_signature^ORu_request_type=gov referral request^ORu_request_type=dir review^state=20^sys_updated_on&lt;=javascript:gs.beginningOfOneYearAgo()</value>
+        <sys_updated_on>2021-12-02 20:10:19</sys_updated_on>
+        <value>u_request_type=response requested - no due date^ORu_request_type=response requested - with due date^ORu_request_type=dir_signature^ORu_request_type=gov referral request^ORu_request_type=dir review^sys_updated_on&lt;=javascript:gs.beginningOfOneYearAgo()^state=20</value>
         <variable display_value="Conditions">8f400a1587003300663ca1bb36cb0b50</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=47c22a551bbe3090eef0cb72604bcb3b"/>
@@ -155,10 +155,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-24 01:28:16</sys_created_on>
         <sys_id>4bc22a551bbe3090eef0cb72604bcb43</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-12 22:52:16</sys_updated_on>
+        <sys_updated_on>2021-12-02 20:10:19</sys_updated_on>
         <ui_id>b73c49b9-44ba-4952-99a7-12b943cd64ac</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4bc22a551bbe3090eef0cb72604bcb43"/>
@@ -250,10 +250,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-09-24 01:28:16</sys_created_on>
         <sys_id>4fc22a551bbe3090eef0cb72604bcb2f</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-12 22:52:16</sys_updated_on>
+        <sys_updated_on>2021-12-02 20:10:19</sys_updated_on>
         <ui_id>08ed5182-68ca-4eb9-8bd3-b454110d40df</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
