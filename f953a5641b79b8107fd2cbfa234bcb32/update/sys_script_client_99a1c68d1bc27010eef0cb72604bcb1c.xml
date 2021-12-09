@@ -16,13 +16,12 @@
         return;
     }
 
-    // Clear the task assignment fields when the State is 'Cancelled'.  Need to reset request type and action requested to
-    // default values before clearing values for the when needed date and opened_at fields because they are mandatory for
-    // assignment related request types
+    // Clear the task assignment fields when the State is 'Cancelled'.  
+	// Need to reset request type and action requested to
+    // default values before clearing values for the when needed date and opened_at fields because 
+	// they are mandatory for assignment related request types
 	
-	// NOTE:  reset of Request Type and Action Requested is done in workflow
-
-    var resetRequestType = 'no response required';
+    var resetRequestType = 'journal entry only';  // use this because all other req types will generate a notice
     var resetActionRequested = 'no response required';
 	var resetState = '1';
     // If the new State value is cancelled...
@@ -52,7 +51,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>99a1c68d1bc27010eef0cb72604bcb1c</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Reset Task Fields When Cancelled</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -60,7 +59,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-02 23:34:40</sys_updated_on>
+        <sys_updated_on>2021-12-09 18:42:18</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

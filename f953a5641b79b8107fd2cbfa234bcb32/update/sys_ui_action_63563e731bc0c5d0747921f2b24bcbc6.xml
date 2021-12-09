@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>approve_action</action_name>
+        <action_name>resubmit_action</action_name>
         <active>true</active>
         <client>false</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments>Show Approve Button only for Active Letter Approval Requests (handled by UI Policy) and not currently Approved/Rejected.  Also, show only for the assigned to person.&#13;
-(current.u_request_type == 'letter approval request' &amp;&amp; current.state == '-5'  &amp;&amp; current.state != '50' &amp;&amp; current.state != '55' ) &amp;&amp; (current.assigned_to == gs.getUserID() || (gs.hasRole('admin') ))</comments>
-        <condition>(current.state == '-5') &amp;&amp; (current.state != '50' &amp;&amp; current.state != '55' ) &amp;&amp; (current.assigned_to == gs.getUserID() )</condition>
+        <comments>Show only for Active Letter Approval Requests (handled on UI Policy) , the Approval is Rejected, and for the person that assigned this task.  Change Action Requested to 'Review and Respond (Resubmittal) (done in workflow).  &#13;
+&#13;
+(current.approval == 'rejected'  &amp;&amp; current.opened_by == gs.getUserID() || (gs.hasRole('admin')))</comments>
+        <condition>(current.approval == 'rejected' &amp;&amp; current.opened_by == gs.getUserID())</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
-        <form_style>primary</form_style>
+        <form_style/>
         <hint/>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
@@ -27,11 +28,10 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Approve</name>
+        <name>Resubmit</name>
         <onclick/>
-        <order>320</order>
-        <script><![CDATA[current.approval = 'approved';
-current.state = '50';  // Approved - Ready to Finalize
+        <order>380</order>
+        <script><![CDATA[current.u_action_requested = 'review and respond (resubmittal)';
 current.update();]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -39,19 +39,19 @@ current.update();]]></script>
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-11-12 17:30:12</sys_created_on>
+        <sys_created_on>2021-12-03 00:47:17</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>fde356111bbff810747921f2b24bcb2e</sys_id>
-        <sys_mod_count>34</sys_mod_count>
-        <sys_name>Approve</sys_name>
+        <sys_id>63563e731bc0c5d0747921f2b24bcbc6</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Resubmit</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_ui_action_fde356111bbff810747921f2b24bcb2e</sys_update_name>
+        <sys_update_name>sys_ui_action_63563e731bc0c5d0747921f2b24bcbc6</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-08 20:33:28</sys_updated_on>
+        <sys_updated_on>2021-12-08 22:31:32</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

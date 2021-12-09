@@ -21,8 +21,8 @@
     //    g_form.setValue('u_office_section', userRefID.department);
     // }
     //
-	//  This was used to test a reference field without the default value.  Got an error message when submitting so
-	//  I deleted u_opened_by and will try something else later. 
+    //  This was used to test a reference field without the default value.  Got an error message when submitting so
+    //  I deleted u_opened_by and will try something else later. 
     //if (g_form.isNewRecord()) {
     //    var fullName = g_user.getFullName();
     //    g_form.setValue('u_opened_by', fullName);
@@ -38,10 +38,12 @@
         g_form.setReadonly('state', false);
         g_form.setReadonly('approval', false);
         g_form.setReadonly('active', false);
+        //g_form.setReadonly('u_action_requested', false);
     } else {
         g_form.setReadonly('state', true);
         g_form.setReadonly('approval', true);
         g_form.setReadonly('active', true);
+        //g_form.setReadonly('u_action_requested', true);
     }
 
     //Set the following fields to Mandatory
@@ -100,7 +102,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>129</sys_mod_count>
+        <sys_mod_count>131</sys_mod_count>
         <sys_name>Set Form Properties On Load</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -108,7 +110,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-02 18:32:19</sys_updated_on>
+        <sys_updated_on>2021-12-03 01:21:45</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
