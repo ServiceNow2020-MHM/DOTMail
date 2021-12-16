@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report">
     <sys_report action="INSERT_OR_UPDATE">
-        <additional_groupby/>
+        <additional_groupby>u_request_type,state</additional_groupby>
         <aggregate>COUNT</aggregate>
         <aggregation_source>no_override</aggregation_source>
         <allow_data_label_overlap>false</allow_data_label_overlap>
@@ -19,9 +19,9 @@
         <chart_subtitle_color/>
         <chart_subtitle_size>14</chart_subtitle_size>
         <chart_subtitle_style>normal</chart_subtitle_style>
-        <chart_title>Correspondence States</chart_title>
+        <chart_title>DOTMail</chart_title>
         <chart_title_color display_value="Black">65b30218a9fe3dba0120df8611520d97</chart_title_color>
-        <chart_title_size>48</chart_title_size>
+        <chart_title_size>36</chart_title_size>
         <chart_title_style>normal</chart_title_style>
         <chart_title_x_position>0</chart_title_x_position>
         <chart_title_y_position>0</chart_title_y_position>
@@ -45,9 +45,11 @@
         <donut_width_percent>50</donut_width_percent>
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
-        <field>state</field>
+        <field>u_request_type</field>
         <field_list>u_log_date,u_office_section,number,short_description,u_request_type,u_action_requested,assigned_to,state</field_list>
-        <filter/>
+        <filter table="x_sohd3_dotmail_dotmail">active=true^NQopened_byDYNAMICfdc474aab313001013a082c136a8dc15<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="opened_by" goto="false" newquery="true" operator="DYNAMIC" or="false" value="fdc474aab313001013a082c136a8dc15"/>
+        </filter>
         <formatting_configuration>{"table":"incident","stringFormattingProperties":{},"durationFormattingProperties":{},"dateFormattingProperties":{},"numberFormattingProperties":{}}</formatting_configuration>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
@@ -72,7 +74,7 @@
         <map display_value="World">93b8a3a2d7101200bd4a4ebfae61033a</map>
         <map_source/>
         <orderby_list/>
-        <other_threshold>-2</other_threshold>
+        <other_threshold>-1</other_threshold>
         <others>true</others>
         <page_hdrftr/>
         <pivot_expanded>true</pivot_expanded>
@@ -106,21 +108,21 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-10-07 20:44:37</sys_created_on>
         <sys_id>e028a97d1b837810eef0cb72604bcb89</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>DOTMail State Report</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>What's In DOTMail</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_report_e028a97d1b837810eef0cb72604bcb89</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-08 00:24:09</sys_updated_on>
+        <sys_updated_on>2021-12-10 23:25:30</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
-        <title>DOTMail State Report</title>
+        <title>What's In DOTMail</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
         <trend_field/>
-        <type>donut</type>
+        <type>pie</type>
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>
         <use_null_in_trend>false</use_null_in_trend>

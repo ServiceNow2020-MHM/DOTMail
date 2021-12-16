@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
-        <active>false</active>
+        <active>true</active>
         <api_name>x_sohd3_dotmail.WhenNeededUtil</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
@@ -12,11 +12,14 @@ WhenNeededUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     initialize: function() {},
     isDatePast: function(strDate) {
         // Create GlideDateTime objects for the current date and the passed in date
-        var rightnow = new GlideDateTime();
-        var testdate = new GlideDateTime(strDate);
+        //var rightnow = new GlideDateTime();
+        var tempnow = new GlideDateTime();
+        var temptest = new GlideDateTime(strDate);   // passed-in When needed date
+        var v_tempnow = tempnow.getDate();
+        var v_temptest = temptest.getDate();
 
-        // If the testdate is before rightnow, return true, else return false
-        if (testdate.before(rightnow)) {
+        // If the passed in date is before rightnow, return true - cannot be in the past
+        if (v_temptest.before(v_tempnow)) {
             return true;
         } else {
             return false;
@@ -24,14 +27,19 @@ WhenNeededUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     },
 
     isDateToday: function(strDate) {
-        // Create GlideDateTime objects for the current date and the passed in date
+        // Create GlideDateTime objects for the current date and the passed-in date
         var rightnow = new GlideDateTime();
-        var testdate = new GlideDateTime(strDate);
-        // Get the date portion of rightnow and testdate (no timestamp)
-        var today = rightnow.getLocalDate();
-        var istoday = testdate.getLocalDate();
+        var testdate = new GlideDateTime(strDate);   // passed-in When needed date
 
-        // Compare today and istoday to see if they are the same day
+        // Get the date portion of rightnow and testdate (no timestamp).  Use getDate() because getLocalDate()
+		// doesn't work.
+        //var today = rightnow.getLocalDate();
+        //var istoday = testdate.getLocalDate();
+        var today = rightnow.getDate();
+        var istoday = testdate.getDate();
+
+        // Compare right now (today) and passed-in (istoday) to see if they are the same day
+		// When needed cannot be today
         if (today.compareTo(istoday) == 0) {
             return true;
         } else {
@@ -45,13 +53,13 @@ WhenNeededUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-08-19 21:23:51</sys_created_on>
         <sys_id>34995d861b8a7010eef0cb72604bcbf7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>WhenNeededUtil</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_include_34995d861b8a7010eef0cb72604bcbf7</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 23:52:39</sys_updated_on>
+        <sys_updated_on>2021-12-16 17:27:28</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation>Return the Current Date</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch1-hotfix1b-10-18-2021_11-10-2021_0611.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>return_the_current_date</internal_name>
+        <label_cache>[{"name":"{{action.left_date}}","label":"action➛Left Date","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.right_date}}","label":"action➛Right Date","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].r}}","label":"step➛Script step➛r","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].re}}","label":"step➛Script step➛re","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].res}}","label":"step➛Script step➛res","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].resu}}","label":"step➛Script step➛resu","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].resul}}","label":"step➛Script step➛resul","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].result}}","label":"step➛Script step➛result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].result}}","label":"step➛Script step➛result","type":"step","ref":"","reference_display":"","base_type":"glide_date","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date","uiUniqueId":"1e70192c-69ba-446c-b883-f6059b6c8e3b"}},{"name":"{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].__step_status__}}","label":"step➛Script step➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master_snapshot>9b3041801be00950747921f2b24bcb4e</master_snapshot>
+        <name>Return the Current Date</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:46:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5b5e388c1ba00950747921f2b24bcb50</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Return the Current Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_5b5e388c1ba00950747921f2b24bcb50</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=5b5e388c1ba00950747921f2b24bcb50"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5b5e388c1ba00950747921f2b24bcb50"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>5b5e388c1ba00950747921f2b24bcb50</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>2530cd401be00950747921f2b24bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:00</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">1d30cd401be00950747921f2b24bcbaf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>5b5e388c1ba00950747921f2b24bcb50</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:56:37</sys_created_on>
+        <sys_id>8c5e01481b240950747921f2b24bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:56:37</sys_updated_on>
+        <value/>
+        <variable display_value="Current Date">445e01481b240950747921f2b24bcb04</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>5b5e388c1ba00950747921f2b24bcb50</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>e530cd401be00950747921f2b24bcbbe</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:20:35</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDd930cd407ee009509d66ec4e686faf92":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDd930cd407ee009509d66ec4e686faf92.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"95d8ce1d-3f66-4338-bf86-6a3e5c5cc3ae\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDd930cd407ee009509d66ec4e686faf92\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">1530cd401be00950747921f2b24bcba8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5b5e388c1ba00950747921f2b24bcb50"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>result</field>
+        <id>5b5e388c1ba00950747921f2b24bcb50</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:56:37</sys_created_on>
+        <sys_id>085e01481b240950747921f2b24bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:56:37</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</table>
+        <value>{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>variable</field>
+        <id>5b5e388c1ba00950747921f2b24bcb50</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>2d30cd401be00950747921f2b24bcbbd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:08:27</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</table>
+        <value>{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>5b5e388c1ba00950747921f2b24bcb50</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>a130cd401be00950747921f2b24bcbbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>5b5e388c1ba00950747921f2b24bcb50</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>ed30cd401be00950747921f2b24bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:00</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=5b5e388c1ba00950747921f2b24bcb50^sys_idNOT IN6e4ff0001be00950747921f2b24bcbc6"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</action>
+        <cid>b78873a7-4ce9-46aa-8ce5-06f04dbcb65a</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:50:59</sys_created_on>
+        <sys_id>6e4ff0001be00950747921f2b24bcbc6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:20:34</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6e4ff0001be00950747921f2b24bcbc6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6e4ff0001be00950747921f2b24bcbc6</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:50:59</sys_created_on>
+        <sys_id>3a4ff0001be00950747921f2b24bcbf5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:20:34</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  
+// Output the current date
+  var gd = new GlideDate();
+  outputs.result = gd;
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6e4ff0001be00950747921f2b24bcbc6</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:50:59</sys_created_on>
+        <sys_id>be4ff0001be00950747921f2b24bcbf4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:50:59</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_6e4ff0001be00950747921f2b24bcbc6^id=6e4ff0001be00950747921f2b24bcbc6"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=6e4ff0001be00950747921f2b24bcbc6"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=6e4ff0001be00950747921f2b24bcbc6^sys_idNOT IN3e4ff0001be00950747921f2b24bcbcf"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date,uiTypeLabel=Date,uiUniqueId=1e70192c-69ba-446c-b883-f6059b6c8e3b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date</internal_type>
+        <label>result</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">6e4ff0001be00950747921f2b24bcbc6</model>
+        <model_id>6e4ff0001be00950747921f2b24bcbc6</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_6e4ff0001be00950747921f2b24bcbc6</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:50:59</sys_created_on>
+        <sys_id>3e4ff0001be00950747921f2b24bcbcf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:53:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_6e4ff0001be00950747921f2b24bcbc6^sys_idNOT INfa4ff0001be00950747921f2b24bcbef"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_6e4ff0001be00950747921f2b24bcbc6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:50:59</sys_created_on>
+        <sys_id>fa4ff0001be00950747921f2b24bcbef</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:53:30</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_output action="delete_multiple" query="model=5b5e388c1ba00950747921f2b24bcb50^sys_idNOT IN1530cd401be00950747921f2b24bcba8,1d30cd401be00950747921f2b24bcbaf,445e01481b240950747921f2b24bcb04"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDd930cd407ee009509d66ec4e686faf92,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=95d8ce1d-3f66-4338-bf86-6a3e5c5cc3ae</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</model>
+        <model_id>5b5e388c1ba00950747921f2b24bcb50</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:54:59</sys_created_on>
+        <sys_id>1530cd401be00950747921f2b24bcba8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:20:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=d463052b-dcc8-4fa0-85ae-92a89485b800,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</model>
+        <model_id>5b5e388c1ba00950747921f2b24bcb50</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>1d30cd401be00950747921f2b24bcbaf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:20:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=glide_date,uiTypeLabel=Date,uiUniqueId=22537b13-a31a-4c1d-b9f9-60ebdebe8fcf</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">glide_date</internal_type>
+        <label>Current Date</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</model>
+        <model_id>5b5e388c1ba00950747921f2b24bcb50</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:56:37</sys_created_on>
+        <sys_id>445e01481b240950747921f2b24bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:56:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=5b5e388c1ba00950747921f2b24bcb50^sys_idNOT INf64f34001be00950747921f2b24bcb03"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</action_type_id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:51:00</sys_created_on>
+        <sys_id>f64f34001be00950747921f2b24bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:51:00</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50^sys_idNOT IN005e01481b240950747921f2b24bcb0b,1530cd401be00950747921f2b24bcbba,5530cd401be00950747921f2b24bcbae"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>Current Date</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:56:37</sys_created_on>
+        <sys_id>005e01481b240950747921f2b24bcb0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:56:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>1530cd401be00950747921f2b24bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5b5e388c1ba00950747921f2b24bcb50</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:00</sys_created_on>
+        <sys_id>5530cd401be00950747921f2b24bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=5b5e388c1ba00950747921f2b24bcb50^sys_idNOT IN673081801be00950747921f2b24bcb20"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"673081801be00950747921f2b24bcb20","name":"plan","plan_signature":null}}</plan>
+        <snapshot>e3de41881b240950747921f2b24bcb23</snapshot>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>673081801be00950747921f2b24bcb20</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:03</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation>Return the Current Date</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>return_the_current_date</internal_name>
+        <label_cache>[{"name":"{{action.left_date}}","label":"action➛Left Date","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.right_date}}","label":"action➛Right Date","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].r}}","label":"step➛Script step➛r","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].re}}","label":"step➛Script step➛re","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].res}}","label":"step➛Script step➛res","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].resu}}","label":"step➛Script step➛resu","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].resul}}","label":"step➛Script step➛resul","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b3845692-fbaf-4c0c-bdc5-197c66a98e08].result}}","label":"step➛Script step➛result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].result}}","label":"step➛Script step➛result","type":"step","ref":"","reference_display":"","base_type":"glide_date","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Date","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"glide_date","uiUniqueId":"1e70192c-69ba-446c-b883-f6059b6c8e3b"}},{"name":"{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].__step_status__}}","label":"step➛Script step➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Return the Current Date</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Return the Current Date">5b5e388c1ba00950747921f2b24bcb50</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b3041801be00950747921f2b24bcb4e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:01</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=9b3041801be00950747921f2b24bcb4e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9b3041801be00950747921f2b24bcb4e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9b3041801be00950747921f2b24bcb4e</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:59:02</sys_created_on>
+        <sys_id>2bde41881b240950747921f2b24bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <value/>
+        <variable display_value="Current Date">e3de01881b240950747921f2b24bcbf0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9b3041801be00950747921f2b24bcb4e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>a33041801be00950747921f2b24bcbdc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FD1b3041800fe00950190b0589d52f2896":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD1b3041800fe00950190b0589d52f2896.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"95d8ce1d-3f66-4338-bf86-6a3e5c5cc3ae\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD1b3041800fe00950190b0589d52f2896\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">933041801be00950747921f2b24bcbc6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9b3041801be00950747921f2b24bcb4e</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>ef3041801be00950747921f2b24bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">5b3041801be00950747921f2b24bcbcd</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9b3041801be00950747921f2b24bcb4e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>result</field>
+        <id>9b3041801be00950747921f2b24bcb4e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:59:02</sys_created_on>
+        <sys_id>23de41881b240950747921f2b24bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</table>
+        <value>{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>variable</field>
+        <id>9b3041801be00950747921f2b24bcb4e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>e73041801be00950747921f2b24bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</table>
+        <value>{{step[b78873a7-4ce9-46aa-8ce5-06f04dbcb65a].result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>9b3041801be00950747921f2b24bcb4e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>6f3041801be00950747921f2b24bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>9b3041801be00950747921f2b24bcb4e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>ab3041801be00950747921f2b24bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+        <table>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=9b3041801be00950747921f2b24bcb4e^sys_idNOT IN9f3041801be00950747921f2b24bcb52"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Return the Current Date">9b3041801be00950747921f2b24bcb4e</action>
+        <cid>b78873a7-4ce9-46aa-8ce5-06f04dbcb65a</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:07</sys_created_on>
+        <sys_id>9f3041801be00950747921f2b24bcb52</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:01</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9f3041801be00950747921f2b24bcb52"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9f3041801be00950747921f2b24bcb52</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:07</sys_created_on>
+        <sys_id>1f3041801be00950747921f2b24bcb93</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  
+// Output the current date
+  var gd = new GlideDate();
+  outputs.result = gd;
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>9f3041801be00950747921f2b24bcb52</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:07</sys_created_on>
+        <sys_id>5b3041801be00950747921f2b24bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:07</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_9f3041801be00950747921f2b24bcb52^id=9f3041801be00950747921f2b24bcb52"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=9f3041801be00950747921f2b24bcb52"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=9f3041801be00950747921f2b24bcb52^sys_idNOT IN933041801be00950747921f2b24bcb57"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date,uiTypeLabel=Date,uiUniqueId=1e70192c-69ba-446c-b883-f6059b6c8e3b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date</internal_type>
+        <label>result</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">9f3041801be00950747921f2b24bcb52</model>
+        <model_id>9f3041801be00950747921f2b24bcb52</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_9f3041801be00950747921f2b24bcb52</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:07</sys_created_on>
+        <sys_id>933041801be00950747921f2b24bcb57</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_9f3041801be00950747921f2b24bcb52^sys_idNOT IN533041801be00950747921f2b24bcb8f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_9f3041801be00950747921f2b24bcb52</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:07</sys_created_on>
+        <sys_id>533041801be00950747921f2b24bcb8f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_output action="delete_multiple" query="model=9b3041801be00950747921f2b24bcb4e^sys_idNOT IN5b3041801be00950747921f2b24bcbcd,933041801be00950747921f2b24bcbc6,e3de01881b240950747921f2b24bcbf0"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=d463052b-dcc8-4fa0-85ae-92a89485b800,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Return the Current Date">9b3041801be00950747921f2b24bcb4e</model>
+        <model_id>9b3041801be00950747921f2b24bcb4e</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>5b3041801be00950747921f2b24bcbcd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FD1b3041800fe00950190b0589d52f2896,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=95d8ce1d-3f66-4338-bf86-6a3e5c5cc3ae</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Return the Current Date">9b3041801be00950747921f2b24bcb4e</model>
+        <model_id>9b3041801be00950747921f2b24bcb4e</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>933041801be00950747921f2b24bcbc6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=glide_date,uiTypeLabel=Date,uiUniqueId=22537b13-a31a-4c1d-b9f9-60ebdebe8fcf</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">glide_date</internal_type>
+        <label>Current Date</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Return the Current Date">9b3041801be00950747921f2b24bcb4e</model>
+        <model_id>9b3041801be00950747921f2b24bcb4e</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:59:02</sys_created_on>
+        <sys_id>e3de01881b240950747921f2b24bcbf0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=9b3041801be00950747921f2b24bcb4e^sys_idNOT INa33041801be00950747921f2b24bcbde"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Return the Current Date">9b3041801be00950747921f2b24bcb4e</action_type_id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>a33041801be00950747921f2b24bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e^sys_idNOT IN233041801be00950747921f2b24bcbd8,2fde01881b240950747921f2b24bcbf6,933041801be00950747921f2b24bcbcc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>233041801be00950747921f2b24bcbd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>Current Date</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 21:59:02</sys_created_on>
+        <sys_id>2fde01881b240950747921f2b24bcbf6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 21:59:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9b3041801be00950747921f2b24bcb4e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-12-15 20:55:08</sys_created_on>
+        <sys_id>933041801be00950747921f2b24bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-12-15 20:55:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_type_definition action="update">
+        <sys_id>5b5e388c1ba00950747921f2b24bcb50</sys_id>
+        <latest_snapshot>9b3041801be00950747921f2b24bcb4e</latest_snapshot>
+    </sys_hub_action_type_definition>
+</record_update>
