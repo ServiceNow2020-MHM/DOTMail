@@ -41,7 +41,6 @@
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This notification is to inform you that a DOTMail action request that was assigned to you has been <strong><span style="text-decoration: underline;">Reopened</span></strong>.&nbsp; Please look in the Additional Comments field of the DOTMail record for instructions as to what corrections and/or revisions we have requested.&nbsp; Please click on the "<span style="text-decoration: underline;"><strong>Completed Request Button</strong></span>" after you have completed the requested changes.</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Feel free to contact me if you have any questions or concerns.</span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp;&nbsp;</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Thank You,<br /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${opened_by.first_name}</span></p>
 <p>&nbsp;</p>
@@ -80,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>84acb3b91b848990747921f2b24bcb2d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Request Reopened</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -88,7 +87,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_84acb3b91b848990747921f2b24bcb2d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-02 23:55:29</sys_updated_on>
+        <sys_updated_on>2022-01-05 23:57:06</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

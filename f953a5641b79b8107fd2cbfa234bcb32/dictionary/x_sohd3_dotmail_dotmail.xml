@@ -114,6 +114,7 @@
         <element label="DIR" max_length="40" name="u_route_1" type="integer"/>
         <element label="DEP-S" max_length="40" name="u_route_2" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Additional Instructions and Comments" max_length="120" name="u_route_slip_comments" type="string"/>
+        <element attributes="encode_utf8=false" label="Route to group" max_length="32" name="u_route_to_group" reference="sys_user_group" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="DOT Letter Number Cycle" max_length="40" name="u_string_1" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Division" max_length="40" name="u_string_4" type="string"/>
         <element attributes="encode_utf8=false" dynamic_creation="true" dynamic_creation_script="current.name = value;&#13;&#10;current.insert();" hint="Who the correspondence was addressed to." label="Letter to" max_length="32" name="u_to" reference="x_sohd3_dotmail_mail_list" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
