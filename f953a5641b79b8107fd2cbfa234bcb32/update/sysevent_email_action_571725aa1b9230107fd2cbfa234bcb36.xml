@@ -39,7 +39,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img style="align: baseline;" title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">A DOTMail record has been created and a <span style="text-decoration: underline;"><strong>Governor Referral</strong></span> related action request is assigned to you.&nbsp; Please note that <span style="text-decoration: underline;"><strong>if</strong> <strong>there is a due date</strong></span> you are requested to complete the action requested on or before the due date.&nbsp; </span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">A DOTMail record has been added and a <span style="text-decoration: underline;"><strong>Governor Referral</strong></span> action request is assigned to you.&nbsp; Please note that <span style="text-decoration: underline;"><strong>if</strong> <strong>there is a due date</strong></span> you are requested to complete the action requested on or before the due date.&nbsp; </span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">To avoid reminder notices, please click on the "<strong><span style="text-decoration: underline;">Completed Request Button</span></strong>" after you have completed the action requested.</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is the Task Information:</span></p>
@@ -63,7 +63,7 @@
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>assigned_to,group_list,additional_assignee_list</recipient_fields>
+        <recipient_fields>u_responsible_group,u_route_to_group_list</recipient_fields>
         <recipient_groups/>
         <recipient_users/>
         <reply_to/>
@@ -78,7 +78,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>571725aa1b9230107fd2cbfa234bcb36</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Governor Referral Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -86,7 +86,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_571725aa1b9230107fd2cbfa234bcb36</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-02 23:48:26</sys_updated_on>
+        <sys_updated_on>2022-01-20 01:23:08</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

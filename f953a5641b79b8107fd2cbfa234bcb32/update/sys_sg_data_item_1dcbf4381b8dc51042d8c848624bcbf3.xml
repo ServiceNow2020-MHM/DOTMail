@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
+    <sys_sg_data_item action="INSERT_OR_UPDATE">
+        <condition_type>declarative</condition_type>
+        <description/>
+        <group_by>u_log_date</group_by>
+        <instance_relative_url_qc/>
+        <name>DOTMail for CSS</name>
+        <query_condition table="x_sohd3_dotmail_dotmail">active=true^u_office_sectionLIKECSS^ORassigned_toDYNAMIC90d1921e5f510100a9ad2572f2b477fe^ORgroup_listLIKEf87c553a1baf70907fd2cbfa234bcb9a<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="u_office_section" goto="false" newquery="false" operator="LIKE" or="false" value="CSS"/>
+            <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="DYNAMIC" or="true" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="false" field="group_list" goto="false" newquery="false" operator="LIKE" or="true" value="f87c553a1baf70907fd2cbfa234bcb9a"/>
+        </query_condition>
+        <query_condition_script/>
+        <sys_class_name>sys_sg_data_item</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-12 01:02:26</sys_created_on>
+        <sys_id>1dcbf4381b8dc51042d8c848624bcbf3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DOTMail for CSS</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_sg_data_item_1dcbf4381b8dc51042d8c848624bcbf3</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-12 01:04:11</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+    </sys_sg_data_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=1dcbf4381b8dc51042d8c848624bcbf3"/>
+</record_update>

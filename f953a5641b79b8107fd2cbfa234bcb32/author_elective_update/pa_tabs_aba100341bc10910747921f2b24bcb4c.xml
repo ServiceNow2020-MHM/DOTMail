@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="DELETE">
+        <canvas_page/>
+        <name>My Homepage - New Tab</name>
+        <page/>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-11 20:48:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aba100341bc10910747921f2b24bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Homepage - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>pa_tabs_aba100341bc10910747921f2b24bcb4c</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-11 20:48:38</sys_updated_on>
+    </pa_tabs>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>pa_tabs_aba100341bc10910747921f2b24bcb4c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs"><pa_tabs action="INSERT_OR_UPDATE"><canvas_page/><name>My Homepage - New Tab</name><page/><sys_class_name>pa_tabs</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2022-01-11 20:48:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>aba100341bc10910747921f2b24bcb4c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Homepage - New Tab</sys_name><sys_overrides/><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>pa_tabs_aba100341bc10910747921f2b24bcb4c</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2022-01-11 20:48:38</sys_updated_on></pa_tabs></record_update>]]></payload>
+        <payload_hash>-940383410</payload_hash>
+        <record_name>My Homepage - New Tab</record_name>
+        <reverted_from/>
+        <source>96c10caa1b67b450747921f2b24bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-11 20:53:32</sys_created_on>
+        <sys_id>17c20c741bc10910747921f2b24bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e4aeadc390000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-11 20:53:32</sys_updated_on>
+        <type>Tab</type>
+        <update_guid>6ba100349dc10910e2b78d6d5d228f4e</update_guid>
+        <update_guid_history>6ba100349dc10910e2b78d6d5d228f4e:-1819882054,6ba100349dc10910e2b78d6d5d228f4e:-1819882054,6ba100349dc10910e2b78d6d5d228f4e:-1819882054</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Homepage - New Tab">1bc20c741bc10910747921f2b24bcb6f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-11 20:53:33</sys_created_on>
+        <sys_db_object display_value="" name="pa_tabs">pa_tabs</sys_db_object>
+        <sys_id>1bdf663ddaba4926b5b8e0533e86f871</sys_id>
+        <sys_metadata>aba100341bc10910747921f2b24bcb4c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Homepage - New Tab</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>pa_tabs_aba100341bc10910747921f2b24bcb4c</sys_update_name>
+        <sys_update_version display_value="pa_tabs_aba100341bc10910747921f2b24bcb4c">17c20c741bc10910747921f2b24bcb39</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-11 20:53:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

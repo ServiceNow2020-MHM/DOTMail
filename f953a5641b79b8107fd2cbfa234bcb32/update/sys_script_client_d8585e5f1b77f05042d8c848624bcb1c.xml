@@ -15,12 +15,14 @@
 
     var request = g_form.getValue('u_request_type');
     if (request != 'journal entry only') {
-            var a = g_form.getValue('assigned_to');
-            var b = g_form.getValue('group_list');
-            var c = g_form.getValue('additional_assignee_list');
-
-            if (a == "" && b == "" && c == "") {
-                alert("You must enter a value in at least one of the Route to, the Route to group list, or the Additional assignee list fields.");
+            //var a = g_form.getValue('assigned_to');
+            //var b = g_form.getValue('group_list');
+            //var c = g_form.getValue('additional_assignee_list');
+            var a = g_form.getValue('u_responsible_group');
+            var b = g_form.getValue('u_route_to_group_list');
+            //if (a == "" && b == "" && c == "") {
+            if (a == "" && b == "") {
+                alert("You must enter a value in at least one of the Responsible group or the Route to group list fields.");
                 return false;
             }
         }
@@ -31,7 +33,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d8585e5f1b77f05042d8c848624bcb1c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Require At Least One Assignment Field</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -39,7 +41,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_d8585e5f1b77f05042d8c848624bcb1c</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-11-18 23:55:07</sys_updated_on>
+        <sys_updated_on>2022-01-19 21:55:13</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

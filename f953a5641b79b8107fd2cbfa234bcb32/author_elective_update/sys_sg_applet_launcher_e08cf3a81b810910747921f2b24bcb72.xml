@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher">
+    <sys_sg_applet_launcher action="DELETE">
+        <active>true</active>
+        <available_offline>false</available_offline>
+        <header_button/>
+        <header_titles/>
+        <hide_empty_sections>true</hide_empty_sections>
+        <name>DOTMail</name>
+        <required_roles/>
+        <search_config/>
+        <sys_class_name>sys_sg_applet_launcher</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-11 20:26:03</sys_created_on>
+        <sys_id>e08cf3a81b810910747921f2b24bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DOTMail</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_e08cf3a81b810910747921f2b24bcb72</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-11 20:26:03</sys_updated_on>
+        <title>DOTMail</title>
+    </sys_sg_applet_launcher>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_sg_applet_launcher_e08cf3a81b810910747921f2b24bcb72</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher"><sys_sg_applet_launcher action="INSERT_OR_UPDATE"><active>true</active><available_offline>false</available_offline><header_button/><header_titles/><hide_empty_sections>true</hide_empty_sections><name>DOTMail</name><required_roles/><search_config/><sys_class_name>sys_sg_applet_launcher</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2022-01-11 20:26:03</sys_created_on><sys_id>e08cf3a81b810910747921f2b24bcb72</sys_id><sys_mod_count>0</sys_mod_count><sys_name>DOTMail</sys_name><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sys_sg_applet_launcher_e08cf3a81b810910747921f2b24bcb72</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2022-01-11 20:26:03</sys_updated_on><title>DOTMail</title></sys_sg_applet_launcher></record_update>]]></payload>
+        <payload_hash>-353735163</payload_hash>
+        <record_name>DOTMail</record_name>
+        <reverted_from/>
+        <source>96c10caa1b67b450747921f2b24bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-11 20:26:03</sys_created_on>
+        <sys_id>e08cf3a81b810910747921f2b24bcb76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e4ad1afed0000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-11 20:26:03</sys_updated_on>
+        <type>Launcher screen</type>
+        <update_guid>2c8cf3a8aa810910890cbb5adf86c175</update_guid>
+        <update_guid_history>2c8cf3a8aa810910890cbb5adf86c175:-353735163</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-11 20:31:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_applet_launcher">sys_sg_applet_launcher</sys_db_object>
+        <sys_id>03cbc07a07304e248088f2e8b04ce064</sys_id>
+        <sys_metadata>e08cf3a81b810910747921f2b24bcb72</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DOTMail</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_sg_applet_launcher_e08cf3a81b810910747921f2b24bcb72</sys_update_name>
+        <sys_update_version display_value="sys_sg_applet_launcher_e08cf3a81b810910747921f2b24bcb72">e08cf3a81b810910747921f2b24bcb76</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-11 20:31:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -41,19 +41,23 @@
         if (infoFromScriptInclude == g_user.fullName || g_user.hasRoleExactly('admin')) {
             g_form.setReadOnly('u_request_type', false);
             g_form.setReadOnly('u_action_requested', false);
-            g_form.setReadOnly('assigned_to', false);
-		    g_form.setReadOnly('group_list', false);
-			g_form.setReadOnly('additional_assignee_list', false);
-			g_form.setReadOnly('opened_at', false);
-			g_form.setReadOnly('u_when_needed',false);
+            g_form.setReadOnly('u_responsible_group', false);
+            g_form.setReadOnly('u_route_to_group_list', false);
+            //g_form.setReadOnly('assigned_to', false);
+            //g_form.setReadOnly('group_list', false);
+            //g_form.setReadOnly('additional_assignee_list', false);
+            g_form.setReadOnly('opened_at', false);
+            g_form.setReadOnly('u_when_needed', false);
         } else {
             g_form.setReadOnly('u_request_type', true);
             g_form.setReadOnly('u_action_requested', true);
-            g_form.setReadOnly('assigned_to', true);
-            g_form.setReadOnly('group_list', true);
-			g_form.setReadOnly('additional_assignee_list', true);
-			g_form.setReadOnly('opened_at', true);
-			g_form.setReadOnly('u_when_needed', true);
+            g_form.setReadOnly('u_responsible_group', true);
+            g_form.setReadOnly('u_route_to_group_list', true);
+            //g_form.setReadOnly('assigned_to', true);
+            //g_form.setReadOnly('group_list', true);
+            //g_form.setReadOnly('additional_assignee_list', true);
+            g_form.setReadOnly('opened_at', true);
+            g_form.setReadOnly('u_when_needed', true);
 
         }
     }
@@ -64,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>58eb0d1f1bb73850747921f2b24bcb0b</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>Set Request Type Read Only</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -72,7 +76,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_58eb0d1f1bb73850747921f2b24bcb0b</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-10 23:42:50</sys_updated_on>
+        <sys_updated_on>2022-01-19 22:54:33</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

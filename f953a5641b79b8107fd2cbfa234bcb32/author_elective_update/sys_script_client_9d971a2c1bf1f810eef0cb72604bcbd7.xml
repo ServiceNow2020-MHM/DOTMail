@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Use the MAILClientUtil Script Include to retrieve the user info from the sys_user database when the form loads.</description>
+        <field>u_action_requested</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>DOTMail Prefill User Info</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    //Check to see if the form is for a new record.  If it is a new record, 
+    //set the Requested for value to the currently logged in user.
+
+    if (g_form.isNewRecord()) {
+
+        // Instantiate the MAILClientUtil Script Include 
+        var getUserInfo = new GlideAjax("MAILClientUtil");
+        // Specify the getUserInfo method on Script Include
+        getUserInfo.addParam("sysparm_name", "getUserInfo");
+        jslog("The currently logged in user is " + g_user.getFullName());
+        //jslog("The currently logged in user info is " + g_user.getUserID());
+        // Send the request to the server
+        getUserInfo.getXML(populateUserFields);
+    }
+
+    // When the response is back from the server
+    function populateUserFields(serverResponse) {
+        // Extract the info from the response, clear any value from the field, 
+        // set new value in the  field
+        var result = serverResponse.responseXML.getElementsByTagName("result");
+        var division = result[0].getAttribute("u_division");
+        var department = result[0].getAttribute("u_office_section");
+
+        g_form.clearValue('u_division');
+        g_form.setValue('u_division', division);
+		g_form.clearValue('u_office_section');
+        g_form.setValue('u_office_section', department);
+
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-02 23:43:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9d971a2c1bf1f810eef0cb72604bcbd7</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>DOTMail Prefill User Info</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_9d971a2c1bf1f810eef0cb72604bcbd7</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-04 22:30:01</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_client_9d971a2c1bf1f810eef0cb72604bcbd7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Use the MAILClientUtil Script Include to retrieve the user info from the sys_user database when the form loads.&lt;/description&gt;&lt;field&gt;u_action_requested&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;DOTMail Prefill User Info&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    //Check to see if the form is for a new record.  If it is a new record, 
+    //set the Requested for value to the currently logged in user.
+
+    if (g_form.isNewRecord()) {
+
+        // Instantiate the MAILClientUtil Script Include 
+        var getUserInfo = new GlideAjax("MAILClientUtil");
+        // Specify the getUserInfo method on Script Include
+        getUserInfo.addParam("sysparm_name", "getUserInfo");
+        jslog("The currently logged in user is " + g_user.getFullName());
+        //jslog("The currently logged in user info is " + g_user.getUserID());
+        // Send the request to the server
+        getUserInfo.getXML(populateUserFields);
+    }
+
+    // When the response is back from the server
+    function populateUserFields(serverResponse) {
+        // Extract the info from the response, clear any value from the field, 
+        // set new value in the  field
+        var result = serverResponse.responseXML.getElementsByTagName("result");
+        var division = result[0].getAttribute("u_division");
+        var department = result[0].getAttribute("u_office_section");
+
+        g_form.clearValue('u_division');
+        g_form.setValue('u_division', division);
+		g_form.clearValue('u_office_section');
+        g_form.setValue('u_office_section', department);
+
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-02 23:43:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;9d971a2c1bf1f810eef0cb72604bcbd7&lt;/sys_id&gt;&lt;sys_mod_count&gt;46&lt;/sys_mod_count&gt;&lt;sys_name&gt;DOTMail Prefill User Info&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_9d971a2c1bf1f810eef0cb72604bcbd7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-04 22:30:01&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>347595245</payload_hash>
+        <record_name>DOTMail Prefill User Info</record_name>
+        <reverted_from/>
+        <source>b953a5641b79b8107fd2cbfa234bcb35</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-04 22:30:01</sys_created_on>
+        <sys_id>dc8ad0511bf134107fd2cbfa234bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b1349aeb20000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-08-04 22:30:01</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>188ad0518bf1341091206a564b0fc6c0</update_guid>
+        <update_guid_history>188ad0518bf1341091206a564b0fc6c0:347595245,470d6b8df87df0101487bdaba2ddb86c:11661901,d412f3b8fcb5b0109eb0bcee7267cb71:89777024,9e49677c6e75b010e73b8973ce986f53:-1251945344,04686bf87575b010cd93907ddce37a63:656778688,bb3827f81c75b0104335ac6721f0a5f5:362940321,9e28ef78eb75b010ff97681ac792f874:656778688,22d76bb88375b0109a02ddf74cc3f1d5:-982270739,72c763b8f775b010f061443a900aafdc:115757045,9e87ef782075b010d642c5a0655d377c:1518047633,9d8563b47875b010578115ac40294287:-1216221746,e925e7741e75b01044c3898a6d389951:-536213663,21c4af34cd75b0109ca9aa1857da4c83:1536730491,23c3a3f0ed75b010c6f11d6551203c62:-513924911,1bbe4b7c5fb1b010c8e4844857b05e39:748800209,dcbecb7cb4b1b0108a0c822213d6957d:-655375874,d4aecb7c2ab1b0107181b297bd795078:-1111501175,f08e477ccdb1b010c032df7fe989b647:-655375874,2a5e8f3c50b1b010f1f4a5b2d1776ce7:-1568019849,44ec0bf4e6b1b010c972cdc8a532b628:-655375874,33cc8bb802b1b0104f47e59d5d3cba3b:748800209,d63c03b8f7b1b010887512584c366fe1:-655375874,30fb4b783fb1b0106f8dd6b9fb06cafc:-1531528774,5b18cb7866717c1002649f03b1301592:-239217788,bfee7eb83afd3c10590edb561e3aef1c:2052927198,65c83678e7fd3c10cc8858ddd4cbfe38:-707794818,53367eb4b6fd3c108df8cab4cd98cf61:838312062,dcd5b63427fd3c10c5c514df2b6ade94:-707794818,47943af0c8fd3c10c760beb071ab46a0:1260671880,4c04f2b0abfd3c1043192367987b408c:1361673656,8ec3f2b057fd3c10cd0dc214958e325c:-1725574824,623ae2b0aabd3c10158c3ad2c8f6b8dc:-1364990286,a422fe2488b5f810aba6b4860ed9d6a6:-984205985,71db6a680875f8103bf75d59fab4f79c:-1686297793,56cbea685975f810569cfabc7e1132cd:-679856993,4f1566e09d75f810e8e2637b7b11665b:1050990623,99f326601575f810bea9688cf6f5a63a:990185887,d773a6208c75f810e6134a1d4d6a259d:1050990623,d6b222ecb035f8108fba5cd1c9a82e13:990185887,d42dd624e635f81087cc56e596f45015:428556361,58ecd264b535f810a640975f83247d71:1940172124,cbf99eacc4f1f8109bea3a017d1554f5:428556361,32e91e6c02f1f810c1206904fdb2ccb0:800433897,39599eac3bf1f81044c763de6d4d7c7d:251505881,99091aac10f1f810781542b5b345f1de:-263627741,30d852a856f1f810c55f8f3a85c453f4:401456351,8d381a6c35f1f810e567c9f9c73fc293:-2032909563</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-13 00:52:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0082ef61f17f4a98a2473e34107d0790</sys_id>
+        <sys_metadata>9d971a2c1bf1f810eef0cb72604bcbd7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DOTMail Prefill User Info</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_client_9d971a2c1bf1f810eef0cb72604bcbd7</sys_update_name>
+        <sys_update_version display_value="sys_script_client_9d971a2c1bf1f810eef0cb72604bcbd7">dc8ad0511bf134107fd2cbfa234bcbc0</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-13 00:52:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

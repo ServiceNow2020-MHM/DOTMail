@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Activity" section_id="6709d1531b7a3410eef0cb72604bcb54" sys_domain="global" table="x_sohd3_dotmail_dotmail" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>comments</element>
+            <element>activity.xml</element>
             <position>0</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-09-30 01:19:14</sys_created_on>
-            <sys_id>a54a55d31b7a3410eef0cb72604bcbf5</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Activity" display_value="Activity" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">6709d1531b7a3410eef0cb72604bcb54</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-09-30 01:19:14</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>activity.xml</element>
-            <position>1</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-09-30 01:19:14</sys_created_on>
-            <sys_id>2d4a55d31b7a3410eef0cb72604bcbf5</sys_id>
+            <sys_created_on>2022-01-12 22:53:54</sys_created_on>
+            <sys_id>44f7e1491b01891042d8c848624bcbbc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
             <sys_ui_section caption="Activity" display_value="Activity" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">6709d1531b7a3410eef0cb72604bcb54</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-09-30 01:19:14</sys_updated_on>
+            <sys_updated_on>2022-01-12 22:53:54</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>

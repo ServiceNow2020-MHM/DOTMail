@@ -48,9 +48,8 @@
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This notification is to inform you that the DOTMail action request that was assigned to me/us has been completed.&nbsp; &nbsp;&nbsp;</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Feel free to contact me/us if you have any questions or concerns.</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Thank You,<br /></span></p>
-<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${assigned_to}<br /></span></p>
-<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${group_list}</span></p>
-<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${additional_assignee_list}<br /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${u_responsible_group}<br /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${u_route_to_group_list}</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is the Task Information:</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Request type</strong>: ${u_request_type}<br /></span></p>
@@ -71,7 +70,7 @@
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>opened_by,group_list,assignment_group</recipient_fields>
+        <recipient_fields>opened_by,u_responsible_group,u_route_to_group_list</recipient_fields>
         <recipient_groups/>
         <recipient_users/>
         <reply_to/>
@@ -86,7 +85,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e450a15d1bcc4590747921f2b24bcb6c</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Request Completed</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -94,7 +93,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_e450a15d1bcc4590747921f2b24bcb6c</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-04 20:35:19</sys_updated_on>
+        <sys_updated_on>2022-01-20 01:04:26</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

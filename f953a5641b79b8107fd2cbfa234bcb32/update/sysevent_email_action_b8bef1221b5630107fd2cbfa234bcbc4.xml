@@ -37,7 +37,7 @@
         <message/>
         <message_html><![CDATA[<p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;" data-tinymcerootblock=""><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img style="align: baseline;" src="DOTMail%20Banner.jpgx" width="1280" height="182" align="baseline" /></span></p>
 <p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;" data-tinymcerootblock=""><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Dear ${opened_by.first_name},</span></p>
-<p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;" data-tinymcerootblock=""><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Your Letter Draft needs some revisions and has been rejected.&nbsp; Please revise and attach the revised draft to this record.&nbsp; Don't forget to change the Action Requested field to "<span style="text-decoration: underline;"><strong>Review and Respond (Resubmittal)</strong></span>" for approval when completed.</span></p>
+<p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;" data-tinymcerootblock=""><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Your Letter Draft needs some revisions and has been rejected.&nbsp; Refer to the Additional Instructions or Responses and remarks fields on the DOTMail record for instructions as to what corrections and/or revisions we have requested.&nbsp; Please revise the letter and attach the revised draft to this record.&nbsp; Don't forget to change the Action Requested field to "<span style="text-decoration: underline;"><strong>Review and Respond (Resubmittal)</strong></span>" for approval when completed.</span></p>
 <p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Click here to attach and submit the revised letter draft on this DOTMail record:&nbsp; <strong><span style="color: #3366ff;">${URI_REF}</span></strong></span></p>
 <p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Or click on this link to attach and submit the revised letter draft in the portal:&nbsp;<span style="color: #3366ff;"><strong> <a style="color: #3366ff;" title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_only&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id}">Link</a></strong></span></span></p>
 <p style="margin-right: 0in; margin-left: 0in; font-size: 12pt; font-family: 'Times New Roman', serif;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Regards,</span></p>
@@ -63,7 +63,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b8bef1221b5630107fd2cbfa234bcbc4</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Letter Rejected</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -71,7 +71,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_b8bef1221b5630107fd2cbfa234bcbc4</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-09-09 23:51:22</sys_updated_on>
+        <sys_updated_on>2022-01-20 00:59:48</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

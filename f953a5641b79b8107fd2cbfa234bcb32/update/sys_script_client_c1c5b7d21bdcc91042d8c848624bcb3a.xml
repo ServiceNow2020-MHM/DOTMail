@@ -3,7 +3,7 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Set the default value of Assigned To based on user requirements.  THIS IS A TEMPORARY WORKAROUND UNTIL DYNAMIC VERSION CAN BE ADDED.</description>
+        <description>Set the default value of Assigned To based on user requirements. </description>
         <field>u_request_type</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
@@ -16,9 +16,11 @@
     }
 
     //Type appropriate comment here, and begin script below
-    var defaultValue = '5b10d0f01b5b6410ead9a755604bcbd5';    // Jade Butay's sys_id
+    //     var defaultValue = '5b10d0f01b5b6410ead9a755604bcbd5';    // Jade Butay's sys_id
     if (newValue == 'dir review') {
-        g_form.setValue('assigned_to', defaultValue);
+		g_form.setValue('u_responsible_group', 'Route to DIR Only');
+      //g_form.setValue('assigned_to', defaultValue);
+
     } else {
         return;
     }
@@ -29,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c1c5b7d21bdcc91042d8c848624bcb3a</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Set Assigned To Director</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -37,7 +39,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c1c5b7d21bdcc91042d8c848624bcb3a</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-03 20:16:30</sys_updated_on>
+        <sys_updated_on>2022-01-19 22:47:01</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

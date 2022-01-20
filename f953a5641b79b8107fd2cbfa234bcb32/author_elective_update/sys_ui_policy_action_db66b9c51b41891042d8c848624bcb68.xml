@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>additional_assignee_list</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-12 23:57:35</sys_created_on>
+        <sys_id>db66b9c51b41891042d8c848624bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>additional_assignee_list</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_policy_action_db66b9c51b41891042d8c848624bcb68</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-12 23:57:35</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <ui_policy display_value="Temporarily Hide for Presentation Only">21b06f1c1b81451042d8c848624bcb26</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_ui_policy_action_db66b9c51b41891042d8c848624bcb68</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>additional_assignee_list</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2022-01-12 23:57:35</sys_created_on><sys_id>db66b9c51b41891042d8c848624bcb68</sys_id><sys_mod_count>0</sys_mod_count><sys_name>additional_assignee_list</sys_name><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sys_ui_policy_action_db66b9c51b41891042d8c848624bcb68</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2022-01-12 23:57:35</sys_updated_on><table>x_sohd3_dotmail_dotmail</table><ui_policy display_value="Temporarily Hide for Presentation Only">21b06f1c1b81451042d8c848624bcb26</ui_policy><visible>false</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-1808343942</payload_hash>
+        <record_name>additional_assignee_list</record_name>
+        <reverted_from/>
+        <source>96c10caa1b67b450747921f2b24bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-12 23:57:35</sys_created_on>
+        <sys_id>c186b9091b41891042d8c848624bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e50b9b9080000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-12 23:57:35</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>0d86b9092b41891088dc98398fc7c760</update_guid>
+        <update_guid_history>0d86b9092b41891088dc98398fc7c760:-1808343942</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-12 23:59:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>0d3bc3c007ff417082e54bf6c8682f24</sys_id>
+        <sys_metadata>db66b9c51b41891042d8c848624bcb68</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>additional_assignee_list</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_db66b9c51b41891042d8c848624bcb68</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_db66b9c51b41891042d8c848624bcb68">c186b9091b41891042d8c848624bcb61</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-12 23:59:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

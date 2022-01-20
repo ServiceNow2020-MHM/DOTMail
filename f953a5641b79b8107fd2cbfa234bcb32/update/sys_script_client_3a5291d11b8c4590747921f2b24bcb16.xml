@@ -17,12 +17,16 @@
 
     if (newValue == 'journal entry only') {
         g_form.clearValue('u_when_needed');
-        g_form.clearValue('assigned_to');
-        g_form.clearValue('group_list');
-        g_form.clearValue('additional_assignee_list');
+        //g_form.clearValue('assigned_to');
+        //g_form.clearValue('group_list');
+        //g_form.clearValue('additional_assignee_list');
+        g_form.clearValue('u_responsible_group');
+        g_form.clearValue('u_route_to_group_list');
         g_form.clearValue('opened_at');
-
         g_form.setMandatory('opened_at', false); //opened_at field becomes non-mandatory.  Need this or will not save. 
+		
+    } else if (newValue == 'no response required') {
+        g_form.clearValue('u_when_needed');
     }
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -31,7 +35,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3a5291d11b8c4590747921f2b24bcb16</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Reset Task Fields onChange Request Type</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -39,7 +43,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_3a5291d11b8c4590747921f2b24bcb16</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-13 23:36:34</sys_updated_on>
+        <sys_updated_on>2022-01-19 22:25:06</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
