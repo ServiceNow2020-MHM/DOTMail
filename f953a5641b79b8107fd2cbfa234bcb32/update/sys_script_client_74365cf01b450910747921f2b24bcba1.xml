@@ -14,45 +14,41 @@
     if (isLoading || newValue === '') {
         return;
     }
-	
+
     g_form.clearOptions('u_request_type');
-	
+
     if (newValue == 'DIR' || newValue == 'DEP-S') {
-        // set option to No Response Required so that there is a value in this column in the list view
         g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
         g_form.addOption('u_request_type', 'no response required', 'No Response Required');
-        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Dude Date');
-        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Dude Date');
+        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
         g_form.addOption('u_request_type', 'dir review', 'DIR Review');
         g_form.addOption('u_request_type', 'dir_signature', 'DIR Signature Request');
         g_form.addOption('u_request_type', 'gov referral request', 'GOV Referral Request');
         //g_form.addOption('u_request_type', 'letter approval request', 'Letter Approval Request');
     } else if (newValue == 'BUS' || newValue == 'BUS-I') {
-        // set option to No Response Required so that there is a value in this column in the list view
         g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
         g_form.addOption('u_request_type', 'no response required', 'No Response Required');
-        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Dude Date');
-        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Dude Date');
+        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
         //g_form.addOption('u_request_type', 'dir review', 'DIR Review');
         //g_form.addOption('u_request_type', 'dir_signature', 'DIR Signature Request');
         //g_form.addOption('u_request_type', 'gov referral request', 'GOV Referral Request');
         g_form.addOption('u_request_type', 'letter approval request', 'Letter Approval Request');
     } else if (newValue == 'CSS' || newValue == 'CSS-I') {
-        // set option to No Response Required so that there is a value in this column in the list view
         g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
         g_form.addOption('u_request_type', 'no response required', 'No Response Required');
-        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Dude Date');
-        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Dude Date');
+        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
         //g_form.addOption('u_request_type', 'dir review', 'DIR Review');
         //g_form.addOption('u_request_type', 'dir_signature', 'DIR Signature Request');
         //g_form.addOption('u_request_type', 'gov referral request', 'GOV Referral Request');
         //g_form.addOption('u_request_type', 'letter approval request', 'Letter Approval Request');
     } else {
-        // set option to No Response Required so that there is a value in this column in the list view
         g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
         g_form.addOption('u_request_type', 'no response required', 'No Response Required');
-        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Dude Date');
-        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Dude Date');
+        g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+        g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
         //g_form.addOption('u_request_type', 'dir review', 'DIR Review');
         //g_form.addOption('u_request_type', 'dir_signature', 'DIR Signature Request');
         //g_form.addOption('u_request_type', 'gov referral request', 'GOV Referral Request');
@@ -68,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>74365cf01b450910747921f2b24bcba1</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Request Type Options Based on Office</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -76,7 +72,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_74365cf01b450910747921f2b24bcba1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-19 22:43:13</sys_updated_on>
+        <sys_updated_on>2022-01-25 01:10:02</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
