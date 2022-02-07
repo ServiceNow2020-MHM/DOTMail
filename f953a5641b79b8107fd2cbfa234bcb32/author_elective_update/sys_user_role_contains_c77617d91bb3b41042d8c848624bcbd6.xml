@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="task_editor" name="task_editor">0956f6390a0a0bc50064623d5d51c556</contains>
+        <role display_value="x_sohd3_dotmail.BUS Editors" name="x_sohd3_dotmail.BUS Editors">aa0e4f1d1b73b41042d8c848624bcb1b</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-11-12 22:16:52</sys_created_on>
+        <sys_id>c77617d91bb3b41042d8c848624bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_editor.x_sohd3_dotmail.BUS Editors</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_user_role_contains_c77617d91bb3b41042d8c848624bcbd6</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-11-12 22:16:52</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_user_role_contains_c77617d91bb3b41042d8c848624bcbd6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="task_editor" name="task_editor">0956f6390a0a0bc50064623d5d51c556</contains><role display_value="x_sohd3_dotmail.BUS Editors" name="x_sohd3_dotmail.BUS Editors">aa0e4f1d1b73b41042d8c848624bcb1b</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>moody_admin</sys_created_by><sys_created_on>2021-11-12 22:16:52</sys_created_on><sys_id>c77617d91bb3b41042d8c848624bcbd6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>task_editor.x_sohd3_dotmail.BUS Editors</sys_name><sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package><sys_policy/><sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope><sys_update_name>sys_user_role_contains_c77617d91bb3b41042d8c848624bcbd6</sys_update_name><sys_updated_by>moody_admin</sys_updated_by><sys_updated_on>2021-11-12 22:16:52</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>975975240</payload_hash>
+        <record_name>task_editor.x_sohd3_dotmail.BUS Editors</record_name>
+        <reverted_from/>
+        <source>96c10caa1b67b450747921f2b24bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-11-12 22:16:52</sys_created_on>
+        <sys_id>4f7617d91bb3b41042d8c848624bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17d163997aa0000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-11-12 22:16:52</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>877617d922b3b410e90bc5c478f670e2</update_guid>
+        <update_guid_history>877617d922b3b410e90bc5c478f670e2:975975240</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-01-25 21:12:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>04e4bed59028425893f5adfc35636310</sys_id>
+        <sys_metadata>c77617d91bb3b41042d8c848624bcbd6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_editor.x_sohd3_dotmail.BUS Editors</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_c77617d91bb3b41042d8c848624bcbd6</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_c77617d91bb3b41042d8c848624bcbd6">4f7617d91bb3b41042d8c848624bcbe2</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-01-25 21:12:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

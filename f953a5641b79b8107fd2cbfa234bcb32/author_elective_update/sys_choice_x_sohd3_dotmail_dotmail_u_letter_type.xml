@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_letter_type" table="x_sohd3_dotmail_dotmail" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_letter_type</element>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-01-25 16:57:43</sys_created_on>
+            <sys_id>e9139b011b19c95042d8c848624bcb7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_letter_type</sys_name>
+            <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+            <sys_update_name>sys_choice_x_sohd3_dotmail_dotmail_u_letter_type</sys_update_name>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-01-25 16:57:43</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Admin Hearing</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-01-25 16:57:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ed139b011b19c95042d8c848624bcb79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-01-25 16:57:43</sys_updated_on>
+            <value>admin hearing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>UIPA</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-01-25 16:57:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65139b011b19c95042d8c848624bcb99</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:05:34</sys_updated_on>
+            <value>uipa</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bid Protest</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-01-25 16:57:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e1139b011b19c95042d8c848624bcb85</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-01-25 16:57:43</sys_updated_on>
+            <value>bid protest</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Complaint; Summons</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cc1df0b71b1dc51042d8c848624bcbd0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>complaint_summons</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CON Amendment</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>081d34b71b1dc51042d8c848624bcb16</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>con amendment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>County Request</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>881d34b71b1dc51042d8c848624bcb02</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>county request</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Environmental Assessment</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0c1df0b71b1dc51042d8c848624bcbee</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>environmental assessment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Governor's Message</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>481d34b71b1dc51042d8c848624bcb0c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>governors message</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grievance</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>001df0b71b1dc51042d8c848624bcbc7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>grievance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MauiMPO</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c1df0b71b1dc51042d8c848624bcbe4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>mauimpo</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MOA/Supplemental Agreement</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c81df0b71b1dc51042d8c848624bcbf8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:05:34</sys_updated_on>
+            <value>moa_supplemental_agreement</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OMPO</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8c1df0b71b1dc51042d8c848624bcbda</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>ompo</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tort Claim</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-01-25 16:57:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>25139b011b19c95042d8c848624bcb8f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>tort claim</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UIPA/FOIA</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 19:05:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c01df0b71b1dc51042d8c848624bcb4c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 19:08:52</sys_updated_on>
+            <value>uipa_foia</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_letter_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_sohd3_dotmail_dotmail</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 20:59:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1827d1bf1b9dc51042d8c848624bcba8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 20:59:26</sys_updated_on>
+            <value>other</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

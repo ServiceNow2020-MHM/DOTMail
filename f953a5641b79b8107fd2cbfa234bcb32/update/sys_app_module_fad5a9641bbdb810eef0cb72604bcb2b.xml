@@ -13,7 +13,7 @@
         <mobile_title>DOTMails</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_sohd3_dotmail_dotmail</name>
-        <order>200</order>
+        <order>1</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -24,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fad5a9641bbdb810eef0cb72604bcb2b</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>DOTMail - All</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_app_module_fad5a9641bbdb810eef0cb72604bcb2b</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-16 20:08:34</sys_updated_on>
+        <sys_updated_on>2022-01-25 20:16:07</sys_updated_on>
         <timeline_page/>
         <title>DOTMail - All</title>
         <uncancelable>false</uncancelable>

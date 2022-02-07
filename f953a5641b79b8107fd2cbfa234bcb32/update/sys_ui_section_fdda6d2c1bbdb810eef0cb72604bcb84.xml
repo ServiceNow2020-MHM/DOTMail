@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>2197b8ae1babb450747921f2b24bcb2d</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>ddd4d9bb1b9dc51042d8c848624bcbb4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>u_log_date</element>
             <position>1</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>e997b8ae1babb450747921f2b24bcb2d</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>55d4d9bb1b9dc51042d8c848624bcbb5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>u_letter_date</element>
             <position>2</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6197b8ae1babb450747921f2b24bcb2e</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d5d4d9bb1b9dc51042d8c848624bcbb5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>u_from</element>
             <position>3</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>e597b8ae1babb450747921f2b24bcb2e</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>59d4d9bb1b9dc51042d8c848624bcbb5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,167 +60,209 @@
             <element>u_to</element>
             <position>4</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6d97b8ae1babb450747921f2b24bcb2e</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d9d4d9bb1b9dc51042d8c848624bcbb5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_letter_type</element>
+            <position>5</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>5dd4d9bb1b9dc51042d8c848624bcbb5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_other_letter_type</element>
+            <position>6</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>ddd4d9bb1b9dc51042d8c848624bcbb5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_email_ind</element>
-            <position>5</position>
+            <position>7</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>e197b8ae1babb450747921f2b24bcb2f</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>51d4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
+            <position>8</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6997b8ae1babb450747921f2b24bcb2f</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d1d4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_division</element>
-            <position>7</position>
+            <position>9</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>ed97b8ae1babb450747921f2b24bcb2f</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>55d4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_office_section</element>
-            <position>8</position>
+            <position>10</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6597b8ae1babb450747921f2b24bcb30</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d5d4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_dot_letter_number</element>
-            <position>9</position>
+            <position>11</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>e997b8ae1babb450747921f2b24bcb30</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>59d4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_gov_ref_number</element>
-            <position>10</position>
+            <position>12</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6197b8ae1babb450747921f2b24bcb31</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d9d4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_other_letter_number</element>
-            <position>11</position>
+            <position>13</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>e597b8ae1babb450747921f2b24bcb31</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>5dd4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_related_doclink</element>
-            <position>12</position>
+            <position>14</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6d97b8ae1babb450747921f2b24bcb31</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>ddd4d9bb1b9dc51042d8c848624bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_documents_mailed_date</element>
+            <position>15</position>
+            <sys_created_by>moody_admin</sys_created_by>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>51d4d9bb1b9dc51042d8c848624bcbb7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
+            <sys_updated_by>moody_admin</sys_updated_by>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>13</position>
+            <position>16</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>e197b8ae1babb450747921f2b24bcb32</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d1d4d9bb1b9dc51042d8c848624bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>short_description</element>
-            <position>14</position>
+            <position>17</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>6997b8ae1babb450747921f2b24bcb32</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>55d4d9bb1b9dc51042d8c848624bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>description</element>
-            <position>15</position>
+            <position>18</position>
             <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2021-11-03 21:39:21</sys_created_on>
-            <sys_id>ed97b8ae1babb450747921f2b24bcb32</sys_id>
+            <sys_created_on>2022-02-02 20:49:24</sys_created_on>
+            <sys_id>d5d4d9bb1b9dc51042d8c848624bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Correspondence Information" display_value="Correspondence Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">fdda6d2c1bbdb810eef0cb72604bcb84</sys_ui_section>
             <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-11-03 21:39:21</sys_updated_on>
+            <sys_updated_on>2022-02-02 20:49:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

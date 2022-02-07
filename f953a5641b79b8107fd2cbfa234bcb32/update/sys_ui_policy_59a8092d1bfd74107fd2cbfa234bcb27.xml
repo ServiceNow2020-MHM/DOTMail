@@ -15,10 +15,13 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>false</run_scripts>
         <script_false><![CDATA[function onCondition() {
-
+    g_form.setValue('u_checkbox_66', 'false');
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-
+	alert(g_form.getValue('u_other'));
+    var other_action = g_form.getValue('u_other');
+    g_form.setValue('u_action_1', other_action);
+    g_form.setValue('u_checkbox_66', 'true');
 }]]></script_true>
         <set_values/>
         <short_description>Other</short_description>
@@ -28,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>59a8092d1bfd74107fd2cbfa234bcb27</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Other</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -36,9 +39,9 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_policy_59a8092d1bfd74107fd2cbfa234bcb27</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-08-06 00:07:53</sys_updated_on>
+        <sys_updated_on>2022-02-03 20:21:10</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <view/>
     </sys_ui_policy>
 </record_update>
