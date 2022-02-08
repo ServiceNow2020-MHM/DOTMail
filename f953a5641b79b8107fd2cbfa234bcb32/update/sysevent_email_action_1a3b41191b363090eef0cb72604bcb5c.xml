@@ -37,7 +37,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img style="align: baseline;" title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is a reminder that a DOTMail action request (${u_request_type})<br />had been assigned to you on ${opened_at} and our records show that it has not yet been completed.&nbsp; If you have already completed the action requested then please click on the "<span style="text-decoration: underline;"><strong>Completed Request Button</strong></span>".&nbsp; If you are still working on the task and want to avoid future reminders, please don't forget to click on the "<span style="text-decoration: underline;"><strong>Completed Request Button</strong></span>" when you are done. </span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is a reminder that a DOTMail action request (${u_request_type}) had been assigned to you on ${opened_at} and our records show that it has not yet been completed.&nbsp; If you have already completed the action requested then please click on the "<span style="text-decoration: underline;"><strong>Completed Request Button</strong></span>".&nbsp; If you are still working on the task and want to avoid future reminders, please don't forget to click on the "<span style="text-decoration: underline;"><strong>Completed Request Button</strong></span>" when you are done. </span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Feel free to contact me if you have any questions or concerns.</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp;&nbsp;</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Thank You,</span></p>
@@ -78,7 +78,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1a3b41191b363090eef0cb72604bcb5c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Reminder Notice</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -86,7 +86,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_1a3b41191b363090eef0cb72604bcb5c</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-20 00:46:01</sys_updated_on>
+        <sys_updated_on>2022-02-08 19:28:18</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

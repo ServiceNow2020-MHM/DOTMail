@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch4-hotfix1a-12-17-2021_01-11-2022_1246.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>reminder_notices_for_reopened_tasks</internal_name>
+        <label_cache>[{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.Records","label":"1➛DOTMail Records","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.Table","label":"1➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f349a66e-adf0-4be2-a9f2-07c2e1da20ad.item","label":"1➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"142864b5-2f0c-42bc-ac55-f383a6bbe801.total_duration","label":"3➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"142864b5-2f0c-42bc-ac55-f383a6bbe801.scheduled_end_date_time","label":"3➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"f349a66e-adf0-4be2-a9f2-07c2e1da20ad.item.state","label":"1➛DOTMail Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"state"},{"name":"013fd101-009e-4090-abac-99ae2bc28d2d.__action_status__","label":"5➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"013fd101-009e-4090-abac-99ae2bc28d2d.__dont_treat_as_error__","label":"5➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a74c184f-b1fa-4012-9ebd-615403d78b4f.total_duration","label":"2➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a74c184f-b1fa-4012-9ebd-615403d78b4f.scheduled_end_date_time","label":"2➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Updated_1.current.state","label":"Trigger➛DOTMail Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"state"},{"name":"dd10dc90-36f3-4533-a66e-76d971586481.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dd10dc90-36f3-4533-a66e-76d971586481.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
+        <master_snapshot>6978b7251b21c51042d8c848624bcb44</master_snapshot>
+        <name>DOTMail Reminder Notices for Reopened Tasks</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>c6f004b11b61c51042d8c848624bcbb7</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-07 21:39:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7340d3dd1be90510747921f2b24bcbed</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>DOTMail Reminder Notices for Reopened Tasks</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_hub_flow_7340d3dd1be90510747921f2b24bcbed</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:52</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=7340d3dd1be90510747921f2b24bcbed"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7340d3dd1be90510747921f2b24bcbed"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_sohd3_dotmail_dotmail">state=30<item display_value="Reopened" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="30"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:50:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c6f004b11b61c51042d8c848624bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"82f004b11b61c51042d8c848624bcbb8","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>7340d3dd1be90510747921f2b24bcbed</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:50:51</sys_created_on>
+        <sys_id>82f004b11b61c51042d8c848624bcbb8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <trigger display_value="">c6f004b11b61c51042d8c848624bcbb7</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>82f004b11b61c51042d8c848624bcbb8</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:50:51</sys_created_on>
+        <sys_id>8af004b11b61c51042d8c848624bcbb8</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=7340d3dd1be90510747921f2b24bcbed^sys_idNOT IN82f004b11b61c51042d8c848624bcbb8"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=7340d3dd1be90510747921f2b24bcbed^sys_idNOT INa63073691b698510747921f2b24bcbf6"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>a63073691b698510747921f2b24bcbf6</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a63073691b698510747921f2b24bcbf6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a63073691b698510747921f2b24bcbf6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>263073691b698510747921f2b24bcbf8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <value>state=30</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a63073691b698510747921f2b24bcbf6</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>6a3073691b698510747921f2b24bcbf7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <value>every</value>
+        <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a63073691b698510747921f2b24bcbf6</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>e63073691b698510747921f2b24bcbf8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <value>x_sohd3_dotmail_dotmail</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=a63073691b698510747921f2b24bcbf6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7340d3dd1be90510747921f2b24bcbed^sys_idNOT INfb40d3dd1be90510747921f2b24bcbee"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7340d3dd1be90510747921f2b24bcbed</id>
+        <name>Reminder Notices for Reopened Tasks</name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-07 21:39:46</sys_created_on>
+        <sys_id>fb40d3dd1be90510747921f2b24bcbee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-07 21:39:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=7340d3dd1be90510747921f2b24bcbed^sys_idNOT IN923073691b698510747921f2b24bcbd0,ae3073691b698510747921f2b24bcbed,ea3073691b698510747921f2b24bcbda"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</model>
+        <model_id>7340d3dd1be90510747921f2b24bcbed</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:41</sys_created_on>
+        <sys_id>923073691b698510747921f2b24bcbd0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</model>
+        <model_id>7340d3dd1be90510747921f2b24bcbed</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ae3073691b698510747921f2b24bcbed</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD7df004b1d261c5108ad55d0f242d6318,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</model>
+        <model_id>7340d3dd1be90510747921f2b24bcbed</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ea3073691b698510747921f2b24bcbda</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=7340d3dd1be90510747921f2b24bcbed^sys_idNOT INe230b3691b698510747921f2b24bcb0e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent/>
+        <comment>Send Reminder Notification</comment>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</flow>
+        <order>4</order>
+        <parent_ui_id>0f4acf1a-916a-4d62-ac49-69fb71707c92</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:43</sys_created_on>
+        <sys_id>e230b3691b698510747921f2b24bcb0e</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:52</sys_updated_on>
+        <ui_id>dd10dc90-36f3-4533-a66e-76d971586481</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e230b3691b698510747921f2b24bcb0e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e230b3691b698510747921f2b24bcb0e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:43</sys_created_on>
+        <sys_id>a230b3691b698510747921f2b24bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:43</sys_updated_on>
+        <value>x_sohd3_dotmail_dotmail</value>
+        <variable display_value="Table">818dd9f10f11101051218e8ebc767e32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e230b3691b698510747921f2b24bcb0e</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:43</sys_created_on>
+        <sys_id>ee30b3691b698510747921f2b24bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:43</sys_updated_on>
+        <value>1a3b41191b363090eef0cb72604bcb5c</value>
+        <variable display_value="Notification">418dd9f10f11101051218e8ebc767e38</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e230b3691b698510747921f2b24bcb0e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>notification</field>
+        <id>e230b3691b698510747921f2b24bcb0e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:43</sys_created_on>
+        <sys_id>e630b3691b698510747921f2b24bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>e230b3691b698510747921f2b24bcb0e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:43</sys_created_on>
+        <sys_id>6e30b3691b698510747921f2b24bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e230b3691b698510747921f2b24bcb0e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:43</sys_created_on>
+        <sys_id>aa30b3691b698510747921f2b24bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=7340d3dd1be90510747921f2b24bcbed^sys_idNOT IN6a3073691b698510747921f2b24bcbfb,ae30b3691b698510747921f2b24bcb06,e630b3691b698510747921f2b24bcb00"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2a3073691b698510747921f2b24bcbfa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>6a3073691b698510747921f2b24bcbfb</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <ui_id>d07c2dc1-410c-4214-8075-2d186f183892</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6a3073691b698510747921f2b24bcbfb"/>
+    <sys_element_mapping action="delete_multiple" query="id=6a3073691b698510747921f2b24bcbfb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>6a3073691b698510747921f2b24bcbfb</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>e23073691b698510747921f2b24bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_eaeb040687210300e6c2c88fc0e3ec89</table>
+        <value>{{Updated_1.current.state}}=20^NQ{{Updated_1.current.state}}=10^NQ{{Updated_1.current.state}}=3</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e630b3691b698510747921f2b24bcb06</block>
+        <comment>If State is still Reopened</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d07c2dc1-410c-4214-8075-2d186f183892</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ae30b3691b698510747921f2b24bcb06</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:52</sys_updated_on>
+        <ui_id>0f4acf1a-916a-4d62-ac49-69fb71707c92</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ae30b3691b698510747921f2b24bcb06"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ae30b3691b698510747921f2b24bcb06</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>a230b3691b698510747921f2b24bcb0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <value>State is Reopened</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ae30b3691b698510747921f2b24bcb06"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ae30b3691b698510747921f2b24bcb06</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>2230b3691b698510747921f2b24bcb0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Updated_1.current.state}}=30</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ae30b3691b698510747921f2b24bcb06</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>6e30b3691b698510747921f2b24bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2230b3691b698510747921f2b24bcb00</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d07c2dc1-410c-4214-8075-2d186f183892</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>e630b3691b698510747921f2b24bcb00</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <ui_id>a74c184f-b1fa-4012-9ebd-615403d78b4f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e630b3691b698510747921f2b24bcb00"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e630b3691b698510747921f2b24bcb00</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>6230b3691b698510747921f2b24bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <value>090eecae0a0a0b260077e1dfa71da828</value>
+        <variable display_value="During the following schedule">fb55145473031300b61e66476bf6a762</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e630b3691b698510747921f2b24bcb00</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ae30b3691b698510747921f2b24bcb05</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:36</sys_updated_on>
+        <value>1970-01-03 00:00:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e630b3691b698510747921f2b24bcb00</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ea30b3691b698510747921f2b24bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=e630b3691b698510747921f2b24bcb00"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed^sys_idNOT INae3073691b698510747921f2b24bcbd8,ae3073691b698510747921f2b24bcbf2,e63073691b698510747921f2b24bcbec"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ae3073691b698510747921f2b24bcbd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>ae3073691b698510747921f2b24bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7340d3dd1be90510747921f2b24bcbed</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 18:37:42</sys_created_on>
+        <sys_id>e63073691b698510747921f2b24bcbec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 18:37:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=7340d3dd1be90510747921f2b24bcbed^sys_idNOT INf978b7251b21c51042d8c848624bcbc2"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f978b7251b21c51042d8c848624bcbc2","name":"plan","plan_signature":null}}</plan>
+        <plan_id>7340d3dd1be90510747921f2b24bcbed</plan_id>
+        <snapshot>6978b7251b21c51042d8c848624bcb44</snapshot>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f978b7251b21c51042d8c848624bcbc2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <trigger display_value="">c6f004b11b61c51042d8c848624bcbb7</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>dotmail_reminder_notices_for_reopened_tasks</internal_name>
+        <label_cache>[{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.Records","label":"1➛DOTMail Records","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.Table","label":"1➛DOTMail Table","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"15c6212b-bf67-4458-ba0e-98b22d1bda3c.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f349a66e-adf0-4be2-a9f2-07c2e1da20ad.item","label":"1➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"142864b5-2f0c-42bc-ac55-f383a6bbe801.total_duration","label":"3➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"142864b5-2f0c-42bc-ac55-f383a6bbe801.scheduled_end_date_time","label":"3➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"f349a66e-adf0-4be2-a9f2-07c2e1da20ad.item.state","label":"1➛DOTMail Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"state"},{"name":"013fd101-009e-4090-abac-99ae2bc28d2d.__action_status__","label":"5➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"013fd101-009e-4090-abac-99ae2bc28d2d.__dont_treat_as_error__","label":"5➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a74c184f-b1fa-4012-9ebd-615403d78b4f.total_duration","label":"2➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a74c184f-b1fa-4012-9ebd-615403d78b4f.scheduled_end_date_time","label":"2➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Updated_1.current.state","label":"Trigger➛DOTMail Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_sohd3_dotmail_dotmail","column_name":"state"},{"name":"dd10dc90-36f3-4533-a66e-76d971586481.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dd10dc90-36f3-4533-a66e-76d971586481.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger➛DOTMail Record","reference":"x_sohd3_dotmail_dotmail","reference_display":"DOTMail","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>DOTMail Reminder Notices for Reopened Tasks</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="DOTMail Reminder Notices for Reopened Tasks">7340d3dd1be90510747921f2b24bcbed</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6978b7251b21c51042d8c848624bcb44</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6978b7251b21c51042d8c848624bcb44"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6978b7251b21c51042d8c848624bcb44"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=6978b7251b21c51042d8c848624bcb44^sys_idNOT IN3978b7251b21c51042d8c848624bcb9a"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>3978b7251b21c51042d8c848624bcb9a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:51</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3978b7251b21c51042d8c848624bcb9a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>3978b7251b21c51042d8c848624bcb9a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>7978b7251b21c51042d8c848624bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>x_sohd3_dotmail_dotmail</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>3978b7251b21c51042d8c848624bcb9a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>b578b7251b21c51042d8c848624bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>state=30</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>3978b7251b21c51042d8c848624bcb9a</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>f178b7251b21c51042d8c848624bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>every</value>
+        <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=3978b7251b21c51042d8c848624bcb9a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6978b7251b21c51042d8c848624bcb44^sys_idNOT INed78b7251b21c51042d8c848624bcb45"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6978b7251b21c51042d8c848624bcb44</id>
+        <name>DOTMail Reminder Notices for Reopened Tasks</name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:40</sys_created_on>
+        <sys_id>ed78b7251b21c51042d8c848624bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:40</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=6978b7251b21c51042d8c848624bcb44^sys_idNOT IN6578b7251b21c51042d8c848624bcb49,a178b7251b21c51042d8c848624bcb67,ad78b7251b21c51042d8c848624bcb5b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</model>
+        <model_id>6978b7251b21c51042d8c848624bcb44</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:40</sys_created_on>
+        <sys_id>6578b7251b21c51042d8c848624bcb49</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</model>
+        <model_id>6978b7251b21c51042d8c848624bcb44</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>a178b7251b21c51042d8c848624bcb67</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD7df004b1d261c5108ad55d0f242d6318,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</model>
+        <model_id>6978b7251b21c51042d8c848624bcb44</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>ad78b7251b21c51042d8c848624bcb5b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=6978b7251b21c51042d8c848624bcb44^sys_idNOT IN6d78b7251b21c51042d8c848624bcb97"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <comment>Send Reminder Notification</comment>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</flow>
+        <order>4</order>
+        <parent_ui_id>0f4acf1a-916a-4d62-ac49-69fb71707c92</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>6d78b7251b21c51042d8c848624bcb97</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <ui_id>dd10dc90-36f3-4533-a66e-76d971586481</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6d78b7251b21c51042d8c848624bcb97"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6d78b7251b21c51042d8c848624bcb97</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>b178b7251b21c51042d8c848624bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>x_sohd3_dotmail_dotmail</value>
+        <variable display_value="Table">818dd9f10f11101051218e8ebc767e32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6d78b7251b21c51042d8c848624bcb97</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>fd78b7251b21c51042d8c848624bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>1a3b41191b363090eef0cb72604bcb5c</value>
+        <variable display_value="Notification">418dd9f10f11101051218e8ebc767e38</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6d78b7251b21c51042d8c848624bcb97"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>notification</field>
+        <id>6d78b7251b21c51042d8c848624bcb97</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>f578b7251b21c51042d8c848624bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>6d78b7251b21c51042d8c848624bcb97</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>7d78b7251b21c51042d8c848624bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>6d78b7251b21c51042d8c848624bcb97</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>b978b7251b21c51042d8c848624bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=6978b7251b21c51042d8c848624bcb44^sys_idNOT IN2578b7251b21c51042d8c848624bcb8e,e578b7251b21c51042d8c848624bcb7a,e978b7251b21c51042d8c848624bcb75"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e630b3691b698510747921f2b24bcb06</block>
+        <comment>If State is still Reopened</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d07c2dc1-410c-4214-8075-2d186f183892</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>2578b7251b21c51042d8c848624bcb8e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <ui_id>0f4acf1a-916a-4d62-ac49-69fb71707c92</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=2578b7251b21c51042d8c848624bcb8e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>2578b7251b21c51042d8c848624bcb8e</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>2d78b7251b21c51042d8c848624bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>State is Reopened</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2578b7251b21c51042d8c848624bcb8e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>2578b7251b21c51042d8c848624bcb8e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>a978b7251b21c51042d8c848624bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Updated_1.current.state}}=30</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>2578b7251b21c51042d8c848624bcb8e</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>e578b7251b21c51042d8c848624bcb91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2230b3691b698510747921f2b24bcb00</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d07c2dc1-410c-4214-8075-2d186f183892</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>e578b7251b21c51042d8c848624bcb7a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <ui_id>a74c184f-b1fa-4012-9ebd-615403d78b4f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e578b7251b21c51042d8c848624bcb7a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e578b7251b21c51042d8c848624bcb7a</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>a578b7251b21c51042d8c848624bcb8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value>090eecae0a0a0b260077e1dfa71da828</value>
+        <variable display_value="During the following schedule">fb55145473031300b61e66476bf6a762</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e578b7251b21c51042d8c848624bcb7a</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>e178b7251b21c51042d8c848624bcb8d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <value>1970-01-03 00:00:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e578b7251b21c51042d8c848624bcb7a</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>e978b7251b21c51042d8c848624bcb8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=e578b7251b21c51042d8c848624bcb7a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2a3073691b698510747921f2b24bcbfa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="DOTMail Reminder Notices for Reopened Tasks">6978b7251b21c51042d8c848624bcb44</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>e978b7251b21c51042d8c848624bcb75</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:50:50</sys_updated_on>
+        <ui_id>d07c2dc1-410c-4214-8075-2d186f183892</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e978b7251b21c51042d8c848624bcb75"/>
+    <sys_element_mapping action="delete_multiple" query="id=e978b7251b21c51042d8c848624bcb75"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e978b7251b21c51042d8c848624bcb75</id>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>a578b7251b21c51042d8c848624bcb79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_eaeb040687210300e6c2c88fc0e3ec89</table>
+        <value>{{Updated_1.current.state}}=20^NQ{{Updated_1.current.state}}=10^NQ{{Updated_1.current.state}}=3</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44^sys_idNOT IN6178b7251b21c51042d8c848624bcb63,6178b7251b21c51042d8c848624bcb6e,6d78b7251b21c51042d8c848624bcb57"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>6178b7251b21c51042d8c848624bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>6178b7251b21c51042d8c848624bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6978b7251b21c51042d8c848624bcb44</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-02-08 19:13:41</sys_created_on>
+        <sys_id>6d78b7251b21c51042d8c848624bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-02-08 19:13:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_flow action="update">
+        <sys_id>7340d3dd1be90510747921f2b24bcbed</sys_id>
+        <latest_snapshot>6978b7251b21c51042d8c848624bcb44</latest_snapshot>
+    </sys_hub_flow>
+</record_update>
