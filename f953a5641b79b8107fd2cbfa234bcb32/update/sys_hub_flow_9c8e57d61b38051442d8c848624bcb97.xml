@@ -6,7 +6,7 @@
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build/>
+        <compiler_build>glide-rome-06-23-2021__patch4-hotfix1a-12-17-2021_01-11-2022_1246.zip</compiler_build>
         <copied_from/>
         <copied_from_name/>
         <description>Only for Letter Approval Requests</description>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9c8e57d61b38051442d8c848624bcb97</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>DOTMail Past Due Approvals</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -37,7 +37,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_hub_flow_9c8e57d61b38051442d8c848624bcb97</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:13</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=9c8e57d61b38051442d8c848624bcb97"/>
@@ -108,10 +108,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:51</sys_created_on>
         <sys_id>96d06b5e1b38051442d8c848624bcb5f</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:12</sys_updated_on>
         <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -150,7 +150,7 @@
         <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
         <action_type_parent/>
         <comment>for Letter Approval Requests</comment>
-        <compiled_snapshot/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="DOTMail Past Due Approvals">9c8e57d61b38051442d8c848624bcb97</flow>
         <order>1</order>
@@ -159,10 +159,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:52</sys_created_on>
         <sys_id>5ad06b5e1b38051442d8c848624bcb67</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:12</sys_updated_on>
         <ui_id>342ab827-f3c7-46d0-9db8-b16b5a2e5aa7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5ad06b5e1b38051442d8c848624bcb67"/>
@@ -174,10 +174,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:52</sys_created_on>
         <sys_id>1ad06b5e1b38051442d8c848624bcb6a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-04 18:38:52</sys_updated_on>
-        <value>u_request_type=letter approval request^state=-5^approval=requested^u_action_requested=review and respond</value>
+        <sys_updated_on>2022-02-10 20:14:35</sys_updated_on>
+        <value>u_request_type=letter approval request^state=-5^approval=requested^u_action_requested=review and respond^u_when_neededISNOTEMPTY</value>
         <variable display_value="Conditions">8f400a1587003300663ca1bb36cb0b50</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -201,7 +201,7 @@
         <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
         <action_type_parent/>
         <comment>Send Past Due Date Notification</comment>
-        <compiled_snapshot/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
         <display_text/>
         <flow display_value="DOTMail Past Due Approvals">9c8e57d61b38051442d8c848624bcb97</flow>
         <order>5</order>
@@ -210,10 +210,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:52</sys_created_on>
         <sys_id>5ed06b5e1b38051442d8c848624bcb95</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:13</sys_updated_on>
         <ui_id>825d0249-d388-491f-92d7-3f10d74d557c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5ed06b5e1b38051442d8c848624bcb95"/>
@@ -287,7 +287,7 @@
         <action_type display_value="Return the Current Date">9b3041801be00950747921f2b24bcb4e</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>9b3041801be00950747921f2b24bcb4e</compiled_snapshot>
         <display_text/>
         <flow display_value="DOTMail Past Due Approvals">9c8e57d61b38051442d8c848624bcb97</flow>
         <order>2</order>
@@ -296,10 +296,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:52</sys_created_on>
         <sys_id>92d06b5e1b38051442d8c848624bcb70</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:12</sys_updated_on>
         <ui_id>1886bfde-40cf-4ba5-ac1a-6aec7cc15e78</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=92d06b5e1b38051442d8c848624bcb70"/>
@@ -326,10 +326,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:52</sys_created_on>
         <sys_id>96d06b5e1b38051442d8c848624bcb71</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:13</sys_updated_on>
         <ui_id>cf017122-3e6e-4871-b218-f69114eafe1c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -370,10 +370,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-01-04 18:38:52</sys_created_on>
         <sys_id>dad06b5e1b38051442d8c848624bcb75</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:13</sys_updated_on>
         <ui_id>9db253f5-58fc-45cc-a08e-d0c46b9dee7b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -421,7 +421,7 @@
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9c8e57d61b38051442d8c848624bcb97^sys_idNOT IN01d148751b61c51042d8c848624bcb87"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
         <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
-        <plan/>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"01d148751b61c51042d8c848624bcb87","name":"plan","plan_signature":null}}</plan>
         <plan_id>9c8e57d61b38051442d8c848624bcb97</plan_id>
         <snapshot>b8d148751b61c51042d8c848624bcb22</snapshot>
         <sys_created_by>moody_admin</sys_created_by>
@@ -429,11 +429,11 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>01d148751b61c51042d8c848624bcb87</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:12</sys_updated_on>
         <trigger display_value="">81d148751b61c51042d8c848624bcb86</trigger>
     </sys_flow_trigger_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -464,7 +464,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b8d148751b61c51042d8c848624bcb22</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -472,7 +472,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=b8d148751b61c51042d8c848624bcb22"/>
@@ -487,10 +487,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>85d148751b61c51042d8c848624bcb42</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:37</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:12</sys_updated_on>
         <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -539,10 +539,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>01d148751b61c51042d8c848624bcb40</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
         <ui_id>825d0249-d388-491f-92d7-3f10d74d557c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=01d148751b61c51042d8c848624bcb40"/>
@@ -625,10 +625,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>3cd148751b61c51042d8c848624bcb33</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
         <ui_id>342ab827-f3c7-46d0-9db8-b16b5a2e5aa7</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3cd148751b61c51042d8c848624bcb33"/>
@@ -654,10 +654,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>89d148751b61c51042d8c848624bcb35</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
-        <value>u_request_type=letter approval request^state=-5^approval=requested^u_action_requested=review and respond</value>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
+        <value>u_request_type=letter approval request^state=-5^approval=requested^u_action_requested=review and respond^u_when_neededISNOTEMPTY</value>
         <variable display_value="Conditions">8f400a1587003300663ca1bb36cb0b50</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=3cd148751b61c51042d8c848624bcb33"/>
@@ -675,10 +675,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>49d148751b61c51042d8c848624bcb3b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
         <ui_id>1886bfde-40cf-4ba5-ac1a-6aec7cc15e78</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=49d148751b61c51042d8c848624bcb3b"/>
@@ -705,10 +705,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>b8d148751b61c51042d8c848624bcb26</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
         <ui_id>cf017122-3e6e-4871-b218-f69114eafe1c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -749,10 +749,10 @@
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2022-02-08 19:54:36</sys_created_on>
         <sys_id>bcd148751b61c51042d8c848624bcb29</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-08 19:54:36</sys_updated_on>
+        <sys_updated_on>2022-02-10 20:17:11</sys_updated_on>
         <ui_id>9db253f5-58fc-45cc-a08e-d0c46b9dee7b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
