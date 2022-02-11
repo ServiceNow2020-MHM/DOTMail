@@ -15,7 +15,7 @@
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
-        <hint>WARNING!  If you want to keep your Route Slip Setup Information, you'll have to Save before clicking on the Generate Route Slip Button</hint>
+        <hint/>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
@@ -199,8 +199,8 @@ var destinationTableSysId = current.sys_id; // sys_id of current record
 var pdfName = "Route Slip " + current.number + ".pdf";
 
 pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
-action.setRedirectURL(current);
-current.update();]]></script>
+current.update();
+action.setRedirectURL(current);]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -211,7 +211,7 @@ current.update();]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3316771c1b5738507fd2cbfa234bcbfb</sys_id>
-        <sys_mod_count>168</sys_mod_count>
+        <sys_mod_count>170</sys_mod_count>
         <sys_name>Generate Route Slip</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -219,7 +219,7 @@ current.update();]]></script>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-03 20:28:56</sys_updated_on>
+        <sys_updated_on>2022-02-11 21:26:42</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
