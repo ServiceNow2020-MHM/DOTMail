@@ -17,7 +17,10 @@
 
     // Set the responsible group
     if (newValue == 'dir review') {
-		g_form.setValue('u_responsible_group', 'Route to DIR Only');
+		//g_form.clearValue('u_responsible_group');
+		// Have to use the sys_id of the Route to DIR Only reference group; otherwise type mismatch error occurs
+		//g_form.setValue('u_responsible_group', 'Route to DIR Only');
+		g_form.setValue('u_responsible_group', 'c274f8d31b058d1042d8c848624bcb6a');		
     } else {
         return;
     }
@@ -28,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c1c5b7d21bdcc91042d8c848624bcb3a</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Set Responsible Group To DIR Only</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -36,7 +39,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c1c5b7d21bdcc91042d8c848624bcb3a</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-09 01:16:07</sys_updated_on>
+        <sys_updated_on>2022-02-15 20:51:43</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

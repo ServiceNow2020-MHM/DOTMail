@@ -3,7 +3,9 @@
         <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Set Request Type to Read Only under certain conditions.   Pending (-5), Reopened (30),  Closed Complete (3), Not Approved - Resubmit (55)</description>
+        <description>Set Request Type to Read Only under certain conditions.   Pending (-5), Reopened (30),  Closed Complete (3), Not Approved - Resubmit (55)&#13;
+&#13;
+NOT NEEDED:  Replaced by Set Request and Routing Fields Read Only.  Delete when cleaning up.</description>
         <field>u_order_20</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
@@ -26,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9e96710a1b614910747921f2b24bcbeb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Set Request Type to Read Only</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -34,7 +36,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_9e96710a1b614910747921f2b24bcbeb</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-09 23:18:27</sys_updated_on>
+        <sys_updated_on>2022-02-15 22:13:18</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

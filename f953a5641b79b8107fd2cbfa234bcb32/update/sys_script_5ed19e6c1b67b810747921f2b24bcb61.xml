@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Test</name>
+        <name>Set Delegates</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -27,13 +27,38 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-var msg='haha';
+    var gr = new GlideRecord('sys_user_delegate');
+    gr.addQuery('user', current.opened_by);
+    gr.query();
 
+    var count = 1;   // initialize counter before while statement; doesn't work correctly in the while loop
+    //gs.info('total delegates = ' + gr.getRowCount());
+	//reset delegate values in case they have changed
+	current.u_delegate_1.setDisplayValue("");
+	current.u_delegate_2.setDisplayValue("");	
 
-gs.addErrorMessage('<script>var t=setTimeout(function(){var test = confirm("' + msg + '");if(!test){return false;}},500);</script>' + msg);
-
+    while (gr.next()) //use while here if there can be more then 1 entries and you want to print all
+        //if (gr.next())
+        if (count == 1) {
+            if (current.u_delegate_1 !== gr.delegate.user_name) {
+                current.u_delegate_1.setDisplayValue(gr.delegate.user_name);
+                //gs.info('Count = ' + count + ' User = ' + gr.user.user_name + ' has delegate = ' + gr.delegate.user_name);
+            }
+			current.save;
+            count = count + 1;
+        } else if (count == 2) {
+        if (current.u_delegate_2 !== gr.delegate.user_name) {
+            current.u_delegate_2.setDisplayValue(gr.delegate.user_name);
+            //gs.info('Count = ' + count + ' User = ' + gr.user.user_name + ' has delegate = ' + gr.delegate.user_name);
+			current.save;
+			count = count + 1;
+        }
+    } else {
+        //gs.info('Count = ' + count + ' exit out of routine');
+        return;
+    }
 
 
 })(current, previous);]]></script>
@@ -43,17 +68,17 @@ gs.addErrorMessage('<script>var t=setTimeout(function(){var test = confirm("' + 
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ed19e6c1b67b810747921f2b24bcb61</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Test</sys_name>
+        <sys_mod_count>84</sys_mod_count>
+        <sys_name>Set Delegates</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_5ed19e6c1b67b810747921f2b24bcb61</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-10-29 01:08:32</sys_updated_on>
+        <sys_updated_on>2022-02-16 00:01:38</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>before_display</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=5ed19e6c1b67b810747921f2b24bcb61"/>
 </record_update>
