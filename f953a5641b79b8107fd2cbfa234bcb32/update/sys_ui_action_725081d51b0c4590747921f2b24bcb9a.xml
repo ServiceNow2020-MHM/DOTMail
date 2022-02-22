@@ -6,10 +6,11 @@
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments>Show button if not Journal Entry Only or No Response Required, or Letter Approval Requests (handled on UI Policy) that have been Approved or Rejected.  Do not show if already a Completed Request (20)  or archived (handled on UI Policy).  Button should also show only for the Opened By person.&#13;
+        <comments>Show button if not Journal Entry Only or No Response Required, or Letter Approval Requests (handled on UI Policy) that have been Approved or Rejected.  Do not show if already a Completed Request (20)  or archived (handled on UI Policy).  Button should also show only for the Opened By person and delegates).&#13;
+(current.approval != 'approved' &amp;&amp; current.approval != 'rejected')  &amp;&amp; (current.state != '20')  &amp;&amp;  (current.opened_by == gs.getUserID())&#13;
 &#13;
-(current.u_request_type != 'journal entry only' &amp;&amp; current.u_request_type != 'no response required') &amp;&amp; (current.approval != 'approved' &amp;&amp; current.approval != 'rejected')  &amp;&amp; (current.state != '20')  &amp;&amp;  (current.opened_by == gs.getUserID())</comments>
-        <condition>(current.approval != 'approved' &amp;&amp; current.approval != 'rejected')  &amp;&amp; (current.state != '20')  &amp;&amp;  (current.opened_by == gs.getUserID()  || g_user.userName == g_form.getValue('u_delegate_1') || g_user.userName == g_form.getValue('u_delegate_2')) </condition>
+(current.approval != 'approved' &amp;&amp; current.approval != 'rejected')  &amp;&amp; (current.state != '20')  &amp;&amp;  (current.opened_by == gs.getUserID()  || gs.getUserName() == current.u_delegate_1 ||  gs.getUserName() == current.u_delegate_2)</comments>
+        <condition>(current.approval != 'approved' &amp;&amp; current.approval != 'rejected')  &amp;&amp; (current.state != '20')  &amp;&amp;  (current.opened_by == gs.getUserID()  || gs.getUserName() == current.u_delegate_1 ||  gs.getUserName() == current.u_delegate_2)</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -17,7 +18,7 @@
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
-        <hint>Cancelling will reset the Request Type to Journal Entry Only and Action Requested to No Response Required and set the Status to Open (in client script).</hint>
+        <hint>Cancelling will reset the Request Type to Journal Entry Only and Action Requested to No Response Required and set the Status to Open.</hint>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
@@ -44,7 +45,7 @@ action.setRedirectURL(current);  // use this to update and stay ]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>725081d51b0c4590747921f2b24bcb9a</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>Cancel Assignment</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -52,7 +53,7 @@ action.setRedirectURL(current);  // use this to update and stay ]]></script>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_action_725081d51b0c4590747921f2b24bcb9a</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-16 01:02:02</sys_updated_on>
+        <sys_updated_on>2022-02-16 19:26:12</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

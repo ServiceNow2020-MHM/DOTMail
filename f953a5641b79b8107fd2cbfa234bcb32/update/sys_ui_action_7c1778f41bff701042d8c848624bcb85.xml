@@ -8,8 +8,9 @@
 }]]></client_script_v2>
         <comments>Show button if not Journal Entry Only, No Response Required, Letter Approval Request (handled by UI Policy).  Also do no show if already a Completed Request or Closed Complete.  Change state to Completed Request and reset the When needed date so that it doesn't error out (i.e., cannot enter date that is in the past) with any future updates to the record, i.e., Reopen.&#13;
 (current.state != '20' &amp;&amp; current.state != '3') &amp;&amp;  ((current.opened_by == gs.getUserID()) ||  (gs.getUser().isMemberOf(current.u_responsible_group))) &lt;-- doesn't work in scoped applications&#13;
-(current.state != '20' &amp;&amp; current.state != '3') &amp;&amp;  (current.opened_by == gs.getUserID() ||  gs.getUser().isMemberOf(current.u_responsible_group.toString()))</comments>
-        <condition>(current.state != '20' &amp;&amp; current.state != '3') &amp;&amp;  (current.opened_by == gs.getUserID() ||  gs.getUser().isMemberOf(current.u_responsible_group.toString()))</condition>
+(current.state != '20' &amp;&amp; current.state != '3') &amp;&amp;  (current.opened_by == gs.getUserID() ||  gs.getUser().isMemberOf(current.u_responsible_group.toString())) &#13;
+ current.opened_by == gs.getUserID() ||  gs.getUser().isMemberOf(current.u_responsible_group.toString())  || gs.getUserName() == current.u_delegate_1 ||  gs.getUserName() == current.u_delegate_2 </comments>
+        <condition> current.opened_by == gs.getUserID() ||  gs.getUser().isMemberOf(current.u_responsible_group.toString())  || gs.getUserName() == current.u_delegate_1 ||  gs.getUserName() == current.u_delegate_2 </condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -47,7 +48,7 @@ action.setRedirectURL(current);  // use this to update and stay
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7c1778f41bff701042d8c848624bcb85</sys_id>
-        <sys_mod_count>79</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>Completed Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -55,7 +56,7 @@ action.setRedirectURL(current);  // use this to update and stay
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_action_7c1778f41bff701042d8c848624bcb85</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-11 21:11:18</sys_updated_on>
+        <sys_updated_on>2022-02-16 19:08:01</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

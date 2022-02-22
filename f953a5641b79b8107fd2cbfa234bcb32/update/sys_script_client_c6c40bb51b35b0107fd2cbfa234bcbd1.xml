@@ -32,6 +32,8 @@
     g_form.setReadonly('u_log_date', true);
     g_form.setReadonly('u_division', true);
     g_form.setReadonly('u_office_section', true);
+    g_form.setReadOnly('u_delegate_1', true);
+    g_form.setReadOnly('u_delegate_2', true);
 
     // Set to read only if not admin
     if (g_user.hasRoleExactly('admin')) {
@@ -39,15 +41,15 @@
         g_form.setReadonly('approval', false);
         g_form.setReadonly('active', false);
         //g_form.setReadonly('u_action_requested', false);
-		g_form.setReadOnly('u_delegate_1', false);
-		g_form.setReadOnly('u_delegate_2', false);		
+        //g_form.setReadOnly('u_delegate_1', false);
+        //g_form.setReadOnly('u_delegate_2', false);		
     } else {
         g_form.setReadonly('state', true);
         g_form.setReadonly('approval', true);
         g_form.setReadonly('active', true);
         //g_form.setReadonly('u_action_requested', true);
-		g_form.setReadOnly('u_delegate_1', true);
-		g_form.setReadOnly('u_delegate_2', true);
+        //g_form.setReadOnly('u_delegate_1', true);
+        //g_form.setReadOnly('u_delegate_2', true);
     }
 
     //Set the following fields to Mandatory
@@ -62,8 +64,8 @@
     //Change the color of the 'Reject' button to red  --> Doesn't work
     //changeButtonColor('reject_action', '#CC0000');
     //changeButtonColor('reject_action', 'red', 'white');	
-	
-	// Set the approve and reject button colors
+
+    // Set the approve and reject button colors
     var approveButton = document.getElementById('approve_action');
     var rejectButton = document.getElementById('reject_action');
     if (approveButton) {
@@ -118,7 +120,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6c40bb51b35b0107fd2cbfa234bcbd1</sys_id>
-        <sys_mod_count>136</sys_mod_count>
+        <sys_mod_count>137</sys_mod_count>
         <sys_name>Set Form Properties onLoad</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -126,7 +128,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_c6c40bb51b35b0107fd2cbfa234bcbd1</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-15 22:39:15</sys_updated_on>
+        <sys_updated_on>2022-02-22 18:40:12</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
