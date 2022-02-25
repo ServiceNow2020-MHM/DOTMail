@@ -9,7 +9,7 @@
         <comments>Show only for Active Letter Approval Requests (handled on UI Policy) , the Approval is Rejected, and for the person that assigned this task.  Change Action Requested to 'Review and Respond (Resubmittal) and approval to Requested (no need to do this here, it will be done in the workflow).  &#13;
 &#13;
 (current.approval == 'rejected'  &amp;&amp; current.opened_by == gs.getUserID() || (gs.hasRole('admin')))</comments>
-        <condition>(current.approval == 'rejected' &amp;&amp; current.opened_by == gs.getUserID())</condition>
+        <condition>(current.approval == 'rejected') &amp;&amp; (current.opened_by == gs.getUserID()  || gs.getUserName() == current.u_delegate_1 ||  gs.getUserName() == current.u_delegate_2)</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -44,7 +44,7 @@ current.update();]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>63563e731bc0c5d0747921f2b24bcbc6</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>Resubmit</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -52,7 +52,7 @@ current.update();]]></script>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_action_63563e731bc0c5d0747921f2b24bcbc6</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-04 18:00:23</sys_updated_on>
+        <sys_updated_on>2022-02-22 22:48:33</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
