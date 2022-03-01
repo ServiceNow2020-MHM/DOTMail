@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -15,12 +15,13 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_sohd3_dotmail_dotmail">u_request_typeCHANGESTOdir review^EQ<item display_value="DIR Review Request" endquery="false" field="u_request_type" goto="false" newquery="false" operator="CHANGESTO" or="false" value="dir review"/>
+        <filter_condition table="x_sohd3_dotmail_dotmail">active=true^u_request_type!=journal entry only^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="Journal Entry Only" endquery="false" field="u_request_type" goto="false" newquery="false" operator="!=" or="false" value="journal entry only"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Set Group for DIR Review</name>
+        <name>Check for Attachments Validation</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,28 +30,45 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
+    var rowcount = 0;
+    var gr = new GlideRecord("sys_attachment");
 
+    gr.addQuery("table_name", "x_sohd3_dotmail_dotmail");
+    gr.addQuery("table_sys_id", current.sys_id);
+    gr.query();
+
+    while (gr.next())
+
+    {
+        rowcount++;
+    }
+
+    if (rowcount < 1) {
+        //gs.addInfoMessage("An Attachment is Missing!  You'll need to add a least 1 attachment.");
+		gs.addErrorMessage("An Attachment is Missing!  You'll need to add a least 1 attachment.");
+        current.setAbortAction(true);
+    }
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-12-16 18:14:40</sys_created_on>
+        <sys_created_on>2022-02-28 23:17:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>cba3615c1bec4950747921f2b24bcbf1</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Set Group for DIR Review</sys_name>
+        <sys_id>a4afaf481b4ac190747921f2b24bcb4f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Check for Attachments Validation</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_script_cba3615c1bec4950747921f2b24bcbf1</sys_update_name>
+        <sys_update_name>sys_script_a4afaf481b4ac190747921f2b24bcb4f</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-28 23:08:53</sys_updated_on>
-        <template>u_responsible_group=d24ba1391be3b050747921f2b24bcb50^EQ</template>
+        <sys_updated_on>2022-03-01 17:35:07</sys_updated_on>
+        <template/>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=cba3615c1bec4950747921f2b24bcbf1"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=a4afaf481b4ac190747921f2b24bcb4f"/>
 </record_update>
