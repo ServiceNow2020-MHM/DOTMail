@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>generate_route_slip</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Show button if not Active Journal Entry Only, DIR Review Request, and Letter Approval Request (handled by UI Policy). </comments>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Generate Route Slip</name>
+        <onclick/>
+        <order>300</order>
+        <script><![CDATA[var pdf = new global.GeneralPdfUtils();
+// Script Include GeneralPdfUtils() comes with the PDF Generator Plugin
+
+// Sys ID of the attachment PDF template
+// Need to attach the PDF template file in a new Sys Property in PROD (https://hidotdev.service-now.com/sys_properties_list.do)
+// then get the attachment SysID from (https://hidotdev.service-now.com/sys_attachment_list.do) and update it here below
+var attachmentSysId = "a73e08471b928d1042d8c848624bcbb4";
+// set autofill variables with current form values
+var v_log_date = current.u_log_date.getDisplayValue() || "";
+var v_log_number = current.number.getDisplayValue() || "";
+var v_when_needed = current.u_when_needed.getDisplayValue() || "";
+var v_subject = current.short_description.getDisplayValue() || "";
+var v_responsible_group = current.u_responsible_group.getDisplayValue() || "";
+//var v_route_to = current.group_list.getDisplayValue() || "";
+//var v_route_to = current.assigned_to.getDisplayValue() || "";
+var v_action_requested = current.u_action_requested.getDisplayValue() || "";
+// set user entered variables with current form values
+var v_order_1 = current.u_order_1.getDisplayValue() || "";
+var v_order_2 = current.u_order_2.getDisplayValue() || "";
+var v_order_3 = current.u_order_3.getDisplayValue() || "";
+var v_order_4 = current.u_order_4.getDisplayValue() || "";
+var v_order_5 = current.u_order_5.getDisplayValue() || "";
+var v_order_6 = current.u_order_6.getDisplayValue() || "";
+var v_order_7 = current.u_order_7.getDisplayValue() || "";
+var v_order_8 = current.u_order_8.getDisplayValue() || "";
+var v_order_9 = current.u_order_9.getDisplayValue() || "";
+var v_order_10 = current.u_order_10.getDisplayValue() || "";
+var v_order_11 = current.u_order_11.getDisplayValue() || "";
+var v_order_12 = current.u_order_12.getDisplayValue() || "";
+var v_order_13 = current.u_order_13.getDisplayValue() || "";
+var v_order_14 = current.u_order_14.getDisplayValue() || "";
+var v_order_15 = current.u_order_15.getDisplayValue() || "";
+var v_order_16 = current.u_order_16.getDisplayValue() || "";
+var v_order_17 = current.u_order_17.getDisplayValue() || "";
+var v_order_18 = current.u_order_18.getDisplayValue() || "";
+var v_order_19 = current.u_order_19.getDisplayValue() || "";
+var v_order_20 = current.u_order_20.getDisplayValue() || "";
+var v_order_21 = current.u_order_21.getDisplayValue() || "";
+var v_order_22 = current.u_order_22.getDisplayValue() || "";
+var v_order_23 = current.u_order_23.getDisplayValue() || "";
+var v_order_24 = current.u_order_24.getDisplayValue() || "";
+var v_order_25 = current.u_order_25.getDisplayValue() || "";
+var v_order_26 = current.u_order_26.getDisplayValue() || "";
+var v_order_27 = current.u_order_27.getDisplayValue() || "";
+var v_other_1 = current.u_other_route_1.getDisplayValue() || "";
+var v_other_2 = current.u_other_route_2.getDisplayValue() || "";
+var v_other_3 = current.u_other_route_3.getDisplayValue() || "";
+var v_other_action = current.u_action_1.getDisplayValue() || "";
+var v_phone_number = current.u_phone_number.getDisplayValue() || "";
+var v_comments = current.u_route_slip_comments.getDisplayValue() || "";
+// Set user entered checkbox values with current form values
+var str50 = current.u_checkbox_50.getDisplayValue() || "";
+var v_checkbox_50 = str50.replace('true', 'Yes');
+
+var str51 = current.u_checkbox_51.getDisplayValue() || "";
+var v_checkbox_51 = str51.replace('true', 'Yes');
+
+var str52 = current.u_checkbox_52.getDisplayValue() || "";
+var v_checkbox_52 = str52.replace('true', 'Yes');
+
+var str53 = current.u_checkbox_53.getDisplayValue() || "";
+var v_checkbox_53 = str53.replace('true', 'Yes');
+
+var str54 = current.u_checkbox_54.getDisplayValue() || "";
+var v_checkbox_54 = str54.replace('true', 'Yes');
+
+var str55 = current.u_checkbox_55.getDisplayValue() || "";
+var v_checkbox_55 = str55.replace('true', 'Yes');
+
+var str56 = current.u_checkbox_56.getDisplayValue() || "";
+var v_checkbox_56 = str56.replace('true', 'Yes');
+
+var str57 = current.u_checkbox_57.getDisplayValue() || "";
+var v_checkbox_57 = str57.replace('true', 'Yes');
+
+var str58 = current.u_checkbox_58.getDisplayValue() || "";
+var v_checkbox_58 = str58.replace('true', 'Yes');
+
+var str59 = current.u_checkbox_59.getDisplayValue() || "";
+var v_checkbox_59 = str59.replace('true', 'Yes');
+
+var str60 = current.u_checkbox_60.getDisplayValue() || "";
+var v_checkbox_60 = str60.replace('true', 'Yes');
+
+var str61 = current.u_checkbox_61.getDisplayValue() || "";
+var v_checkbox_61 = str61.replace('true', 'Yes');
+
+var str62 = current.u_checkbox_62.getDisplayValue() || "";
+var v_checkbox_62 = str62.replace('true', 'Yes');
+
+var str63 = current.u_checkbox_63.getDisplayValue() || "";
+var v_checkbox_63 = str63.replace('true', 'Yes');
+
+var str64 = current.u_checkbox_64.getDisplayValue() || "";
+var v_checkbox_64 = str64.replace('true', 'Yes');
+
+var str65 = current.u_checkbox_65.getDisplayValue() || "";
+var v_checkbox_65 = str65.replace('true', 'Yes');
+
+var str66 = current.u_checkbox_66.getDisplayValue() || "";
+var v_checkbox_66 = str66.replace('true', 'Yes');
+
+// set PDF variables with the variable values created above
+var jsonObject = {
+    "f_log_date": v_log_date,
+    "f_log_number": v_log_number,
+    "f_when_needed": v_when_needed,
+    "f_subject": v_subject,
+//    "f_route_to": v_route_to,
+	"f_route_to": v_responsible_group,
+    "f_action_requested": v_action_requested,
+    "Order": v_order_1,
+    "Order 2": v_order_2,
+    "Order 3": v_order_3,
+    "Order 4": v_order_4,
+    "Order 5": v_order_5,
+    "Order 6": v_order_6,
+    "Order 7": v_order_7,
+    "Order 8": v_order_8,
+    "Order 9": v_order_9,
+    "Order 10": v_order_10,
+    "Order 11": v_order_11,
+    "Order 12": v_order_12,
+    "Order 13": v_order_13,
+    "Order 14": v_order_14,
+    "Order 15": v_order_15,
+    "Order 16": v_order_16,
+    "Order 17": v_order_17,
+    "Order 18": v_order_18,
+    "Order 19": v_order_19,
+    "Order 20": v_order_20,
+    "Order 21": v_order_21,
+    "Order 22": v_order_22,
+    "Order 23": v_order_23,
+    "Order 24": v_order_24,
+    "Order 25": v_order_25,
+    "Order 26": v_order_26,
+    "Order 27": v_order_27,
+    "Blank Route 1": v_other_1,
+    "Blank Route 2": v_other_2,
+    "Blank Route 3": v_other_3,
+    "Check Box 50": v_checkbox_50,
+    "Check Box 51": v_checkbox_51,
+    "Check Box 52": v_checkbox_52,
+    "Check Box 53": v_checkbox_53,
+    "Check Box 54": v_checkbox_54,
+    "Check Box 55": v_checkbox_55,
+    "Check Box 56": v_checkbox_56,
+    "Check Box 57": v_checkbox_57,
+    "Check Box 58": v_checkbox_58,
+    "Check Box 59": v_checkbox_59,
+    "Check Box 60": v_checkbox_60,
+    "Check Box 61": v_checkbox_61,
+    "Check Box 62": v_checkbox_62,
+    "Check Box 63": v_checkbox_63,
+    "Check Box 64": v_checkbox_64,
+    "Check Box 65": v_checkbox_65,
+    "Check Box 66": v_checkbox_66,
+    "Phone Number": v_phone_number,
+    "Comments": v_comments,
+    "Blank Action 1": v_other_action,
+};
+
+var jsonString = JSON.stringify(jsonObject);
+var destinationTableName = "x_sohd3_dotmail_dotmail";
+var destinationTableSysId = current.sys_id; // sys_id of current record
+
+var pdfName = "Route Slip " + current.number + ".pdf";
+
+pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
+current.update();
+action.setRedirectURL(current);]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-16 01:29:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3316771c1b5738507fd2cbfa234bcbfb</sys_id>
+        <sys_mod_count>174</sys_mod_count>
+        <sys_name>Generate Route Slip</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-03-22 00:55:28</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;generate_route_slip&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;Show button if not Active Journal Entry Only, DIR Review Request, and Letter Approval Request (handled by UI Policy). &lt;/comments&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Generate Route Slip&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;300&lt;/order&gt;&lt;script&gt;&lt;![CDATA[var pdf = new global.GeneralPdfUtils();
+// Script Include GeneralPdfUtils() comes with the PDF Generator Plugin
+
+// Sys ID of the attachment PDF template
+// Need to attach the PDF template file in a new Sys Property in PROD (https://hidotdev.service-now.com/sys_properties_list.do)
+// then get the attachment SysID from (https://hidotdev.service-now.com/sys_attachment_list.do) and update it here below
+var attachmentSysId = "a73e08471b928d1042d8c848624bcbb4";
+// set autofill variables with current form values
+var v_log_date = current.u_log_date.getDisplayValue() || "";
+var v_log_number = current.number.getDisplayValue() || "";
+var v_when_needed = current.u_when_needed.getDisplayValue() || "";
+var v_subject = current.short_description.getDisplayValue() || "";
+var v_responsible_group = current.u_responsible_group.getDisplayValue() || "";
+//var v_route_to = current.group_list.getDisplayValue() || "";
+//var v_route_to = current.assigned_to.getDisplayValue() || "";
+var v_action_requested = current.u_action_requested.getDisplayValue() || "";
+// set user entered variables with current form values
+var v_order_1 = current.u_order_1.getDisplayValue() || "";
+var v_order_2 = current.u_order_2.getDisplayValue() || "";
+var v_order_3 = current.u_order_3.getDisplayValue() || "";
+var v_order_4 = current.u_order_4.getDisplayValue() || "";
+var v_order_5 = current.u_order_5.getDisplayValue() || "";
+var v_order_6 = current.u_order_6.getDisplayValue() || "";
+var v_order_7 = current.u_order_7.getDisplayValue() || "";
+var v_order_8 = current.u_order_8.getDisplayValue() || "";
+var v_order_9 = current.u_order_9.getDisplayValue() || "";
+var v_order_10 = current.u_order_10.getDisplayValue() || "";
+var v_order_11 = current.u_order_11.getDisplayValue() || "";
+var v_order_12 = current.u_order_12.getDisplayValue() || "";
+var v_order_13 = current.u_order_13.getDisplayValue() || "";
+var v_order_14 = current.u_order_14.getDisplayValue() || "";
+var v_order_15 = current.u_order_15.getDisplayValue() || "";
+var v_order_16 = current.u_order_16.getDisplayValue() || "";
+var v_order_17 = current.u_order_17.getDisplayValue() || "";
+var v_order_18 = current.u_order_18.getDisplayValue() || "";
+var v_order_19 = current.u_order_19.getDisplayValue() || "";
+var v_order_20 = current.u_order_20.getDisplayValue() || "";
+var v_order_21 = current.u_order_21.getDisplayValue() || "";
+var v_order_22 = current.u_order_22.getDisplayValue() || "";
+var v_order_23 = current.u_order_23.getDisplayValue() || "";
+var v_order_24 = current.u_order_24.getDisplayValue() || "";
+var v_order_25 = current.u_order_25.getDisplayValue() || "";
+var v_order_26 = current.u_order_26.getDisplayValue() || "";
+var v_order_27 = current.u_order_27.getDisplayValue() || "";
+var v_other_1 = current.u_other_route_1.getDisplayValue() || "";
+var v_other_2 = current.u_other_route_2.getDisplayValue() || "";
+var v_other_3 = current.u_other_route_3.getDisplayValue() || "";
+var v_other_action = current.u_action_1.getDisplayValue() || "";
+var v_phone_number = current.u_phone_number.getDisplayValue() || "";
+var v_comments = current.u_route_slip_comments.getDisplayValue() || "";
+// Set user entered checkbox values with current form values
+var str50 = current.u_checkbox_50.getDisplayValue() || "";
+var v_checkbox_50 = str50.replace('true', 'Yes');
+
+var str51 = current.u_checkbox_51.getDisplayValue() || "";
+var v_checkbox_51 = str51.replace('true', 'Yes');
+
+var str52 = current.u_checkbox_52.getDisplayValue() || "";
+var v_checkbox_52 = str52.replace('true', 'Yes');
+
+var str53 = current.u_checkbox_53.getDisplayValue() || "";
+var v_checkbox_53 = str53.replace('true', 'Yes');
+
+var str54 = current.u_checkbox_54.getDisplayValue() || "";
+var v_checkbox_54 = str54.replace('true', 'Yes');
+
+var str55 = current.u_checkbox_55.getDisplayValue() || "";
+var v_checkbox_55 = str55.replace('true', 'Yes');
+
+var str56 = current.u_checkbox_56.getDisplayValue() || "";
+var v_checkbox_56 = str56.replace('true', 'Yes');
+
+var str57 = current.u_checkbox_57.getDisplayValue() || "";
+var v_checkbox_57 = str57.replace('true', 'Yes');
+
+var str58 = current.u_checkbox_58.getDisplayValue() || "";
+var v_checkbox_58 = str58.replace('true', 'Yes');
+
+var str59 = current.u_checkbox_59.getDisplayValue() || "";
+var v_checkbox_59 = str59.replace('true', 'Yes');
+
+var str60 = current.u_checkbox_60.getDisplayValue() || "";
+var v_checkbox_60 = str60.replace('true', 'Yes');
+
+var str61 = current.u_checkbox_61.getDisplayValue() || "";
+var v_checkbox_61 = str61.replace('true', 'Yes');
+
+var str62 = current.u_checkbox_62.getDisplayValue() || "";
+var v_checkbox_62 = str62.replace('true', 'Yes');
+
+var str63 = current.u_checkbox_63.getDisplayValue() || "";
+var v_checkbox_63 = str63.replace('true', 'Yes');
+
+var str64 = current.u_checkbox_64.getDisplayValue() || "";
+var v_checkbox_64 = str64.replace('true', 'Yes');
+
+var str65 = current.u_checkbox_65.getDisplayValue() || "";
+var v_checkbox_65 = str65.replace('true', 'Yes');
+
+var str66 = current.u_checkbox_66.getDisplayValue() || "";
+var v_checkbox_66 = str66.replace('true', 'Yes');
+
+// set PDF variables with the variable values created above
+var jsonObject = {
+    "f_log_date": v_log_date,
+    "f_log_number": v_log_number,
+    "f_when_needed": v_when_needed,
+    "f_subject": v_subject,
+//    "f_route_to": v_route_to,
+	"f_route_to": v_responsible_group,
+    "f_action_requested": v_action_requested,
+    "Order": v_order_1,
+    "Order 2": v_order_2,
+    "Order 3": v_order_3,
+    "Order 4": v_order_4,
+    "Order 5": v_order_5,
+    "Order 6": v_order_6,
+    "Order 7": v_order_7,
+    "Order 8": v_order_8,
+    "Order 9": v_order_9,
+    "Order 10": v_order_10,
+    "Order 11": v_order_11,
+    "Order 12": v_order_12,
+    "Order 13": v_order_13,
+    "Order 14": v_order_14,
+    "Order 15": v_order_15,
+    "Order 16": v_order_16,
+    "Order 17": v_order_17,
+    "Order 18": v_order_18,
+    "Order 19": v_order_19,
+    "Order 20": v_order_20,
+    "Order 21": v_order_21,
+    "Order 22": v_order_22,
+    "Order 23": v_order_23,
+    "Order 24": v_order_24,
+    "Order 25": v_order_25,
+    "Order 26": v_order_26,
+    "Order 27": v_order_27,
+    "Blank Route 1": v_other_1,
+    "Blank Route 2": v_other_2,
+    "Blank Route 3": v_other_3,
+    "Check Box 50": v_checkbox_50,
+    "Check Box 51": v_checkbox_51,
+    "Check Box 52": v_checkbox_52,
+    "Check Box 53": v_checkbox_53,
+    "Check Box 54": v_checkbox_54,
+    "Check Box 55": v_checkbox_55,
+    "Check Box 56": v_checkbox_56,
+    "Check Box 57": v_checkbox_57,
+    "Check Box 58": v_checkbox_58,
+    "Check Box 59": v_checkbox_59,
+    "Check Box 60": v_checkbox_60,
+    "Check Box 61": v_checkbox_61,
+    "Check Box 62": v_checkbox_62,
+    "Check Box 63": v_checkbox_63,
+    "Check Box 64": v_checkbox_64,
+    "Check Box 65": v_checkbox_65,
+    "Check Box 66": v_checkbox_66,
+    "Phone Number": v_phone_number,
+    "Comments": v_comments,
+    "Blank Action 1": v_other_action,
+};
+
+var jsonString = JSON.stringify(jsonObject);
+var destinationTableName = "x_sohd3_dotmail_dotmail";
+var destinationTableSysId = current.sys_id; // sys_id of current record
+
+var pdfName = "Route Slip " + current.number + ".pdf";
+
+pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
+current.update();
+action.setRedirectURL(current);]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-16 01:29:47&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;3316771c1b5738507fd2cbfa234bcbfb&lt;/sys_id&gt;&lt;sys_mod_count&gt;174&lt;/sys_mod_count&gt;&lt;sys_name&gt;Generate Route Slip&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-03-22 00:55:28&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-164466038</payload_hash>
+        <record_name>Generate Route Slip</record_name>
+        <reverted_from/>
+        <source>96c10caa1b67b450747921f2b24bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-03-22 00:55:28</sys_created_on>
+        <sys_id>73df8ccb1b928d1042d8c848624bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17faf1f25000000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-03-22 00:55:28</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>f7df8ccb75928d108acbb8bd150384a2</update_guid>
+        <update_guid_history>f7df8ccb75928d108acbb8bd150384a2:-164466038,409e48cb69928d10b76bbd400c8dd8cc:-50437363,b63a4c0787928d106409dc2944fbb452:-1461815758,26894cc3b4928d100bb587837351e05f:446412927,e3a33b2260654d105ae6721b2d7d80a5:1455689460,e1217faab3254d10867af4bc82fdda4a:-258429152,4bb95e049c2189107bd54092ae98c634:-793117792,a3ff424085ed491013cad1bc583e6282:715176146,78d70244ecad49103b0bfc2b90ca8dfa:1795063835,3a7605112d190d505ae515eac8416816:-98087738,4ac5491db4d50d50c26df9060af17a70:585234059,477489d1b6d50d509f944fda5b0ab82f:-1318354200,310445d189d50d50dc2f51eeb0f2e5d7:676825704,eec3c191f6d50d50b6721bbd765ef360:-1136147352,d2834d5dec950d507252d54e43629187:-969233272,14020915d0950d507be8848baa0ff5d5:-1488422632,e5618d55ac950d504ca88357d2670c39:1107595512,9011c191cf950d50ea06eb3f0cccc828:33377680,dea08d5183950d50f5669712c390a8ac:-75204898,cabb38f9ec14c51090ffa231849c8229:-1207670755,e348b01dcfc84590b53d70311e7e97a0:-1572993409,496ea81d638845907e485fd6aea039f0:1569634633,48c328999c484590b1204e235eb5609b:2141424153,0693e899bf484590fcc1212c59eeb259:-149011045,0543a4991248459013e7b28b997d3ba1:853145597,c1dfc3340a48c190356ae7830ae41335:2141424153,51af4bf06048c19083ec4da1fa9ce430:-1640757131,235f07f06148c190d9bf8ac3b9487be2:-1969675307,0e0f8f70c548c190fed61b4ebc390351:353608985,0b7ec3709448c19028a61a04520c7621:108473117,be3c03bcad08c1907cab193adfde9c8c:-867974286,62dbcb7ce508c19065e943afef8930c7:806382318,7f01ec4b3eb7305071b0d39fb1a85370:-2108620782,d9d0a04bf6b730507d5b03b21c7994ef:-605499948,6f90680b06b730500a76850579c060da:618703728,b57024c770b73050f38a48313c2fd7a1:233087939,9c50a40bacb73050fd6819c88d0cb53d:652315619,53ef90c799b730500e887298efb24d9f:1635016323,577ed44716b73050d641aa34f8614e81:2136699823,9f5ed00760b7305051bb3ddf79388706:494538583,431ed80722b730502f0634b2a558fd14:-700920649,8bfd94c37ab730502b33e1620191264c:1482812709,67bd50072cb7305089daad89f70c9258:1173523100,4f3ddc8333b7305099917e6ed7981a23:1173529276,f80d5483d9b730501793f474130f93fe:-1920227300,775cdc0303b73050078e325126c03748:379486647,123cd4432db73050318352cf90f9291f:-568036825,3fbb580355b73050343a34417b7bdedc:44945158,f89b98cf447730503367ed1f026a6857:1084631816,ef3b54cf2277305078241a83ceebf253:-1582943139,cc1b148fc177305015e8b01180ffae13:1408908029,dbba5ccbe57730503b601f1e8fad7f5b:379486647,00495c8ba4773050aa4b62a8c97f7589:-108595359,842333594fb7b4108b37b21ba76d6c73:2136699823,02037b1922b7b41074aaad446f67aca7:-364756136,1fe23bd5d8b7b4104773b8947c160b99:652315619,63727f9522b7b4108d0cdd57f1a2df10:379486647,69223f558eb7b410ff547b7c2df74331:-1989028885,fbc1339546b7b410ed391dc7ff770a11:-903982556,de252315f037b41024a7c080fcfd2b10:-903988732,50d4e3d1e937b41008a86f39fe4b49f5:251114811,6c54af512537b41038f175f47b914104:2027416517,76c3afddc7f3b4107a701ee9563f4f5b:-1643129919,53a3eb11c637b410e11da3eb6836d9b6:2027416517,f673eb111c37b41089aa880c64e0f55c:-587330530,4c9e0add8f7ff8100080c03a727900a3:-865837836,69c565b0b137b0105151633be08d4cbc:-383439150,ee7c71b64263b0907f4ec169bbf97365:1606824148,9a3cfdf69063b09037b5dc20ec86e433:-242705125,4e0b7df65263b090c913eedad6d5cb27:1606824148,3d9721bae0ef7090ef1a817a16c67cc9:-1922876160,131f19fac3af70907d4804ea6446b602:-267325517,b715157e066f7090e6770c613b5591be:-616255248,1305917e726f709039919566fc1c5212:2026741726,9994913e706f7090dc1069428e041753:-106505880,8e4b22dea613f410e9c69446f84d4ffb:-211132146,aa3bee9e0d13f4102a29754d9fa0ec30:-18781263,00fa6a9ea413f4104854ab304299aa5c:1074614280,e908665a2513f4104db93ecc81933c3f:107748965,35362e56bc13f4104c6b9ec874699eb5:-1080978999,79122a12e613f410ce5bf45915cb2841:121414059,dee0ae1e0bdfb4108da441b193d07f2b:-315089012,3c20a69a00dfb410c90b484d6f43ff4a:-934055013,1e6f961ec7dfb410646cc7551cb31247:359930698,d32e969a97dfb4102fc00a9dff642e43:-791396072,05fdde5ab0dfb4101eb5d15ef4abfad8:1534774743,10f21ad2169fb410184e0d2ad615dfc6:-2119740384,6a629a922a9fb4108c6521ee844d534e:-1744384604,4f919652f49fb4105e24ad998e84e65f:1647203908,558f861eee5fb41002c27589b6b2c524:4231466,9c1f021ea85fb41095a830d5cbc33193:756895530,ea2e869add5fb410124466165fac5888:153657066,d6dc8e5ad45fb410e48167761384485d:-1220266447,f8bb821a685fb410a1c737c77be50eab:-1306166539,df0b4e561a5fb410a3c50fa002a9be47:-1970603069,924a0e56e05fb41096ccbdde90dbae7c:-1579843549,9b0a46569c5fb4108d21fe5859036470:-1506769486,d8610296071fb4102fa08aa51a833ada:478931809,aa3ffdd2ca1fb410c0dc363eaef59da7:564500877,821e3192a51fb4102bec197f4eea3ff5:388016461,73cdbd52071fb4101d733ea96d37c04d:2042213841,7badf9de3fdbb4103afaa405457de536:296199185,196db1524c1fb410352c27e54e700141:-2070354373,dc4df59e47dbb41056d2777aa6d1d83b:1349690289,8897bd12ddd3b410df6831f2fe0383bd:564500877,4f463d9ebd93b410ade2fc53c2f23bd5:-1786855409,8bf0359ab293b410d8fe1f0d39d0d899:-1035199076,751de116c693b410377d022272277464:-1349202756,e3372dda1153b4105e17de27b1b18a22:-1314986272,2c07299ab053b410b6715a25e6629caa:-964151696,9816e15ab253b410c485fa23e75c5947:1421925113,f46e191e5613b4100525cedd5b8a9ecf:715313551,d6935d5e50d7b4107a39f901154c1cf3:357147183,a22c4dd246d7b4108674ee15b64596fd:715313551,eb764d9a8797b41013339d4f4a4c73f7:1520966705,c9a141d2ac97b4106c7c146f1de2c486:2122789291,c44005529097b410a8ac534f4c17e9cd:95624043,36e06d0ae3df3410c1f624fc44fe3c33:-733368694,2aa0e10a25df341041e05fc9f4ddf8ed:1953708083,119f1d86a1df3410e6ec72fda3d9a350:-1031523923,4ffed94647df34103fefea0f7c6bfd1d:309351333,d9ae1546e6df3410948d62479ba33d8b:1611547434,f44ed506c6df34105dba6c8fd3a9df5c:-733368694,c71ed50674df3410f8e4f03a57913d56:366982435,3b8bd102fadf3410f5eb03533617a18e:-733368694,cf4b19ce1f9f3410924f8e2aa91fa629:1611547434,3f1b55cee19f34101a17cd216cb69920:-773225380,a9e9d14e7e9f341013b1112335e3f6c3:1611547434,d5611d8a165f34104cfdc82b72eb5521:-733368694,16bfc90a525f3410f6d715997313256b:-944102628,652945ca0a1f34107e6af762206146ba:1638380887,84c6cd4afa1f34108edf89f4839325b4:-1804941281,15960d8a271f34102b26c5bfec90e6e9:724543880,fb520dc2c91f34104f76f14575358af0:-2051281865,b4320dc21e1f34106f6450c084f4e656:267677879,1a0241c2a41f341017ea8bfab95f2024:-233630761,f2d18582b31f3410584ac87387be09b3:924171617,0ea18582071f3410fe857cfa0d838bf8:-1051928063,e18105825a1f34104e14308f126ffcd4:-220323241,82514d42fa1f34107bc448cb6b6f8375:-1051928063,d431c942bf1f34103c4133d55d5ce1c9:418671841,b8fc34caabdb341055ed9342718f587e:-1051928063,64bc3c8afbdb3410f6b548f2deb0d79d:-1871194426,d8aa34c6bedb3410e99fd036b7766039:-2111931954,1213fc8a929b3410ed0a4903d486dc1d:-1159487870,7eaf104ed21b3410275d23d952b6110a:1029894018,1c9f9c0e631b34107fc6c72d1c78c908:-1798373226,646f140e3c1b34103329b64d49d3c255:386324705,f91e108a2f1b341064ca83f09e73c474:1029894018,e1c9908a34d33410a96957d9b9eaeaef:534567096,b7375086ead334106965c7b44fc0533f:1061222827,502790c6bfd3341013aafd8833d3725f:1895216612,65761086add33410c1045200ca9ead0d:994735876,1b069c028cd33410bea05dd6313c5de6:-993244284,fc0550424dd33410258576b3fbc74ac4:1965285569,8c749c8e75933410d16eeb91f68298ef:632868860,5261588e46933410a029461d727afd45:1965285569,5970dc0e69933410857317c860ec8235:1999157659,4c5e48c6ee933410848d990c94e2bf96:1061222827,dd2c4486db93341091ad99ab0b88fe92:-1984897763,8f7b84060f93341056eb51db4c775771:-1350400749,d5f90cc22e933410691827ab3e2a644c:46924483,d019c0824093341045053d9725276e4d:-1094259462,34e88082299334102f6bec0889306385:1520559994,e3c80082d3933410969ea49d20f833e0:1700880250,e2b80c42f8933410413700826c85fdb7:957469882,54988842ff933410e659d624823b841d:-152059014,62388c02469334106b2fe9353b4775ea:1186489274,5ff708020d93341004994d4ff0441f3e:1717332218,7ad7c4022e9334109ce1c14fc473ed95:-1246875430,a4a78c8a7053341052a48c8c1d5ed392:-1625102406,c1547f351d133410cf27d7db3a34e370:308913811,d4070b51a95f3010aa87916cad6d2383:1809517393,c3477f1c9357385041f76014141441e3:384884606,fb167f1cbb573850fc8a6e28b38c5edb:-151250010</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-03-28 23:17:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>0ebe0ea530e14f3f80e6390e8fa7a271</sys_id>
+        <sys_metadata>3316771c1b5738507fd2cbfa234bcbfb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Generate Route Slip</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb">73df8ccb1b928d1042d8c848624bcba3</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-03-28 23:17:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

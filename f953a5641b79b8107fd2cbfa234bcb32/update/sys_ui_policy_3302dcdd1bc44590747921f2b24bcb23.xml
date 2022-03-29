@@ -11,7 +11,7 @@
         <description/>
         <global>true</global>
         <inherit>false</inherit>
-        <isolate_script>true</isolate_script>
+        <isolate_script>false</isolate_script>
         <model_id/>
         <model_table/>
         <on_load>true</on_load>
@@ -20,9 +20,11 @@
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
     $j('[data-action-name=generate_route_slip]').hide();
+    //this.jQuery('generate_route_slip').hide();
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
     $j('[data-action-name=generate_route_slip]').show();
+    //this.jQuery('generate_route_slip').show();
 }]]></script_true>
         <set_values/>
         <short_description>Show/Hide Generate Route Slip Button</short_description>
@@ -32,7 +34,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3302dcdd1bc44590747921f2b24bcb23</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Show/Hide Generate Route Slip Button</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -40,7 +42,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_policy_3302dcdd1bc44590747921f2b24bcb23</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-09 21:55:10</sys_updated_on>
+        <sys_updated_on>2022-03-29 00:22:01</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui_type>10</ui_type>
         <view/>

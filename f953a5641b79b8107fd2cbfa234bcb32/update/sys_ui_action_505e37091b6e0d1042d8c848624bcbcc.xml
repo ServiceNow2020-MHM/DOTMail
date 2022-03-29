@@ -6,7 +6,7 @@
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments>Show button if not Active Journal Entry Only, DIR Review Request, and Letter Approval Request (handled by UI Policy). </comments>
+        <comments>Show button if not Active Journal Entry Only, DIR Review Request, and Letter Approval Request (handled by UI Policy).</comments>
         <condition/>
         <form_action>true</form_action>
         <form_button>true</form_button>
@@ -15,6 +15,7 @@
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
         <hint/>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
@@ -31,11 +32,10 @@
         <order>300</order>
         <script><![CDATA[var pdf = new global.GeneralPdfUtils();
 // Script Include GeneralPdfUtils() comes with the PDF Generator Plugin
-
 // Sys ID of the attachment PDF template
-//var attachmentSysId = "3dbaa69e1b13f410eef0cb72604bcb7b";
-var attachmentSysId = "6147a57a1bef70907fd2cbfa234bcb2b";
-
+// Need to attach the PDF template file in a new Sys Property in PROD (https://hidotdev.service-now.com/sys_properties_list.do)
+// then get the attachment SysID from (https://hidotdev.service-now.com/sys_attachment_list.do) and update it here below
+var attachmentSysId = "a73e08471b928d1042d8c848624bcbb4";
 // set autofill variables with current form values
 var v_log_date = current.u_log_date.getDisplayValue() || "";
 var v_log_number = current.number.getDisplayValue() || "";
@@ -201,25 +201,25 @@ var pdfName = "Route Slip " + current.number + ".pdf";
 pdf.prefillPdf(jsonString, destinationTableSysId, attachmentSysId, destinationTableName, pdfName);
 current.update();
 action.setRedirectURL(current);]]></script>
-        <show_insert>false</show_insert>
+        <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-10-16 01:29:47</sys_created_on>
+        <sys_created_on>2022-03-28 23:32:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>3316771c1b5738507fd2cbfa234bcbfb</sys_id>
-        <sys_mod_count>170</sys_mod_count>
+        <sys_id>505e37091b6e0d1042d8c848624bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Generate Route Slip</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_ui_action_3316771c1b5738507fd2cbfa234bcbfb</sys_update_name>
+        <sys_update_name>sys_ui_action_505e37091b6e0d1042d8c848624bcbcc</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-11 21:26:42</sys_updated_on>
+        <sys_updated_on>2022-03-28 23:32:29</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
