@@ -9,7 +9,7 @@
         <isolate_script>true</isolate_script>
         <messages/>
         <name>Set Request and Routing Fields Read Only</name>
-        <order/>
+        <order>110</order>
         <script><![CDATA[function onLoad() {
     //Type appropriate comment here, and begin script below
     if (g_form.isNewRecord()) {
@@ -39,45 +39,54 @@
         //alert("g_user.firstName = " + g_user.firstName 
         //+ ", \n g_user.lastName = " + g_user.lastName 
         //+ ", \n g_user.userName = " + g_user.userName 
-		//+ ", \n g_user.fullName = " + g_user.fullName
+        //+ ", \n g_user.fullName = " + g_user.fullName
         //+ ", \n g_user.userID = " + g_user.userID);
         //alert(g_user.userName);
         //alert(g_form.getValue('u_delegate_1'));
         //alert(g_form.getValue('u_delegate_2'));
         // Set the Request Type and Action Requested fields to read only if not the Opened By person (or admin)
         var whatState = g_form.getValue('state');
+        //alert("State is: " + whatState);
         //if (infoFromScriptInclude == g_user.fullName || g_user.hasRoleExactly('admin') || g_user.userName == 
+        //if (infoFromScriptInclude == g_user.userName || g_user.hasRoleExactly('admin') || g_user.userName == g_form.getValue('u_delegate_1') ||
         if (infoFromScriptInclude == g_user.userName || g_user.hasRoleExactly('admin') || g_user.userName == g_form.getValue('u_delegate_1') || g_user.userName == g_form.getValue('u_delegate_2')) {
-            if (whatState == '-5' || whatState == '30' || whatState == '3' || whatState == '55') {
+            if (whatState == -5 || whatState == 30 || whatState == 3 || whatState == 55) {
                 // Set Request Type to Read Only if State is Pending (-5), Reopened (30),  Closed Complete (3), or
                 // Not Approved - Resubmit (55)
+                //alert('in if pending, reopened, closed complete, or not approved');
                 g_form.setReadOnly('u_request_type', true);
                 g_form.setReadOnly('u_action_requested', true);
                 g_form.setReadOnly('u_other', true);
                 g_form.setReadOnly('u_responsible_group', true);
                 g_form.setReadOnly('u_route_to_group_list', true);
-                g_form.setReadOnly('opened_at', true);
+                //g_form.setReadOnly('opened_at', true);
+                g_form.setReadOnly('u_routed_on', true);
                 g_form.setReadOnly('u_when_needed', true);
                 //g_form.setReadOnly('u_additional_instructions', true);
                 //g_form.setReadOnly('u_responses_remarks', true);
             } else {
+                //alert("State is: " + whatState);
+                //alert('in else open, cancelled, completed request, or approved');
                 g_form.setReadOnly('u_request_type', false);
                 g_form.setReadOnly('u_action_requested', false);
                 g_form.setReadOnly('u_other', false);
                 g_form.setReadOnly('u_responsible_group', false);
                 g_form.setReadOnly('u_route_to_group_list', false);
-                g_form.setReadOnly('opened_at', false);
+                //g_form.setReadOnly('opened_at', false);
+                g_form.setReadOnly('u_routed_on', false);
                 g_form.setReadOnly('u_when_needed', false);
                 g_form.setReadOnly('u_additional_instructions', false);
                 g_form.setReadOnly('u_responses_remarks', false);
             }
         } else {
+            //alert('in not author, admin, or delegate');
             g_form.setReadOnly('u_request_type', true);
             g_form.setReadOnly('u_action_requested', true);
             g_form.setReadOnly('u_other', true);
             g_form.setReadOnly('u_responsible_group', true);
             g_form.setReadOnly('u_route_to_group_list', true);
-            g_form.setReadOnly('opened_at', true);
+            //g_form.setReadOnly('opened_at', true);
+            g_form.setReadOnly('u_routed_on', true);
             g_form.setReadOnly('u_when_needed', true);
             g_form.setReadOnly('u_additional_instructions', true);
             //g_form.setReadOnly('u_responses_remarks', true);
@@ -90,7 +99,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>58eb0d1f1bb73850747921f2b24bcb0b</sys_id>
-        <sys_mod_count>66</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>Set Request and Routing Fields Read Only</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -98,7 +107,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_58eb0d1f1bb73850747921f2b24bcb0b</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-22 23:09:14</sys_updated_on>
+        <sys_updated_on>2022-04-05 23:17:57</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

@@ -9,33 +9,58 @@
         <isolate_script>true</isolate_script>
         <messages/>
         <name>Reset Task Fields onChange Request Type</name>
-        <order/>
+        <order>210</order>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     if (isLoading || newValue === '') {
         return;
     }
-	var whenNeeded = g_form.getValue('u_when_needed');
+    //var whenNeeded = g_form.getValue('u_when_needed');
     if (newValue == 'journal entry only') {
+        g_form.setMandatory('u_routed_on', false); //opened_at field becomes non-mandatory.  Need this or will not save.
         g_form.clearValue('u_when_needed');
-        //g_form.clearValue('assigned_to');
-        //g_form.clearValue('group_list');
-        //g_form.clearValue('additional_assignee_list');
         g_form.clearValue('u_responsible_group');
         g_form.clearValue('u_route_to_group_list');
-        g_form.clearValue('opened_at');
-        g_form.setMandatory('opened_at', false); //opened_at field becomes non-mandatory.  Need this or will not save. 
+        //g_form.clearValue('opened_at');
+        g_form.clearValue('u_routed_on');
+        g_form.setValue('state', 1); // set default value to Open 
+        return;
 
-    } else if (newValue == 'no response required') {
-        g_form.clearValue('u_when_needed');
-	} else
-		g_form.clearValue('u_responsible_group');
-        g_form.clearValue('u_route_to_group_list');	
-	//else if (oldValue == 'dir review') {   // <-- doesn't work
-		//g_form.clearValue('u_responsible_group');
-	//}
-	//alert(newValue);
-	//alert(whenNeeded);
-	
+    } else {
+        if (newValue == 'no response required') {
+            g_form.clearValue('u_when_needed');
+            g_form.setValue('state', 1); // set default value to Open
+
+            // calculate new opened_by date
+            var ajax1 = new GlideAjax('MyDateTimeAjax');
+            ajax1.addParam('sysparm_name', 'nowDateTime');
+            ajax1.getXML(function() {
+                //g_form.setValue('opened_at', ajax1.getAnswer());
+                g_form.setValue('u_routed_on', ajax1.getAnswer());
+            });
+            return;
+        }
+        g_form.clearValue('u_responsible_group');
+        g_form.clearValue('u_route_to_group_list');
+        //g_form.clearValue('opened_at');
+        g_form.clearValue('u_routed_on');
+        g_form.setValue('state', -5); // set default value to Pending
+
+        // calculate new opened_by date
+        var ajax2 = new GlideAjax('MyDateTimeAjax');
+        ajax2.addParam('sysparm_name', 'nowDateTime');
+        ajax2.getXML(function() {
+            //g_form.setValue('opened_at', ajax2.getAnswer());
+            g_form.setValue('u_routed_on', ajax2.getAnswer());
+        });
+        return;
+    }
+
+    //else if (oldValue == 'dir review') {   // <-- oldValue doesn't work
+    //g_form.clearValue('u_responsible_group');
+    //}
+    //alert(newValue);
+    //alert(whenNeeded);
+
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -43,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3a5291d11b8c4590747921f2b24bcb16</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>Reset Task Fields onChange Request Type</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -51,7 +76,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_3a5291d11b8c4590747921f2b24bcb16</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-02-23 01:10:19</sys_updated_on>
+        <sys_updated_on>2022-04-05 23:25:56</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

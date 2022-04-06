@@ -1,57 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Deactivated.  Replaced by Set Tab Display Client Script.</description>
+        <description>Hide the Activity,  Journal Information, and Route Slip Setup Sections for New Records.  On existing records show Route Slip Section only for certain Request Types and assigned roles.</description>
         <field>u_request_type</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Hide Route Slip Section onChange</name>
+        <name>Set Tab DIsplay</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-    if (isLoading || newValue === '') {
+    // Removed isLoading.  Perform when loading and change	
+    //if (isLoading || newValue === '') {
+    //   return;
+    //}
+    if (newValue === '') {
         return;
     }
+
+    // Hide the Activity,  Journal Information, and Route Slip Setup Sections for New Records.  
+    // On existing records show Route Slip Section only for certain Request Types and assigned roles.
     if (g_form.isNewRecord()) {
+        g_form.setSectionDisplay('activity', false);
+        g_form.setSectionDisplay('journal_information', false);
+        g_form.setSectionDisplay('route_slipsetup', false);
         //alert("in new record logic");
-        return;
     } else {
         //alert("in existing record logic");
-        //         if (newValue == 'letter approval request' || newValue == 'dir review') {
-        //             // Hide the Route Slip Setup Section
-        //             g_form.setSectionDisplay('route_slipsetup', false);
-        //         } else {
-        //             g_form.setSectionDisplay('route_slipsetup', true);
-        //         }
-        if (newValue != 'journal entry only' && newValue != 'letter approval request' && newValue != 'dir review' && newValue != 'no response required') {
-            // Display only for DIR related roles and not for letter approvals and dir reviews
+        // Display the Route Slip Setup Section only for certain roles and request types
+        var request = g_form.getValue('u_request_type');
+        if (request != 'letter approval request' && request != 'dir review' && request != 'journal entry only' && request != 'no response required') {
+            // Display only for DIR related roles
             if (g_user.hasRoleExactly('x_sohd3_dotmail.DIR Administrators') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Contributors') || g_user.hasRoleExactly('x_sohd3_dotmail.DIR Editors') || g_user.hasRoleExactly('admin')) {
                 g_form.setSectionDisplay('route_slipsetup', true);
+                //alert("in existing record logic - checking roles true");
             } else {
                 g_form.setSectionDisplay('route_slipsetup', false);
+                //alert("in existing record logic - checking roles false");
             }
         } else {
             g_form.setSectionDisplay('route_slipsetup', false);
         }
+        // alert(g_form.getSectionNames());
     }
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
-        <sys_created_on>2021-11-13 00:52:43</sys_created_on>
+        <sys_created_on>2022-03-29 18:07:46</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>3d483b9d1bb7b41042d8c848624bcbe2</sys_id>
-        <sys_mod_count>21</sys_mod_count>
-        <sys_name>Hide Route Slip Section onChange</sys_name>
+        <sys_id>1bccb3911b62cd1042d8c848624bcb05</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Set Tab DIsplay</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
-        <sys_update_name>sys_script_client_3d483b9d1bb7b41042d8c848624bcbe2</sys_update_name>
+        <sys_update_name>sys_script_client_1bccb3911b62cd1042d8c848624bcb05</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-29 20:13:20</sys_updated_on>
+        <sys_updated_on>2022-03-29 19:12:46</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
