@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_sohd3_dotmail.DuplicateMailUtil</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>DuplicateMailUtil</name>
+        <script><![CDATA[var DuplicateMailUtil = Class.create();
+DuplicateMailUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    dupUtils: function() {
+        var table = ('x_sohd3_dotmail_dotmail');
+        var columns = ('u_letter_date', 'u_from');
+        var pivotColumn = 'u_from_2';
+        var duplicateFinder = new GlideAggregate(table);
+
+        for (var i = 0; i < columns.length; i++) {
+            duplicateFinder.groupBy(columns[i]);
+        }
+		
+		var j = i;
+        duplicateFinder.addAggregate('COUNT', pivotColumn);
+        duplicateFinder.query();
+
+        while (duplicateFinder.next()) {
+
+            var count = parseInt(duplicateFinder.getAggregate('COUNT', pivotColumn));
+
+            if (count > 1) {
+
+                var message = count + 'found \n\t' + gs.getProperty('glide.servlet.uri') + table + '_list.do ? sysparm_query = ';
+
+                for (j = 0; j < columns.length; j++) {
+
+                    message += columns[j] + ' = ' + duplicateFinder[columns[j]] + ' ^ ';
+
+                }
+
+                gs.log(message);
+
+            }
+        }
+
+    },
+
+    type: 'DuplicateMailUtil'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-29 00:35:48</sys_created_on>
+        <sys_id>999d3dac1be3b810747921f2b24bcb42</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>DuplicateMailUtil</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_999d3dac1be3b810747921f2b24bcb42</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 01:08:50</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_include_999d3dac1be3b810747921f2b24bcb42</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_sohd3_dotmail.DuplicateMailUtil&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;DuplicateMailUtil&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var DuplicateMailUtil = Class.create();
+DuplicateMailUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    dupUtils: function() {
+        var table = ('x_sohd3_dotmail_dotmail');
+        var columns = ('u_letter_date', 'u_from');
+        var pivotColumn = 'u_from_2';
+        var duplicateFinder = new GlideAggregate(table);
+
+        for (var i = 0; i &lt; columns.length; i++) {
+            duplicateFinder.groupBy(columns[i]);
+        }
+		
+		var j = i;
+        duplicateFinder.addAggregate('COUNT', pivotColumn);
+        duplicateFinder.query();
+
+        while (duplicateFinder.next()) {
+
+            var count = parseInt(duplicateFinder.getAggregate('COUNT', pivotColumn));
+
+            if (count &gt; 1) {
+
+                var message = count + 'found \n\t' + gs.getProperty('glide.servlet.uri') + table + '_list.do ? sysparm_query = ';
+
+                for (j = 0; j &lt; columns.length; j++) {
+
+                    message += columns[j] + ' = ' + duplicateFinder[columns[j]] + ' ^ ';
+
+                }
+
+                gs.log(message);
+
+            }
+        }
+
+    },
+
+    type: 'DuplicateMailUtil'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-29 00:35:48&lt;/sys_created_on&gt;&lt;sys_id&gt;999d3dac1be3b810747921f2b24bcb42&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;DuplicateMailUtil&lt;/sys_name&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_999d3dac1be3b810747921f2b24bcb42&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-29 01:08:50&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1508759600</payload_hash>
+        <record_name>DuplicateMailUtil</record_name>
+        <reverted_from/>
+        <source>ab77d7f11bb5b0107fd2cbfa234bcb75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-10-29 01:08:50</sys_created_on>
+        <sys_id>73fd62a01b6bb810747921f2b24bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17cc997a4380000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 01:08:50</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>7bfd62a04f6bb810877525d81e276538</update_guid>
+        <update_guid_history>7bfd62a04f6bb810877525d81e276538:-1508759600,786a6ae83e2bb8104027c6d6971b131c:1473208641,b2d9aaa8172bb81034bc02bd4bf9d8ca:-1850195689,807662a800e7b810134aaeda28e6beb1:1812436637</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-04-12 20:31:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>23d8842c93aa454e9fba66d79dafed09</sys_id>
+        <sys_metadata>999d3dac1be3b810747921f2b24bcb42</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DuplicateMailUtil</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_include_999d3dac1be3b810747921f2b24bcb42</sys_update_name>
+        <sys_update_version display_value="sys_script_include_999d3dac1be3b810747921f2b24bcb42">73fd62a01b6bb810747921f2b24bcb39</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-12 20:31:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

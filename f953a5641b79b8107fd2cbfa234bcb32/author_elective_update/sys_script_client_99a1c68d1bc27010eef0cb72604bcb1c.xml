@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Reset task assignment related fields to default values if state is changed to 'Cancelled'.</description>
+        <field>state</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Reset Task Fields When Cancelled</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    // identifies whether the change occurs as part of a form load or not.
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Clear the task assignment fields when the State is 'Cancelled'.  
+    // Need to reset request type and action requested to
+    // default values before clearing values for the when needed date and opened_at fields because 
+    // they are mandatory for assignment related request types
+
+    var resetRequestType = 'journal entry only'; // use this because all other req types will generate a notice
+    var resetActionRequested = 'no response required';
+    var resetState = 1; // reset to Open State
+    //alert(isLoading);
+    //alert(newValue);
+    // If the new State value is cancelled...
+    if (newValue == 10) {
+        //g_form.setValue('u_request_type', resetRequestType);
+        //g_form.setValue('u_action_requested', resetActionRequested);
+        //g_form.setValue('state', resetState);
+        //g_form.clearValue('u_when_needed');
+        //g_form.clearValue('u_responsible_group');
+        //g_form.clearValue('u_route_to_group_list');
+        //g_form.clearValue('opened_at');
+        g_form.setMandatory('opened_at', false);
+
+        // If the new State value is pending...only applies to request types that don't require a response; i.e.,
+        // anything but Journal Entries and No response required
+    } else if (newValue == -5) {
+        g_form.setMandatory('opened_at', true); //opened_at field becomes mandatory.  To reverse a cancellation save.
+    }
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2021-08-16 21:47:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>99a1c68d1bc27010eef0cb72604bcb1c</sys_id>
+        <sys_mod_count>63</sys_mod_count>
+        <sys_name>Reset Task Fields When Cancelled</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-04 22:24:04</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Reset task assignment related fields to default values if state is changed to 'Cancelled'.&lt;/description&gt;&lt;field&gt;state&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Reset Task Fields When Cancelled&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    // identifies whether the change occurs as part of a form load or not.
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Clear the task assignment fields when the State is 'Cancelled'.  
+    // Need to reset request type and action requested to
+    // default values before clearing values for the when needed date and opened_at fields because 
+    // they are mandatory for assignment related request types
+
+    var resetRequestType = 'journal entry only'; // use this because all other req types will generate a notice
+    var resetActionRequested = 'no response required';
+    var resetState = 1; // reset to Open State
+    //alert(isLoading);
+    //alert(newValue);
+    // If the new State value is cancelled...
+    if (newValue == 10) {
+        //g_form.setValue('u_request_type', resetRequestType);
+        //g_form.setValue('u_action_requested', resetActionRequested);
+        //g_form.setValue('state', resetState);
+        //g_form.clearValue('u_when_needed');
+        //g_form.clearValue('u_responsible_group');
+        //g_form.clearValue('u_route_to_group_list');
+        //g_form.clearValue('opened_at');
+        g_form.setMandatory('opened_at', false);
+
+        // If the new State value is pending...only applies to request types that don't require a response; i.e.,
+        // anything but Journal Entries and No response required
+    } else if (newValue == -5) {
+        g_form.setMandatory('opened_at', true); //opened_at field becomes mandatory.  To reverse a cancellation save.
+    }
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-16 21:47:14&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;99a1c68d1bc27010eef0cb72604bcb1c&lt;/sys_id&gt;&lt;sys_mod_count&gt;63&lt;/sys_mod_count&gt;&lt;sys_name&gt;Reset Task Fields When Cancelled&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-04 22:24:04&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>584927790</payload_hash>
+        <record_name>Reset Task Fields When Cancelled</record_name>
+        <reverted_from/>
+        <source>20ce88551be24d1042d8c848624bcbe5</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-04-04 22:24:04</sys_created_on>
+        <sys_id>2673fbd71bae05104261edb1604bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ff6ad90c50000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-04 22:24:04</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>aa73fbd7d4ae05109bd2f4de788cf712</update_guid>
+        <update_guid_history>aa73fbd7d4ae05109bd2f4de788cf712:584927790,df92b75719ae05105fcfce19404fae91:-1458844133,3be1ff17ffae05109b2971ff685fc9f6:-1257403979,9bb1bb173dae0510661eb9ca919d1d81:-261830567,a821f7d352ae0510ecdbc0e39d1a2527:2122421445,61d07fdf016e0510297c04f0e55271c5:1668926505,d280bb9387ae0510aa337b1417691fca:496023634,c5ce6fdf716e0510b4c610abc696712f:-1808106318,468ee7df5e6e051021814237a74af0cf:-1367177189,819b6f5b3e6e051083826f3491ef2b6e:468091783,a18a6b1b316e05105a43a6912322f1f7:-471133343,406abad7afe60510b2ba6a2cbd18703b:-1429159560,a1197297aae6051000ee53983e30b9f9:1650437803,12561965ba2ecd106d630c50082ad530:-2130284229,5526196d49eacd103bbb7dc67ff69328:1853112347,b8d5d9adf5eacd10fb3e68cdbf75acd4:-988418775,c0ebcd6df66acd10486eb8f7f916c1d8:-1379374007,4bba856d4a6acd102e638402c3cf88d3:-988418775,f83a8de9ba6acd10ce0f563dceb1e448:1766220767,b2a94de9f76acd1009b05b843827b0c1:1440776511,d384e997f2498d10c0a74971b6b5092f:-2000759983,041525fa6534c514f99247a65ceb1251:-1193912774,1748e10af510c9107ff1a7feb68f0724:-634942694,ac182d864d10c910da35e2a91c162c17:571682473,a918a6f74d40c5d09e25ef98136eadf2:-1196528180,1a4662774640c5d047121e04ef402509:874620524,2ee52a37b840c5d00304a2495b03bd7b:1039686217,9a34a673eb40c5d088bcc32106ddea0e:429760649,a3ca3dfbb10c85d0822e563646f0ecce:-522695443,03c051d1c38c4590fe71facc87a4c26c:1302379,761fc511d98c4590199b36182edbf2e0:1155135225,dbbe899da44c45907d709049e347bd10:-1493657981,925ccdd9014c45908034ae8a7b116fa2:-1560070375,46fbc599cc4c4590cd3b2d56b0ac19c0:332920803,ac8b8d59084c4590d6dd3468b83918d9:-1560070375,9d584955f64c4590b3a5189a273d3312:1006112592,4ec2015d250c4590158acc7fbcff3c27:-604333970,aedd16fe6927b090940eb4877163216f:514268594,7c829d3ac26f7090ad7db3629eb4b6e0:-163501809,c6cd01b29f6f70901c7cc85713795dec:-112250449,998c09be27e73850e5fd3dd8da51f58f:1455878240,64eb817e58e738506dc06162aa28aa39:1697450322,cdbb49fa2be7385072313e3151c8b8f0:358580054,fca6685be3f234104b5bd9a63d46d0dd:-359512520,ce86201bbcf2341076f6b7b7ccf38edf:-1266993928,4976ecd703f234106f43eed8e4090050:-1583098930,f9256897faf23410d65a38781b93eb31:-730439900,44b4a49713f23410ba6e5bd211b272c1:-770829671,c004a0d36bf23410e45c24df45ea972c:-1692391794,ef9364179ef234106878dd4ef90b1d4f:45202645,818220d340f234102d07c2f2f2cfa3b0:-1451347024,a8612c13edf2341029541dce83ac6350:-1467280967,7201e8dfe2b23410e1b56846df324199:1458136850,a720a85fecb23410f6ec27ef08e8447b:1281430799,876e54db5bb234102334062244774881:2029422639,8d9d949b64b23410806ae549abf48800:-336455453,605c949714b23410a1ef530d259d8ba9:1020491550,1db14c6817ee70100c5babac13f45ff3:612535451,b5ce3d610ed6301040135e8032cc5a44:-1772445957,3a36480c1d1274101135fb10367b840a:2000481518,f3f11d0e610a7010d6f03f930a335f1e:549064019,c7e0b2153a0af0106eb05863702e6913:-575592068,25544e091e067010241e18c8c50234b6:405875735,b6c3c2c58a0670101769e7fdee523f8a:958406327</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-04-12 22:30:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>8a516d615d304d148db45ef1f5e3c284</sys_id>
+        <sys_metadata>99a1c68d1bc27010eef0cb72604bcb1c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reset Task Fields When Cancelled</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c</sys_update_name>
+        <sys_update_version display_value="sys_script_client_99a1c68d1bc27010eef0cb72604bcb1c">2673fbd71bae05104261edb1604bcb13</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-12 22:30:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Displays the Request Types available to an Office (cannot use for new records because the Office/Section field is not populated until Submitted).  Another client script (Request Type Options by Office onChange) will handle new records.</description>
+        <field>u_request_type</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Request Type Options By Office onLoad</name>
+        <order>110</order>
+        <script><![CDATA[function onLoad() {
+    //
+	// This client script will only determine Request type options by Office/Section for existing records only.
+	// Request type options for new records are handled by the Request Type Options by Office onChange client script.
+	//
+    if (g_form.isNewRecord()) {
+        return;
+    }
+	
+    if (g_user.hasRole('admin')) {
+        return;
+    }
+    var whatoffice = g_form.getValue('u_office_section');
+    var whatstate = g_form.getValue('state');
+    //alert(whatoffice);
+    //alert(whatstate);
+    if (whatstate == '1' || whatstate == '10' || whatstate == '20' || whatstate == '50') {
+        //
+        // Display request type options if the state is open (1), cancelled (10), completed request (20), 
+        // or approved - ready to finalize (50).  The request type is editable for these states.  
+        // If request type is read only then problems will occur, i.e., incorrect request type and state are displayed.
+        // 
+        //g_form.clearOptions('u_request_type');
+        //
+        // Options for DIR or DEP-S
+        //
+        if (whatoffice == 'DIR' || whatoffice == 'DEP-S') {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            //g_form.addOption('u_request_type', 'dir review', 'DIR Review');
+            //g_form.addOption('u_request_type', 'dir_signature', 'DIR Signature Request');
+            //g_form.addOption('u_request_type', 'gov referral request', 'GOV Referral Request');
+            g_form.removeOption('u_request_type', 'letter approval request');
+            //
+            // Options for BUS or BUS-I
+            //
+        } else if (whatoffice == 'BUS' || whatoffice == 'BUS-I') {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            g_form.removeOption('u_request_type', 'dir review');
+            g_form.removeOption('u_request_type', 'dir_signature');
+            g_form.removeOption('u_request_type', 'gov referral request');
+            //g_form.addOption('u_request_type', 'letter approval request', 'Letter Approval Request');
+            //
+            // Options for CSS or CSS-I
+            //
+        } else if (whatoffice == 'CSS' || whatoffice == 'CSS-I') {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            g_form.removeOption('u_request_type', 'dir review');
+            g_form.removeOption('u_request_type', 'dir_signature');
+            g_form.removeOption('u_request_type', 'gov referral request');
+            g_form.removeOption('u_request_type', 'letter approval request');
+            //
+            // Options for all other offices
+            //
+        } else {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            g_form.removeOption('u_request_type', 'dir review');
+            g_form.removeOption('u_request_type', 'dir_signature');
+            g_form.removeOption('u_request_type', 'gov referral request');
+            g_form.removeOption('u_request_type', 'letter approval request');		
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-03-21 18:29:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2356baf21b9a4d1042d8c848624bcb82</sys_id>
+        <sys_mod_count>61</sys_mod_count>
+        <sys_name>Request Type Options By Office onLoad</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_2356baf21b9a4d1042d8c848624bcb82</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-06 01:03:42</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_client_2356baf21b9a4d1042d8c848624bcb82</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Displays the Request Types available to an Office (cannot use for new records because the Office/Section field is not populated until Submitted).  Another client script (Request Type Options by Office onChange) will handle new records.&lt;/description&gt;&lt;field&gt;u_request_type&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Request Type Options By Office onLoad&lt;/name&gt;&lt;order&gt;110&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    //
+	// This client script will only determine Request type options by Office/Section for existing records only.
+	// Request type options for new records are handled by the Request Type Options by Office onChange client script.
+	//
+    if (g_form.isNewRecord()) {
+        return;
+    }
+	
+    if (g_user.hasRole('admin')) {
+        return;
+    }
+    var whatoffice = g_form.getValue('u_office_section');
+    var whatstate = g_form.getValue('state');
+    //alert(whatoffice);
+    //alert(whatstate);
+    if (whatstate == '1' || whatstate == '10' || whatstate == '20' || whatstate == '50') {
+        //
+        // Display request type options if the state is open (1), cancelled (10), completed request (20), 
+        // or approved - ready to finalize (50).  The request type is editable for these states.  
+        // If request type is read only then problems will occur, i.e., incorrect request type and state are displayed.
+        // 
+        //g_form.clearOptions('u_request_type');
+        //
+        // Options for DIR or DEP-S
+        //
+        if (whatoffice == 'DIR' || whatoffice == 'DEP-S') {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            //g_form.addOption('u_request_type', 'dir review', 'DIR Review');
+            //g_form.addOption('u_request_type', 'dir_signature', 'DIR Signature Request');
+            //g_form.addOption('u_request_type', 'gov referral request', 'GOV Referral Request');
+            g_form.removeOption('u_request_type', 'letter approval request');
+            //
+            // Options for BUS or BUS-I
+            //
+        } else if (whatoffice == 'BUS' || whatoffice == 'BUS-I') {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            g_form.removeOption('u_request_type', 'dir review');
+            g_form.removeOption('u_request_type', 'dir_signature');
+            g_form.removeOption('u_request_type', 'gov referral request');
+            //g_form.addOption('u_request_type', 'letter approval request', 'Letter Approval Request');
+            //
+            // Options for CSS or CSS-I
+            //
+        } else if (whatoffice == 'CSS' || whatoffice == 'CSS-I') {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            g_form.removeOption('u_request_type', 'dir review');
+            g_form.removeOption('u_request_type', 'dir_signature');
+            g_form.removeOption('u_request_type', 'gov referral request');
+            g_form.removeOption('u_request_type', 'letter approval request');
+            //
+            // Options for all other offices
+            //
+        } else {
+            //g_form.addOption('u_request_type', 'journal entry only', 'Journal Entry Only');
+            //g_form.addOption('u_request_type', 'no response required', 'No Response Required');
+            //g_form.addOption('u_request_type', 'response requested - no due date', 'Response Requested - No Due Date');
+            //g_form.addOption('u_request_type', 'response requested - with due date', 'Response Requested - With Due Date');
+            g_form.removeOption('u_request_type', 'dir review');
+            g_form.removeOption('u_request_type', 'dir_signature');
+            g_form.removeOption('u_request_type', 'gov referral request');
+            g_form.removeOption('u_request_type', 'letter approval request');		
+        }
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;moody_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-03-21 18:29:46&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;2356baf21b9a4d1042d8c848624bcb82&lt;/sys_id&gt;&lt;sys_mod_count&gt;61&lt;/sys_mod_count&gt;&lt;sys_name&gt;Request Type Options By Office onLoad&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_2356baf21b9a4d1042d8c848624bcb82&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;moody_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-06 01:03:42&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1578659460</payload_hash>
+        <record_name>Request Type Options By Office onLoad</record_name>
+        <reverted_from/>
+        <source>20ce88551be24d1042d8c848624bcbe5</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-04-06 01:03:42</sys_created_on>
+        <sys_id>fa91a5f31ba6c51042d8c848624bcb3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ffc6614f00000001</sys_recorded_at>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-06 01:03:42</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>7291a5f37aa6c510c38160df73ae0e3b</update_guid>
+        <update_guid_history>7291a5f37aa6c510c38160df73ae0e3b:1578659460,6290e9b3d6a6c5104edba212b3bcbe31:855456855,f51e99332fa6c510e97dc59f3331a076:2134886595,974dd1ff8766c5107b780dd4447da84d:-891201415,49fcd1bff366c5101dc826e8a716ada9:-1341828692,7bea15fb9f66c510a30c1d1cbe3675a1:402596970,e8e95db77766c510d8a48144d79c27f5:-1252768521,71c695f31766c51029b82756b67b66ae:402596970,4f6699b36366c510f783d165b422d9b3:-668172777,161e093ba8e2c5108fa833f46f95a7e7:517905994,41881ab97fe2815082ca8e8747b81554:-668172777,78ea978d7f6a0d101bc8aede9a249bd9:517905994,bb5ad34d1a6a0d10d5b9fc4ec4ff809f:1565432040,5d895fc9a36a0d10e654554229cece51:379353269,3de09349bc2a0d10822ca838a36f5e39:1565432040,727a8fc13c2a0d10fc66ea7c5dd7399e:1632021387,9fb90b81bb2a0d10440ec6fa149e0bc0:1702852123,ad690741a12a0d10f3debda0085f3baa:-8832964,38e84341012a0d10af7ff00bc4512827:-483892797,09e5cb890de60d1090cf22e609a1a695:-409278413,bea3c34504e60d10c1a1400501838eee:124441052,bf714bc15ce60d10cb760bd8eac25251:696755900,9e31cbc1c3e60d10a2f04043afdcb4ac:124441052,4150c38105e60d106aa85081a81342b8:-948271579,e28f36cd63a60d105ffd9e2892d5931f:175090716,416ebe4de1a60d104da8e1a62841e305:1319508185,946d3e0d25a60d10bbd862d6ad6d8cbf:-40512583,703df20d2ca60d10d6b472d1e2572aac:1855219382,791db20d95a60d10d53efdb04cf88511:-130568203,a8cc36c902a60d10d130b02297d08acb:-1276228651,629c76894da60d104b19eae7382395da:-2030105454,a02c7e4998a60d100933d643c048ba68:1448973126,85eb364923a60d107768abf36854e042:820980168,eb9b3a8131a60d10349f679020797451:-625527640,ded63a41f7a60d1021fc8ed51a7fe715:1025430432,5266f6015aa60d104fe6aab3f8b8995d:-1704651104,2541b609fe660d10da4aa66a2c15aed3:-2130665239,6bb0b60946660d100cf615e595af6c2a:-1790252791,ce6f22cd8a260d1026727f6f97e5ba90:208977801,12b59c9fb0dacd103755d28a124ee3d9:-2130665239,fc7294dbd3dacd100fe76f84a44176d3:-1736641062,ff00545bfddacd10f07abb23ef69e1e0:1531641082,6c00989b57dacd109d3fb1d2bd68965c:-864352217,40e08017359acd1063b745058377534f:643103948,9cc4677edb9e4d10b13002efe8a73a95:-484742977,3f14277eac9e4d10c901eef2968296f8:-1281601834,357a07722d1e4d10634ec0b3fa22c2d8:-1691002960,a276cf32d51e4d109b8af3126dc06f3c:1877423102,adf40f3ee0da4d1028fe607c891b41e0:-729345014,65e4cbbe69da4d10c5af4ac7338746b5:-439542975,eaa203fa3cda4d10cea0eb0e43f4320c:-402231379,4072c37ab4da4d104044c269e6e45e77:-1764996848,7d614bf699da4d107dc5fe92ff36b449:-2079051008,536087f60cda4d10340cdf636fb7d8df:361218566,329fb276ebda4d1037836dd861ae9bdb:-93350118,931ffe36edda4d10c422f3e173af8ae9:-1231530118,4e0e76f252da4d10333312eaf669555f:-245553747,bbbdb6b2bfda4d102b65d727640bb4bc:-93350118,422cb232bfda4d10785c9ac0b4240491:-1231530118,28d83e7a969a4d10b194480d17f284a0:-93350118,17f7723ae49a4d10726b8006b33466cb:1965687817,0697b6f67b9a4d1009610209d830b815:-453873943</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-04-12 22:46:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>19afcb1cd89c48c4a6359734792b6410</sys_id>
+        <sys_metadata>2356baf21b9a4d1042d8c848624bcb82</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Type Options By Office onLoad</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_client_2356baf21b9a4d1042d8c848624bcb82</sys_update_name>
+        <sys_update_version display_value="sys_script_client_2356baf21b9a4d1042d8c848624bcb82">fa91a5f31ba6c51042d8c848624bcb3b</sys_update_version>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-04-12 22:46:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
