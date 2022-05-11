@@ -43,7 +43,8 @@
         g_form.clearValue('u_route_to_group_list');
         //g_form.clearValue('opened_at');
         g_form.clearValue('u_routed_on');
-        g_form.setValue('state', -5); // set default value to Pending
+        //g_form.setValue('state', -5); // set default value to Pending
+        g_form.setValue('state', -10); // set default value to Awaiting Request Info
 
         // calculate new opened_by date
         var ajax2 = new GlideAjax('MyDateTimeAjax');
@@ -68,7 +69,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3a5291d11b8c4590747921f2b24bcb16</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>65</sys_mod_count>
         <sys_name>Reset Task Fields onChange Request Type</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -76,7 +77,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_3a5291d11b8c4590747921f2b24bcb16</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-04-05 23:25:56</sys_updated_on>
+        <sys_updated_on>2022-05-03 20:14:26</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

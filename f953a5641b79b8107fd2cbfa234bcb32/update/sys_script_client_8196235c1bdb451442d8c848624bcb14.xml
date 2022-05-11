@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Changes from UI Actions may need to be saved.  Form does not appear to automatically catch and save the changes made in the UI Actions so this script was added to force the user to Save.   This will allow for the removal of the update statement from the individual UI Actions. </description>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Check If Form Modified Validation</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    if (g_form.isNewRecord()) {
+        return;
+    }
+    //Confirm if you want to save the changes if modifications are detected
+    if (g_form.modified) {
+        var answer = confirm("Values on the form have changed.\nDo you want to save your changes");
+        if (!answer) {
+            return;
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-05-02 20:59:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8196235c1bdb451442d8c848624bcb14</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Check If Form Modified Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_8196235c1bdb451442d8c848624bcb14</sys_update_name>
+        <sys_updated_by>moody_admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 17:18:19</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

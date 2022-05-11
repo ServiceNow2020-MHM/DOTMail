@@ -11,11 +11,11 @@
         <name>Action Options Based on Request Type</name>
         <order>205</order>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-	
+
     //if (isLoading || newValue === '') {
     //    return;
     //}
-	// Removed isLoading so that this script runs onChange and onLoad
+    // Removed isLoading so that this script runs onChange and onLoad
     if (newValue === '') {
         return;
     }
@@ -48,6 +48,7 @@
         g_form.addOption('u_action_requested', 'comment/recommendation', 'Comment/Recommendation');
         g_form.addOption('u_action_requested', 'other', 'Other');
 
+        g_form.addOption('state', '-10', 'Awaiting Request Info');
         g_form.addOption('state', '-5', 'Pending');
         //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
@@ -60,6 +61,7 @@
         g_form.addOption('u_action_requested', 'signature requested', 'Signature Requested');
         //g_form.addOption('u_action_requested', 'other', 'Other');
 
+        g_form.addOption('state', '-10', 'Awaiting Request Info');
         g_form.addOption('state', '-5', 'Pending');
         //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
@@ -85,6 +87,7 @@
         g_form.addOption('u_action_requested', 'return enclosure(s)', 'Return Enclosure(s)');
         g_form.addOption('u_action_requested', 'other', 'Other');
 
+        g_form.addOption('state', '-10', 'Awaiting Request Info');
         g_form.addOption('state', '-5', 'Pending');
         //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
@@ -125,6 +128,7 @@
         g_form.addOption('u_action_requested', 'submit copy of response', 'Submit Copy of Response');
         g_form.addOption('u_action_requested', 'other', 'Other');
 
+        g_form.addOption('state', '-10', 'Awaiting Request Info');
         g_form.addOption('state', '-5', 'Pending');
         //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
@@ -147,7 +151,8 @@
         g_form.addOption('u_action_requested', 'submit copy of response', 'Submit Copy of Response');
         g_form.addOption('u_action_requested', 'other', 'Other');
 
-        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '-10', 'Awaiting Request Info');
+		g_form.addOption('state', '-5', 'Pending');
         //g_form.addOption('state', '1', 'Open');
         g_form.addOption('state', '3', 'Closed Complete');
         g_form.addOption('state', '10', 'Cancelled');
@@ -160,7 +165,8 @@
         g_form.addOption('u_action_requested', 'review and respond (resubmittal)', 'Review and Respond (Resubmittal)');
         //g_form.addOption('u_action_requested', 'other', 'Other');
 
-        g_form.addOption('state', '-5', 'Pending');
+        g_form.addOption('state', '-10', 'Awaiting Request Info');
+		g_form.addOption('state', '-5', 'Pending');
         g_form.addOption('state', '50', 'Approved - Ready to Finalize');
         g_form.addOption('state', '55', 'Not Approved - Re-submit');
     }
@@ -179,7 +185,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a396f4d11bb534107fd2cbfa234bcb6d</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>Action Options Based on Request Type</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -187,7 +193,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_a396f4d11bb534107fd2cbfa234bcb6d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-04-05 21:38:14</sys_updated_on>
+        <sys_updated_on>2022-05-03 19:25:55</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
