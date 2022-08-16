@@ -19,10 +19,9 @@
         <mobile_title>DIR Mail</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_sohd3_dotmail_dotmail</name>
-        <order>120</order>
+        <order>130</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>options.show_breadcrumbs=false;&#13;
-options.enable_filter=false;</query>
+        <query/>
         <report/>
         <roles>x_sohd3_dotmail.DIR Contributors,x_sohd3_dotmail.DIR Readers,x_sohd3_dotmail.DIR Editors,x_sohd3_dotmail.DIR Administrators</roles>
         <sys_class_name>sys_app_module</sys_class_name>
@@ -31,7 +30,7 @@ options.enable_filter=false;</query>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ba33392f1bf2f0507fd2cbfa234bcb03</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>DIR Mail</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -39,7 +38,7 @@ options.enable_filter=false;</query>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_app_module_ba33392f1bf2f0507fd2cbfa234bcb03</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-20 00:13:54</sys_updated_on>
+        <sys_updated_on>2022-08-10 19:51:50</sys_updated_on>
         <timeline_page/>
         <title>DIR Mail</title>
         <uncancelable>false</uncancelable>
