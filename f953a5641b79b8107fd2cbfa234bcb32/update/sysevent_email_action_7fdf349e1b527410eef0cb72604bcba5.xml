@@ -38,7 +38,7 @@
         <message_html><![CDATA[<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><img style="align: baseline;" title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">A DOTMail record has been added and a task has been assigned to you.&nbsp; Although <span style="text-decoration: underline;"><strong>there is</strong> <strong>no due date</strong></span>, please complete the action requested as soon as possible.&nbsp; </span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">To avoid reminder notices, please click on the "<strong><span style="text-decoration: underline;">Completed Request Button</span></strong>" after you have completed the action requested.</span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is the Task Information:</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><strong>&nbsp; &nbsp; &nbsp;Request type:</strong> ${u_request_type}<br /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><strong>&nbsp; &nbsp; &nbsp;Action requested:</strong> ${u_action_requested}<br /></span></p>
@@ -67,7 +67,7 @@
         <send_self>false</send_self>
         <sms_alternate/>
         <style/>
-        <subject>New DOTMail Notification:  ${u_action_requested}</subject>
+        <subject>New DOTMail Notification - Response is Requested:  ${number}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -75,7 +75,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7fdf349e1b527410eef0cb72604bcba5</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Response Requested - No Due Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -83,7 +83,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_7fdf349e1b527410eef0cb72604bcba5</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-01 21:29:53</sys_updated_on>
+        <sys_updated_on>2022-08-30 20:47:38</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

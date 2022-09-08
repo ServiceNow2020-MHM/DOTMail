@@ -39,7 +39,7 @@
         <message/>
         <message_html><![CDATA[<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;"><img style="align: baseline;" title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">A DOTMail record has been added that you might be interested in.&nbsp;&nbsp;This notification is for your information only and <strong><span style="text-decoration: underline;">no response is necessary</span></strong>.</span></p>
-<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;"><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;"><span style="font-family: arial, helvetica, sans-serif;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Here is the Correspondence Information:</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong>DOTMail number:</strong> ${number}</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong>Letter date:</strong> ${u_letter_date}<br /></span></p>
@@ -47,7 +47,7 @@
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong>Letter addressed to:</strong> ${u_to.name}<br /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong>Letter Subject:</strong> ${short_description}</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Click here to view the DOTMail record:&nbsp; <span style="color: #3366ff;"><strong>${URI_REF}</strong></span></span></p>
-<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Or click on this link to view the DOTMail record in the portal:&nbsp;<strong><span style="color: #3366ff;"> <a style="color: #3366ff;" title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_lf&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id}">Link</a></span></strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Or click on this link to view the DOTMail record in the portal:&nbsp;<strong><span style="color: #3366ff;"> <a style="color: #3366ff;" title="Link" href="https://hidotdev.service-now.com/DOTAPPS?id=dotmail_form_tabbed_page&amp;table=x_sohd3_dotmail_dotmail&amp;sys_id=${sys_id}">Link</a>&nbsp;&nbsp;</span></strong></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp;</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Thank You,</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${opened_by.first_name}</span></p>
@@ -65,7 +65,7 @@
         <send_self>false</send_self>
         <sms_alternate/>
         <style/>
-        <subject>New DOTMail Notification:  ${u_action_requested}</subject>
+        <subject>New DOTMail Notification:  ${number}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -73,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5f7b54121b9e3410eef0cb72604bcb22</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>No Response Required</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -81,7 +81,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_5f7b54121b9e3410eef0cb72604bcb22</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-01 21:28:25</sys_updated_on>
+        <sys_updated_on>2022-08-30 20:06:53</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

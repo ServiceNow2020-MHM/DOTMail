@@ -44,7 +44,7 @@
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">Thank You,<br /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">${opened_by.first_name}</span></p>
 <p>&nbsp;</p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is the Task Information:</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Request type</strong>: ${u_request_type}<br /></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Action requested:</strong> ${u_action_requested}<br /></span></p>
@@ -71,7 +71,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>DOTMail Request Reopened Notification:  ${number}  ${u_action_requested} </subject>
+        <subject>DOTMail Request Reopened for:  ${number}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -79,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>84acb3b91b848990747921f2b24bcb2d</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Request Reopened</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -87,7 +87,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_84acb3b91b848990747921f2b24bcb2d</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-01-20 00:55:19</sys_updated_on>
+        <sys_updated_on>2022-08-30 20:56:23</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

@@ -40,7 +40,7 @@
         <message_html><![CDATA[<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;"><img style="align: baseline;" title="" src="DOTMail%20Banner.jpgx" alt="" width="1280" height="182" align="baseline" border="" hspace="" vspace="" /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">A DOTMail record has been added and a <span style="text-decoration: underline;"><strong>Director's Review</strong></span> is requested. Please review the attached document(s) and add your comments, instructions, and/or remarks to the DOTMail record as to how you feel we should proceed with this correspondence.&nbsp; Note that if there is a due date you are requested to complete this request on or before the due date.</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">To avoid reminder notices, please click on the "<span style="text-decoration: underline;"><strong>Completed Request Button</strong></span>" after you have completed the action requested.</span></p>
-<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">This is the Task Information:</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Request type:</strong> ${u_request_type}</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Action requested:</strong> ${u_action_requested}</span></p>
@@ -68,7 +68,7 @@
         <send_self>false</send_self>
         <sms_alternate/>
         <style/>
-        <subject>New DIR Review Request Notification:  ${u_action_requested} </subject>
+        <subject>New DIR Review Request:  ${number} </subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>moody_admin</sys_created_by>
@@ -76,7 +76,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>39bde0301b733810747921f2b24bcb30</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>DIR Review Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -84,7 +84,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_39bde0301b733810747921f2b24bcb30</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-01 21:25:30</sys_updated_on>
+        <sys_updated_on>2022-08-30 19:49:41</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

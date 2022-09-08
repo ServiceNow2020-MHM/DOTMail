@@ -49,6 +49,7 @@
         //alert("State is: " + whatState);
         //if (infoFromScriptInclude == g_user.fullName || g_user.hasRoleExactly('admin') || g_user.userName == 
         //if (infoFromScriptInclude == g_user.userName || g_user.hasRoleExactly('admin') || g_user.userName == g_form.getValue('u_delegate_1') ||
+		//  NOTE:  remove admin conditionon when testing is completed.
         if (infoFromScriptInclude == g_user.userName || g_user.hasRoleExactly('admin') || g_user.userName == g_form.getValue('u_delegate_1') || g_user.userName == g_form.getValue('u_delegate_2')) {
             if (whatState == -5 || whatState == 30 || whatState == 3 || whatState == 55) {
                 // Set Request Type to Read Only if State is Pending (-5), Reopened (30),  Closed Complete (3), or
@@ -99,7 +100,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>58eb0d1f1bb73850747921f2b24bcb0b</sys_id>
-        <sys_mod_count>90</sys_mod_count>
+        <sys_mod_count>91</sys_mod_count>
         <sys_name>Set Request and Routing Fields Read Only</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
@@ -107,7 +108,7 @@
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_client_58eb0d1f1bb73850747921f2b24bcb0b</sys_update_name>
         <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-04-05 23:17:57</sys_updated_on>
+        <sys_updated_on>2022-08-30 19:12:05</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
