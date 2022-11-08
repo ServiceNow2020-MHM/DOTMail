@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas">
+    <sys_grid_canvas action="INSERT_OR_UPDATE">
+        <legacy_page display_value="PA DOTMail - New Tab">3f17aaa21b1a99104261edb1604bcb6c</legacy_page>
+        <name>PA DOTMail - New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-10-05 18:50:28</sys_created_on>
+        <sys_id>b317aaa21b1a99104261edb1604bcb6e</sys_id>
+        <sys_name>PA DOTMail - New Tab</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_grid_canvas_b317aaa21b1a99104261edb1604bcb6e</sys_update_name>
+    </sys_grid_canvas>
+</record_update>

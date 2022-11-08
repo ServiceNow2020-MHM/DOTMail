@@ -29,6 +29,7 @@ WhenNeededUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     isDateToday: function(strDate) {
         // Create GlideDateTime objects for the current date and the passed-in date
         var rightnow = new GlideDateTime();
+		//var rightnow = new GlideDateTime().getDisplayValue();  // try this to fix the today validation
         var testdate = new GlideDateTime(strDate);   // passed-in When needed date
 
         // Get the date portion of rightnow and testdate (no timestamp).  Use getDate() because getLocalDate()
@@ -53,13 +54,10 @@ WhenNeededUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>moody_admin</sys_created_by>
         <sys_created_on>2021-08-19 21:23:51</sys_created_on>
         <sys_id>34995d861b8a7010eef0cb72604bcbf7</sys_id>
-        <sys_mod_count>22</sys_mod_count>
         <sys_name>WhenNeededUtil</sys_name>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_script_include_34995d861b8a7010eef0cb72604bcbf7</sys_update_name>
-        <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2021-12-16 17:27:28</sys_updated_on>
     </sys_script_include>
 </record_update>

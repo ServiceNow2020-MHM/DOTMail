@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="DOTMail">6bf6e6a21b1a99104261edb1604bcb95</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>moody_admin</sys_created_by>
+        <sys_created_on>2022-10-05 18:50:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bf17aaa21b1a99104261edb1604bcb73</sys_id>
+        <sys_name>6bf6e6a21b1a99104261edb1604bcb95</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_bf17aaa21b1a99104261edb1604bcb73</sys_update_name>
+        <tab display_value="DOTMail - New Tab">3317aaa21b1a99104261edb1604bcb71</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>
