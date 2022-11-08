@@ -3,126 +3,140 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_created_on</element>
             <position>0</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>8e9a6beb1be5455042d8c848624bcbeb</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:44</sys_created_on>
+            <sys_id>a6fd1a591b578d504261edb1604bcb77</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:44</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_updated_on</element>
             <position>1</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>069a6beb1be5455042d8c848624bcbec</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>aefd1a591b578d504261edb1604bcb77</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
             <position>2</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>8a9a6beb1be5455042d8c848624bcbec</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>a2fd1a591b578d504261edb1604bcb78</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_delegate_1</element>
             <position>3</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>029a6beb1be5455042d8c848624bcbed</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>a6fd1a591b578d504261edb1604bcb78</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>4</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>869a6beb1be5455042d8c848624bcbed</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>aafd1a591b578d504261edb1604bcb78</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_created_by</element>
             <position>5</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>0e9a6beb1be5455042d8c848624bcbed</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>aefd1a591b578d504261edb1604bcb78</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>sys_updated_by</element>
             <position>6</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>829a6beb1be5455042d8c848624bcbee</sys_id>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>a2fd1a591b578d504261edb1604bcb79</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>letter_number_cycle</element>
+            <position>7</position>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>a6fd1a591b578d504261edb1604bcb79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_string_1</element>
-            <position>7</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>0a9a6beb1be5455042d8c848624bcbee</sys_id>
+            <position>8</position>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>aafd1a591b578d504261edb1604bcb79</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_delegate_2</element>
-            <position>8</position>
-            <sys_created_by>moody_admin</sys_created_by>
-            <sys_created_on>2022-02-14 23:20:57</sys_created_on>
-            <sys_id>8e9a6beb1be5455042d8c848624bcbee</sys_id>
+            <position>9</position>
+            <sys_created_by>deanfujimoto_admin</sys_created_by>
+            <sys_created_on>2022-05-05 17:49:45</sys_created_on>
+            <sys_id>aefd1a591b578d504261edb1604bcb79</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Journal Information" display_value="Journal Information" name="x_sohd3_dotmail_dotmail" sys_domain="global" view="Default view">7185bdec1bfdb810eef0cb72604bcb86</sys_ui_section>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2022-02-14 23:20:57</sys_updated_on>
+            <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+            <sys_updated_on>2022-05-05 17:49:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -137,15 +151,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>7185bdec1bfdb810eef0cb72604bcb86</sys_id>
-            <sys_mod_count>1</sys_mod_count>
             <sys_name>x_sohd3_dotmail_dotmail</sys_name>
             <sys_overrides/>
             <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
             <sys_policy/>
             <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
             <sys_update_name>sys_ui_section_7185bdec1bfdb810eef0cb72604bcb86</sys_update_name>
-            <sys_updated_by>moody_admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 22:58:32</sys_updated_on>
             <sys_user/>
             <title>false</title>
             <view display_value="Default view" name="NULL">Default view</view>

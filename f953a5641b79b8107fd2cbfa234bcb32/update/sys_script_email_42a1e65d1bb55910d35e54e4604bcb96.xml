@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>other_action_requested_change</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+	// If action requested is Other
+	// Print what's in the other field
+	if(current.u_action_requested.toString() === 'other') {
+		template.print(current.u_other.toString());
+	} else {
+		// Else print what's in the requested action field
+		template.print(current.getDisplayValue('u_action_requested'));
+	}
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-09-07 00:58:16</sys_created_on>
+        <sys_id>42a1e65d1bb55910d35e54e4604bcb96</sys_id>
+        <sys_name>other_action_requested_change</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_email_42a1e65d1bb55910d35e54e4604bcb96</sys_update_name>
+    </sys_script_email>
+</record_update>

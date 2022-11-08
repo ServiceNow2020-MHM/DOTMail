@@ -23,12 +23,50 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-     $j('[data-action-name=cancel_action]').hide();
-    //this.jQuery('cancel_action').hide();
+	// sys_id of the UI Action for the button to modify
+	var UI_ACTION_SYS_ID = '725081d51b0c4590747921f2b24bcb9a';
+	// 'none' to hide the button, or '' to show the button
+	var DISPLAY_STYLE = 'none';
+
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (not normally exposed in service portal)
+		windowObject = top.window;
+	}
+	// Get document object (not normally exposed in service portal)
+	var document = windowObject.document;
+	var buttons = document.querySelectorAll('[gsft_id="' + UI_ACTION_SYS_ID + '"]');
+
+	// Update all buttons
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].style.display = DISPLAY_STYLE;
+	}
+
+	//$j('[data-action-name=cancel_action]').hide();
+	//this.jQuery('cancel_action').hide();
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-    $j('[data-action-name=cancel_action]').show();
-    //this.jQuery('cancel_action').show();
+	// sys_id of the UI Action for the button to modify
+	var UI_ACTION_SYS_ID = '725081d51b0c4590747921f2b24bcb9a';
+	// 'none' to hide the button, or '' to show the button
+	var DISPLAY_STYLE = '';
+
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (not normally exposed in service portal)
+		windowObject = top.window;
+	}
+	// Get document object (not normally exposed in service portal)
+	var document = windowObject.document;
+	var buttons = document.querySelectorAll('[gsft_id="' + UI_ACTION_SYS_ID + '"]');
+
+	// Update all buttons
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].style.display = DISPLAY_STYLE;
+	}
+
+	//$j('[data-action-name=cancel_action]').show();
+	//this.jQuery('cancel_action').show();
 }]]></script_true>
         <set_values/>
         <short_description>Show/Hide Cancel Assignment Button</short_description>
@@ -38,17 +76,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>310307b91b008990747921f2b24bcb0f</sys_id>
-        <sys_mod_count>21</sys_mod_count>
         <sys_name>Show/Hide Cancel Assignment Button</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_policy_310307b91b008990747921f2b24bcb0f</sys_update_name>
-        <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-29 17:03:40</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <view/>
     </sys_ui_policy>
 </record_update>

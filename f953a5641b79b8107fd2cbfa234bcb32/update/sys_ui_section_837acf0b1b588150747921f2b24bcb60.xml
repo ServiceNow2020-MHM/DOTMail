@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="837acf0b1b588150747921f2b24bcb60" sys_domain="global" table="x_sohd3_dotmail_dot_letter_number" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>section</element>
+            <position>0</position>
+            <sys_created_by>ethanchow_admin</sys_created_by>
+            <sys_created_on>2022-06-28 23:10:41</sys_created_on>
+            <sys_id>9e4dedb61b94d990253a65f2604bcb12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sohd3_dotmail_dot_letter_number" sys_domain="global" view="Default view">837acf0b1b588150747921f2b24bcb60</sys_ui_section>
+            <sys_updated_by>ethanchow_admin</sys_updated_by>
+            <sys_updated_on>2022-06-28 23:10:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prefix</element>
+            <position>1</position>
+            <sys_created_by>ethanchow_admin</sys_created_by>
+            <sys_created_on>2022-06-28 23:10:41</sys_created_on>
+            <sys_id>1a4dedb61b94d990253a65f2604bcb13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sohd3_dotmail_dot_letter_number" sys_domain="global" view="Default view">837acf0b1b588150747921f2b24bcb60</sys_ui_section>
+            <sys_updated_by>ethanchow_admin</sys_updated_by>
+            <sys_updated_on>2022-06-28 23:10:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cycle</element>
+            <position>2</position>
+            <sys_created_by>ethanchow_admin</sys_created_by>
+            <sys_created_on>2022-06-28 23:10:41</sys_created_on>
+            <sys_id>1e4dedb61b94d990253a65f2604bcb13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sohd3_dotmail_dot_letter_number" sys_domain="global" view="Default view">837acf0b1b588150747921f2b24bcb60</sys_ui_section>
+            <sys_updated_by>ethanchow_admin</sys_updated_by>
+            <sys_updated_on>2022-06-28 23:10:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sequence</element>
+            <position>3</position>
+            <sys_created_by>ethanchow_admin</sys_created_by>
+            <sys_created_on>2022-06-28 23:10:41</sys_created_on>
+            <sys_id>124dedb61b94d990253a65f2604bcb14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sohd3_dotmail_dot_letter_number" sys_domain="global" view="Default view">837acf0b1b588150747921f2b24bcb60</sys_ui_section>
+            <sys_updated_by>ethanchow_admin</sys_updated_by>
+            <sys_updated_on>2022-06-28 23:10:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number_of_digits</element>
+            <position>4</position>
+            <sys_created_by>ethanchow_admin</sys_created_by>
+            <sys_created_on>2022-06-28 23:10:41</sys_created_on>
+            <sys_id>164dedb61b94d990253a65f2604bcb14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_sohd3_dotmail_dot_letter_number" sys_domain="global" view="Default view">837acf0b1b588150747921f2b24bcb60</sys_ui_section>
+            <sys_updated_by>ethanchow_admin</sys_updated_by>
+            <sys_updated_on>2022-06-28 23:10:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_sohd3_dotmail_dot_letter_number</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>karim_admin</sys_created_by>
+            <sys_created_on>2021-12-13 04:25:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>837acf0b1b588150747921f2b24bcb60</sys_id>
+            <sys_name>x_sohd3_dotmail_dot_letter_number</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+            <sys_update_name>sys_ui_section_837acf0b1b588150747921f2b24bcb60</sys_update_name>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

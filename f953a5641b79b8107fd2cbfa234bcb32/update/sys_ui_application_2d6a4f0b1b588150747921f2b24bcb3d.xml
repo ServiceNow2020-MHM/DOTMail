@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>DOT Letter Number</name>
+        <order/>
+        <roles>x_sohd3_dotmail.dot_letter_number_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>karim_admin</sys_created_by>
+        <sys_created_on>2021-12-13 04:24:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2d6a4f0b1b588150747921f2b24bcb3d</sys_id>
+        <sys_name>DOT Letter Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_application_2d6a4f0b1b588150747921f2b24bcb3d</sys_update_name>
+    </sys_ui_application>
+</record_update>

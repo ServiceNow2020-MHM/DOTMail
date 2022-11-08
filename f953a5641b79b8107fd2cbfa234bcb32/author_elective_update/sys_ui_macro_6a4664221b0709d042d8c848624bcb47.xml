@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <description>UI macro to add button next to DOT letter number</description>
+        <media_type/>
+        <name>_Letter Number Field</name>
+        <scoped_name>x_sohd3_dotmail__Letter Number Field</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-04-26 20:03:32</sys_created_on>
+        <sys_id>6a4664221b0709d042d8c848624bcb47</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>_Letter Number Field</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_macro_6a4664221b0709d042d8c848624bcb47</sys_update_name>
+        <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+        <sys_updated_on>2022-04-27 19:25:35</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate var="jvar_guid" expression="gs.generateGUID(this);" />
+	<j:set var="jvar_n" value="assign_letter_number_${jvar_guid}:${ref}"/>
+	<button id="${jvar_n}"
+			type="button"
+			aria-haspopup="true"
+			aria-label="${gs.getMessage('Assign Letter Number')}"
+			name="${jvar_n}"
+			class="btn btn-ref btn-default icon-number"
+			tabindex="$[jvar_ua_optional_tabindex]"
+			title="${gs.getMessage('Assign Letter Number')}">
+	</button>
+	
+	
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_ui_macro_6a4664221b0709d042d8c848624bcb47</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description&gt;UI macro to add button next to DOT letter number&lt;/description&gt;&lt;media_type/&gt;&lt;name&gt;_Letter Number Field&lt;/name&gt;&lt;scoped_name&gt;x_sohd3_dotmail__Letter Number Field&lt;/scoped_name&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;deanfujimoto_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-04-26 20:03:32&lt;/sys_created_on&gt;&lt;sys_id&gt;6a4664221b0709d042d8c848624bcb47&lt;/sys_id&gt;&lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;&lt;sys_name&gt;_Letter Number Field&lt;/sys_name&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_6a4664221b0709d042d8c848624bcb47&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;deanfujimoto_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-27 19:25:35&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;g:evaluate var="jvar_guid" expression="gs.generateGUID(this);" /&gt;
+	&lt;j:set var="jvar_n" value="assign_letter_number_${jvar_guid}:${ref}"/&gt;
+	&lt;button id="${jvar_n}"
+			type="button"
+			aria-haspopup="true"
+			aria-label="${gs.getMessage('Assign Letter Number')}"
+			name="${jvar_n}"
+			class="btn btn-ref btn-default icon-number"
+			tabindex="$[jvar_ua_optional_tabindex]"
+			title="${gs.getMessage('Assign Letter Number')}"&gt;
+	&lt;/button&gt;
+	
+	
+	
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>619418697</payload_hash>
+        <record_name>_Letter Number Field</record_name>
+        <reverted_from/>
+        <source>379b285a1b0f85d042d8c848624bcb36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-04-27 19:25:35</sys_created_on>
+        <sys_id>603761f21bc389d042d8c848624bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1806c7c6e050000001</sys_recorded_at>
+        <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+        <sys_updated_on>2022-04-27 19:25:35</sys_updated_on>
+        <type>Macro</type>
+        <update_guid>e43761f207c389d0dff324c4a593b5c2</update_guid>
+        <update_guid_history>e43761f207c389d0dff324c4a593b5c2:619418697,a7334aae360f09d04e6557a39de6c77c:-95403535,2d824ee6fa8b0d10efbc18a6db16d9d4:-1005600719,e7c10ae6fa8b0d108aa877ac19cdb3fa:-940796753,c1814e66758b0d1084cc25433b2354d8:-1432844689,8b618626d98b0d10903eacbac75c550a:-940796753,48f0c2a2ee8b0d105e8ceac6e549a504:1946995887,93e0c2a26b8b0d10f63eb5bb8ede64cc:-1623916802,45c082a2198b0d107a3884d8c6e33cff:-846815645,f72f316ad64b0d10ff94b89a87da215e:1953832899,fbfef9e2264b0d10fb5f4fcdb760ec88:-1179657661,a8fef92a484b0d10efb922fbd556133a:-1064554885,d8fd71ee090b0d1021c2a00b0d9bebf3:-772442010,15dcfdae2e0b0d1004291793c8112fce:1636816973,401c75aa150b0d109bd5b5f646e85b4d:2103951339,eedbb5aae00b0d10c1cf7e96a1a266b2:1231441906,45bcadea5e8b09d0330f4218e25ee5a0:1750615333,733591e6ba0b09d0694ce258ef732a39:-651442595,884f206a9e0709d0ac17a9f54ae36f8b:-1022196467,4e0bec664f0709d0c3317615d32ee78f:-313934236,82eae0e69f0709d0dafef6c1a6895c20:-131251691,e2466422710709d0e14d09119acb3749:-609480014</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ethanchow_admin</sys_created_by>
+        <sys_created_on>2022-04-27 20:05:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_macro">sys_ui_macro</sys_db_object>
+        <sys_id>2fcd0bc509354e3f8b5b7a214eecc269</sys_id>
+        <sys_metadata>6a4664221b0709d042d8c848624bcb47</sys_metadata>
+        <sys_name>_Letter Number Field</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_ui_macro_6a4664221b0709d042d8c848624bcb47</sys_update_name>
+        <sys_update_version display_value="sys_ui_macro_6a4664221b0709d042d8c848624bcb47">603761f21bc389d042d8c848624bcbc3</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

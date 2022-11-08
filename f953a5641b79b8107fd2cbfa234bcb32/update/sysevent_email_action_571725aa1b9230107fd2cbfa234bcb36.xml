@@ -25,6 +25,7 @@
         <digest_template/>
         <digest_text/>
         <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
         <event_name>activate.life.cycle.migration</event_name>
         <event_parm_1>false</event_parm_1>
         <event_parm_2>false</event_parm_2>
@@ -44,7 +45,7 @@
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">This is the Task Information:</span></p>
 <p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; <strong>Request type:</strong> ${u_request_type}<br /></span></p>
-<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; <strong>Action requested:</strong> ${u_action_requested}<br /></span></p>
+<p><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; <strong>Action requested:</strong> ${mail_script:other_action_requested_change} <br /></span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp; <strong>Due by: <span style="color: #ff0000;">${u_when_needed}</span></strong><br /><br />Here is the Correspondence Information:</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>DOTMail number:</strong> ${number}</span></p>
 <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;<strong>Letter date:</strong> ${u_letter_date}<br /></span></p>
@@ -78,15 +79,12 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>571725aa1b9230107fd2cbfa234bcb36</sys_id>
-        <sys_mod_count>15</sys_mod_count>
         <sys_name>Governor Referral Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sysevent_email_action_571725aa1b9230107fd2cbfa234bcb36</sys_update_name>
-        <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-08-30 19:54:41</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

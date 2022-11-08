@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Duplicate Validation - On Submit</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (only necessary for service portal)
+		windowObject = top.window;
+	}
+	var clientStorage = windowObject.clientStorage;
+
+	// Uses clientStorage to ensure onSubmit does not continue to loop
+	// If clientStorage.canFormSubmit is true then we know that the client script ran correctly and has triggered itself
+	// So we return
+	if (clientStorage.canFormSubmit) {
+		return true;
+	}
+
+	// Check if any requirement fields have changed
+	var fields = Object.keys(clientStorage.initialValues);
+	for (var i = 0; i < fields.length; i++) {
+		var field = fields[i];
+
+		if (g_form.getValue(field) !== clientStorage.initialValues[field]) {
+			return validate();
+		}
+	}
+
+	// No changes detected, continue with submit
+	return true;
+
+	function validate() {
+		// Retrieves the actionName of the form to be used later
+		var actionName = g_form.getActionName();
+
+		// Retrieves the value of the Letter Date field
+		// Conducts string manipulation to pass it in the correct format to the script includes
+		var letterDate = g_form.getValue('u_letter_date');
+		var strArr = letterDate.split('/');
+		var newLetterDate = strArr[2] + '-' + strArr[0] + '-' + strArr[1];
+
+		// Creates a DOT_duplicate_letter GlideAjax
+		// Calls the get_records function to retrieve the correct records
+		// Passes newLetterDate to sysparam_letter_date
+		// Passes the value of the From field to sysparam_from
+		// Passes the value of the To field to sysparam_to
+		// Passes the value of the numebr field to sysparam_number
+		// Passes the sys_id of the current record to sysparam_parent_sys_id
+		// Retrieves the response with getXML()
+		var ga = new GlideAjax('DOT_duplicate_letter');
+		ga.addParam('sysparm_name', 'get_records');
+		ga.addParam('sysparm_letter_date', newLetterDate);
+		ga.addParam('sysparm_from', g_form.getValue('u_from'));
+		ga.addParam('sysparam_to', g_form.getValue('u_to'));
+		ga.addParam('sysparam_number', g_form.getValue('number'));
+		ga.addParam('sysparam_parent_sys_id', g_form.getUniqueValue());
+		ga.getXML(onResponse);
+
+		// Returns false to prevent the form from submitting before the call back function completes
+		return false;
+
+		// Call back function to retrieve response
+		function onResponse(response) {
+			// Sets response to answer 
+			// Parses answer and sets to results
+			var answer = response.responseXML.documentElement.getAttribute('answer');
+			var results = JSON.parse(answer);
+
+			// If results.answer is false
+			// No records retrieved
+			// Sets clientStorage.canFormSubmit to true to prevent looping
+			// Re-submits form using the same action that the user first utilized
+			if (!results.answer) {
+				clientStorage.canFormSubmit = true;
+				g_form.submit(actionName);
+				return true;
+			}
+
+			// Uses results.message in a confirm function to retrieve user input 
+			var confirmAnswer = confirm(results.message);
+
+			// If the user inputs Ok
+			// Sets clientStorage.canFormSubmit to true to prevent looping
+			// Re-submits form using the same action that the user first utilized
+			if (confirmAnswer) {
+				clientStorage.canFormSubmit = true;
+				g_form.submit(actionName);
+				return true;
+			}
+
+			// Otherwise user inputted Cancel so we can just return
+			return false;
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-04-21 21:21:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>29f7cbb81bc341104261edb1604bcb47</sys_id>
+        <sys_name>Duplicate Validation - On Submit</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_29f7cbb81bc341104261edb1604bcb47</sys_update_name>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

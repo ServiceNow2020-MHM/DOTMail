@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sohd3_dotmail.LetterNumber2</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Generates Letter/Number for users in DOT mail.</description>
+        <name>LetterNumber2</name>
+        <script><![CDATA[var LetterNumber2 = Class.create();
+LetterNumber2.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+
+    generateNumber: function(section) {
+
+        section = this.getParameter('sysparm_section') || section;
+        var sectionNumber = this.getSectionNumber(section);
+		var results = this.autoNumIncrement(section);
+		var autonum = results.number;
+		var cycle = results.cycle;
+        var concat = sectionNumber + '-' + autonum + ' ' + cycle;
+		gs.info('concat' + concat);
+		return concat;
+    },
+
+
+    zeroPadder: function(num, size) {
+        num = num.toString();
+        while (num.length < size) num = "0" + num;
+        return num;
+    },
+
+    getSectionNumber: function(section) {
+        var table = new GlideRecord("x_sohd3_dotmail_dot_letter_number");
+        table.addQuery('section', section);
+        table.query();
+        if (table.next()) {
+            var prefix = table.prefix;
+            prefix = prefix.toString();
+            var concat = prefix + '-' + table.auto_number.toString();
+            return prefix;
+        }
+
+        return null;
+
+
+    },
+
+    autoNumIncrement: function(section) {
+        var table = new GlideRecord("x_sohd3_dotmail_dot_letter_number");
+        table.addQuery('section', section);
+        table.query();
+        if (table.next()) {
+            var result = {
+                number: table.auto_number,
+                cycle: table.cycle
+            };
+            table.auto_number = table.auto_number + 1;
+            if (table.auto_number.length() > number_of_digits) {
+                table.auto_number = 1;
+                table.cycle = String.fromCharCode(table.cycle.charCodeAt(0) + 1);
+            }
+            return result;
+        }
+    },
+    type: 'LetterNumber2'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-04-26 20:32:42</sys_created_on>
+        <sys_id>bfdca42a1b0709d042d8c848624bcbad</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>LetterNumber2</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_bfdca42a1b0709d042d8c848624bcbad</sys_update_name>
+        <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+        <sys_updated_on>2022-04-26 23:39:29</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_include_bfdca42a1b0709d042d8c848624bcbad</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_sohd3_dotmail.LetterNumber2&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Generates Letter/Number for users in DOT mail.&lt;/description&gt;&lt;name&gt;LetterNumber2&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var LetterNumber2 = Class.create();
+LetterNumber2.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+
+    generateNumber: function(section) {
+
+        section = this.getParameter('sysparm_section') || section;
+        var sectionNumber = this.getSectionNumber(section);
+		var results = this.autoNumIncrement(section);
+		var autonum = results.number;
+		var cycle = results.cycle;
+        var concat = sectionNumber + '-' + autonum + ' ' + cycle;
+		gs.info('concat' + concat);
+		return concat;
+    },
+
+
+    zeroPadder: function(num, size) {
+        num = num.toString();
+        while (num.length &lt; size) num = "0" + num;
+        return num;
+    },
+
+    getSectionNumber: function(section) {
+        var table = new GlideRecord("x_sohd3_dotmail_dot_letter_number");
+        table.addQuery('section', section);
+        table.query();
+        if (table.next()) {
+            var prefix = table.prefix;
+            prefix = prefix.toString();
+            var concat = prefix + '-' + table.auto_number.toString();
+            return prefix;
+        }
+
+        return null;
+
+
+    },
+
+    autoNumIncrement: function(section) {
+        var table = new GlideRecord("x_sohd3_dotmail_dot_letter_number");
+        table.addQuery('section', section);
+        table.query();
+        if (table.next()) {
+            var result = {
+                number: table.auto_number,
+                cycle: table.cycle
+            };
+            table.auto_number = table.auto_number + 1;
+            if (table.auto_number.length() &gt; number_of_digits) {
+                table.auto_number = 1;
+                table.cycle = String.fromCharCode(table.cycle.charCodeAt(0) + 1);
+            }
+            return result;
+        }
+    },
+    type: 'LetterNumber2'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;deanfujimoto_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-04-26 20:32:42&lt;/sys_created_on&gt;&lt;sys_id&gt;bfdca42a1b0709d042d8c848624bcbad&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;LetterNumber2&lt;/sys_name&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_bfdca42a1b0709d042d8c848624bcbad&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;deanfujimoto_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-26 23:39:29&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1510600725</payload_hash>
+        <record_name>LetterNumber2</record_name>
+        <reverted_from/>
+        <source>379b285a1b0f85d042d8c848624bcb36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-04-26 23:39:29</sys_created_on>
+        <sys_id>c6b755ea1b0b09d042d8c848624bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>180683e85320000001</sys_recorded_at>
+        <sys_updated_by>deanfujimoto_admin</sys_updated_by>
+        <sys_updated_on>2022-04-26 23:39:29</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>cab755ea6b0b09d0bd74bb1e510e2b01</update_guid>
+        <update_guid_history>cab755ea6b0b09d0bd74bb1e510e2b01:1510600725,7c36d12a030b09d042b578bc40eae113:-305390613,dbd5d5e6e80b09d077ddadf0646b9a6a:-2050025403,4ce25daa20c709d04183e0a308882b6b:295630780,83a2d9220f0b09d00b0d25887faf80f6:878658592,aa3f49ea1cc709d08d94340edddcf437:-942780604,c24c412ad2c709d0203faa185281f9ec:-811282653,bb17cd22c8c709d0531dcae497e2218f:1414541929,fba070ead10709d0647632104a9e1561:-1585516440,f1fce0aa780709d0e1486deb4f4c67ad:-1777420574</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-06-28 20:44:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>304d8c3ba3b0479393b8e516c64517e9</sys_id>
+        <sys_metadata>bfdca42a1b0709d042d8c848624bcbad</sys_metadata>
+        <sys_name>LetterNumber2</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_include_bfdca42a1b0709d042d8c848624bcbad</sys_update_name>
+        <sys_update_version display_value="sys_script_include_bfdca42a1b0709d042d8c848624bcbad">c6b755ea1b0b09d042d8c848624bcb02</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

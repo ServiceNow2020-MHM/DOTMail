@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_sohd3_dotmail.Dot_Duplicate_Validation</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>Dot_Duplicate_Validation</name>
+        <script><![CDATA[var Dot_Duplicate_Validation = Class.create();
+Dot_Duplicate_Validation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    duplicate: function() {
+        var u_letter_date = this.getParameter('sysparm_u_letter_date');
+        var u_from = this.getParameter('sysparm_u_from');
+        var u_to = this.getParameter('sysparm_u_to');
+
+        var gr = new GlideRecord('x_sohd3_dotmail_dotmail');
+        gr.addQuery('u_letter_date', u_letter_date);
+        gr.addQuery('u_from', u_from);
+        gr.addQuery('u_to', u_to);
+        gr.query();
+
+
+        return gr.getEncodedQuery();
+        //         if (gr.next()) {
+        //             return 'yes';
+        //         } else {
+        //             return 'no';
+        //         }
+
+    },
+
+    type: 'Dot_Duplicate_Validation'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>karim_admin</sys_created_by>
+        <sys_created_on>2022-02-09 15:43:39</sys_created_on>
+        <sys_id>e2d0d8061be1491042d8c848624bcb35</sys_id>
+        <sys_name>Dot_Duplicate_Validation</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_e2d0d8061be1491042d8c848624bcb35</sys_update_name>
+    </sys_script_include>
+</record_update>

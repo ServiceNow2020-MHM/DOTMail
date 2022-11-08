@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_request_type</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Service Portal - Resonsible Group Change</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   var windowObject = window;
+    if (!windowObject) {
+        // Get window object (not normally exposed in service portal)
+        windowObject = top.window;
+    }
+    // Get document object (not normally exposed in service portal)
+    var document = windowObject.document;
+    var FIELD_NAME = 'u_request_type';
+	var requestElement = document.getElementById('sp_formfield_' + FIELD_NAME);
+	console.log('RESONSIBLE GROUP ON CHANGE ' + newValue);
+	var event = new CustomEvent('request_type_change', {detail : newValue});
+	document.querySelector('main.body').dataset.responsibleGroupCreated = 'false';
+	requestElement.dispatchEvent(event);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-08-12 21:04:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ed7ef4dd1b1d5d10253a65f2604bcb91</sys_id>
+        <sys_name>Service Portal - Resonsible Group Change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_ed7ef4dd1b1d5d10253a65f2604bcb91</sys_update_name>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onChange</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

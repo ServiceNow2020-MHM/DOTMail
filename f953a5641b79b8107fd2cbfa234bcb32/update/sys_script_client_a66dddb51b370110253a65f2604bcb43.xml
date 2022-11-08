@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Service Portal - Sticky Header/Footer</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	// sys_id of the UI Action for the button to modify
+	var UI_ACTION_SYS_ID = '505e37091b6e0d1042d8c848624bcbcc';
+	// 'none' to hide the button, or '' to show the button
+	var DISPLAY_STYLE = '';
+
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (not normally exposed in service portal)
+		windowObject = top.window;
+	}
+	
+	// Added to select the iframe that service portal uses to display content
+	// Fixes browser errors caused by original script that appears in service portal
+	if (windowObject.location.pathname === '/$spd.do') {
+		windowObject = top.window.document.querySelector('iframe.preview').contentWindow;
+	}
+	
+	// Get document object (not normally exposed in service portal)
+	var document = windowObject.document;
+
+	var mainElement = document.querySelector('main.body');
+	if (mainElement.dataset.observed !== 'true') {
+		// Whenever the page changes, attempt to make the header and footer sticky
+		// Fixes a bug where clicking "New" from the list on the service portal would open a new form
+		// where the header and footer were not sticky
+		var observer = new MutationObserver(function () {
+			stick();
+		});
+		observer.observe(mainElement, {subtree: true, childList: true});
+		mainElement.dataset.observed = 'true';
+	}
+
+	function stick() {
+		var header = document.querySelector('[sn-atf-area="DOTMail Form"] .panel-heading') || document.querySelector('[sn-atf-area="Form"] .panel-heading');
+		var footer = document.querySelector('[sn-atf-area="DOTMail Form"] .panel-footer') || document.querySelector('[sn-atf-area="Form"] .panel-footer');
+
+		if (header) {
+			header.style.position = 'sticky';
+			header.style.top = 0;
+			// Make header appear above certain elements (such as the graphical timeline)
+			header.style.zIndex = 101;
+		}
+		if (footer) {
+			footer.style.position = 'sticky';
+			footer.style.bottom = 0;
+			// Make footer appear above certain elements (such as the graphical timeline)
+			footer.style.zIndex = 100;
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ethanchow_admin</sys_created_by>
+        <sys_created_on>2022-05-31 23:57:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a66dddb51b370110253a65f2604bcb43</sys_id>
+        <sys_name>Service Portal - Sticky Header/Footer</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_a66dddb51b370110253a65f2604bcb43</sys_update_name>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

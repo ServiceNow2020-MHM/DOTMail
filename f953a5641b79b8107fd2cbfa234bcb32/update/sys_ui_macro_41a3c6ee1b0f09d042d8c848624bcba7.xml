@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>UI macro to add button next to DOT letter number</description>
+        <media_type/>
+        <name>AssignLetterNumber</name>
+        <scoped_name>x_sohd3_dotmail_AssignLetterNumber</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>ethanchow_admin</sys_created_by>
+        <sys_created_on>2022-04-27 02:51:47</sys_created_on>
+        <sys_id>41a3c6ee1b0f09d042d8c848624bcba7</sys_id>
+        <sys_name>AssignLetterNumber</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_ui_macro_41a3c6ee1b0f09d042d8c848624bcba7</sys_update_name>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<j:set var="jvar_n" value="${ref}_assign_letter_number"/>
+	<button id="${jvar_n}"
+			type="button"
+			aria-haspopup="true"
+			aria-label="${gs.getMessage('Assign letter number')}"
+			onclick="assignLetterNumber()"
+			name="${jvar_n}"
+			class="btn btn-ref btn-default icon-check"
+			tabindex="$[jvar_ua_optional_tabindex]"
+			title="${gs.getMessage('Assign letter number')}">
+	</button>
+	<script>
+		function assignLetterNumber(reference) {
+			var isValid = g_form.mandatoryCheck();
+			if (!isValid) {
+				return;
+			}
+
+			var confirmAnswer = confirm('Warning – a DOT Letter Number will be assigned and cannot be reversed. Do you wish to continue?');
+			if (confirmAnswer) {
+				disable();
+
+				var scriptInclude = new GlideAjax('LetterNumber');
+				scriptInclude.addParam('sysparm_name', 'getNextNumber');
+				scriptInclude.addParam('sysparm_section', g_form.getValue('u_office_section'));
+				scriptInclude.getXML(function (responseDoc) {
+					var response = JSON.parse(responseDoc.responseXML.documentElement.getAttribute("answer"));
+					g_form.setValue('u_dot_letter_number', response.sequence);
+					g_form.setValue('letter_number_cycle', response.cycle);
+					g_form.save();
+
+				});
+			}
+		}
+
+		function disable(shouldDisable) {
+			var buttonId = '${jvar_n}';
+
+			if (shouldDisable === undefined) {
+				shouldDisable = true;
+			}
+
+			if (shouldDisable) {
+				document.getElementById(buttonId).setAttribute('disabled', '');
+			} else {
+				document.getElementById(buttonId).removeAttribute('disabled');
+			}
+		}
+
+		function disableCheck() {
+			var createdByUser = g_form.getValue('sys_created_by');
+			var formId = g_form.getUniqueValue();
+
+			// Keep button enabled on new records
+			if (!g_form.isNewRecord()) {
+				disable();
+
+				if (g_form.getValue('u_dot_letter_number') === '') {
+					var scriptInclude = new GlideAjax('GetUserDelegates');
+					scriptInclude.addParam('sysparm_name', 'fromDOTMail');
+					scriptInclude.addParam('sysparm_sys_id', formId);
+					scriptInclude.getXML(function (responseDoc) {
+						var response = JSON.parse(responseDoc.responseXML.documentElement.getAttribute("answer"));
+
+						// If this user is the opener or a delegate, enable the button
+						if (response.openedBy === g_user.userID || response.delegates.includes(g_user.userID)) {
+							disable(false);
+						}
+					});
+				}
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', disableCheck);
+	</script>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Service Portal - Responsible Group</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    var windowObject = window;
+    if (!windowObject) {
+        // Get window object (not normally exposed in service portal)
+        windowObject = top.window;
+    }
+
+    // Added to select the iframe that service portal uses to display content
+    // Fixes browser errors caused by original script that appears in service portal
+    if (windowObject.location.pathname === '/$spd.do') {
+        windowObject = top.window.document.querySelector('iframe.preview').contentWindow;
+    }
+
+    // Get document object (not normally exposed in service portal)
+    var document = windowObject.document;
+    document.defaultView.g_form = g_form;
+
+    //Set variables
+    var responsibleGroupCreated;
+    var mainElement = document.querySelector('main.body');
+    var selectInput = null;
+    var REQUEST_TYPE_FIELD = 'u_request_type';
+    var RESPONSIBLE_GROUP_FIELD = 'u_responsible_group';
+    var ROUTING_TYPE = 'f5d6cccf1bf3305042d8c848624bcb99';
+    var APPROVER_TYPE = 'ccf5cd171b858d1042d8c848624bcba0';
+
+    // Observer to ensure only 1 element is created
+    var observer = new MutationObserver(function() {
+        var originalReference = document.querySelector('#' + RESPONSIBLE_GROUP_FIELD + ' .reference');
+        if (originalReference && responsibleGroupCreated !== true) {
+            responsibleGroupCreated = true;
+            createGroupComponent(originalReference);
+            disableCheck();
+        }
+    });
+    observer.observe(mainElement, {
+        subtree: true,
+        childList: true,
+    });
+
+    function fetchRows(query) {
+        // Fetch appropriate records for dropdown
+        // ServiceNow strips the URL if the entire string is a template string
+        return fetch('https://' + windowObject.location.host + '/api/now/table/' + query, {
+            headers: {
+                'X-UserToken': windowObject.g_ck,
+                Accept: 'application/json',
+            },
+            cache: 'no-cache'
+        }).then(function(response) {
+            return response.json().then(function(json) {
+                return json.result;
+            });
+        });
+    }
+
+    function selectOption(value, text) {
+        // Adds the appropriate options to element
+        for (var i = 0; i < selectInput.options.length; i++) {
+            if (selectInput.options[i].value == value) {
+                selectInput.options[i].selected = true;
+                return;
+            }
+        }
+
+        addOption(value, text).selected = true;
+    }
+
+    function addOption(value, text) {
+        // Adds the option to element
+        var option = document.createElement('option');
+        option.setAttribute('value', value);
+        option.setAttribute('role', 'option');
+        option.innerText = text;
+
+        selectInput.appendChild(option);
+        return option;
+    }
+
+    function loadOptions(type) {
+        // Loads current options to dropdown
+        return fetchRows('sys_user_group?sysparm_query=typeLIKE' + type).then(function(groups) {
+            var groupPromises = [];
+            var choices = [];
+
+            while (selectInput.lastChild) {
+                selectInput.lastChild.remove();
+            }
+            // Add default option
+            addOption('', '-- Select --').setAttribute('disabled', '');
+
+            for (var i = 0; i < groups.length; i++) {
+                groupPromises.push(
+                    new Promise(function(resolve) {
+                        fetchRows('sys_user_group/' + groups[i].sys_id).then(function(row) {
+                            choices.push(row);
+                            resolve();
+                        });
+                    })
+                );
+            }
+
+            return Promise.allSettled(groupPromises).then(function() {
+                choices.sort(function(a, b) {
+                    return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+                });
+
+                for (var i = 0; i < choices.length; i++) {
+                    addOption(choices[i].sys_id, choices[i].name);
+                }
+            });
+        });
+    }
+
+    function changeListen() {
+        // Set the hidden input when a change is made in the dropdown
+        selectInput.addEventListener('change', function() {
+            g_form.setValue(RESPONSIBLE_GROUP_FIELD, selectInput.value);
+        });
+
+        var requestElement = document.getElementById('sp_formfield_' + REQUEST_TYPE_FIELD);
+        requestElement.addEventListener('request_type_change', function(event) {
+            if (event.detail == 'letter approval request') {
+                loadOptions(APPROVER_TYPE);
+            } else {
+                var optionsPromise = loadOptions(ROUTING_TYPE);
+                optionsPromise.then(function() {
+                    if (event.detail == 'dir review') {
+                        g_form.setValue(RESPONSIBLE_GROUP_FIELD, 'c274f8d31b058d1042d8c848624bcb6a');
+                        selectOption(g_form.getValue(RESPONSIBLE_GROUP_FIELD), g_form.getDisplayValue(RESPONSIBLE_GROUP_FIELD));
+						disable(true);
+                    }
+                });
+            }
+        });
+    }
+
+    function createGroupComponent(originalReference) {
+        //Setup form
+        selectInput = document.createElement('select');
+        selectInput.style.width = '100%';
+        selectInput.style.height = '3.2rem';
+        selectInput.style.borderRadius = '4px';
+        originalReference.appendChild(selectInput);
+
+        var originalContainer = document.querySelector('#' + RESPONSIBLE_GROUP_FIELD + ' .select2-container');
+        originalContainer.style.display = 'none';
+        // Add values
+        var optionsPromise;
+        if (g_form.getValue(REQUEST_TYPE_FIELD) == 'letter approval request') {
+            optionsPromise = loadOptions(APPROVER_TYPE);
+        } else {
+            optionsPromise = loadOptions(ROUTING_TYPE);
+        }
+        // Check for changes
+        changeListen();
+        // Set the value
+        optionsPromise.then(function() {
+            selectOption(g_form.getValue(RESPONSIBLE_GROUP_FIELD), g_form.getDisplayValue(RESPONSIBLE_GROUP_FIELD));
+        });
+    }
+
+    function disable(shouldDisable) {
+        if (shouldDisable) {
+            selectInput.setAttribute('disabled', '');
+        } else {
+            selectInput.removeAttribute('disabled');
+        }
+    }
+
+    function disableCheck() {
+        if (!g_form.isNewRecord()) {
+            disable(true);
+            var getUserInfo = new GlideAjax('GetOpenedBy');
+            getUserInfo.addParam('sysparm_name', 'getUserInfo');
+            getUserInfo.addParam('sysparm_user', g_form.getValue('opened_by'));
+            getUserInfo.getXML(function(responseDoc) {
+                try {
+                    var response = responseDoc.responseXML.documentElement.getAttribute("answer");
+                    var dotmailState = g_form.getValue('state');
+                    var stateBoolean = dotmailState == -5 || dotmailState == 30 || dotmailState == 3 || dotmailState == 55;
+                    var userBoolean = response == g_user.userName || g_user.userName == g_form.getValue('u_delegate_1') || g_user.userName == g_form.getValue('u_delegate_2');
+                    if (userBoolean) {
+                        if (stateBoolean) {
+                            disable(true);
+                        } else {
+                            disable(false);
+                        }
+                    } else {
+                        disable(true);
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            });
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-08-10 01:55:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e08522981b1d95104261edb1604bcb7a</sys_id>
+        <sys_name>Service Portal - Responsible Group</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_e08522981b1d95104261edb1604bcb7a</sys_update_name>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

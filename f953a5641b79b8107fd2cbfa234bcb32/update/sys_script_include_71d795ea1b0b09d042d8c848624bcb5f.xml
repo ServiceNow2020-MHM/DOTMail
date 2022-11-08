@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_sohd3_dotmail.LetterNumber</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Generates Letter/Number for users in DOT mail.</description>
+        <name>LetterNumber</name>
+        <script><![CDATA[var LetterNumber = Class.create();
+LetterNumber.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getNextNumber: function(section) {
+        section = this.getParameter('sysparm_section') || section;
+		section = section.substring(0, 3);
+
+        var numberMeta = this.getLetterNumberMeta(section);
+        var sectionNumber = this.getSectionPrefix(numberMeta);
+        var results = this.incrementNumber(numberMeta);
+        var digits = this.toNumber(numberMeta.number_of_digits);
+        var sequence = sectionNumber + '-' + this.zeroPad(results.sequence, digits);
+		var result = {
+            sequence: sequence,
+            cycle: results.cycle
+        };
+
+		return JSON.stringify(result);
+    },
+    getLetterNumberMeta: function(section) {
+        var table = new GlideRecord("x_sohd3_dotmail_dot_letter_number");
+        table.addQuery('section', section);
+        table.query();
+
+        if (table.next()) {
+            return table;
+        } else {
+			gs.error('Unknown section "' + section + '" in getLetterNumberMeta (LetterNumber Script Include)');
+            throw new Error('Unknown section "' + section + '" in getLetterNumberMeta (LetterNumber Script Include)');
+        }
+    },
+    toNumber: function(number) {
+        return parseInt(number.toString(), 10);
+    },
+    zeroPad: function(number, length) {
+        var string = number.toString();
+
+        return '0'.repeat(length - string.length) + number;
+    },
+    getSectionPrefix: function(table) {
+        return this.toNumber(table.prefix);
+    },
+    incrementNumber: function(table) {
+        var sequence = this.toNumber(table.sequence);
+        var result = {
+            sequence: sequence,
+            cycle: table.cycle.toString()
+        };
+
+        sequence++;
+        table.sequence = sequence;
+        if (sequence.toString().length > table.number_of_digits) {
+            table.sequence = 1;
+            table.cycle = String.fromCharCode(table.cycle.charCodeAt(0) + 1);
+        }
+
+        table.update();
+        return result;
+    },
+    type: 'LetterNumber'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-04-26 23:40:56</sys_created_on>
+        <sys_id>71d795ea1b0b09d042d8c848624bcb5f</sys_id>
+        <sys_name>LetterNumber</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_71d795ea1b0b09d042d8c848624bcb5f</sys_update_name>
+    </sys_script_include>
+</record_update>

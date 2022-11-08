@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_sohd3_dotmail.DOT_Auto_Number</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>DOT_Auto_Number</name>
+        <script><![CDATA[var DOT_Auto_Number = Class.create();
+DOT_Auto_Number.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    createNumber: function() {
+
+        var autoNumber = this.getParameter('sysparm_section');
+        var gr = new GlideRecord('x_sohd3_dotmail_dot_letter_number');
+        gr.addEncodedQuery('section=' + autoNumber);
+        gr.query();
+        if (gr.next()) {
+            return this.addOne(gr);
+        }
+
+
+
+    },
+
+
+    addalphaIncreas: function(value) {
+        var carry = 1;
+        var res = '';
+        for (var i = value.length - 1; i >= 0; i--) {
+            var cdr = value.toUpperCase().charCodeAt(i);
+            cdr += carry;
+            if (cdr > 90) {
+                cdr = 65;
+                carry = 1;
+            } else {
+                carry = 0;
+            }
+            res = String.fromCharCode(cdr) + res;
+            if (!carry) {
+                res = value.substring(0, i) + res;
+                break;
+            }
+        }
+        if (carry) {
+            res = 'A' + res;
+        }
+        return res;
+    },
+
+    addOne: function(gr) {
+
+        var section = gr.section;
+         var auto_number = gr.auto_number.toString().split('-');
+        //var u_auto_number = gr.u_auto_number_field;
+        var cycle = gr.cycle;
+        var prefix = gr.prefix;
+        var lastNumber = parseInt(auto_number) + parseInt(1);
+        if (lastNumber == '10000') {
+            lastNumber = '0001';
+            cycle = this.addalphaIncreas(cycle.toString());
+        }
+        lastNumber = prefix + '-' + this.addZero(lastNumber);
+        return lastNumber + "|" + cycle;
+
+    },
+
+
+    getSection: function(section) {
+        var sec = new GlideRecord('x_sohd3_dotmail_dot_letter_number');
+        sec.addQuery('section', section);
+        sec.query();
+        if (sec.next()) {
+            return sec.prefix;
+        }
+
+    },
+
+    insertRec: function(section) {
+        if (!section) {
+            section = this.getParameter('sysparm_section');
+        }
+        var autoNumber = this.numberIncreas(section);
+        return autoNumber;
+    },
+
+    numberIncreas: function(section) {
+        var cycle = '';
+        var num = new GlideRecord('x_sohd3_dotmail_dot_letter_number');
+        num.addQuery('section', section);
+        num.orderByDesc('cycle');
+        num.orderByDesc('sys_created_on');
+        num.query();
+        //	gs.addInfoMessage(num.getEncodedQuery());
+        if (num.next()) {
+            var incr = num.auto_number.split('-');
+            var lastNumber = parseInt(incr[1]) + 1;
+            cycle = num.cycle;
+            if (lastNumber.toString().length > 4) {
+                cycle = this.alphaIncreas(cycle.toString());
+                lastNumber = '0001';
+            }
+            var data = {};
+            data.prfx = num.prefix.toString();
+            data.lastNumber = this.addZero(lastNumber).toString();
+            data.number_of_digits = num.number_of_digits.toString();
+            data.cycle = cycle.toString();
+            data.section = num.section.toString();
+
+            return JSON.stringify(data);
+        }
+
+    },
+
+    alphaIncreas: function(str) {
+        var index = str.length - 1;
+        var baseCode = str.charCodeAt(index);
+        do {
+            baseCode = str.charCodeAt(index);
+            var strArr = str.split("");
+            if (strArr[index] == "Z") {
+                strArr[index] = "A";
+                if (index == 0) {
+                    strArr.unshift("A");
+                }
+            } else {
+                strArr[index] = String.fromCharCode(baseCode + 1);
+            }
+            str = strArr.join("");
+            index--;
+        } while (baseCode == 90);
+        return str;
+    },
+
+    addZero: function(your_number) {
+        var num = '' + your_number;
+        while (num.length < 4) {
+            num = '0' + num;
+        }
+        return num;
+    },
+
+    createRec: function() {
+        var data = JSON.parse(this.getParameter('sysparm_data'));
+        var aut = new GlideRecord('x_sohd3_dotmail_dot_letter_number');
+        aut.initialize();
+        aut.prefix = data.prfx.toString();
+        aut.number_of_digits = data.number_of_digits.toString();
+        aut.auto_number = data.prfx.toString() + '-' + data.lastNumber.toString();
+        aut.section = data.section.toString();
+        aut.cycle = data.cycle.toString();
+        var sys = aut.insert();
+        return sys;
+    },
+    type: 'DOT_Auto_Number'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>karim_admin</sys_created_by>
+        <sys_created_on>2021-12-13 04:26:14</sys_created_on>
+        <sys_id>519ac34b1b588150747921f2b24bcba7</sys_id>
+        <sys_name>DOT_Auto_Number</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_519ac34b1b588150747921f2b24bcba7</sys_update_name>
+    </sys_script_include>
+</record_update>

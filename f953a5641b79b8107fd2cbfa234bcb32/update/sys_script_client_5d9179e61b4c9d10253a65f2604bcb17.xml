@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>This client script adds the "Assign Letter Number" button to the service portal interface.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Service Portal - Assign Letter Number</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (not normally exposed in service portal)
+		windowObject = top.window;
+	}
+	
+	// Added to select the iframe that service portal uses to display content
+	// Fixes browser errors caused by original script that appears in service portal
+	if (windowObject.location.pathname === '/$spd.do') {
+		windowObject = top.window.document.querySelector('iframe.preview').contentWindow;
+	}
+	
+	// Get document object (not normally exposed in service portal)
+	var document = windowObject.document;
+
+	document.defaultView.g_form = g_form;
+	var mainElement = document.querySelector('main.body');
+	var button = null;
+	var observer = new MutationObserver(function (mutationList) {
+		for (var i = 0; i < mutationList.length; i++) {
+			var letterNumberInput = mutationList[i].target.querySelector('input[name="u_dot_letter_number"]');
+
+			if (letterNumberInput) {
+				letterNumberInput.parentElement.classList.add('input-group');
+				var buttonGroup = document.createElement('span');
+				buttonGroup.className = 'input-group-btn';
+				buttonGroup.setAttribute('ng-hide', 'snDisabled');
+				buttonGroup.setAttribute('aria-hidden', 'false');
+				button = document.createElement('button');
+				button.className = 'btn btn-default';
+				button.type = "button";
+				button.setAttribute('role', 'button');
+				button.setAttribute('aria-label', 'Assign letter number');
+				button.dataset.toggle = 'tooltip';
+				button.dataset.placement = 'top';
+				button.dataset.container = 'section.page';
+				button.dataset.originalTitle = 'Assign letter number';
+				button.addEventListener('click', assignLetterNumber);
+				var icon = document.createElement('span');
+				icon.className = 'glyphicon glyphicon-ok';
+				icon.setAttribute('sn-char', 'ok');
+
+				letterNumberInput.parentElement.appendChild(buttonGroup);
+				buttonGroup.appendChild(button);
+				button.appendChild(icon);
+				disableCheck();
+
+				observer.disconnect();
+				return;
+			}
+		}
+	});
+	observer.observe(mainElement, {subtree: true, childList: true});
+
+	function getFormStatus() {
+		var fields = g_form.getFieldNames();
+		var missingFields = [];
+
+		// Check to see if required fields are missing
+		for (var i = 0; i < fields.length; i++) {
+			if (g_form.isVisible(fields[i]) && g_form.isMandatory(fields[i]) && !g_form.isReadOnly(fields[i])) {
+				if (g_form.getValue(fields[i]).trim() === '') {
+					missingFields.push(fields[i]);
+				}
+			}
+		}
+
+		if (missingFields.length === 0) {
+			return {isValid: true};
+		} else {
+			return {isValid: false, missingFields: missingFields};
+		}
+	}
+
+	function assignLetterNumber() {
+		var status = getFormStatus();
+		if (!status.isValid) {
+			g_form.addErrorMessage('Some fields are incomplete: ' + status.missingFields.map(function (fieldName) {
+				return g_form.getLabelOf(fieldName);
+			}).join(', '));
+			return;
+		}
+
+		var confirmAnswer = confirm('Warning – a DOT Letter Number will be assigned and cannot be reversed. Do you wish to continue?');
+
+		if (confirmAnswer) {
+			disable();
+
+			var scriptInclude = new GlideAjax('LetterNumber');
+			scriptInclude.addParam('sysparm_name', 'getNextNumber');
+			scriptInclude.addParam('sysparm_section', g_form.getValue('u_office_section'));
+			scriptInclude.getXML(function (responseDoc) {
+				var response = JSON.parse(responseDoc.responseXML.documentElement.getAttribute("answer"));
+				g_form.setValue('u_dot_letter_number', response.sequence);
+				g_form.setValue('letter_number_cycle', response.cycle);
+				g_form.save();
+			});
+		}
+	}
+
+	function disable(shouldDisable) {
+		if (shouldDisable === undefined) {
+			shouldDisable = true;
+		}
+
+		if (shouldDisable) {
+			button.setAttribute('disabled', '');
+		} else {
+			button.removeAttribute('disabled');
+		}
+	}
+
+	function disableCheck() {
+		var createdByUser = g_form.getValue('sys_created_by');
+		var formId = g_form.getUniqueValue();
+
+		// Keep button enabled on new records
+		if (!g_form.isNewRecord()) {
+			disable();
+
+			if (g_form.getValue('u_dot_letter_number') === '') {
+				var scriptInclude = new GlideAjax('GetUserDelegates');
+				scriptInclude.addParam('sysparm_name', 'fromDOTMail');
+				scriptInclude.addParam('sysparm_sys_id', formId);
+				scriptInclude.getXML(function (responseDoc) {
+					var response = JSON.parse(responseDoc.responseXML.documentElement.getAttribute("answer"));
+
+					// If this user is the opener or a delegate, enable the button
+					if (response.openedBy === g_user.userID || response.delegates.includes(g_user.userID)) {
+						disable(false);
+					}
+				});
+			}
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ethanchow_admin</sys_created_by>
+        <sys_created_on>2022-06-16 03:53:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5d9179e61b4c9d10253a65f2604bcb17</sys_id>
+        <sys_name>Service Portal - Assign Letter Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_5d9179e61b4c9d10253a65f2604bcb17</sys_update_name>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

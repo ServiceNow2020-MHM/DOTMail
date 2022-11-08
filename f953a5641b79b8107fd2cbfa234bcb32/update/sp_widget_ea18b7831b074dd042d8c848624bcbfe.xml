@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[	function assignLetterNumber(reference) {
+			var scriptInclude = new GlideAjax('LetterNumber');
+			scriptInclude.addParam('sysparm_name', 'getNextNumber');
+			scriptInclude.addParam('sysparm_section', g_form.getValue('u_office_section'));
+			scriptInclude.getXML(onResponse);
+		}
+		
+		function onResponse(response) {
+			var answer = response.responseXML.documentElement.getAttribute("answer");
+			answer = JSON.parse(answer);
+			g_form.setReadOnly('u_dot_letter_number', false);
+			g_form.setValue('u_dot_letter_number', answer.sequence);
+			g_form.setValue('letter_number_cycle', answer.cycle);
+
+			disable();
+		}
+		
+		function disable() {
+			var buttonId = '${jvar_n}';
+			
+			document.getElementById(buttonId).setAttribute('disabled', '');
+			g_form.setReadOnly('u_dot_letter_number', true);
+		}
+		
+		function disableIfNumberExists() {
+			if (g_form.getValue('u_dot_letter_number') !== '') {
+				disable();
+			}
+		}
+		
+		document.addEventListener('DOMContentLoaded', disableIfNumberExists);
+	
+	
+ 
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>dotletternumber</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>DOTLetterNumber</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[var LetterNumber = Class.create();
+LetterNumber.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getNextNumber: function(section) {
+        section = this.getParameter('sysparm_section') || section;
+		section = section.substring(0, 3);
+
+        var numberMeta = this.getLetterNumberMeta(section);
+        var sectionNumber = this.getSectionPrefix(numberMeta);
+        var results = this.incrementNumber(numberMeta);
+        var digits = this.toNumber(numberMeta.number_of_digits);
+        var sequence = sectionNumber + '-' + this.zeroPad(results.sequence, digits);
+		var result = {
+            sequence: sequence,
+            cycle: results.cycle
+        };
+
+		return JSON.stringify(result);
+    },
+    getLetterNumberMeta: function(section) {
+        var table = new GlideRecord("x_sohd3_dotmail_dot_letter_number");
+        table.addQuery('section', section);
+        table.query();
+
+        if (table.next()) {
+            return table;
+        } else {
+			gs.error('Unknown section "' + section + '" in getLetterNumberMeta (LetterNumber Script Include)');
+            throw new Error('Unknown section "' + section + '" in getLetterNumberMeta (LetterNumber Script Include)');
+        }
+    },
+    toNumber: function(number) {
+        return parseInt(number.toString(), 10);
+    },
+    zeroPad: function(number, length) {
+        var string = number.toString();
+
+        return '0'.repeat(length - string.length) + number;
+    },
+    getSectionPrefix: function(table) {
+        return this.toNumber(table.prefix);
+    },
+    incrementNumber: function(table) {
+        var sequence = this.toNumber(table.sequence);
+        var result = {
+            sequence: sequence,
+            cycle: table.cycle.toString()
+        };
+
+        sequence++;
+        table.sequence = sequence;
+        if (sequence.toString().length > table.number_of_digits) {
+            table.sequence = 1;
+            table.cycle = String.fromCharCode(table.cycle.charCodeAt(0) + 1);
+        }
+
+        table.update();
+        return result;
+    },
+    type: 'LetterNumber'
+});]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>deanfujimoto_admin</sys_created_by>
+        <sys_created_on>2022-04-29 00:37:10</sys_created_on>
+        <sys_id>ea18b7831b074dd042d8c848624bcbfe</sys_id>
+        <sys_name>DOTLetterNumber</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sp_widget_ea18b7831b074dd042d8c848624bcbfe</sys_update_name>
+        <template><![CDATA[<div class="panel panel-default">
+ <div class="panel-heading">Actions</div>
+ <div class="panel-body">
+ <button type="button" class="btn btn-primary btn-block" ng-click="c.uiAction('resolve')">Resolve Incident</button>
+ <button type="button" class="btn btn-default btn-block" ng-click="c.uiAction('cancel')">Cancel</button>
+ </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b74a8b0b1b588150747921f2b24bcb3a" label="DOT Letter Number Counter" max_length="40" name="x_sohd3_dotmail_dot_letter_number" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="A" label="Cycle" max_length="40" name="cycle" type="string"/>
+        <element default="4" label="Number of Digits" max_length="40" name="number_of_digits" type="integer"/>
+        <element label="Prefix" max_length="40" name="prefix" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Section" max_length="40" name="section" type="string">
+            <choice>
+                <element inactive_on_update="false" label="BUS" sequence="0" value="BUS"/>
+                <element inactive_on_update="false" label="CON" sequence="1" value="CON"/>
+                <element inactive_on_update="false" label="CSS" sequence="2" value="CSS"/>
+                <element inactive_on_update="false" label="DIR" sequence="3" value="DIR"/>
+                <element inactive_on_update="false" label="PER" sequence="4" value="PER"/>
+                <element inactive_on_update="false" label="PPB" sequence="5" value="PPB"/>
+                <element inactive_on_update="false" label="STP" sequence="6" value="STP"/>
+            </choice>
+        </element>
+        <element default="1" label="Sequence" max_length="40" name="sequence" type="integer"/>
+    </element>
+</database>

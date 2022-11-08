@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Responsible Group Filtering</name>
+        <order/>
+        <script><![CDATA[/* eslint-env es6, browser */
+/* exported onLoad */
+
+// Automatically called by ServiceNow
+function onLoad() {
+    var windowObject = window;
+
+    if (!windowObject) {
+        windowObject = top.window;
+    }
+
+    var document = windowObject.document;
+
+    var TABLE_NAME = 'x_sohd3_dotmail_dotmail';
+    var FIELD_NAME = 'u_responsible_group';
+    var ROUTING_TYPE = 'f5d6cccf1bf3305042d8c848624bcb99';
+    var APPROVER_TYPE = 'ccf5cd171b858d1042d8c848624bcba0';
+
+    var fieldInput = document.getElementById(TABLE_NAME + '.' + FIELD_NAME);
+    var fieldDisplayInput = document.getElementById('sys_display.' + TABLE_NAME + '.' + FIELD_NAME);
+    var selectInput = null;
+
+    function log(...args) {
+        console.log('[SN_CALLER]', ...args);
+    }
+
+    async function fetchRows(query) {
+        // ServiceNow strips the URL if the entire string is a template string
+        // eslint-disable-next-line no-useless-concat
+        var response = await fetch('https://' + window.location.host + '/api/now/table/' + query, {
+            headers: {
+                'X-UserToken': window.g_ck,
+                Accept: 'application/json'
+            },
+            cache: 'no-cache'
+        });
+        var json = await response.json();
+        return json.result;
+    }
+
+    function selectOption(value, text) {
+        for (var option of selectInput.options) {
+            if (option.value == value) {
+                option.selected = true;
+
+                return;
+            }
+        }
+
+        addOption(value, text).selected = true;
+    }
+
+    function addOption(value, text) {
+        var option = document.createElement('option');
+        option.setAttribute('value', value);
+        option.setAttribute('role', 'option');
+        option.innerText = text;
+
+        selectInput.appendChild(option);
+        return option;
+    }
+
+    function bootstrap() {
+        selectInput = document.createElement('select');
+        selectInput.className = 'form-control';
+        if (fieldDisplayInput.classList.contains('disabled')) {
+            selectInput.setAttribute('disabled', '');
+        }
+
+        fieldDisplayInput.parentElement.insertBefore(selectInput, fieldDisplayInput);
+        fieldDisplayInput.type = 'hidden';
+
+        // Listen for updates to the hidden field
+        var oldOnChange = window.onChange;
+        window.onChange = function(elementName, fromSetTemplateValue) {
+            oldOnChange(elementName, fromSetTemplateValue);
+            log(elementName, fromSetTemplateValue);
+
+            if (elementName == fieldInput.id) {
+                log(fieldInput.value);
+                selectOption(fieldInput.value, fieldDisplayInput.value.trim());
+            }
+        };
+
+        // Set the hidden input when a change is made in the dropdown
+        selectInput.addEventListener('change', () => {
+            fieldInput.value = selectInput.value;
+            fieldDisplayInput.value = selectInput.selectedOptions[0].text;
+            // Trigger ServiceNow client-side code
+            oldOnChange(`${TABLE_NAME}.${FIELD_NAME}`);
+        });
+
+        var requestElement = document.getElementById(TABLE_NAME + '.u_request_type');
+        requestElement.addEventListener('change', () => {
+            if (requestElement.value == 'letter approval request') {
+                loadOptions(APPROVER_TYPE);
+            } else {
+                var optionsPromise = loadOptions(ROUTING_TYPE);
+                optionsPromise.then(function() {
+                    if (requestElement.value == 'dir review') {
+                        g_form.setValue(FIELD_NAME, 'c274f8d31b058d1042d8c848624bcb6a');
+                        selectOption(g_form.getValue(FIELD_NAME), g_form.getDisplayValue(FIELD_NAME));
+						disable(true);
+                    }
+                });
+            }
+        });
+    }
+
+    async function loadOptions(type) {
+        var groups = await fetchRows('sys_user_group?sysparm_query=typeLIKE' + type);
+        var groupPromises = [];
+        var choices = [];
+
+        while (selectInput.lastChild) {
+            selectInput.lastChild.remove();
+        }
+        // Add default option
+        addOption('', '-- Select --').setAttribute('disabled', '');
+
+        for (var group of groups) {
+            log('GROUP: ' + JSON.stringify(group));
+            groupPromises.push((async () => {
+                choices.push(await fetchRows('sys_user_group/' + group.sys_id));
+            })());
+        }
+
+        await Promise.allSettled(groupPromises);
+
+        choices.sort((a, b) => {
+            return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+        });
+
+        for (var choice of choices) {
+            addOption(choice.sys_id, choice.name);
+        }
+    }
+
+    function disable(shouldDisable) {
+        if (shouldDisable) {
+            selectInput.setAttribute('disabled', '');
+        } else {
+            selectInput.removeAttribute('disabled');
+        }
+    }
+
+    function disableCheck() {
+        if (!g_form.isNewRecord()) {
+            disable(true);
+            var getUserInfo = new GlideAjax('GetOpenedBy');
+            getUserInfo.addParam('sysparm_name', 'getUserInfo');
+            getUserInfo.addParam('sysparm_user', g_form.getValue('opened_by'));
+            getUserInfo.getXML(function(responseDoc) {
+                try {
+                    var response = responseDoc.responseXML.documentElement.getAttribute("answer");
+                    var dotmailState = g_form.getValue('state');
+                    var stateBoolean = dotmailState == -5 || dotmailState == 30 || dotmailState == 3 || dotmailState == 55;
+                    var userBoolean = response == g_user.userName || g_user.userName == g_form.getValue('u_delegate_1') || g_user.userName == g_form.getValue('u_delegate_2');
+                    if (userBoolean) {
+                        if (stateBoolean) {
+                            disable(true);
+                        } else {
+                            disable(false);
+                        }
+                    } else {
+                        disable(true);
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            });
+        }
+    }
+
+    // Automatically called by ServiceNow
+    async function run() {
+        log('Initializing...');
+        // Setup the form
+        bootstrap();
+		disableCheck();
+        log('Loading options...');
+        // Add the values
+        if (g_form.getValue('u_request_type') == 'letter approval request') {
+            await loadOptions(APPROVER_TYPE);
+        } else {
+            await loadOptions(ROUTING_TYPE);
+        }
+
+        // Set the value
+        selectOption(fieldInput.value, fieldDisplayInput.value.trim());
+
+        log('Compare.');
+    }
+
+    run();
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-07-23 01:12:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>400fa12a1bf411904261edb1604bcbe6</sys_id>
+        <sys_name>Responsible Group Filtering</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_400fa12a1bf411904261edb1604bcbe6</sys_update_name>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

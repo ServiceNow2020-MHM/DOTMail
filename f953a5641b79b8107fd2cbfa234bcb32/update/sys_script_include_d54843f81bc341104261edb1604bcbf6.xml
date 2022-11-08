@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sohd3_dotmail.DOT_duplicate_letter</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>DOT_duplicate_letter</name>
+        <script><![CDATA[var DOT_duplicate_letter = Class.create();
+DOT_duplicate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	get_records: function() {
+		// results is an object used to contain everything the client script will need when it is passed
+		// letter_date is populated with sysparam_letter_date and is set in the client script to the record's Letter Date Field
+		// from is populated with sysparam_from and is set in the client script to the record's From field
+		// to is populated with sysparam_to and is set in the client script to the record's To field
+		// parent_sys_id is populated with sysparam_parent_sys_id and is set in the client script to the record's sys_id
+		// number is populated with sysparam_number and is set in the client script to the record's DOTMail number
+		var results = {};
+		var letter_date = this.getParameter('sysparm_letter_date');
+		var from = this.getParameter('sysparm_from');
+		var to = this.getParameter('sysparam_to');
+		var parent_sys_id = this.getParameter('sysparam_parent_sys_id');
+		var number = this.getParameter('sysparam_number');
+		
+		//Checks if the DOTMail number already exists
+		// If it does it is not a new record and the script includes can be returned immediately 
+		/*var dotmailNumCheck = new GlideRecord('x_sohd3_dotmail_dotmail');
+		dotmailNumCheck.addQuery('number', number);
+		dotmailNumCheck.query();
+		
+		if (dotmailNumCheck.hasNext()) {
+			results.answer = false;
+			return JSON.stringify(results);
+		}*/
+		
+		// Creates a DOTMail GlideRecord
+		// Queries for any records whose From field is equal to from
+		// AND whose To field is equal to to
+		var dotmail = new GlideRecord('x_sohd3_dotmail_dotmail');
+		dotmail.addQuery('active', true);
+		dotmail.addQuery('u_from', from);
+		dotmail.addQuery('u_to', to);
+		
+		// Creates a GlideDate object
+		// Sets the value of the object to be letter_date
+		// This was done because letter_date is a string and u_letter_date is a GlideDate
+		// And the final query checks for any records whose Letter Date field is equal to the value of gd 
+		// Which should now be letter_date
+		// AND queries for records whose sys_id is not equal to parent_sys_id 
+		var gd = new GlideDate(); 
+		gd.setValue(letter_date);
+		dotmail.addQuery('u_letter_date', gd.getValue());
+		dotmail.addQuery('sys_id', '!=', parent_sys_id);
+		dotmail.orderByDesc('number');
+		
+		dotmail.query();
+		
+		// If dotMail.hasNext() returns false then the query returned no records
+		// So we set results.answer to false and return
+		if (!dotmail.hasNext()){
+			results.answer = false;
+			return JSON.stringify(results);
+		}
+		
+		// Set results.answer to true
+		// Create the beginning of results.message
+		results.answer = true;
+		results.message = 'Warning – the following possible duplicate record(s) have been found: ';
+		
+		// While dotmail.next() we concat onto the results.message the values of each record retrieved from the query
+		while (dotmail.next()) {
+			results.message += '\n';
+			results.message += dotmail.number.toString();
+			results.message += ' ';
+			results.message += dotmail.u_log_date.toString();
+			results.message += ' '; 
+			results.message += dotmail.u_office_section.toString();
+		}
+		
+		// Concats the final part of results.message
+		results.message += '\n';
+		results.message += '\n';
+		results.message += 'It is highly recommended that you verify with the appropriate Office/Section staff that the DOTMail records listed above are not truly duplicates BEFORE you continue with the Save.';
+		results.message += '\n';
+		results.message += '\n';
+		results.message += 'Do you wish to continue with the Save?';
+		
+		// Returns
+		return JSON.stringify(results);
+	},
+    type: 'DOT_duplicate_letter'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-04-21 21:22:15</sys_created_on>
+        <sys_id>d54843f81bc341104261edb1604bcbf6</sys_id>
+        <sys_name>DOT_duplicate_letter</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_include_d54843f81bc341104261edb1604bcbf6</sys_update_name>
+    </sys_script_include>
+</record_update>

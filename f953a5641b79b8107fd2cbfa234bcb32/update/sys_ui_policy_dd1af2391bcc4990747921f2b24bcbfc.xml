@@ -16,12 +16,50 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-    $j('[data-action-name=reject_action]').hide();
-    //this.jQuery('reject_action').hide();
+	// sys_id of the UI Action for the button to modify
+	var UI_ACTION_SYS_ID = '2215da191bbff810747921f2b24bcb47';
+	// 'none' to hide the button, or '' to show the button
+	var DISPLAY_STYLE = 'none';
+
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (not normally exposed in service portal)
+		windowObject = top.window;
+	}
+	// Get document object (not normally exposed in service portal)
+	var document = windowObject.document;
+	var buttons = document.querySelectorAll('[gsft_id="' + UI_ACTION_SYS_ID + '"]');
+
+	// Update all buttons
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].style.display = DISPLAY_STYLE;
+	}
+
+	//$j('[data-action-name=reject_action]').hide();
+	//this.jQuery('reject_action').hide();
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-    $j('[data-action-name=reject_action]').show();
-    //this.jQuery('reject_action').show();
+	// sys_id of the UI Action for the button to modify
+	var UI_ACTION_SYS_ID = '2215da191bbff810747921f2b24bcb47';
+	// 'none' to hide the button, or '' to show the button
+	var DISPLAY_STYLE = '';
+
+	var windowObject = window;
+	if (!windowObject) {
+		// Get window object (not normally exposed in service portal)
+		windowObject = top.window;
+	}
+	// Get document object (not normally exposed in service portal)
+	var document = windowObject.document;
+	var buttons = document.querySelectorAll('[gsft_id="' + UI_ACTION_SYS_ID + '"]');
+
+	// Update all buttons
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].style.display = DISPLAY_STYLE;
+	}
+
+	//$j('[data-action-name=reject_action]').show();
+	//this.jQuery('reject_action').show();
 }]]></script_true>
         <set_values/>
         <short_description>Show/Hide Reject Button</short_description>
@@ -31,15 +69,12 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dd1af2391bcc4990747921f2b24bcbfc</sys_id>
-        <sys_mod_count>8</sys_mod_count>
         <sys_name>Show/Hide Reject Button</sys_name>
         <sys_overrides/>
         <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
         <sys_policy/>
         <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
         <sys_update_name>sys_ui_policy_dd1af2391bcc4990747921f2b24bcbfc</sys_update_name>
-        <sys_updated_by>moody_admin</sys_updated_by>
-        <sys_updated_on>2022-03-29 00:22:22</sys_updated_on>
         <table>x_sohd3_dotmail_dotmail</table>
         <ui_type>10</ui_type>
         <view/>

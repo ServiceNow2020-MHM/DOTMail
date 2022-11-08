@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_request_type</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Responsible Group Filtering onChange</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+	
+    var TABLE_NAME = 'x_sohd3_dotmail_dotmail';
+    var FIELD_NAME = 'u_responsible_group';
+    var ROUTING_TYPE = 'f5d6cccf1bf3305042d8c848624bcb99';
+    var APPROVER_TYPE = 'ccf5cd171b858d1042d8c848624bcba0';
+
+    var fieldInput = document.getElementById(`${TABLE_NAME}.${FIELD_NAME}`);
+    var fieldDisplayInput = document.getElementById(`sys_display.${TABLE_NAME}.${FIELD_NAME}`);
+    var selectInput = null;
+
+    function log(...args) {
+        console.log('[SN_CALLER]', ...args);
+    }
+
+    async function fetchRows(query) {
+        // ServiceNow strips the URL if the entire string is a template string
+        // eslint-disable-next-line no-useless-concat
+        var response = await fetch('https://' + window.location.host + '/api/now/table/' + query, {
+            headers: {
+                'X-UserToken': window.g_ck,
+                Accept: 'application/json'
+            },
+            cache: 'no-cache'
+        });
+        var json = await response.json();
+        return json.result;
+    }
+
+    function selectOption(value, text) {
+        for (var option of selectInput.options) {
+            if (option.value == value) {
+                option.selected = true;
+
+                return;
+            }
+        }
+
+        addOption(value, text).selected = true;
+    }
+
+    function addOption(value, text) {
+        var option = document.createElement('option');
+        option.setAttribute('value', value);
+        option.setAttribute('role', 'option');
+        option.innerText = text;
+
+        selectInput.appendChild(option);
+        return option;
+    }
+
+    function bootstrap() {
+        selectInput = document.createElement('select');
+        selectInput.className = 'form-control';
+        if (fieldDisplayInput.classList.contains('disabled')) {
+            selectInput.setAttribute('disabled', '');
+        }
+
+        // Add default option
+        addOption('', '-- Select --').setAttribute('disabled', '');
+
+        fieldDisplayInput.parentElement.insertBefore(selectInput, fieldDisplayInput);
+        fieldDisplayInput.type = 'hidden';
+
+        // Listen for updates to the hidden field
+        var oldOnChange = window.onChange;
+        window.onChange = function(elementName, fromSetTemplateValue) {
+            oldOnChange(elementName, fromSetTemplateValue);
+            log(elementName, fromSetTemplateValue);
+
+            if (elementName == fieldInput.id) {
+                log(fieldInput.value);
+                selectOption(fieldInput.value, fieldDisplayInput.value.trim());
+            }
+        };
+
+        // Set the hidden input when a change is made in the dropdown
+        selectInput.addEventListener('change', () => {
+            fieldInput.value = selectInput.value;
+            fieldDisplayInput.value = selectInput.selectedOptions[0].text;
+            // Trigger ServiceNow client-side code
+            oldOnChange(`${TABLE_NAME}.${FIELD_NAME}`);
+        });
+    }
+
+    async function loadOptions(type) {
+        var groups = await fetchRows('sys_user_group?sysparm_query=typeLIKE' + type);
+        var groupPromises = [];
+        var choices = [];
+
+        for (var group of groups) {
+            log('GROUP: ' + JSON.stringify(group));
+            groupPromises.push((async () => {
+                choices.push(await fetchRows('sys_user_group/' + group.sys_id));
+            })());
+        }
+
+        await Promise.allSettled(groupPromises);
+
+        for (var choice of choices) {
+            console.log('CHOICE ' + choice);
+            addOption(choice.sys_id, choice.name);
+        }
+    }
+
+    // Automatically called by ServiceNow
+    async function run() {
+        log('Initializing...');
+        // Load tags from Knowledge Base article
+        // Setup the form
+        bootstrap();
+        log('Loading options...');
+        // Add the values
+        log('REQUEST TYPE: ' + g_form.getValue('u_request_type'));
+        if (newValue == 'letter approval request') {
+            await loadOptions(APPROVER_TYPE);
+        } else {
+            await loadOptions(ROUTING_TYPE);
+        }
+
+        // Set the value
+        selectOption(fieldInput.value, fieldDisplayInput.value.trim());
+
+        log('Compvare.');
+    }
+
+    run();
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-07-28 21:45:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b8e8b7181b491d904261edb1604bcb02</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Responsible Group Filtering onChange</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_update_name>sys_script_client_b8e8b7181b491d904261edb1604bcb02</sys_update_name>
+        <sys_updated_by>ioaneomerod_admin</sys_updated_by>
+        <sys_updated_on>2022-07-28 22:38:51</sys_updated_on>
+        <table>x_sohd3_dotmail_dotmail</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</application>
+        <file_path/>
+        <instance_id>6612c0221b0724547d9d2f8dee4bcb10</instance_id>
+        <instance_name>hidotdev</instance_name>
+        <name>sys_script_client_b8e8b7181b491d904261edb1604bcb02</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_request_type&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Responsible Group Filtering onChange&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+	
+    var TABLE_NAME = 'x_sohd3_dotmail_dotmail';
+    var FIELD_NAME = 'u_responsible_group';
+    var ROUTING_TYPE = 'f5d6cccf1bf3305042d8c848624bcb99';
+    var APPROVER_TYPE = 'ccf5cd171b858d1042d8c848624bcba0';
+
+    var fieldInput = document.getElementById(`${TABLE_NAME}.${FIELD_NAME}`);
+    var fieldDisplayInput = document.getElementById(`sys_display.${TABLE_NAME}.${FIELD_NAME}`);
+    var selectInput = null;
+
+    function log(...args) {
+        console.log('[SN_CALLER]', ...args);
+    }
+
+    async function fetchRows(query) {
+        // ServiceNow strips the URL if the entire string is a template string
+        // eslint-disable-next-line no-useless-concat
+        var response = await fetch('https://' + window.location.host + '/api/now/table/' + query, {
+            headers: {
+                'X-UserToken': window.g_ck,
+                Accept: 'application/json'
+            },
+            cache: 'no-cache'
+        });
+        var json = await response.json();
+        return json.result;
+    }
+
+    function selectOption(value, text) {
+        for (var option of selectInput.options) {
+            if (option.value == value) {
+                option.selected = true;
+
+                return;
+            }
+        }
+
+        addOption(value, text).selected = true;
+    }
+
+    function addOption(value, text) {
+        var option = document.createElement('option');
+        option.setAttribute('value', value);
+        option.setAttribute('role', 'option');
+        option.innerText = text;
+
+        selectInput.appendChild(option);
+        return option;
+    }
+
+    function bootstrap() {
+        selectInput = document.createElement('select');
+        selectInput.className = 'form-control';
+        if (fieldDisplayInput.classList.contains('disabled')) {
+            selectInput.setAttribute('disabled', '');
+        }
+
+        // Add default option
+        addOption('', '-- Select --').setAttribute('disabled', '');
+
+        fieldDisplayInput.parentElement.insertBefore(selectInput, fieldDisplayInput);
+        fieldDisplayInput.type = 'hidden';
+
+        // Listen for updates to the hidden field
+        var oldOnChange = window.onChange;
+        window.onChange = function(elementName, fromSetTemplateValue) {
+            oldOnChange(elementName, fromSetTemplateValue);
+            log(elementName, fromSetTemplateValue);
+
+            if (elementName == fieldInput.id) {
+                log(fieldInput.value);
+                selectOption(fieldInput.value, fieldDisplayInput.value.trim());
+            }
+        };
+
+        // Set the hidden input when a change is made in the dropdown
+        selectInput.addEventListener('change', () =&gt; {
+            fieldInput.value = selectInput.value;
+            fieldDisplayInput.value = selectInput.selectedOptions[0].text;
+            // Trigger ServiceNow client-side code
+            oldOnChange(`${TABLE_NAME}.${FIELD_NAME}`);
+        });
+    }
+
+    async function loadOptions(type) {
+        var groups = await fetchRows('sys_user_group?sysparm_query=typeLIKE' + type);
+        var groupPromises = [];
+        var choices = [];
+
+        for (var group of groups) {
+            log('GROUP: ' + JSON.stringify(group));
+            groupPromises.push((async () =&gt; {
+                choices.push(await fetchRows('sys_user_group/' + group.sys_id));
+            })());
+        }
+
+        await Promise.allSettled(groupPromises);
+
+        for (var choice of choices) {
+            console.log('CHOICE ' + choice);
+            addOption(choice.sys_id, choice.name);
+        }
+    }
+
+    // Automatically called by ServiceNow
+    async function run() {
+        log('Initializing...');
+        // Load tags from Knowledge Base article
+        // Setup the form
+        bootstrap();
+        log('Loading options...');
+        // Add the values
+        log('REQUEST TYPE: ' + g_form.getValue('u_request_type'));
+        if (newValue == 'letter approval request') {
+            await loadOptions(APPROVER_TYPE);
+        } else {
+            await loadOptions(ROUTING_TYPE);
+        }
+
+        // Set the value
+        selectOption(fieldInput.value, fieldDisplayInput.value.trim());
+
+        log('Compvare.');
+    }
+
+    run();
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ioaneomerod_admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-28 21:45:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b8e8b7181b491d904261edb1604bcb02&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Responsible Group Filtering onChange&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="DOTMail" source="x_sohd3_dotmail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="DOTMail"&gt;f953a5641b79b8107fd2cbfa234bcb32&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_b8e8b7181b491d904261edb1604bcb02&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ioaneomerod_admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-28 22:38:51&lt;/sys_updated_on&gt;&lt;table&gt;x_sohd3_dotmail_dotmail&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-938065793</payload_hash>
+        <record_name>Responsible Group Filtering onChange</record_name>
+        <reverted_from/>
+        <source>4788588c1bc705904261edb1604bcbed</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-07-28 22:38:51</sys_created_on>
+        <sys_id>1cb5c8a81b891d904261edb1604bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18246f66daa0000001</sys_recorded_at>
+        <sys_updated_by>ioaneomerod_admin</sys_updated_by>
+        <sys_updated_on>2022-07-28 22:38:51</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>90b5c8a80d891d90b992cd4312890495</update_guid>
+        <update_guid_history>90b5c8a80d891d90b992cd4312890495:-938065793,f155c0a80d891d9022e6da3146fb0d92:2123632626,c1993358cb491d905fa30e16fd02f4f5:-938065793,3069371858491d90413c3cf428da7a6c:-935780366</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ioaneomerod_admin</sys_created_by>
+        <sys_created_on>2022-07-28 23:05:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>81839b8ef096488fa04f6b2633587d41</sys_id>
+        <sys_metadata>b8e8b7181b491d904261edb1604bcb02</sys_metadata>
+        <sys_name>Responsible Group Filtering onChange</sys_name>
+        <sys_package display_value="DOTMail" source="x_sohd3_dotmail">f953a5641b79b8107fd2cbfa234bcb32</sys_package>
+        <sys_parent display_value="DOTMail">0455ad241bbdb810eef0cb72604bcbd9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="DOTMail">f953a5641b79b8107fd2cbfa234bcb32</sys_scope>
+        <sys_scope_delete display_value="">02881410aefc4b88882dabff82000d90</sys_scope_delete>
+        <sys_update_name>sys_script_client_b8e8b7181b491d904261edb1604bcb02</sys_update_name>
+        <sys_update_version display_value="sys_script_client_b8e8b7181b491d904261edb1604bcb02">1cb5c8a81b891d904261edb1604bcb95</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
